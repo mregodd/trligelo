@@ -1,0 +1,606 @@
+season,association,country,coefficient
+2016-17,Royal Spanish Football Federation,Spain,99.999
+2016-17,The Football Association,England,80.391
+2016-17,German Football Association,Germany,79.415
+2016-17,Italian Football Federation,Italy,70.51
+2016-17,Portuguese Football Federation,Portugal,61.382
+2016-17,French Football Federation,France,52.416
+2016-17,Russian Football Union,Russia,50.498
+2016-17,Ukrainian Association of Football,Ukraine,45.166
+2016-17,Royal Dutch Football Association,Netherlands,40.979
+2016-17,Royal Belgian Football Association,Belgium,37.2
+2016-17,Swiss Football Association,Switzerland,34.375
+2016-17,Turkish Football Federation,Turkey,32.6
+2016-17,Hellenic Football Federation,Greece,31.9
+2016-17,Football Association of the Czech Republic,Czech Republic,29.125
+2016-17,Romanian Football Federation,Romania,26.299
+2016-17,Austrian Football Association,Austria,25.675
+2016-17,Croatian Football Federation,Croatia,23.5
+2016-17,Cyprus Football Association,Cyprus,22.3
+2016-17,Polish Football Association,Poland,21.5
+2016-17,Israel Football Association,Israel,21.0
+2016-17,Football Federation of Belarus,Belarus,20.75
+2016-17,Danish Football Association,Denmark,19.8
+2016-17,Scottish Football Association,Scotland,17.9
+2016-17,Swedish Football Association,Sweden,17.725
+2016-17,Bulgarian Football Union,Bulgaria,16.75
+2016-17,Norwegian Football Federation,Norway,14.375
+2016-17,Football Association of Serbia,Serbia,13.875
+2016-17,Football Association of Slovenia,Slovenia,13.625
+2016-17,Association of Football Federations of Azerbaijan,Azerbaijan,12.5
+2016-17,Slovak Football Association,Slovakia,11.25
+2016-17,Hungarian Football Federation,Hungary,11.0
+2016-17,Kazakhstan Football Federation,Kazakhstan,10.375
+2016-17,Moldovan Football Federation,Moldova,10.0
+2016-17,Georgian Football Federation,Georgia,9.375
+2016-17,Football Association of Finland,Finland,8.2
+2016-17,Football Association of Iceland,Iceland,8.0
+2016-17,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,7.5
+2016-17,Liechtenstein Football Association,Liechtenstein,6.0
+2016-17,Football Federation of Macedonia,Macedonia,5.875
+2016-17,Football Association of Ireland,Republic of Ireland,5.75
+2016-17,Football Association of Montenegro,Montenegro,5.625
+2016-17,Albanian Football Federation,Albania,5.375
+2016-17,Luxembourg Football Federation,Luxembourg,5.125
+2016-17,Irish Football Association,Northern Ireland,4.875
+2016-17,Lithuanian Football Federation,Lithuania,4.5
+2016-17,Latvian Football Federation,Latvia,4.25
+2016-17,Malta Football Association,Malta,4.208
+2016-17,Estonian Football Association,Estonia,3.5
+2016-17,Faroe Islands Football Association,Faroe Islands,3.5
+2016-17,Football Association of Wales,Wales,2.875
+2016-17,Football Federation of Armenia,Armenia,2.75
+2016-17,Andorran Football Federation,Andorra,0.833
+2016-17,San Marino Football Federation,San Marino,0.499
+2016-17,Gibraltar Football Association,Gibraltar,0.25
+2016-17,Football Federation of Kosovo,Kosovo,0.0
+2017-18,Royal Spanish Football Federation,Spain,105.713
+2017-18,German Football Association,Germany,80.177
+2017-18,The Football Association,England,76.284
+2017-18,Italian Football Federation,Italy,70.439
+2017-18,Portuguese Football Federation,Portugal,53.082
+2017-18,French Football Federation,France,52.749
+2017-18,Russian Football Union,Russia,51.082
+2017-18,Ukrainian Association of Football,Ukraine,44.883
+2017-18,Royal Belgian Football Association,Belgium,40.0
+2017-18,Royal Dutch Football Association,Netherlands,35.563
+2017-18,Turkish Football Federation,Turkey,34.6
+2017-18,Swiss Football Association,Switzerland,33.775
+2017-18,Football Association of the Czech Republic,Czech Republic,32.925
+2017-18,Hellenic Football Federation,Greece,29.7
+2017-18,Romanian Football Federation,Romania,25.383
+2017-18,Austrian Football Association,Austria,25.1
+2017-18,Croatian Football Federation,Croatia,23.875
+2017-18,Polish Football Association,Poland,22.5
+2017-18,Cyprus Football Association,Cyprus,22.175
+2017-18,Football Federation of Belarus,Belarus,20.0
+2017-18,Swedish Football Association,Sweden,19.875
+2017-18,Norwegian Football Federation,Norway,19.25
+2017-18,Israel Football Association,Israel,18.625
+2017-18,Danish Football Association,Denmark,18.6
+2017-18,Scottish Football Association,Scotland,17.3
+2017-18,Association of Football Federations of Azerbaijan,Azerbaijan,14.875
+2017-18,Football Association of Serbia,Serbia,14.625
+2017-18,Kazakhstan Football Federation,Kazakhstan,14.125
+2017-18,Bulgarian Football Union,Bulgaria,13.125
+2017-18,Football Association of Slovenia,Slovenia,13.125
+2017-18,Slovak Football Association,Slovakia,12.0
+2017-18,Liechtenstein Football Association,Liechtenstein,10.5
+2017-18,Hungarian Football Federation,Hungary,9.875
+2017-18,Moldovan Football Federation,Moldova,9.125
+2017-18,Football Association of Iceland,Iceland,8.75
+2017-18,Georgian Football Federation,Georgia,8.125
+2017-18,Football Association of Finland,Finland,7.4
+2017-18,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,7.125
+2017-18,Albanian Football Federation,Albania,6.625
+2017-18,Football Federation of Macedonia,Macedonia,6.0
+2017-18,Football Association of Ireland,Republic of Ireland,5.45
+2017-18,Latvian Football Federation,Latvia,5.375
+2017-18,Luxembourg Football Federation,Luxembourg,5.25
+2017-18,Football Association of Montenegro,Montenegro,4.875
+2017-18,Lithuanian Football Federation,Lithuania,4.625
+2017-18,Irish Football Association,Northern Ireland,4.5
+2017-18,Estonian Football Association,Estonia,4.25
+2017-18,Football Federation of Armenia,Armenia,4.125
+2017-18,Faroe Islands Football Association,Faroe Islands,3.625
+2017-18,Malta Football Association,Malta,3.583
+2017-18,Football Association of Wales,Wales,3.5
+2017-18,Gibraltar Football Association,Gibraltar,1.0
+2017-18,Andorran Football Federation,Andorra,0.999
+2017-18,San Marino Football Federation,San Marino,0.333
+2017-18,Football Federation of Kosovo,Kosovo,0.0
+2018-19,Royal Spanish Football Federation,Spain,104.998
+2018-19,German Football Association,Germany,79.498
+2018-19,The Football Association,England,75.962
+2018-19,Italian Football Federation,Italy,73.332
+2018-19,French Football Federation,France,56.665
+2018-19,Russian Football Union,Russia,50.532
+2018-19,Portuguese Football Federation,Portugal,49.332
+2018-19,Ukrainian Association of Football,Ukraine,42.633
+2018-19,Royal Belgian Football Association,Belgium,42.4
+2018-19,Turkish Football Federation,Turkey,39.2
+2018-19,Football Association of the Czech Republic,Czech Republic,33.175
+2018-19,Swiss Football Association,Switzerland,32.075
+2018-19,Royal Dutch Football Association,Netherlands,31.063
+2018-19,Hellenic Football Federation,Greece,27.9
+2018-19,Austrian Football Association,Austria,25.35
+2018-19,Croatian Football Federation,Croatia,25.25
+2018-19,Romanian Football Federation,Romania,24.35
+2018-19,Danish Football Association,Denmark,24.0
+2018-19,Football Federation of Belarus,Belarus,19.875
+2018-19,Polish Football Association,Poland,19.75
+2018-19,Swedish Football Association,Sweden,19.725
+2018-19,Israel Football Association,Israel,19.375
+2018-19,Scottish Football Association,Scotland,18.925
+2018-19,Cyprus Football Association,Cyprus,18.55
+2018-19,Norwegian Football Federation,Norway,18.325
+2018-19,Association of Football Federations of Azerbaijan,Azerbaijan,17.75
+2018-19,Bulgarian Football Union,Bulgaria,15.875
+2018-19,Football Association of Serbia,Serbia,15.375
+2018-19,Kazakhstan Football Federation,Kazakhstan,15.25
+2018-19,Football Association of Slovenia,Slovenia,13.125
+2018-19,Slovak Football Association,Slovakia,11.75
+2018-19,Liechtenstein Football Association,Liechtenstein,11.0
+2018-19,Hungarian Football Federation,Hungary,9.5
+2018-19,Moldovan Football Federation,Moldova,9.5
+2018-19,Football Association of Iceland,Iceland,8.375
+2018-19,Football Association of Finland,Finland,7.65
+2018-19,Albanian Football Federation,Albania,6.625
+2018-19,Football Association of Ireland,Republic of Ireland,6.575
+2018-19,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,6.5
+2018-19,Georgian Football Federation,Georgia,6.375
+2018-19,Latvian Football Federation,Latvia,6.125
+2018-19,Football Federation of Macedonia,Macedonia,5.625
+2018-19,Estonian Football Association,Estonia,5.25
+2018-19,Football Association of Montenegro,Montenegro,5.25
+2018-19,Football Federation of Armenia,Armenia,5.125
+2018-19,Luxembourg Football Federation,Luxembourg,4.875
+2018-19,Irish Football Association,Northern Ireland,4.5
+2018-19,Lithuanian Football Federation,Lithuania,4.125
+2018-19,Malta Football Association,Malta,4.0
+2018-19,Football Association of Wales,Wales,3.875
+2018-19,Faroe Islands Football Association,Faroe Islands,3.5
+2018-19,Gibraltar Football Association,Gibraltar,2.5
+2018-19,Andorran Football Federation,Andorra,1.165
+2018-19,San Marino Football Federation,San Marino,0.333
+2018-19,Football Federation of Kosovo,Kosovo,0.0
+2019-20,Royal Spanish Football Federation,Spain,106.998
+2019-20,The Football Association,England,79.605
+2019-20,Italian Football Federation,Italy,76.249
+2019-20,German Football Association,Germany,71.427
+2019-20,French Football Federation,France,56.415
+2019-20,Russian Football Union,Russia,53.382
+2019-20,Portuguese Football Federation,Portugal,47.248
+2019-20,Ukrainian Association of Football,Ukraine,41.133
+2019-20,Royal Belgian Football Association,Belgium,38.5
+2019-20,Turkish Football Federation,Turkey,35.8
+2019-20,Austrian Football Association,Austria,32.85
+2019-20,Swiss Football Association,Switzerland,30.2
+2019-20,Football Association of the Czech Republic,Czech Republic,30.175
+2019-20,Royal Dutch Football Association,Netherlands,29.749
+2019-20,Hellenic Football Federation,Greece,28.6
+2019-20,Croatian Football Federation,Croatia,26.0
+2019-20,Danish Football Association,Denmark,25.95
+2019-20,Israel Football Association,Israel,21.75
+2019-20,Cyprus Football Association,Cyprus,21.55
+2019-20,Romanian Football Federation,Romania,20.45
+2019-20,Polish Football Association,Poland,20.125
+2019-20,Swedish Football Association,Sweden,19.975
+2019-20,Association of Football Federations of Azerbaijan,Azerbaijan,19.125
+2019-20,Bulgarian Football Union,Bulgaria,19.125
+2019-20,Football Association of Serbia,Serbia,18.75
+2019-20,Scottish Football Association,Scotland,18.625
+2019-20,Football Federation of Belarus,Belarus,18.625
+2019-20,Kazakhstan Football Federation,Kazakhstan,18.125
+2019-20,Norwegian Football Federation,Norway,17.425
+2019-20,Football Association of Slovenia,Slovenia,14.5
+2019-20,Liechtenstein Football Association,Liechtenstein,13.0
+2019-20,Slovak Football Association,Slovakia,12.125
+2019-20,Moldovan Football Federation,Moldova,10.0
+2019-20,Albanian Football Federation,Albania,8.5
+2019-20,Football Association of Iceland,Iceland,8.25
+2019-20,Hungarian Football Federation,Hungary,8.125
+2019-20,Football Federation of Macedonia,North Macedonia,7.5
+2019-20,Football Association of Finland,Finland,6.9
+2019-20,Football Association of Ireland,Republic of Ireland,6.7
+2019-20,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,6.625
+2019-20,Latvian Football Federation,Latvia,5.625
+2019-20,Estonian Football Association,Estonia,5.5
+2019-20,Lithuanian Football Federation,Lithuania,5.375
+2019-20,Football Association of Montenegro,Montenegro,5.0
+2019-20,Georgian Football Federation,Georgia,5.0
+2019-20,Football Federation of Armenia,Armenia,4.875
+2019-20,Malta Football Association,Malta,4.5
+2019-20,Luxembourg Football Federation,Luxembourg,4.375
+2019-20,Irish Football Association,Northern Ireland,4.25
+2019-20,Football Association of Wales,Wales,3.875
+2019-20,Faroe Islands Football Association,Faroe Islands,3.75
+2019-20,Gibraltar Football Association,Gibraltar,3.0
+2019-20,Andorran Football Federation,Andorra,1.331
+2019-20,San Marino Football Federation,San Marino,0.499
+2019-20,Football Federation of Kosovo,Kosovo,0.0
+2020-21,Royal Spanish Football Federation,Spain,103.569
+2020-21,The Football Association,England,85.462
+2020-21,Italian Football Federation,Italy,74.725
+2020-21,German Football Association,Germany,71.927
+2020-21,French Football Federation,France,58.498
+2020-21,Russian Football Union,Russia,50.549
+2020-21,Portuguese Football Federation,Portugal,48.232
+2020-21,Royal Belgian Football Association,Belgium,39.9
+2020-21,Ukrainian Association of Football,Ukraine,38.9
+2020-21,Turkish Football Federation,Turkey,34.6
+2020-21,Royal Dutch Football Association,Netherlands,32.433
+2020-21,Austrian Football Association,Austria,31.25
+2020-21,Football Association of the Czech Republic,Czech Republic,28.675
+2020-21,Hellenic Football Federation,Greece,27.6
+2020-21,Croatian Football Federation,Croatia,27.375
+2020-21,Danish Football Association,Denmark,27.025
+2020-21,Swiss Football Association,Switzerland,26.9
+2020-21,Cyprus Football Association,Cyprus,24.925
+2020-21,Football Association of Serbia,Serbia,22.25
+2020-21,Scottish Football Association,Scotland,22.125
+2020-21,Football Federation of Belarus,Belarus,21.875
+2020-21,Swedish Football Association,Sweden,20.9
+2020-21,Norwegian Football Federation,Norway,20.2
+2020-21,Kazakhstan Football Federation,Kazakhstan,19.25
+2020-21,Polish Football Association,Poland,19.25
+2020-21,Association of Football Federations of Azerbaijan,Azerbaijan,19.0
+2020-21,Israel Football Association,Israel,18.625
+2020-21,Bulgarian Football Union,Bulgaria,17.5
+2020-21,Romanian Football Federation,Romania,15.95
+2020-21,Slovak Football Association,Slovakia,15.625
+2020-21,Football Association of Slovenia,Slovenia,15.0
+2020-21,Liechtenstein Football Association,Liechtenstein,13.5
+2020-21,Hungarian Football Federation,Hungary,10.5
+2020-21,Football Federation of Macedonia,North Macedonia,8.0
+2020-21,Moldovan Football Federation,Moldova,7.75
+2020-21,Albanian Football Federation,Albania,7.5
+2020-21,Football Association of Ireland,Republic of Ireland,7.45
+2020-21,Football Association of Finland,Finland,7.275
+2020-21,Football Association of Iceland,Iceland,7.25
+2020-21,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,7.125
+2020-21,Lithuanian Football Federation,Lithuania,6.75
+2020-21,Latvian Football Federation,Latvia,5.625
+2020-21,Luxembourg Football Federation,Luxembourg,5.5
+2020-21,Football Federation of Armenia,Armenia,5.25
+2020-21,Malta Football Association,Malta,5.125
+2020-21,Estonian Football Association,Estonia,5.0
+2020-21,Georgian Football Federation,Georgia,4.75
+2020-21,Football Association of Wales,Wales,4.125
+2020-21,Football Association of Montenegro,Montenegro,4.125
+2020-21,Faroe Islands Football Association,Faroe Islands,4.0
+2020-21,Gibraltar Football Association,Gibraltar,4.0
+2020-21,Irish Football Association,Northern Ireland,3.875
+2020-21,Football Federation of Kosovo,Kosovo,2.5
+2020-21,Andorran Football Federation,Andorra,1.831
+2020-21,San Marino Football Federation,San Marino,0.666
+2021-22,Royal Spanish Football Federation,Spain,102.283
+2021-22,The Football Association,England,90.462
+2021-22,German Football Association,Germany,74.784
+2021-22,Italian Football Federation,Italy,70.653
+2021-22,French Football Federation,France,59.248
+2021-22,Portuguese Football Federation,Portugal,49.449
+2021-22,Russian Football Union,Russia,45.549
+2021-22,Royal Belgian Football Association,Belgium,37.9
+2021-22,Ukrainian Association of Football,Ukraine,36.1
+2021-22,Royal Dutch Football Association,Netherlands,35.75
+2021-22,Turkish Football Federation,Turkey,33.6
+2021-22,Austrian Football Association,Austria,32.925
+2021-22,Danish Football Association,Denmark,29.25
+2021-22,Scottish Football Association,Scotland,27.875
+2021-22,Football Association of the Czech Republic,Czech Republic,27.3
+2021-22,Cyprus Football Association,Cyprus,26.75
+2021-22,Swiss Football Association,Switzerland,26.4
+2021-22,Hellenic Football Federation,Greece,26.3
+2021-22,Football Association of Serbia,Serbia,25.5
+2021-22,Croatian Football Federation,Croatia,24.875
+2021-22,Swedish Football Association,Sweden,22.75
+2021-22,Norwegian Football Federation,Norway,21.75
+2021-22,Israel Football Association,Israel,19.625
+2021-22,Kazakhstan Football Federation,Kazakhstan,19.25
+2021-22,Football Federation of Belarus,Belarus,18.875
+2021-22,Association of Football Federations of Azerbaijan,Azerbaijan,18.75
+2021-22,Bulgarian Football Union,Bulgaria,17.375
+2021-22,Romanian Football Federation,Romania,16.7
+2021-22,Polish Football Association,Poland,16.625
+2021-22,Slovak Football Association,Slovakia,15.875
+2021-22,Liechtenstein Football Association,Liechtenstein,13.5
+2021-22,Football Association of Slovenia,Slovenia,13.0
+2021-22,Hungarian Football Federation,Hungary,12.875
+2021-22,Luxembourg Football Federation,Luxembourg,8.0
+2021-22,Lithuanian Football Federation,Lithuania,7.875
+2021-22,Football Federation of Armenia,Armenia,7.625
+2021-22,Latvian Football Federation,Latvia,7.625
+2021-22,Albanian Football Federation,Albania,7.375
+2021-22,Football Federation of Macedonia,North Macedonia,7.375
+2021-22,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,6.875
+2021-22,Moldovan Football Federation,Moldova,6.75
+2021-22,Football Association of Ireland,Republic of Ireland,6.7
+2021-22,Football Association of Finland,Finland,6.5
+2021-22,Georgian Football Federation,Georgia,5.75
+2021-22,Malta Football Association,Malta,5.75
+2021-22,Football Association of Iceland,Iceland,5.375
+2021-22,Football Association of Wales,Wales,5.0
+2021-22,Irish Football Association,Northern Ireland,4.875
+2021-22,Gibraltar Football Association,Gibraltar,4.75
+2021-22,Football Association of Montenegro,Montenegro,4.375
+2021-22,Estonian Football Association,Estonia,4.375
+2021-22,Football Federation of Kosovo,Kosovo,4.0
+2021-22,Faroe Islands Football Association,Faroe Islands,3.75
+2021-22,Andorran Football Federation,Andorra,2.831
+2021-22,San Marino Football Federation,San Marino,0.666
+2022-23,The Football Association,England,100.569
+2022-23,Royal Spanish Football Federation,Spain,97.855
+2022-23,Italian Football Federation,Italy,75.438
+2022-23,German Football Association,Germany,73.57
+2022-23,French Football Federation,France,56.081
+2022-23,Portuguese Football Federation,Portugal,48.549
+2022-23,Royal Dutch Football Association,Netherlands,39.2
+2022-23,Russian Football Union,Russia,38.382
+2022-23,Royal Belgian Football Association,Belgium,36.5
+2022-23,Austrian Football Association,Austria,35.825
+2022-23,Scottish Football Association,Scotland,33.375
+2022-23,Ukrainian Association of Football,Ukraine,33.1
+2022-23,Turkish Football Federation,Turkey,30.1
+2022-23,Danish Football Association,Denmark,27.875
+2022-23,Cyprus Football Association,Cyprus,27.75
+2022-23,Football Association of Serbia,Serbia,26.75
+2022-23,Football Association of the Czech Republic,Czech Republic,26.6
+2022-23,Croatian Football Federation,Croatia,26.275
+2022-23,Swiss Football Association,Switzerland,26.225
+2022-23,Hellenic Football Federation,Greece,26.0
+2022-23,Israel Football Association,Israel,24.375
+2022-23,Norwegian Football Federation,Norway,21.0
+2022-23,Swedish Football Association,Sweden,20.5
+2022-23,Bulgarian Football Union,Bulgaria,20.375
+2022-23,Romanian Football Federation,Romania,18.2
+2022-23,Association of Football Federations of Azerbaijan,Azerbaijan,16.875
+2022-23,Kazakhstan Football Federation,Kazakhstan,15.625
+2022-23,Hungarian Football Federation,Hungary,15.5
+2022-23,Football Federation of Belarus,Belarus,15.25
+2022-23,Polish Football Association,Poland,15.125
+2022-23,Football Association of Slovenia,Slovenia,14.25
+2022-23,Slovak Football Association,Slovakia,13.625
+2022-23,Liechtenstein Football Association,Liechtenstein,9.0
+2022-23,Lithuanian Football Federation,Lithuania,8.75
+2022-23,Luxembourg Football Federation,Luxembourg,8.25
+2022-23,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,8.0
+2022-23,Football Association of Ireland,Republic of Ireland,7.875
+2022-23,Football Federation of Macedonia,North Macedonia,7.625
+2022-23,Football Federation of Armenia,Armenia,7.375
+2022-23,Latvian Football Federation,Latvia,7.375
+2022-23,Albanian Football Federation,Albania,7.25
+2022-23,Irish Football Association,Northern Ireland,6.958
+2022-23,Georgian Football Federation,Georgia,6.875
+2022-23,Football Association of Finland,Finland,6.875
+2022-23,Moldovan Football Federation,Moldova,6.875
+2022-23,Malta Football Association,Malta,6.375
+2022-23,Faroe Islands Football Association,Faroe Islands,6.125
+2022-23,Football Federation of Kosovo,Kosovo,5.833
+2022-23,Gibraltar Football Association,Gibraltar,5.666
+2022-23,Football Association of Montenegro,Montenegro,5.0
+2022-23,Football Association of Wales,Wales,5.0
+2022-23,Football Association of Iceland,Iceland,4.875
+2022-23,Estonian Football Association,Estonia,4.75
+2022-23,Andorran Football Federation,Andorra,3.331
+2022-23,San Marino Football Federation,San Marino,1.166
+2023-24,The Football Association,England,106.641
+2023-24,Royal Spanish Football Federation,Spain,96.141
+2023-24,Italian Football Federation,Italy,76.902
+2023-24,German Football Association,Germany,75.213
+2023-24,French Football Federation,France,60.081
+2023-24,Portuguese Football Federation,Portugal,53.382
+2023-24,Royal Dutch Football Association,Netherlands,49.3
+2023-24,Austrian Football Association,Austria,38.85
+2023-24,Scottish Football Association,Scotland,36.9
+2023-24,Russian Football Union,Russia,34.482
+2023-24,Football Association of Serbia,Serbia,33.375
+2023-24,Ukrainian Association of Football,Ukraine,31.8
+2023-24,Royal Belgian Football Association,Belgium,30.6
+2023-24,Swiss Football Association,Switzerland,29.675
+2023-24,Hellenic Football Federation,Greece,28.2
+2023-24,Football Association of the Czech Republic,Czech Republic,27.8
+2023-24,Norwegian Football Federation,Norway,27.25
+2023-24,Danish Football Association,Denmark,27.175
+2023-24,Croatian Football Federation,Croatia,27.15
+2023-24,Turkish Football Federation,Turkey,27.1
+2023-24,Cyprus Football Association,Cyprus,26.375
+2023-24,Israel Football Association,Israel,24.375
+2023-24,Swedish Football Association,Sweden,22.875
+2023-24,Bulgarian Football Union,Bulgaria,19.5
+2023-24,Romanian Football Federation,Romania,17.15
+2023-24,Association of Football Federations of Azerbaijan,Azerbaijan,17.0
+2023-24,Hungarian Football Federation,Hungary,16.375
+2023-24,Polish Football Association,Poland,15.875
+2023-24,Kazakhstan Football Federation,Kazakhstan,15.75
+2023-24,Slovak Football Association,Slovakia,15.625
+2023-24,Football Association of Slovenia,Slovenia,15.0
+2023-24,Football Federation of Belarus,Belarus,12.5
+2023-24,Moldovan Football Federation,Moldova,11.25
+2023-24,Lithuanian Football Federation,Lithuania,10.0
+2023-24,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,9.125
+2023-24,Football Association of Finland,Finland,8.875
+2023-24,Luxembourg Football Federation,Luxembourg,8.75
+2023-24,Latvian Football Federation,Latvia,8.625
+2023-24,Football Federation of Kosovo,Kosovo,8.166
+2023-24,Football Association of Ireland,Republic of Ireland,8.125
+2023-24,Football Federation of Armenia,Armenia,8.125
+2023-24,Irish Football Association,Northern Ireland,8.083
+2023-24,Albanian Football Federation,Albania,8.0
+2023-24,Faroe Islands Football Association,Faroe Islands,7.25
+2023-24,Estonian Football Association,Estonia,7.041
+2023-24,Malta Football Association,Malta,7.0
+2023-24,Georgian Football Federation,Georgia,7.0
+2023-24,Football Federation of Macedonia,North Macedonia,7.0
+2023-24,Liechtenstein Football Association,Liechtenstein,6.5
+2023-24,Football Association of Wales,Wales,5.5
+2023-24,Gibraltar Football Association,Gibraltar,5.416
+2023-24,Football Association of Iceland,Iceland,5.375
+2023-24,Football Association of Montenegro,Montenegro,4.875
+2023-24,Andorran Football Federation,Andorra,4.665
+2023-24,San Marino Football Federation,San Marino,1.332
+2024-25,The Football Association,England,109.57
+2024-25,Royal Spanish Football Federation,Spain,92.998
+2024-25,German Football Association,Germany,82.481
+2024-25,Italian Football Federation,Italy,81.926
+2024-25,French Football Federation,France,61.164
+2024-25,Royal Dutch Football Association,Netherlands,59.9
+2024-25,Portuguese Football Federation,Portugal,56.216
+2024-25,Royal Belgian Football Association,Belgium,42.2
+2024-25,Scottish Football Association,Scotland,36.4
+2024-25,Austrian Football Association,Austria,34.0
+2024-25,Football Association of Serbia,Serbia,32.375
+2024-25,Turkish Football Federation,Turkey,32.1
+2024-25,Swiss Football Association,Switzerland,31.675
+2024-25,Ukrainian Association of Football,Ukraine,29.5
+2024-25,Football Association of the Czech Republic,Czech Republic,29.05
+2024-25,Norwegian Football Federation,Norway,29.0
+2024-25,Danish Football Association,Denmark,27.825
+2024-25,Russian Football Union,Russia,26.215
+2024-25,Croatian Football Federation,Croatia,25.4
+2024-25,Hellenic Football Federation,Greece,25.225
+2024-25,Israel Football Association,Israel,25.0
+2024-25,Cyprus Football Association,Cyprus,24.475
+2024-25,Swedish Football Association,Sweden,23.75
+2024-25,Polish Football Association,Poland,20.75
+2024-25,Hungarian Football Federation,Hungary,20.625
+2024-25,Romanian Football Federation,Romania,20.5
+2024-25,Bulgarian Football Union,Bulgaria,20.0
+2024-25,Slovak Football Association,Slovakia,19.75
+2024-25,Association of Football Federations of Azerbaijan,Azerbaijan,16.625
+2024-25,Kazakhstan Football Federation,Kazakhstan,12.625
+2024-25,Football Association of Slovenia,Slovenia,12.5
+2024-25,Moldovan Football Federation,Moldova,12.25
+2024-25,Football Federation of Kosovo,Kosovo,11.041
+2024-25,Liechtenstein Football Association,Liechtenstein,11.0
+2024-25,Latvian Football Federation,Latvia,10.625
+2024-25,Football Association of Ireland,Republic of Ireland,10.375
+2024-25,Football Association of Finland,Finland,10.2
+2024-25,Lithuanian Football Federation,Lithuania,10.0
+2024-25,Football Federation of Armenia,Armenia,9.875
+2024-25,Football Federation of Belarus,Belarus,9.875
+2024-25,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,9.75
+2024-25,Luxembourg Football Federation,Luxembourg,9.0
+2024-25,Faroe Islands Football Association,Faroe Islands,8.75
+2024-25,Irish Football Association,Northern Ireland,8.583
+2024-25,Malta Football Association,Malta,8.25
+2024-25,Georgian Football Federation,Georgia,8.0
+2024-25,Estonian Football Association,Estonia,7.582
+2024-25,Football Association of Iceland,Iceland,7.25
+2024-25,Albanian Football Federation,Albania,6.25
+2024-25,Football Association of Wales,Wales,6.166
+2024-25,Gibraltar Football Association,Gibraltar,5.791
+2024-25,Football Federation of Macedonia,North Macedonia,5.5
+2024-25,Andorran Football Federation,Andorra,5.165
+2024-25,Football Association of Montenegro,Montenegro,4.75
+2024-25,San Marino Football Federation,San Marino,1.999
+2025-26,The Football Association,England,104.303
+2025-26,Italian Football Federation,Italy,90.284
+2025-26,Royal Spanish Football Federation,Spain,89.489
+2025-26,German Football Association,Germany,86.624
+2025-26,French Football Federation,France,66.831
+2025-26,Royal Dutch Football Association,Netherlands,61.3
+2025-26,Portuguese Football Federation,Portugal,56.316
+2025-26,Royal Belgian Football Association,Belgium,48.8
+2025-26,Turkish Football Federation,Turkey,38.6
+2025-26,Football Association of the Czech Republic,Czech Republic,36.05
+2025-26,Scottish Football Association,Scotland,36.05
+2025-26,Swiss Football Association,Switzerland,32.975
+2025-26,Austrian Football Association,Austria,32.6
+2025-26,Norwegian Football Federation,Norway,31.625
+2025-26,Hellenic Football Federation,Greece,31.525
+2025-26,Danish Football Association,Denmark,31.45
+2025-26,Israel Football Association,Israel,31.125
+2025-26,Ukrainian Association of Football,Ukraine,28.0
+2025-26,Football Association of Serbia,Serbia,27.775
+2025-26,Croatian Football Federation,Croatia,25.525
+2025-26,Polish Football Association,Poland,25.375
+2025-26,Russian Football Union,Russia,22.965
+2025-26,Cyprus Football Association,Cyprus,22.1
+2025-26,Hungarian Football Federation,Hungary,21.875
+2025-26,Swedish Football Association,Sweden,21.5
+2025-26,Romanian Football Federation,Romania,21.375
+2025-26,Bulgarian Football Union,Bulgaria,20.375
+2025-26,Association of Football Federations of Azerbaijan,Azerbaijan,20.125
+2025-26,Slovak Football Association,Slovakia,19.625
+2025-26,Football Association of Slovenia,Slovenia,13.25
+2025-26,Moldovan Football Federation,Moldova,13.125
+2025-26,Football Federation of Kosovo,Kosovo,11.541
+2025-26,Kazakhstan Football Federation,Kazakhstan,11.5
+2025-26,Football Association of Finland,Finland,11.125
+2025-26,Football Association of Ireland,Republic of Ireland,10.875
+2025-26,Football Federation of Armenia,Armenia,10.625
+2025-26,Latvian Football Federation,Latvia,10.625
+2025-26,Faroe Islands Football Association,Faroe Islands,10.375
+2025-26,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,10.0
+2025-26,Liechtenstein Football Association,Liechtenstein,10.0
+2025-26,Football Association of Iceland,Iceland,9.583
+2025-26,Irish Football Association,Northern Ireland,9.208
+2025-26,Luxembourg Football Federation,Luxembourg,8.625
+2025-26,Lithuanian Football Federation,Lithuania,8.5
+2025-26,Malta Football Association,Malta,8.25
+2025-26,Georgian Football Federation,Georgia,7.625
+2025-26,Albanian Football Federation,Albania,7.375
+2025-26,Estonian Football Association,Estonia,7.207
+2025-26,Football Federation of Belarus,Belarus,6.625
+2025-26,Football Federation of Macedonia,North Macedonia,6.0
+2025-26,Andorran Football Federation,Andorra,5.998
+2025-26,Football Association of Wales,Wales,5.791
+2025-26,Football Association of Montenegro,Montenegro,5.708
+2025-26,Gibraltar Football Association,Gibraltar,4.957
+2025-26,San Marino Football Federation,San Marino,1.832
+2026-27,The Football Association,England,115.196
+2026-27,Italian Football Federation,Italy,97.231
+2026-27,Royal Spanish Football Federation,Spain,94.453
+2026-27,German Football Association,Germany,86.331
+2026-27,French Football Federation,France,73.093
+2026-27,Royal Dutch Football Association,Netherlands,67.15
+2026-27,Portuguese Football Federation,Portugal,62.266
+2026-27,Royal Belgian Football Association,Belgium,56.85
+2026-27,Football Association of the Czech Republic,Czech Republic,44.1
+2026-27,Turkish Football Federation,Turkey,43.9
+2026-27,Norwegian Football Federation,Norway,39.687
+2026-27,Hellenic Football Federation,Greece,39.312
+2026-27,Austrian Football Association,Austria,36.45
+2026-27,Scottish Football Association,Scotland,35.55
+2026-27,Polish Football Association,Poland,35.0
+2026-27,Danish Football Association,Denmark,33.981
+2026-27,Swiss Football Association,Switzerland,33.625
+2026-27,Israel Football Association,Israel,31.625
+2026-27,Cyprus Football Association,Cyprus,27.537
+2026-27,Swedish Football Association,Sweden,27.125
+2026-27,Croatian Football Federation,Croatia,27.025
+2026-27,Football Association of Serbia,Serbia,25.5
+2026-27,Ukrainian Association of Football,Ukraine,24.4
+2026-27,Hungarian Football Federation,Hungary,24.0
+2026-27,Romanian Football Federation,Romania,23.25
+2026-27,Russian Football Union,Russia,22.632
+2026-27,Slovak Football Association,Slovakia,21.25
+2026-27,Football Association of Slovenia,Slovenia,20.343
+2026-27,Bulgarian Football Union,Bulgaria,19.875
+2026-27,Association of Football Federations of Azerbaijan,Azerbaijan,19.625
+2026-27,Football Association of Ireland,Republic of Ireland,14.968
+2026-27,Moldovan Football Federation,Moldova,14.5
+2026-27,Football Association of Iceland,Iceland,13.52
+2026-27,Football Association of Bosnia and Herzegovina,Bosnia and Herzegovina,13.031
+2026-27,Football Federation of Armenia,Armenia,12.25
+2026-27,Latvian Football Federation,Latvia,12.25
+2026-27,Football Federation of Kosovo,Kosovo,12.041
+2026-27,Football Association of Finland,Finland,11.75
+2026-27,Kazakhstan Football Federation,Kazakhstan,11.125
+2026-27,Faroe Islands Football Association,Faroe Islands,10.75
+2026-27,Malta Football Association,Malta,8.5
+2026-27,Irish Football Association,Northern Ireland,8.333
+2026-27,Lithuanian Football Federation,Lithuania,8.25
+2026-27,Liechtenstein Football Association,Liechtenstein,8.0
+2026-27,Estonian Football Association,Estonia,7.957
+2026-27,Albanian Football Federation,Albania,7.875
+2026-27,Football Association of Montenegro,Montenegro,7.208
+2026-27,Luxembourg Football Federation,Luxembourg,6.875
+2026-27,Football Association of Wales,Wales,6.791
+2026-27,Georgian Football Federation,Georgia,6.625
+2026-27,Football Federation of Macedonia,North Macedonia,6.166
+2026-27,Football Federation of Belarus,Belarus,6.0
+2026-27,Andorran Football Federation,Andorra,5.498
+2026-27,Gibraltar Football Association,Gibraltar,5.457
+2026-27,San Marino Football Federation,San Marino,2.498

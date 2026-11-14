@@ -1,0 +1,2594 @@
+season,team,name,association,coefficient
+2016-17,1. FSV Mainz 05,Mainz 05,German Football Association,18.035
+2016-17,AC Omonia,Omonia,Cyprus Football Association,9.935
+2016-17,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,40.585
+2016-17,ACF Fiorentina,Fiorentina,Italian Football Federation,57.087
+2016-17,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,7.94
+2016-17,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,9.435
+2016-17,AFC Ajax,Ajax,Royal Dutch Football Association,58.112
+2016-17,AIK Fotboll,AIK,Swedish Football Association,8.975
+2016-17,APOEL FC,APOEL,Cyprus Football Association,35.935
+2016-17,AS Monaco FC,Monaco,French Football Federation,36.549
+2016-17,AS Roma,Roma,Italian Football Federation,41.587
+2016-17,AS Saint-Étienne,Saint-Étienne,French Football Federation,26.049
+2016-17,AS Trenčín,Trenčín,Slovak Football Association,5.4
+2016-17,AZ Alkmaar,AZ,Royal Dutch Football Association,43.612
+2016-17,Aberdeen F.C.,Aberdeen,Scottish Football Association,5.46
+2016-17,Admira Wacker,Admira Wacker Mödling,Austrian Football Association,6.02
+2016-17,Ankaraspor,Osmanlıspor,Turkish Football Federation,6.92
+2016-17,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,10.435
+2016-17,Arsenal F.C.,Arsenal,The Football Association,105.256
+2016-17,Athletic Bilbao,Athletic Bilbao,Royal Spanish Football Federation,75.142
+2016-17,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,144.142
+2016-17,B36 Tórshavn,B36,Faroe Islands Football Association,1.975
+2016-17,BK Häcken,BK Häcken,Swedish Football Association,5.975
+2016-17,BSC Young Boys,Young Boys,Swiss Football Association,24.755
+2016-17,Bala Town F.C.,Bala Town,Football Association of Wales,1.2
+2016-17,Balzan F.C.,Balzan,Malta Football Association,0.966
+2016-17,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,89.035
+2016-17,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,4.225
+2016-17,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,34.92
+2016-17,Birkirkara F.C.,Birkirkara,Malta Football Association,2.966
+2016-17,Borussia Dortmund,Borussia Dortmund,German Football Association,110.035
+2016-17,Borussia Mönchengladbach,Borussia Mönchengladbach,German Football Association,42.035
+2016-17,Breiðablik (men's football),Breiðablik,Football Association of Iceland,3.75
+2016-17,Brøndby IF,Brøndby,Danish Football Association,7.22
+2016-17,CS Fola Esch,Fola Esch,Luxembourg Football Federation,3.55
+2016-17,CS Pandurii Târgu Jiu,Pandurii Târgu Jiu,Romanian Football Federation,7.076
+2016-17,Celtic F.C.,Celtic,Scottish Football Association,40.46
+2016-17,Cliftonville F.C.,Cliftonville,Irish Football Association,3.4
+2016-17,Club Brugge KV,Club Brugge,Royal Belgian Football Association,43.0
+2016-17,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,0.7
+2016-17,Cork City F.C.,Cork City,Football Association of Ireland,1.34
+2016-17,Crusaders F.C.,Crusaders,Irish Football Association,3.4
+2016-17,Debreceni VSC,Debrecen,Hungarian Football Federation,6.475
+2016-17,Dundalk F.C.,Dundalk,Football Association of Ireland,2.59
+2016-17,Europa F.C.,Europa,Gibraltar Football Association,0.7
+2016-17,F.C. Arouca,Arouca,Portuguese Football Federation,10.616
+2016-17,F.C. Copenhagen,Copenhagen,Danish Football Association,24.72
+2016-17,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,5.05
+2016-17,FC Aktobe,Aktobe,Kazakhstan Football Federation,8.075
+2016-17,FC Alashkert,Alashkert,Football Federation of Armenia,1.325
+2016-17,FC Astana,Astana,Kazakhstan Football Federation,12.575
+2016-17,FC Astra Giurgiu,Astra Giurgiu,Romanian Football Federation,11.076
+2016-17,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,34.0
+2016-17,FC Barcelona,Barcelona,Royal Spanish Football Federation,159.142
+2016-17,FC Basel,Basel,Swiss Football Association,87.755
+2016-17,FC Bayern Munich,Bayern Munich,German Football Association,163.035
+2016-17,FC Bălți,Zaria Bălți,Moldovan Football Federation,1.825
+2016-17,FC Chikhura Sachkhere,Chikhura Sachkhere,Georgian Football Federation,3.125
+2016-17,FC Dacia Chișinău,Dacia Chișinău,Moldovan Football Federation,4.325
+2016-17,FC Differdange 03,Differdange 03,Luxembourg Football Federation,4.8
+2016-17,FC Dila Gori,Dila Gori,Georgian Football Federation,5.625
+2016-17,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,10.0
+2016-17,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,5.875
+2016-17,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,65.976
+2016-17,FC Flora,Flora,Estonian Football Association,3.35
+2016-17,FC Kairat,Kairat,Kazakhstan Football Federation,4.825
+2016-17,FC Krasnodar,Krasnodar,Russian Football Union,24.216
+2016-17,FC Lusitanos,Lusitanos,Andorran Football Federation,1.699
+2016-17,FC Luzern,Luzern,Swiss Football Association,8.775
+2016-17,FC Midtjylland,Midtjylland,Danish Football Association,14.72
+2016-17,FC Oleksandriya,Oleksandriya,Ukrainian Association of Football,8.976
+2016-17,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,3.575
+2016-17,FC Politehnica Iași (2010),CSM Politehnica Iași,Romanian Football Federation,5.076
+2016-17,FC Porto,Porto,Portuguese Football Federation,92.616
+2016-17,FC Pyunik,Pyunik,Football Federation of Armenia,3.825
+2016-17,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,42.52
+2016-17,FC Rostov,Rostov,Russian Football Union,11.716
+2016-17,FC Samtredia,Samtredia,Georgian Football Federation,1.625
+2016-17,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,2.699
+2016-17,FC Schalke 04,Schalke 04,German Football Association,96.035
+2016-17,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,81.976
+2016-17,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,7.5
+2016-17,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,10.575
+2016-17,FC Slovan Liberec,Slovan Liberec,Football Association of the Czech Republic,22.085
+2016-17,FC Spartak Moscow,Spartak Moscow,Russian Football Union,19.216
+2016-17,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,7.4
+2016-17,FC Torpedo-BelAZ Zhodino,Torpedo-BelAZ Zhodino,Football Federation of Belarus,4.25
+2016-17,FC Urartu,Banants,Football Federation of Armenia,1.575
+2016-17,FC Vaduz,Vaduz,Liechtenstein Football Association,4.85
+2016-17,FC Viitorul Constanța,Viitorul Constanța,Romanian Football Federation,5.076
+2016-17,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,44.585
+2016-17,FC Vorskla Poltava,Vorskla Poltava,Ukrainian Association of Football,11.976
+2016-17,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,93.216
+2016-17,FC Zimbru Chișinău,Zimbru Chișinău,Moldovan Football Federation,3.825
+2016-17,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,11.976
+2016-17,FC Zürich,Zürich,Swiss Football Association,17.755
+2016-17,FCI Levadia Tallinn,Levadia Tallinn,Estonian Football Association,3.85
+2016-17,FCI Tallinn,Infonet Tallinn,Estonian Football Association,0.85
+2016-17,FCSB,Steaua București,Romanian Football Federation,36.576
+2016-17,FH (men's football),FH,Football Association of Iceland,5.75
+2016-17,FK Atlantas,Atlantas,Lithuanian Football Federation,1.675
+2016-17,FK Austria Wien,Austria Wien,Austrian Football Association,19.02
+2016-17,FK Bokelj,Bokelj,Football Association of Montenegro,0.975
+2016-17,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,2.975
+2016-17,FK Jelgava,Jelgava,Latvian Football Federation,1.825
+2016-17,FK Kukësi,Kukësi,Albanian Football Federation,4.075
+2016-17,FK Liepāja,Liepāja,Latvian Football Federation,1.075
+2016-17,FK Mladá Boleslav,Mladá Boleslav,Football Association of the Czech Republic,10.085
+2016-17,FK Partizan,Partizan,Football Association of Serbia,16.925
+2016-17,FK Partizani Tirana,Partizani,Albanian Football Federation,1.575
+2016-17,FK Rabotnichki,Rabotnicki,Football Federation of Macedonia,5.2
+2016-17,FK Radnik Bijeljina,Radnik Bijeljina,Football Association of Bosnia and Herzegovina,1.425
+2016-17,FK Riteriai,Trakai,Lithuanian Football Federation,1.425
+2016-17,FK Rudar Pljevlja,Rudar Pljevlja,Football Association of Montenegro,3.225
+2016-17,FK Sileks,Sileks,Football Federation of Macedonia,1.2
+2016-17,FK Sloboda Tuzla,Sloboda Tuzla,Football Association of Bosnia and Herzegovina,1.425
+2016-17,FK Spartaks Jūrmala,Spartaks Jūrmala,Latvian Football Federation,1.575
+2016-17,FK Sūduva,Sūduva,Lithuanian Football Federation,2.175
+2016-17,FK Vardar,Vardar,Football Federation of Macedonia,4.2
+2016-17,FK Ventspils,Ventspils,Latvian Football Federation,6.075
+2016-17,FK Vojvodina,Vojvodina,Football Association of Serbia,7.925
+2016-17,FK Čukarički,Čukarički,Football Association of Serbia,3.925
+2016-17,FK Žalgiris,Žalgiris,Lithuanian Football Federation,4.925
+2016-17,Fehérvár FC,Videoton,Hungarian Football Federation,8.725
+2016-17,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,40.92
+2016-17,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,3.475
+2016-17,Feyenoord,Feyenoord,Royal Dutch Football Association,19.112
+2016-17,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,25.775
+2016-17,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,5.225
+2016-17,Glenavon F.C.,Glenavon,Irish Football Association,1.4
+2016-17,Grasshopper Club Zurich,Grasshopper,Swiss Football Association,9.755
+2016-17,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,10.775
+2016-17,HNK Rijeka,Rijeka,Croatian Football Federation,14.275
+2016-17,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,4.725
+2016-17,Havnar Bóltfelag,HB,Faroe Islands Football Association,3.225
+2016-17,Heart of Midlothian F.C.,Heart of Midlothian,Scottish Football Association,6.46
+2016-17,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,10.98
+2016-17,Heracles Almelo,Heracles Almelo,Royal Dutch Football Association,7.112
+2016-17,Hertha BSC,Hertha BSC,German Football Association,16.035
+2016-17,Hibernian F.C.,Hibernian,Scottish Football Association,3.96
+2016-17,Hibernians F.C.,Hibernians,Malta Football Association,2.466
+2016-17,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,3.175
+2016-17,IFK Göteborg,IFK Göteborg,Swedish Football Association,6.475
+2016-17,IFK Mariehamn,Mariehamn,Football Association of Finland,1.73
+2016-17,IFK Norrköping,IFK Norrköping,Swedish Football Association,3.975
+2016-17,Inter Milan,Internazionale,Italian Football Federation,58.087
+2016-17,Jeunesse Esch,Jeunesse Esch,Luxembourg Football Federation,2.05
+2016-17,Juventus FC,Juventus,Italian Football Federation,107.087
+2016-17,KAA Gent,Gent,Royal Belgian Football Association,25.0
+2016-17,KF Shkëndija,Shkëndija,Football Federation of Macedonia,2.95
+2016-17,KF Teuta,Teuta,Albanian Football Federation,1.825
+2016-17,KRC Genk,Genk,Royal Belgian Football Association,36.0
+2016-17,KS Cracovia,Cracovia,Polish Football Association,4.5
+2016-17,Kapaz PFK,Kapaz,Association of Football Federations of Azerbaijan,2.975
+2016-17,Knattspyrnufélag Reykjavíkur,KR,Football Association of Iceland,5.75
+2016-17,Konyaspor,Konyaspor,Turkish Football Federation,6.92
+2016-17,Legia Warsaw,Legia Warsaw,Polish Football Association,28.0
+2016-17,Leicester City F.C.,Leicester City,The Football Association,15.256
+2016-17,Lille OSC,Lille,French Football Federation,29.549
+2016-17,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,1.7
+2016-17,Linfield F.C.,Linfield,Irish Football Association,4.4
+2016-17,Llandudno F.C.,Llandudno,Football Association of Wales,0.7
+2016-17,MTK Budapest FC,MTK Budapest,Hungarian Football Federation,2.475
+2016-17,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,11.725
+2016-17,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,20.225
+2016-17,Manchester City F.C.,Manchester City,The Football Association,99.256
+2016-17,Manchester United F.C.,Manchester United,The Football Association,82.256
+2016-17,ND Gorica,Gorica,Football Association of Slovenia,3.125
+2016-17,NK Domžale,Domžale,Football Association of Slovenia,3.625
+2016-17,NK Lokomotiva Zagreb,Lokomotiva Zagreb,Croatian Football Federation,5.775
+2016-17,NK Maribor,Maribor,Football Association of Slovenia,21.625
+2016-17,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,4.625
+2016-17,NK Široki Brijeg,Široki Brijeg,Football Association of Bosnia and Herzegovina,3.675
+2016-17,NSÍ Runavík,NSÍ,Faroe Islands Football Association,1.475
+2016-17,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,9.725
+2016-17,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,3.85
+2016-17,OFK Titograd,Mladost Podgorica,Football Association of Montenegro,2.475
+2016-17,OGC Nice,Nice,French Football Federation,12.049
+2016-17,Odds BK,Odd,Norwegian Football Federation,5.35
+2016-17,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,70.94
+2016-17,Olympique Lyonnais,Lyon,French Football Federation,63.049
+2016-17,PAOK FC,PAOK,Hellenic Football Federation,37.44
+2016-17,PAS Giannina F.C.,PAS Giannina,Hellenic Football Federation,5.94
+2016-17,PFC Beroe Stara Zagora,Beroe Stara Zagora,Bulgarian Football Union,3.625
+2016-17,PFC CSKA Moscow,CSKA Moscow,Russian Football Union,48.716
+2016-17,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,4.375
+2016-17,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,25.625
+2016-17,PFC Slavia Sofia,Slavia Sofia,Bulgarian Football Union,2.625
+2016-17,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,57.112
+2016-17,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,14.94
+2016-17,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,112.549
+2016-17,Piast Gliwice,Piast Gliwice,Polish Football Association,5.0
+2016-17,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,13.475
+2016-17,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,54.0
+2016-17,RC Celta de Vigo,Celta Vigo,Royal Spanish Football Federation,21.142
+2016-17,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,176.142
+2016-17,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,7.175
+2016-17,Rio Ave F.C.,Rio Ave,Portuguese Football Federation,13.616
+2016-17,Rosenborg BK,Rosenborg,Norwegian Football Federation,12.85
+2016-17,Rovaniemen Palloseura,RoPS,Football Association of Finland,1.98
+2016-17,S.C. Braga,Braga,Portuguese Football Federation,43.116
+2016-17,S.L. Benfica,Benfica,Portuguese Football Federation,116.616
+2016-17,SK Rapid Wien,Rapid Wien,Austrian Football Association,23.52
+2016-17,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,6.585
+2016-17,SP La Fiorita,La Fiorita,San Marino Football Federation,1.316
+2016-17,SP Tre Penne,Tre Penne,San Marino Football Federation,1.316
+2016-17,SS Folgore Falciano Calcio,Folgore,San Marino Football Federation,0.816
+2016-17,SSC Napoli,Napoli,Italian Football Federation,90.087
+2016-17,Seinäjoen Jalkapallokerho,SJK,Football Association of Finland,1.73
+2016-17,Sevilla FC,Sevilla,Royal Spanish Football Federation,95.642
+2016-17,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,4.59
+2016-17,Shirak SC,Shirak,Football Federation of Armenia,3.075
+2016-17,Southampton F.C.,Southampton,The Football Association,16.756
+2016-17,Spartak Myjava,Spartak Myjava,Slovak Football Association,2.4
+2016-17,Sporting CP,Sporting CP,Portuguese Football Federation,51.616
+2016-17,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,4.59
+2016-17,Stabæk Fotball,Stabæk,Norwegian Football Federation,4.1
+2016-17,Standard Liège,Standard Liège,Royal Belgian Football Association,27.5
+2016-17,Strømsgodset Toppfotball,Strømsgodset,Norwegian Football Federation,7.85
+2016-17,Sønderjyske Fodbold,SønderjyskE,Danish Football Association,3.72
+2016-17,The New Saints F.C.,The New Saints,Football Association of Wales,5.2
+2016-17,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,74.256
+2016-17,UE Santa Coloma,UE Santa Coloma,Andorran Football Federation,1.199
+2016-17,US Sassuolo Calcio,Sassuolo,Italian Football Federation,14.087
+2016-17,Valletta F.C.,Valletta,Malta Football Association,4.466
+2016-17,Valur (men's football),Valur,Football Association of Iceland,1.75
+2016-17,Villarreal CF,Villarreal,Royal Spanish Football Federation,60.142
+2016-17,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,2.725
+2016-17,West Ham United F.C.,West Ham United,The Football Association,16.256
+2016-17,Zagłębie Lubin,Zagłębie Lubin,Polish Football Association,4.5
+2016-17,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,7.92
+2016-17,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,8.9
+2017-18,1. FC Köln,1. FC Köln,German Football Association,15.899
+2017-18,AC Milan,Milan,Italian Football Federation,47.666
+2017-18,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,48.135
+2017-18,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,6.58
+2017-18,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,6.21
+2017-18,AEL Limassol,AEL Limassol,Cyprus Football Association,8.21
+2017-18,AFC Ajax,Ajax,Royal Dutch Football Association,67.212
+2017-18,AIK Fotboll,AIK,Swedish Football Association,9.945
+2017-18,APOEL FC,APOEL,Cyprus Football Association,26.21
+2017-18,AS Monaco FC,Monaco,French Football Federation,62.333
+2017-18,AS Roma,Roma,Italian Football Federation,53.666
+2017-18,AS Trenčín,Trenčín,Slovak Football Association,6.85
+2017-18,Aberdeen F.C.,Aberdeen,Scottish Football Association,6.785
+2017-18,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,10.71
+2017-18,Arka Gdynia,Arka Gdynia,Polish Football Association,3.95
+2017-18,Arsenal F.C.,Arsenal,The Football Association,105.192
+2017-18,Atalanta BC,Atalanta,Italian Football Federation,14.666
+2017-18,Athletic Bilbao,Athletic Bilbao,Royal Spanish Football Federation,60.999
+2017-18,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,142.999
+2017-18,B36 Tórshavn,B36,Faroe Islands Football Association,2.45
+2017-18,BSC Young Boys,Young Boys,Swiss Football Association,28.915
+2017-18,Bala Town F.C.,Bala Town,Football Association of Wales,1.525
+2017-18,Ballymena United F.C.,Ballymena United,Irish Football Association,0.9
+2017-18,Balzan F.C.,Balzan,Malta Football Association,1.3
+2017-18,Bangor City F.C.,Bangor City,Football Association of Wales,1.275
+2017-18,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,5.875
+2017-18,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,45.84
+2017-18,Bnei Yehuda Tel Aviv F.C.,Bnei Yehuda,Israel Football Association,4.875
+2017-18,Borussia Dortmund,Borussia Dortmund,German Football Association,124.899
+2017-18,Botev Plovdiv,Botev Plovdiv,Bulgarian Football Union,4.675
+2017-18,Brøndby IF,Brøndby,Danish Football Association,8.8
+2017-18,Budapest Honvéd FC,Honvéd,Hungarian Football Federation,2.9
+2017-18,C.S. Marítimo,Marítimo,Portuguese Football Federation,14.866
+2017-18,CS Fola Esch,Fola Esch,Luxembourg Football Federation,3.475
+2017-18,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,4.87
+2017-18,Celtic F.C.,Celtic,Scottish Football Association,42.785
+2017-18,Chelsea F.C.,Chelsea,The Football Association,106.192
+2017-18,Club Brugge KV,Club Brugge,Royal Belgian Football Association,39.48
+2017-18,Coleraine F.C.,Coleraine,Irish Football Association,0.9
+2017-18,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,1.275
+2017-18,Cork City F.C.,Cork City,Football Association of Ireland,2.565
+2017-18,Crusaders F.C.,Crusaders,Irish Football Association,3.9
+2017-18,Derry City F.C.,Derry City,Football Association of Ireland,2.315
+2017-18,Dundalk F.C.,Dundalk,Football Association of Ireland,5.815
+2017-18,Europa F.C.,Europa,Gibraltar Football Association,1.5
+2017-18,Everton F.C.,Everton,The Football Association,29.192
+2017-18,F.C. Copenhagen,Copenhagen,Danish Football Association,37.8
+2017-18,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,4.975
+2017-18,FC Alashkert,Alashkert,Football Federation of Armenia,2.525
+2017-18,FC Astana,Astana,Kazakhstan Football Federation,16.8
+2017-18,FC Astra Giurgiu,Astra Giurgiu,Romanian Football Federation,17.87
+2017-18,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,29.475
+2017-18,FC Barcelona,Barcelona,Royal Spanish Football Federation,151.999
+2017-18,FC Basel,Basel,Swiss Football Association,74.415
+2017-18,FC Bayern Munich,Bayern Munich,German Football Association,154.899
+2017-18,FC Bălți,Zaria Bălți,Moldovan Football Federation,2.15
+2017-18,FC Chikhura Sachkhere,Chikhura Sachkhere,Georgian Football Federation,3.025
+2017-18,FC Dacia Chișinău,Dacia Chișinău,Moldovan Football Federation,3.65
+2017-18,FC Differdange 03,Differdange 03,Luxembourg Football Federation,3.475
+2017-18,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,1.525
+2017-18,FC Dinamo București,Dinamo București,Romanian Football Federation,6.37
+2017-18,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,10.975
+2017-18,FC Dunav Ruse,Dunav Ruse,Bulgarian Football Union,3.175
+2017-18,FC Dynamo Brest,Dynamo Brest,Football Federation of Belarus,3.975
+2017-18,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,67.526
+2017-18,FC Flora,Flora,Estonian Football Association,3.05
+2017-18,FC Gandzasar Kapan,Gandzasar Kapan,Football Federation of Armenia,1.775
+2017-18,FC Girondins de Bordeaux,Bordeaux,French Football Federation,29.333
+2017-18,FC Irtysh Pavlodar,Irtysh,Kazakhstan Football Federation,3.55
+2017-18,FC Kairat,Kairat,Kazakhstan Football Federation,5.55
+2017-18,FC Krasnodar,Krasnodar,Russian Football Union,32.106
+2017-18,FC Lokomotiv Moscow,Lokomotiv Moscow,Russian Football Union,20.606
+2017-18,FC Lugano,Lugano,Swiss Football Association,6.415
+2017-18,FC Luzern,Luzern,Swiss Football Association,9.415
+2017-18,FC Midtjylland,Midtjylland,Danish Football Association,16.3
+2017-18,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,4.9
+2017-18,FC Oleksandriya,Oleksandriya,Ukrainian Association of Football,9.526
+2017-18,FC Olimpik Donetsk,Olimpik Donetsk,Ukrainian Association of Football,8.526
+2017-18,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,4.05
+2017-18,FC Porto,Porto,Portuguese Football Federation,98.866
+2017-18,FC Prishtina,Prishtina,Football Federation of Kosovo,0.0
+2017-18,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,1.225
+2017-18,FC Pyunik,Pyunik,Football Federation of Armenia,3.275
+2017-18,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,40.57
+2017-18,FC Samtredia,Samtredia,Georgian Football Federation,1.525
+2017-18,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,2.733
+2017-18,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,87.526
+2017-18,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,7.475
+2017-18,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,11.15
+2017-18,FC Sion,Sion,Swiss Football Association,14.415
+2017-18,FC Spartak Moscow,Spartak Moscow,Russian Football Union,18.606
+2017-18,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,1.775
+2017-18,FC Utrecht,Utrecht,Royal Dutch Football Association,6.712
+2017-18,FC Vaduz,Vaduz,Liechtenstein Football Association,4.45
+2017-18,FC Viitorul Constanța,Viitorul Constanța,Romanian Football Federation,5.87
+2017-18,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,40.635
+2017-18,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,87.106
+2017-18,FC Zlín,Fastav Zlín,Football Association of the Czech Republic,6.635
+2017-18,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,13.526
+2017-18,FCI Levadia Tallinn,Levadia Tallinn,Estonian Football Association,4.05
+2017-18,FCI Tallinn,FCI Tallinn,Estonian Football Association,1.3
+2017-18,FCSB,FCSB,Romanian Football Federation,35.37
+2017-18,FH (men's football),FH,Football Association of Iceland,6.175
+2017-18,FK Atlantas,Atlantas,Lithuanian Football Federation,1.825
+2017-18,FK Austria Wien,Austria Wien,Austrian Football Association,17.07
+2017-18,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,3.3
+2017-18,FK Haugesund,Haugesund,Norwegian Football Federation,4.165
+2017-18,FK Jelgava,Jelgava,Latvian Football Federation,2.975
+2017-18,FK Kukësi,Kukësi,Albanian Football Federation,4.575
+2017-18,FK Liepāja,Liepāja,Latvian Football Federation,2.225
+2017-18,FK Mladost Lučani,Mladost Lučani,Football Association of Serbia,3.075
+2017-18,FK Mladá Boleslav,Mladá Boleslav,Football Association of the Czech Republic,10.135
+2017-18,FK Partizan,Partizan,Football Association of Serbia,16.075
+2017-18,FK Partizani Tirana,Partizani,Albanian Football Federation,3.075
+2017-18,FK Pelister,Pelister,Football Federation of Macedonia,1.125
+2017-18,FK Rabotnichki,Rabotnicki,Football Federation of Macedonia,3.875
+2017-18,FK Riteriai,Trakai,Lithuanian Football Federation,1.575
+2017-18,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,5.3
+2017-18,FK Spartaks Jūrmala,Spartaks Jūrmala,Latvian Football Federation,1.975
+2017-18,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,3.3
+2017-18,FK Sūduva,Sūduva,Lithuanian Football Federation,1.825
+2017-18,FK Vardar,Vardar,Football Federation of Macedonia,5.125
+2017-18,FK Ventspils,Ventspils,Latvian Football Federation,5.725
+2017-18,FK Vojvodina,Vojvodina,Football Association of Serbia,9.075
+2017-18,FK Zeta,Zeta,Football Association of Montenegro,2.55
+2017-18,FK Žalgiris,Žalgiris,Lithuanian Football Federation,5.825
+2017-18,FK Željezničar Sarajevo,Željezničar,Football Association of Bosnia and Herzegovina,4.8
+2017-18,Fehérvár FC,Videoton,Hungarian Football Federation,8.65
+2017-18,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,51.84
+2017-18,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,3.9
+2017-18,Feyenoord,Feyenoord,Royal Dutch Football Association,23.212
+2017-18,Floriana F.C.,Floriana,Malta Football Association,1.05
+2017-18,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,26.05
+2017-18,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,7.8
+2017-18,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,58.84
+2017-18,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,11.55
+2017-18,HNK Rijeka,Rijeka,Croatian Football Federation,15.55
+2017-18,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,10.875
+2017-18,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,10.53
+2017-18,Hertha BSC,Hertha BSC,German Football Association,16.899
+2017-18,Hibernians F.C.,Hibernians,Malta Football Association,2.8
+2017-18,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,4.05
+2017-18,IFK Mariehamn,Mariehamn,Football Association of Finland,2.03
+2017-18,IFK Norrköping,IFK Norrköping,Swedish Football Association,4.945
+2017-18,Jagiellonia Białystok,Jagiellonia Białystok,Polish Football Association,4.45
+2017-18,Juventus FC,Juventus,Italian Football Federation,140.666
+2017-18,K.V. Oostende,Oostende,Royal Belgian Football Association,8.48
+2017-18,KAA Gent,Gent,Royal Belgian Football Association,35.48
+2017-18,KF Shkëndija,Shkëndija,Football Federation of Macedonia,3.375
+2017-18,KF Skënderbeu Korçë,Skënderbeu,Albanian Football Federation,6.825
+2017-18,KF Tirana,Tirana,Albanian Football Federation,1.825
+2017-18,KF Trepça '89,Trepça '89,Football Federation of Kosovo,0.0
+2017-18,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,0.7
+2017-18,Knattspyrnufélag Reykjavíkur,KR,Football Association of Iceland,5.175
+2017-18,Konyaspor,Konyaspor,Turkish Football Federation,9.84
+2017-18,Lech Poznań,Lech Poznań,Polish Football Association,10.95
+2017-18,Legia Warsaw,Legia Warsaw,Polish Football Association,28.45
+2017-18,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,3.0
+2017-18,Linfield F.C.,Linfield,Irish Football Association,3.65
+2017-18,Liverpool F.C.,Liverpool,The Football Association,56.192
+2017-18,Lyngby Boldklub,Lyngby,Danish Football Association,4.8
+2017-18,MFK Ružomberok,Ružomberok,Slovak Football Association,2.35
+2017-18,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,23.375
+2017-18,Malmö FF,Malmö FF,Swedish Football Association,16.945
+2017-18,Manchester City F.C.,Manchester City,The Football Association,100.192
+2017-18,Manchester United F.C.,Manchester United,The Football Association,95.192
+2017-18,MŠK Žilina,Žilina,Slovak Football Association,5.85
+2017-18,ND Gorica,Gorica,Football Association of Slovenia,3.375
+2017-18,NK Domžale,Domžale,Football Association of Slovenia,4.125
+2017-18,NK Maribor,Maribor,Football Association of Slovenia,21.125
+2017-18,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,4.625
+2017-18,NK Osijek,Osijek,Croatian Football Federation,5.55
+2017-18,NK Široki Brijeg,Široki Brijeg,Football Association of Bosnia and Herzegovina,3.55
+2017-18,NSÍ Runavík,NSÍ,Faroe Islands Football Association,1.45
+2017-18,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,4.8
+2017-18,OFK Titograd,Mladost Podgorica,Football Association of Montenegro,3.55
+2017-18,OGC Nice,Nice,French Football Federation,16.833
+2017-18,Odds BK,Odd,Norwegian Football Federation,5.665
+2017-18,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,64.58
+2017-18,Olympique Lyonnais,Lyon,French Football Federation,68.833
+2017-18,Olympique de Marseille,Marseille,French Football Federation,28.333
+2017-18,PAOK FC,PAOK,Hellenic Football Federation,35.08
+2017-18,PFC CSKA Moscow,CSKA Moscow,Russian Football Union,39.606
+2017-18,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,4.425
+2017-18,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,34.175
+2017-18,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,46.212
+2017-18,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,15.08
+2017-18,Panionios F.C.,Panionios,Hellenic Football Federation,5.58
+2017-18,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,126.333
+2017-18,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,18.05
+2017-18,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,58.48
+2017-18,RB Leipzig,RB Leipzig,German Football Association,15.899
+2017-18,Rangers F.C.,Rangers,Scottish Football Association,3.785
+2017-18,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,176.999
+2017-18,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,27.499
+2017-18,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,7.325
+2017-18,Rosenborg BK,Rosenborg,Norwegian Football Federation,12.665
+2017-18,S.C. Braga,Braga,Portuguese Football Federation,37.366
+2017-18,S.L. Benfica,Benfica,Portuguese Football Federation,111.866
+2017-18,SBV Vitesse,Vitesse,Royal Dutch Football Association,9.212
+2017-18,SC Freiburg,SC Freiburg,German Football Association,20.899
+2017-18,SC Rheindorf Altach,Rheindorf Altach,Austrian Football Association,6.57
+2017-18,SK Brann,Brann,Norwegian Football Federation,3.665
+2017-18,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,8.135
+2017-18,SK Sturm Graz,Sturm Graz,Austrian Football Association,6.57
+2017-18,SP La Fiorita,La Fiorita,San Marino Football Federation,1.566
+2017-18,SP Tre Penne,Tre Penne,San Marino Football Federation,1.566
+2017-18,SS Folgore Falciano Calcio,Folgore,San Marino Football Federation,1.066
+2017-18,SS Lazio,Lazio,Italian Football Federation,56.666
+2017-18,SSC Napoli,Napoli,Italian Football Federation,88.666
+2017-18,SV Zulte Waregem,Zulte Waregem,Royal Belgian Football Association,14.48
+2017-18,Seinäjoen Jalkapallokerho,SJK,Football Association of Finland,2.78
+2017-18,Sevilla FC,Sevilla,Royal Spanish Football Federation,112.999
+2017-18,Shamakhi FK,Inter Baku,Association of Football Federations of Azerbaijan,6.05
+2017-18,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,3.065
+2017-18,Shirak SC,Shirak,Football Federation of Armenia,3.775
+2017-18,Sporting CP,Sporting CP,Portuguese Football Federation,36.866
+2017-18,St Johnstone F.C.,St Johnstone,Scottish Football Association,6.535
+2017-18,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,0.5
+2017-18,Stjarnan (men's football),Stjarnan,Football Association of Iceland,4.175
+2017-18,TSG 1899 Hoffenheim,TSG Hoffenheim,German Football Association,15.899
+2017-18,The New Saints F.C.,The New Saints,Football Association of Wales,5.775
+2017-18,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,77.192
+2017-18,UE Sant Julià,Sant Julià,Andorran Football Federation,0.733
+2017-18,UE Santa Coloma,UE Santa Coloma,Andorran Football Federation,1.233
+2017-18,Vaasan Palloseura,VPS,Football Association of Finland,2.03
+2017-18,Valletta F.C.,Valletta,Malta Football Association,4.55
+2017-18,Valur (men's football),Valur,Football Association of Iceland,1.925
+2017-18,Vasas SC,Vasas,Hungarian Football Federation,1.9
+2017-18,Villarreal CF,Villarreal,Royal Spanish Football Federation,64.999
+2017-18,Vitória S.C.,Vitória de Guimarães,Portuguese Football Federation,14.866
+2017-18,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,2.95
+2017-18,Zira FK,Zira,Association of Football Federations of Azerbaijan,3.55
+2017-18,Östersunds FK,Östersunds FK,Swedish Football Association,3.945
+2017-18,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,10.34
+2017-18,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,7.35
+2018-19,AC Milan,Milan,Italian Football Federation,28.0
+2018-19,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,34.5
+2018-19,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,10.0
+2018-19,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,4.31
+2018-19,AFC Ajax,Ajax,Royal Dutch Football Association,53.5
+2018-19,AIK Fotboll,AIK,Swedish Football Association,4.0
+2018-19,APOEL FC,APOEL,Cyprus Football Association,27.0
+2018-19,AS Monaco FC,Monaco,French Football Federation,57.0
+2018-19,AS Roma,Roma,Italian Football Federation,64.0
+2018-19,AS Trenčín,Trenčín,Slovak Football Association,5.0
+2018-19,AZ Alkmaar,AZ,Royal Dutch Football Association,25.0
+2018-19,Aberdeen F.C.,Aberdeen,Scottish Football Association,4.0
+2018-19,Admira Wacker,Flyeralarm Admira,Austrian Football Association,6.57
+2018-19,Akhisarspor,Akhisarspor,Turkish Football Federation,7.16
+2018-19,Anorthosis Famagusta FC,Anorthosis Famagusta,Cyprus Football Association,4.31
+2018-19,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,10.0
+2018-19,Arsenal F.C.,Arsenal,The Football Association,93.0
+2018-19,Asteras Tripolis F.C.,Asteras Tripolis,Hellenic Football Federation,9.0
+2018-19,Atalanta BC,Atalanta,Italian Football Federation,15.249
+2018-19,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,140.0
+2018-19,Atromitos F.C.,Atromitos,Hellenic Football Federation,5.72
+2018-19,B36 Tórshavn,B36,Faroe Islands Football Association,1.5
+2018-19,BK Häcken,BK Häcken,Swedish Football Association,3.995
+2018-19,BSC Young Boys,Young Boys,Swiss Football Association,20.5
+2018-19,Bala Town F.C.,Bala Town,Football Association of Wales,1.0
+2018-19,Balzan F.C.,Balzan,Malta Football Association,0.9
+2018-19,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,66.0
+2018-19,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,4.35
+2018-19,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,57.0
+2018-19,Birkirkara F.C.,Birkirkara,Malta Football Association,2.75
+2018-19,Borussia Dortmund,Borussia Dortmund,German Football Association,89.0
+2018-19,Brøndby IF,Brøndby,Danish Football Association,5.19
+2018-19,Budapest Honvéd FC,Honvéd,Hungarian Football Federation,1.625
+2018-19,Burnley F.C.,Burnley,The Football Association,15.921
+2018-19,CFR Cluj,CFR Cluj,Romanian Football Federation,4.09
+2018-19,CS Fola Esch,Fola Esch,Luxembourg Football Federation,3.5
+2018-19,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,4.09
+2018-19,Cefn Druids A.F.C.,Cefn Druids,Football Association of Wales,0.775
+2018-19,Celtic F.C.,Celtic,Scottish Football Association,31.0
+2018-19,Chelsea F.C.,Chelsea,The Football Association,82.0
+2018-19,Cliftonville F.C.,Cliftonville,Irish Football Association,2.5
+2018-19,Club Brugge KV,Club Brugge,Royal Belgian Football Association,29.5
+2018-19,Coleraine F.C.,Coleraine,Irish Football Association,0.85
+2018-19,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,0.775
+2018-19,Cork City F.C.,Cork City,Football Association of Ireland,1.75
+2018-19,Crusaders F.C.,Crusaders,Irish Football Association,3.0
+2018-19,Derry City F.C.,Derry City,Football Association of Ireland,1.34
+2018-19,Djurgårdens IF Fotboll,Djurgårdens IF,Swedish Football Association,3.995
+2018-19,Dundalk F.C.,Dundalk,Football Association of Ireland,5.5
+2018-19,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,14.285
+2018-19,Europa F.C.,Europa,Gibraltar Football Association,1.5
+2018-19,F.C. Copenhagen,Copenhagen,Danish Football Association,34.0
+2018-19,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,3.5
+2018-19,FC Alashkert,Alashkert,Football Federation of Armenia,2.5
+2018-19,FC Astana,Astana,Kazakhstan Football Federation,21.75
+2018-19,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,20.5
+2018-19,FC Barcelona,Barcelona,Royal Spanish Football Federation,132.0
+2018-19,FC Basel,Basel,Swiss Football Association,71.0
+2018-19,FC Bayern Munich,Bayern Munich,German Football Association,135.0
+2018-19,FC Bălți,Zaria Bălți,Moldovan Football Federation,2.0
+2018-19,FC Chikhura Sachkhere,Chikhura Sachkhere,Georgian Football Federation,2.0
+2018-19,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,2.425
+2018-19,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,8.0
+2018-19,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,4.25
+2018-19,FC Drita,Drita,Football Federation of Kosovo,0.0
+2018-19,FC Dynamo Brest,Dynamo Brest,Football Federation of Belarus,3.725
+2018-19,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,62.0
+2018-19,FC Flora,Flora,Estonian Football Association,1.25
+2018-19,FC Gandzasar Kapan,Gandzasar Kapan,Football Federation of Armenia,0.975
+2018-19,FC Girondins de Bordeaux,Bordeaux,French Football Federation,11.283
+2018-19,FC Irtysh Pavlodar,Irtysh,Kazakhstan Football Federation,3.625
+2018-19,FC Kairat,Kairat,Kazakhstan Football Federation,3.625
+2018-19,FC Krasnodar,Krasnodar,Russian Football Union,23.5
+2018-19,FC Lahti,Lahti,Football Association of Finland,1.38
+2018-19,FC Lokomotiv Moscow,Lokomotiv Moscow,Russian Football Union,22.5
+2018-19,FC Luzern,Luzern,Swiss Football Association,6.04
+2018-19,FC Mariupol,Mariupol,Ukrainian Association of Football,8.226
+2018-19,FC Midtjylland,Midtjylland,Danish Football Association,11.5
+2018-19,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,2.75
+2018-19,FC Nordsjælland,Nordsjælland,Danish Football Association,5.19
+2018-19,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,2.0
+2018-19,FC Porto,Porto,Portuguese Football Federation,86.0
+2018-19,FC Prishtina,Prishtina,Football Federation of Kosovo,0.25
+2018-19,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,0.875
+2018-19,FC Pyunik,Pyunik,Football Federation of Armenia,2.25
+2018-19,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,55.5
+2018-19,FC Samtredia,Samtredia,Georgian Football Federation,1.25
+2018-19,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,2.75
+2018-19,FC Schalke 04,Schalke 04,German Football Association,62.0
+2018-19,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,81.0
+2018-19,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,3.725
+2018-19,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,14.75
+2018-19,FC Spartak Moscow,Spartak Moscow,Russian Football Union,13.5
+2018-19,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,3.5
+2018-19,FC St. Gallen,St. Gallen,Swiss Football Association,6.04
+2018-19,FC Stumbras,Stumbras,Lithuanian Football Federation,1.075
+2018-19,FC Tobol,Tobol,Kazakhstan Football Federation,3.625
+2018-19,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,1.0
+2018-19,FC Ufa,Ufa,Russian Football Union,10.676
+2018-19,FC Urartu,Banants,Football Federation of Armenia,0.975
+2018-19,FC Vaduz,Vaduz,Liechtenstein Football Association,2.75
+2018-19,FC Viitorul Constanța,Viitorul Constanța,Romanian Football Federation,4.09
+2018-19,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,33.0
+2018-19,FC Vorskla Poltava,Vorskla Poltava,Ukrainian Association of Football,8.226
+2018-19,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,78.0
+2018-19,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,9.0
+2018-19,FC Zürich,Zürich,Swiss Football Association,12.0
+2018-19,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,2.75
+2018-19,FCSB,FCSB,Romanian Football Federation,27.5
+2018-19,FH (men's football),FH,Football Association of Iceland,5.5
+2018-19,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,2.25
+2018-19,FK Jablonec,Jablonec,Football Association of the Czech Republic,6.035
+2018-19,FK Kukësi,Kukësi,Albanian Football Federation,4.25
+2018-19,FK Liepāja,Liepāja,Latvian Football Federation,1.5
+2018-19,FK Partizan,Partizan,Football Association of Serbia,17.0
+2018-19,FK Partizani Tirana,Partizani,Albanian Football Federation,2.0
+2018-19,FK Rabotnichki,Rabotnicki,Football Federation of Macedonia,3.25
+2018-19,FK Radnički Niš,Radnički Niš,Football Association of Serbia,3.75
+2018-19,FK Riteriai,Trakai,Lithuanian Football Federation,1.75
+2018-19,FK Rudar Pljevlja,Rudar Pljevlja,Football Association of Montenegro,1.75
+2018-19,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,3.25
+2018-19,FK Spartak Subotica,Spartak Subotica,Football Association of Serbia,3.75
+2018-19,FK Spartaks Jūrmala,Spartaks Jūrmala,Latvian Football Federation,1.75
+2018-19,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,2.5
+2018-19,FK Sūduva,Sūduva,Lithuanian Football Federation,2.0
+2018-19,FK Vardar,Vardar,Football Federation of Macedonia,5.0
+2018-19,FK Ventspils,Ventspils,Latvian Football Federation,3.75
+2018-19,FK Žalgiris,Žalgiris,Lithuanian Football Federation,5.5
+2018-19,FK Željezničar Sarajevo,Željezničar,Football Association of Bosnia and Herzegovina,3.0
+2018-19,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,23.5
+2018-19,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,2.5
+2018-19,Feyenoord,Feyenoord,Royal Dutch Football Association,21.5
+2018-19,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,17.5
+2018-19,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,5.25
+2018-19,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,29.5
+2018-19,Glenavon F.C.,Glenavon,Irish Football Association,0.85
+2018-19,Górnik Zabrze,Górnik Zabrze,Polish Football Association,4.025
+2018-19,Gżira United F.C.,Gżira United,Malta Football Association,0.9
+2018-19,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,7.0
+2018-19,HNK Rijeka,Rijeka,Croatian Football Federation,15.5
+2018-19,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,10.0
+2018-19,Hapoel Haifa F.C.,Hapoel Haifa,Israel Football Association,4.35
+2018-19,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,8.0
+2018-19,Hibernian F.C.,Hibernian,Scottish Football Association,3.725
+2018-19,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,3.75
+2018-19,Ilves (football),Ilves,Football Association of Finland,1.38
+2018-19,Inter Milan,Inter Milan,Italian Football Federation,16.0
+2018-19,JK Narva Trans,Narva Trans,Estonian Football Association,1.1
+2018-19,Jagiellonia Białystok,Jagiellonia Białystok,Polish Football Association,4.025
+2018-19,Juventus FC,Juventus,Italian Football Federation,126.0
+2018-19,KAA Gent,Gent,Royal Belgian Football Association,27.0
+2018-19,KF Laçi,Laçi,Albanian Football Federation,1.7
+2018-19,KF Shkupi,Shkupi,Football Federation of Macedonia,1.5
+2018-19,KF Shkëndija,Shkëndija,Football Federation of Macedonia,3.5
+2018-19,KRC Genk,Genk,Royal Belgian Football Association,27.0
+2018-19,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,0.75
+2018-19,Kuopion Palloseura,KuPS,Football Association of Finland,1.38
+2018-19,LASK,LASK,Austrian Football Association,6.57
+2018-19,Lech Poznań,Lech Poznań,Polish Football Association,7.0
+2018-19,Legia Warsaw,Legia Warsaw,Polish Football Association,24.5
+2018-19,Lillestrøm SK,Lillestrøm,Norwegian Football Federation,3.485
+2018-19,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,2.75
+2018-19,Liverpool F.C.,Liverpool,The Football Association,62.0
+2018-19,Luftëtari FC,Luftëtari,Albanian Football Federation,1.7
+2018-19,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,22.5
+2018-19,Malmö FF,Malmö FF,Swedish Football Association,14.0
+2018-19,Manchester City F.C.,Manchester City,The Football Association,100.0
+2018-19,Manchester United F.C.,Manchester United,The Football Association,82.0
+2018-19,Molde FK,Molde,Norwegian Football Federation,12.5
+2018-19,NK Domžale,Domžale,Football Association of Slovenia,3.0
+2018-19,NK Maribor,Maribor,Football Association of Slovenia,22.5
+2018-19,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,2.9
+2018-19,NK Osijek,Osijek,Croatian Football Federation,5.2
+2018-19,NK Rudar Velenje,Rudar Velenje,Football Association of Slovenia,2.9
+2018-19,NK Široki Brijeg,Široki Brijeg,Football Association of Bosnia and Herzegovina,2.25
+2018-19,NSÍ Runavík,NSÍ,Faroe Islands Football Association,0.75
+2018-19,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,3.825
+2018-19,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,4.0
+2018-19,OFK Titograd,Titograd Podgorica,Football Association of Montenegro,3.0
+2018-19,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,54.0
+2018-19,Olympique Lyonnais,Lyon,French Football Federation,59.5
+2018-19,Olympique de Marseille,Marseille,French Football Federation,32.0
+2018-19,PAOK FC,PAOK,Hellenic Football Federation,29.5
+2018-19,PFC CSKA Moscow,CSKA Moscow,Russian Football Union,45.0
+2018-19,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,3.825
+2018-19,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,3.825
+2018-19,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,37.0
+2018-19,PFC Slavia Sofia,Slavia Sofia,Bulgarian Football Union,3.825
+2018-19,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,36.0
+2018-19,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,109.0
+2018-19,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,20.5
+2018-19,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,48.0
+2018-19,RB Leipzig,RB Leipzig,German Football Association,17.0
+2018-19,Racing FC Union Luxembourg,Racing Union,Luxembourg Football Federation,0.875
+2018-19,Rangers F.C.,Rangers,Scottish Football Association,3.725
+2018-19,Real Betis,Real Betis,Royal Spanish Football Federation,21.399
+2018-19,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,162.0
+2018-19,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,10.75
+2018-19,Riga FC,Riga,Latvian Football Federation,1.125
+2018-19,Rio Ave F.C.,Rio Ave,Portuguese Football Federation,9.449
+2018-19,Rosenborg BK,Rosenborg,Norwegian Football Federation,9.0
+2018-19,S.C. Braga,Braga,Portuguese Football Federation,30.5
+2018-19,S.L. Benfica,Benfica,Portuguese Football Federation,80.0
+2018-19,SBV Vitesse,Vitesse,Royal Dutch Football Association,6.0
+2018-19,SK Rapid Wien,Rapid Wien,Austrian Football Association,21.5
+2018-19,SK Sigma Olomouc,Sigma Olomouc,Football Association of the Czech Republic,6.035
+2018-19,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,7.5
+2018-19,SK Sturm Graz,Sturm Graz,Austrian Football Association,6.57
+2018-19,SP La Fiorita,La Fiorita,San Marino Football Federation,1.75
+2018-19,SS Folgore Falciano Calcio,Folgore,San Marino Football Federation,1.25
+2018-19,SS Lazio,Lazio,Italian Football Federation,41.0
+2018-19,SSC Napoli,Napoli,Italian Football Federation,78.0
+2018-19,Sarpsborg 08 FF,Sarpsborg 08,Norwegian Football Federation,3.485
+2018-19,Sevilla FC,Sevilla,Royal Spanish Football Federation,113.0
+2018-19,Shamakhi FK,Keşla,Association of Football Federations of Azerbaijan,3.825
+2018-19,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,1.34
+2018-19,Sporting CP,Sporting CP,Portuguese Football Federation,40.0
+2018-19,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,0.6
+2018-19,Stade Rennais FC,Rennes,French Football Federation,11.283
+2018-19,Standard Liège,Standard Liège,Royal Belgian Football Association,12.5
+2018-19,Stjarnan (men's football),Stjarnan,Football Association of Iceland,2.75
+2018-19,TSG 1899 Hoffenheim,TSG Hoffenheim,German Football Association,14.285
+2018-19,The New Saints F.C.,The New Saints,Football Association of Wales,5.0
+2018-19,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,67.0
+2018-19,Tre Fiori FC,Tre Fiori,San Marino Football Federation,0.099
+2018-19,UE Engordany,Engordany,Andorran Football Federation,0.266
+2018-19,UE Sant Julià,Sant Julià,Andorran Football Federation,0.75
+2018-19,Valencia CF,Valencia,Royal Spanish Football Federation,36.0
+2018-19,Valletta F.C.,Valletta,Malta Football Association,3.25
+2018-19,Valur (men's football),Valur,Football Association of Iceland,1.65
+2018-19,Vidi FC,Vidi,Hungarian Football Federation,4.25
+2018-19,Villarreal CF,Villarreal,Royal Spanish Football Federation,52.0
+2018-19,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,3.0
+2018-19,ÍBV (men's football),ÍBV,Football Association of Iceland,1.65
+2018-19,Újpest FC,Újpest,Hungarian Football Federation,1.625
+2018-19,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,8.5
+2018-19,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,5.0
+2019-20,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,35.5
+2019-20,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,14.0
+2019-20,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,8.0
+2019-20,AEL Limassol,AEL Limassol,Cyprus Football Association,4.985
+2019-20,AFC Ajax,Ajax,Royal Dutch Football Association,70.5
+2019-20,AIK Fotboll,AIK,Swedish Football Association,5.5
+2019-20,APOEL FC,APOEL,Cyprus Football Association,25.5
+2019-20,AS Roma,Roma,Italian Football Federation,81.0
+2019-20,AS Saint-Étienne,Saint-Étienne,French Football Federation,23.0
+2019-20,AZ Alkmaar,AZ,Royal Dutch Football Association,10.5
+2019-20,Aberdeen F.C.,Aberdeen,Scottish Football Association,5.5
+2019-20,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,12.0
+2019-20,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,5.52
+2019-20,Arsenal F.C.,Arsenal,The Football Association,101.0
+2019-20,Atalanta BC,Atalanta,Italian Football Federation,14.945
+2019-20,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,127.0
+2019-20,Atromitos F.C.,Atromitos,Hellenic Football Federation,5.52
+2019-20,B36 Tórshavn,B36,Faroe Islands Football Association,3.0
+2019-20,BK Häcken,BK Häcken,Swedish Football Association,4.18
+2019-20,BSC Young Boys,Young Boys,Swiss Football Association,27.5
+2019-20,Ballymena United F.C.,Ballymena United,Irish Football Association,0.775
+2019-20,Balzan F.C.,Balzan,Malta Football Association,2.25
+2019-20,Barry Town United F.C.,Barry Town United,Football Association of Wales,0.825
+2019-20,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,61.0
+2019-20,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,62.0
+2019-20,Bnei Yehuda Tel Aviv F.C.,Bnei Yehuda,Israel Football Association,3.725
+2019-20,Borussia Dortmund,Borussia Dortmund,German Football Association,85.0
+2019-20,Borussia Mönchengladbach,Borussia Mönchengladbach,German Football Association,29.0
+2019-20,Breiðablik (men's football),Breiðablik,Football Association of Iceland,1.45
+2019-20,Brøndby IF,Brøndby,Danish Football Association,7.5
+2019-20,Budapest Honvéd FC,Honvéd,Hungarian Football Federation,2.5
+2019-20,CFR Cluj,CFR Cluj,Romanian Football Federation,3.5
+2019-20,CS Fola Esch,Fola Esch,Luxembourg Football Federation,4.0
+2019-20,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,3.19
+2019-20,Cardiff Metropolitan University F.C.,Cardiff Metropolitan University,Football Association of Wales,0.825
+2019-20,Celtic F.C.,Celtic,Scottish Football Association,31.0
+2019-20,Chelsea F.C.,Chelsea,The Football Association,87.0
+2019-20,Cliftonville F.C.,Cliftonville,Irish Football Association,2.5
+2019-20,Club Brugge KV,Club Brugge,Royal Belgian Football Association,39.5
+2019-20,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,1.75
+2019-20,Cork City F.C.,Cork City,Football Association of Ireland,3.75
+2019-20,Crusaders F.C.,Crusaders,Irish Football Association,4.25
+2019-20,Debreceni VSC,Debrecen,Hungarian Football Federation,3.0
+2019-20,Dundalk F.C.,Dundalk,Football Association of Ireland,7.0
+2019-20,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,24.0
+2019-20,Esbjerg fB,Esbjerg,Danish Football Association,5.405
+2019-20,Europa F.C.,Europa,Gibraltar Football Association,2.0
+2019-20,F.C. Copenhagen,Copenhagen,Danish Football Association,31.0
+2019-20,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,6.25
+2019-20,FC AP Brera Strumica,Akademija Pandev,Football Federation of Macedonia,1.6
+2019-20,FC Alashkert,Alashkert,Football Federation of Armenia,4.5
+2019-20,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,1.05
+2019-20,FC Arsenal Tula,Arsenal Tula,Russian Football Union,10.109
+2019-20,FC Astana,Astana,Kazakhstan Football Federation,27.5
+2019-20,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,27.5
+2019-20,FC Barcelona,Barcelona,Royal Spanish Football Federation,138.0
+2019-20,FC Basel,Basel,Swiss Football Association,54.5
+2019-20,FC Bayern Munich,Bayern Munich,German Football Association,128.0
+2019-20,FC Chikhura Sachkhere,Chikhura Sachkhere,Georgian Football Federation,3.0
+2019-20,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,3.125
+2019-20,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,9.0
+2019-20,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,3.75
+2019-20,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,65.0
+2019-20,FC Feronikeli 74,Feronikeli,Football Federation of Kosovo,0.5
+2019-20,FC Flora,Flora,Estonian Football Association,2.5
+2019-20,FC Iberia 1999,Saburtalo Tbilisi,Georgian Football Federation,0.95
+2019-20,FC Inter Turku,Inter Turku,Football Association of Finland,1.455
+2019-20,FC Kairat,Kairat,Kazakhstan Football Federation,5.0
+2019-20,FC Krasnodar,Krasnodar,Russian Football Union,34.5
+2019-20,FC Lokomotiv Moscow,Lokomotiv Moscow,Russian Football Union,28.5
+2019-20,FC Lugano,Lugano,Swiss Football Association,6.0
+2019-20,FC Luzern,Luzern,Swiss Football Association,5.38
+2019-20,FC Mariupol,Mariupol,Ukrainian Association of Football,7.78
+2019-20,FC Midtjylland,Midtjylland,Danish Football Association,14.0
+2019-20,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,2.75
+2019-20,FC Oleksandriya,Oleksandriya,Ukrainian Association of Football,7.78
+2019-20,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,3.85
+2019-20,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,1.55
+2019-20,FC Porto,Porto,Portuguese Football Federation,93.0
+2019-20,FC Prishtina,Prishtina,Football Federation of Kosovo,1.25
+2019-20,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,2.75
+2019-20,FC Pyunik,Pyunik,Football Federation of Armenia,3.75
+2019-20,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,54.5
+2019-20,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,4.0
+2019-20,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,80.0
+2019-20,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,4.375
+2019-20,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,12.25
+2019-20,FC Spartak Moscow,Spartak Moscow,Russian Football Union,16.0
+2019-20,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,8.5
+2019-20,FC Thun,Thun,Swiss Football Association,5.38
+2019-20,FC Tobol,Tobol,Kazakhstan Football Federation,3.85
+2019-20,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,2.75
+2019-20,FC Urartu,Banants,Football Federation of Armenia,1.75
+2019-20,FC Utrecht,Utrecht,Royal Dutch Football Association,6.486
+2019-20,FC Vaduz,Vaduz,Liechtenstein Football Association,4.0
+2019-20,FC Viitorul Constanța,Viitorul Constanța,Romanian Football Federation,4.0
+2019-20,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,33.0
+2019-20,FC Vitebsk,Vitebsk,Football Federation of Belarus,4.375
+2019-20,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,72.0
+2019-20,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,11.5
+2019-20,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,3.25
+2019-20,FCSB,FCSB,Romanian Football Federation,23.0
+2019-20,FK Austria Wien,Austria Wien,Austrian Football Association,8.0
+2019-20,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,3.25
+2019-20,FK Haugesund,Haugesund,Norwegian Football Federation,4.04
+2019-20,FK Jablonec,Jablonec,Football Association of the Czech Republic,5.735
+2019-20,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,1.35
+2019-20,FK Kukësi,Kukësi,Albanian Football Federation,4.75
+2019-20,FK Liepāja,Liepāja,Latvian Football Federation,2.5
+2019-20,FK Makedonija G.P.,Makedonija GP,Football Federation of Macedonia,1.6
+2019-20,FK Mladá Boleslav,Mladá Boleslav,Football Association of the Czech Republic,5.735
+2019-20,FK Partizan,Partizan,Football Association of Serbia,18.0
+2019-20,FK Partizani Tirana,Partizani,Albanian Football Federation,3.0
+2019-20,FK RFS,RFS,Latvian Football Federation,1.125
+2019-20,FK Radnik Bijeljina,Radnik Bijeljina,Football Association of Bosnia and Herzegovina,1.425
+2019-20,FK Radnički Niš,Radnički Niš,Football Association of Serbia,4.45
+2019-20,FK Riteriai,Riteriai,Lithuanian Football Federation,3.25
+2019-20,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,4.25
+2019-20,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,3.0
+2019-20,FK Sūduva,Sūduva,Lithuanian Football Federation,4.25
+2019-20,FK Ventspils,Ventspils,Latvian Football Federation,4.25
+2019-20,FK Zeta,Zeta,Football Association of Montenegro,0.825
+2019-20,FK Čukarički,Čukarički,Football Association of Serbia,4.45
+2019-20,FK Žalgiris,Žalgiris,Lithuanian Football Federation,6.0
+2019-20,Fehérvár FC,MOL Fehérvár,Hungarian Football Federation,9.0
+2019-20,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,3.5
+2019-20,Feyenoord,Feyenoord,Royal Dutch Football Association,22.0
+2019-20,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,29.5
+2019-20,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,6.25
+2019-20,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,22.5
+2019-20,Getafe CF,Getafe,Royal Spanish Football Federation,20.713
+2019-20,Gżira United F.C.,Gżira United,Malta Football Association,1.025
+2019-20,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,8.0
+2019-20,HNK Rijeka,Rijeka,Croatian Football Federation,13.5
+2019-20,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,12.0
+2019-20,Havnar Bóltfelag,HB,Faroe Islands Football Association,1.5
+2019-20,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,9.0
+2019-20,Hibernians F.C.,Hibernians,Malta Football Association,2.5
+2019-20,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,5.25
+2019-20,IFK Norrköping,IFK Norrköping,Swedish Football Association,4.18
+2019-20,Inter Milan,Inter Milan,Italian Football Federation,31.0
+2019-20,JK Narva Trans,Narva Trans,Estonian Football Association,1.0
+2019-20,Jeunesse Esch,Jeunesse Esch,Luxembourg Football Federation,1.1
+2019-20,Juventus FC,Juventus,Italian Football Federation,124.0
+2019-20,KAA Gent,Gent,Royal Belgian Football Association,29.5
+2019-20,KF Laçi,Laçi,Albanian Football Federation,2.25
+2019-20,KF Shkupi,Shkupi,Football Federation of Macedonia,1.6
+2019-20,KF Shkëndija,Shkëndija,Football Federation of Macedonia,6.0
+2019-20,KF Teuta,Teuta,Albanian Football Federation,1.5
+2019-20,KRC Genk,Genk,Royal Belgian Football Association,25.0
+2019-20,KS Cracovia,Cracovia,Polish Football Association,3.85
+2019-20,Kilmarnock F.C.,Kilmarnock,Scottish Football Association,4.425
+2019-20,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,1.25
+2019-20,Knattspyrnufélag Reykjavíkur,KR,Football Association of Iceland,2.5
+2019-20,Kuopion Palloseura,KuPS,Football Association of Finland,1.455
+2019-20,LASK,LASK,Austrian Football Association,6.25
+2019-20,Lechia Gdańsk,Lechia Gdańsk,Polish Football Association,3.85
+2019-20,Legia Warsaw,Legia Warsaw,Polish Football Association,24.5
+2019-20,Lille OSC,Lille,French Football Federation,11.699
+2019-20,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,4.25
+2019-20,Linfield F.C.,Linfield,Irish Football Association,2.25
+2019-20,Liverpool F.C.,Liverpool,The Football Association,91.0
+2019-20,MFK Ružomberok,Ružomberok,Slovak Football Association,3.125
+2019-20,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,3.725
+2019-20,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,16.0
+2019-20,Malmö FF,Malmö FF,Swedish Football Association,20.0
+2019-20,Manchester City F.C.,Manchester City,The Football Association,106.0
+2019-20,Manchester United F.C.,Manchester United,The Football Association,78.0
+2019-20,Molde FK,Molde,Norwegian Football Federation,13.5
+2019-20,NK Domžale,Domžale,Football Association of Slovenia,4.25
+2019-20,NK Maribor,Maribor,Football Association of Slovenia,18.5
+2019-20,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,3.75
+2019-20,NK Osijek,Osijek,Croatian Football Federation,5.475
+2019-20,NK Široki Brijeg,Široki Brijeg,Football Association of Bosnia and Herzegovina,2.25
+2019-20,NSÍ Runavík,NSÍ,Faroe Islands Football Association,1.75
+2019-20,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,3.8
+2019-20,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,3.5
+2019-20,NŠ Mura,Mura,Football Association of Slovenia,3.0
+2019-20,OFK Titograd,Titograd Podgorica,Football Association of Montenegro,3.0
+2019-20,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,44.0
+2019-20,Olympique Lyonnais,Lyon,French Football Federation,61.5
+2019-20,PAOK FC,PAOK,Hellenic Football Federation,23.5
+2019-20,PFC CSKA Moscow,CSKA Moscow,Russian Football Union,48.0
+2019-20,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,3.5
+2019-20,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,3.5
+2019-20,PFC Lokomotiv Plovdiv,Lokomotiv Plovdiv,Bulgarian Football Union,3.5
+2019-20,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,27.0
+2019-20,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,37.0
+2019-20,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,103.0
+2019-20,Piast Gliwice,Piast Gliwice,Polish Football Association,3.85
+2019-20,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,22.0
+2019-20,RB Leipzig,RB Leipzig,German Football Association,22.0
+2019-20,RC Strasbourg Alsace,Strasbourg,French Football Federation,11.699
+2019-20,RCD Espanyol,Espanyol,Royal Spanish Football Federation,20.713
+2019-20,Rangers F.C.,Rangers,Scottish Football Association,5.25
+2019-20,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,146.0
+2019-20,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,16.75
+2019-20,Riga FC,Riga,Latvian Football Federation,1.125
+2019-20,Rosenborg BK,Rosenborg,Norwegian Football Federation,11.5
+2019-20,Rovaniemen Palloseura,RoPS,Football Association of Finland,1.455
+2019-20,Royal Antwerp F.C.,Antwerp,Royal Belgian Football Association,7.98
+2019-20,S.C. Braga,Braga,Portuguese Football Federation,31.0
+2019-20,S.L. Benfica,Benfica,Portuguese Football Federation,68.0
+2019-20,SK Brann,Brann,Norwegian Football Federation,4.04
+2019-20,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,21.5
+2019-20,SK Sturm Graz,Sturm Graz,Austrian Football Association,6.25
+2019-20,SP La Fiorita,La Fiorita,San Marino Football Federation,3.0
+2019-20,SP Tre Penne,Tre Penne,San Marino Football Federation,0.75
+2019-20,SS Lazio,Lazio,Italian Football Federation,37.0
+2019-20,SSC Napoli,Napoli,Italian Football Federation,80.0
+2019-20,Sabail FK,Sabail,Association of Football Federations of Azerbaijan,3.8
+2019-20,Sevilla FC,Sevilla,Royal Spanish Football Federation,104.0
+2019-20,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,2.25
+2019-20,Speranța Nisporeni,Speranța Nisporeni,Moldovan Football Federation,1.55
+2019-20,Sporting CP,Sporting CP,Portuguese Football Federation,50.0
+2019-20,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,0.8
+2019-20,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,1.75
+2019-20,Stade Rennais FC,Rennes,French Football Federation,11.699
+2019-20,Standard Liège,Standard Liège,Royal Belgian Football Association,17.5
+2019-20,Stjarnan (men's football),Stjarnan,Football Association of Iceland,4.25
+2019-20,The New Saints F.C.,The New Saints,Football Association of Wales,6.0
+2019-20,Torino FC,Torino,Italian Football Federation,14.945
+2019-20,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,78.0
+2019-20,Trabzonspor,Trabzonspor,Turkish Football Federation,8.0
+2019-20,Tre Fiori FC,Tre Fiori,San Marino Football Federation,1.0
+2019-20,UE Engordany,Engordany,Andorran Football Federation,1.0
+2019-20,UE Sant Julià,Sant Julià,Andorran Football Federation,1.25
+2019-20,Valencia CF,Valencia,Royal Spanish Football Federation,37.0
+2019-20,Valletta F.C.,Valletta,Malta Football Association,4.25
+2019-20,Valur (men's football),Valur,Football Association of Iceland,2.75
+2019-20,VfL Wolfsburg,VfL Wolfsburg,German Football Association,40.0
+2019-20,Vitória S.C.,Vitória de Guimarães,Portuguese Football Federation,9.646
+2019-20,Wolfsberger AC,Wolfsberger AC,Austrian Football Association,6.25
+2019-20,Wolverhampton Wanderers F.C.,Wolverhampton Wanderers,The Football Association,17.092
+2019-20,Yeni Malatyaspor,Yeni Malatyaspor,Turkish Football Federation,6.92
+2019-20,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,10.5
+2019-20,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,6.0
+2020-21,AC Milan,Milan,Italian Football Federation,19.0
+2020-21,AC Omonia,Omonia,Cyprus Football Association,5.35
+2020-21,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,30.5
+2020-21,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,16.5
+2020-21,AFC Ajax,Ajax,Royal Dutch Football Association,69.5
+2020-21,APOEL FC,APOEL,Cyprus Football Association,27.5
+2020-21,AS Roma,Roma,Italian Football Federation,80.0
+2020-21,AZ Alkmaar,AZ,Royal Dutch Football Association,18.5
+2020-21,Aarhus Gymnastikforening,AGF,Danish Football Association,5.85
+2020-21,Aberdeen F.C.,Aberdeen,Scottish Football Association,6.5
+2020-21,Alanyaspor,Alanyaspor,Turkish Football Federation,6.72
+2020-21,Anorthosis Famagusta FC,Anorthosis Famagusta,Cyprus Football Association,5.35
+2020-21,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,12.5
+2020-21,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,5.26
+2020-21,Arsenal F.C.,Arsenal,The Football Association,91.0
+2020-21,Atalanta BC,Atalanta,Italian Football Federation,33.5
+2020-21,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,127.0
+2020-21,B36 Tórshavn,B36,Faroe Islands Football Association,3.75
+2020-21,BSC Young Boys,Young Boys,Swiss Football Association,25.5
+2020-21,Bala Town F.C.,Bala Town,Football Association of Wales,1.25
+2020-21,Barry Town United F.C.,Barry Town United,Football Association of Wales,1.0
+2020-21,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,61.0
+2020-21,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,3.925
+2020-21,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,54.0
+2020-21,Bohemian F.C.,Bohemians,Football Association of Ireland,1.34
+2020-21,Borussia Dortmund,Borussia Dortmund,German Football Association,85.0
+2020-21,Borussia Mönchengladbach,Borussia Mönchengladbach,German Football Association,26.0
+2020-21,Breiðablik (men's football),Breiðablik,Football Association of Iceland,1.25
+2020-21,Budapest Honvéd FC,Honvéd,Hungarian Football Federation,4.0
+2020-21,CFR Cluj,CFR Cluj,Romanian Football Federation,12.5
+2020-21,CS Fola Esch,Fola Esch,Luxembourg Football Federation,4.75
+2020-21,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,5.0
+2020-21,Celtic F.C.,Celtic,Scottish Football Association,34.0
+2020-21,Chelsea F.C.,Chelsea,The Football Association,83.0
+2020-21,Club Brugge KV,Club Brugge,Royal Belgian Football Association,28.5
+2020-21,Coleraine F.C.,Coleraine,Irish Football Association,1.25
+2020-21,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,3.25
+2020-21,Derry City F.C.,Derry City,Football Association of Ireland,1.34
+2020-21,Djurgårdens IF Fotboll,Djurgårdens IF,Swedish Football Association,4.55
+2020-21,Dundalk F.C.,Dundalk,Football Association of Ireland,8.5
+2020-21,Europa F.C.,Europa,Gibraltar Football Association,2.75
+2020-21,F.C. Copenhagen,Copenhagen,Danish Football Association,42.0
+2020-21,FC Alashkert,Alashkert,Football Federation of Armenia,6.0
+2020-21,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,2.5
+2020-21,FC Astana,Astana,Kazakhstan Football Federation,29.0
+2020-21,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,24.0
+2020-21,FC Barcelona,Barcelona,Royal Spanish Football Federation,128.0
+2020-21,FC Basel,Basel,Swiss Football Association,58.5
+2020-21,FC Bayern Munich,Bayern Munich,German Football Association,136.0
+2020-21,FC Botoșani,Botoșani,Romanian Football Federation,3.34
+2020-21,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,3.175
+2020-21,FC Desna Chernihiv,Desna Chernihiv,Ukrainian Association of Football,7.22
+2020-21,FC Differdange 03,Differdange 03,Luxembourg Football Federation,1.6
+2020-21,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,1.15
+2020-21,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,7.0
+2020-21,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,4.75
+2020-21,FC Dinamo-Auto Tiraspol,Dinamo-Auto,Moldovan Football Federation,1.35
+2020-21,FC Drita,Drita,Football Federation of Kosovo,1.5
+2020-21,FC Dynamo Brest,Dynamo Brest,Football Federation of Belarus,3.775
+2020-21,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,55.0
+2020-21,FC Dynamo Moscow,Dynamo Moscow,Russian Football Union,9.109
+2020-21,FC Flora,Flora,Estonian Football Association,4.0
+2020-21,FC Honka,Honka,Football Association of Finland,1.3
+2020-21,FC Iberia 1999,Saburtalo Tbilisi,Georgian Football Federation,2.0
+2020-21,FC Inter Turku,Inter Turku,Football Association of Finland,1.3
+2020-21,FC Kairat,Kairat,Kazakhstan Football Federation,6.0
+2020-21,FC Kaisar,Kaisar,Kazakhstan Football Federation,3.85
+2020-21,FC Kolos Kovalivka,Kolos Kovalivka,Ukrainian Association of Football,7.22
+2020-21,FC Krasnodar,Krasnodar,Russian Football Union,35.5
+2020-21,FC Locomotive Tbilisi,Locomotive Tbilisi,Georgian Football Federation,1.15
+2020-21,FC Lokomotiv Moscow,Lokomotiv Moscow,Russian Football Union,33.0
+2020-21,FC Midtjylland,Midtjylland,Danish Football Association,14.5
+2020-21,FC Noah,Noah,Football Federation of Armenia,1.525
+2020-21,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,3.85
+2020-21,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,2.0
+2020-21,FC Porto,Porto,Portuguese Football Federation,75.0
+2020-21,FC Prishtina,Prishtina,Football Federation of Kosovo,1.75
+2020-21,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,4.25
+2020-21,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,53.5
+2020-21,FC Rostov,Rostov,Russian Football Union,12.0
+2020-21,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,4.5
+2020-21,FC Sfîntul Gheorghe,Sfîntul Gheorghe,Moldovan Football Federation,1.35
+2020-21,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,85.0
+2020-21,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,4.75
+2020-21,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,12.75
+2020-21,FC Slovan Liberec,Slovan Liberec,Football Association of the Czech Republic,8.0
+2020-21,FC St. Gallen,St. Gallen,Swiss Football Association,5.28
+2020-21,FC Vaduz,Vaduz,Liechtenstein Football Association,5.5
+2020-21,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,34.0
+2020-21,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,64.0
+2020-21,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,12.5
+2020-21,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,3.25
+2020-21,FCSB,FCSB,Romanian Football Federation,20.5
+2020-21,FH (men's football),FH,Football Association of Iceland,4.5
+2020-21,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,4.35
+2020-21,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,1.375
+2020-21,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,4.25
+2020-21,FK Iskra Danilovgrad,Iskra,Football Association of Montenegro,0.875
+2020-21,FK Jablonec,Jablonec,Football Association of the Czech Republic,7.0
+2020-21,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,1.575
+2020-21,FK Kukësi,Kukësi,Albanian Football Federation,5.5
+2020-21,FK Partizan,Partizan,Football Association of Serbia,22.0
+2020-21,FK RFS,RFS,Latvian Football Federation,1.525
+2020-21,FK Riteriai,Riteriai,Lithuanian Football Federation,4.25
+2020-21,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,4.75
+2020-21,FK Sileks,Sileks,Football Federation of Macedonia,1.475
+2020-21,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,4.0
+2020-21,FK Sūduva,Sūduva,Lithuanian Football Federation,6.75
+2020-21,FK TSC,TSC,Football Association of Serbia,5.1
+2020-21,FK Ventspils,Ventspils,Latvian Football Federation,5.25
+2020-21,FK Vojvodina,Vojvodina,Football Association of Serbia,5.1
+2020-21,FK Zeta,Zeta,Football Association of Montenegro,1.25
+2020-21,FK Žalgiris,Žalgiris,Lithuanian Football Federation,6.0
+2020-21,FK Željezničar Sarajevo,Željezničar,Football Association of Bosnia and Herzegovina,3.0
+2020-21,Fehérvár FC,MOL Fehérvár,Hungarian Football Federation,10.5
+2020-21,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,9.0
+2020-21,Feyenoord,Feyenoord,Royal Dutch Football Association,17.0
+2020-21,Floriana F.C.,Floriana,Malta Football Association,1.15
+2020-21,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,33.5
+2020-21,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,23.5
+2020-21,Glentoran F.C.,Glentoran,Irish Football Association,0.975
+2020-21,Granada CF,Granada,Royal Spanish Football Federation,20.456
+2020-21,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,7.5
+2020-21,HNK Rijeka,Rijeka,Croatian Football Federation,11.0
+2020-21,Hammarby Fotboll,Hammarby IF,Swedish Football Association,4.55
+2020-21,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,14.0
+2020-21,Havnar Bóltfelag,HB,Faroe Islands Football Association,2.0
+2020-21,Hibernians F.C.,Hibernians,Malta Football Association,3.25
+2020-21,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,6.25
+2020-21,IFK Göteborg,IFK Göteborg,Swedish Football Association,4.55
+2020-21,Ilves (football),Ilves,Football Association of Finland,1.3
+2020-21,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,0.566
+2020-21,Inter Milan,Inter Milan,Italian Football Federation,44.0
+2020-21,Juventus FC,Juventus,Italian Football Federation,117.0
+2020-21,KAA Gent,Gent,Royal Belgian Football Association,39.5
+2020-21,KF Laçi,Laçi,Albanian Football Federation,2.75
+2020-21,KF Renova,Renova,Football Federation of Macedonia,1.475
+2020-21,KF Shkupi,Shkupi,Football Federation of Macedonia,2.0
+2020-21,KF Shkëndija,Shkëndija,Football Federation of Macedonia,7.25
+2020-21,KF Teuta,Teuta,Albanian Football Federation,1.475
+2020-21,KF Tirana,Tirana,Albanian Football Federation,1.475
+2020-21,KS Cracovia,Cracovia,Polish Football Association,3.325
+2020-21,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,2.75
+2020-21,Knattspyrnufélag Reykjavíkur,KR,Football Association of Iceland,2.5
+2020-21,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,1.075
+2020-21,Kuopion Palloseura,KuPS,Football Association of Finland,2.5
+2020-21,LASK,LASK,Austrian Football Association,14.0
+2020-21,Lech Poznań,Lech Poznań,Polish Football Association,7.0
+2020-21,Legia Warsaw,Legia Warsaw,Polish Football Association,17.0
+2020-21,Leicester City F.C.,Leicester City,The Football Association,22.0
+2020-21,Lille OSC,Lille,French Football Federation,11.849
+2020-21,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,5.25
+2020-21,Linfield F.C.,Linfield,Irish Football Association,4.25
+2020-21,Liverpool F.C.,Liverpool,The Football Association,99.0
+2020-21,MFK Ružomberok,Ružomberok,Slovak Football Association,3.175
+2020-21,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,3.925
+2020-21,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,16.5
+2020-21,Malmö FF,Malmö FF,Swedish Football Association,22.0
+2020-21,Manchester City F.C.,Manchester City,The Football Association,116.0
+2020-21,Manchester United F.C.,Manchester United,The Football Association,100.0
+2020-21,Molde FK,Molde,Norwegian Football Federation,15.0
+2020-21,Motherwell F.C.,Motherwell,Scottish Football Association,5.575
+2020-21,MŠK Žilina,Žilina,Slovak Football Association,3.175
+2020-21,NK Celje,Celje,Football Association of Slovenia,2.6
+2020-21,NK Lokomotiva Zagreb,Lokomotiva Zagreb,Croatian Football Federation,4.975
+2020-21,NK Maribor,Maribor,Football Association of Slovenia,14.0
+2020-21,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,5.25
+2020-21,NK Osijek,Osijek,Croatian Football Federation,4.975
+2020-21,NSÍ Runavík,NSÍ,Faroe Islands Football Association,2.25
+2020-21,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,3.75
+2020-21,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,5.0
+2020-21,NŠ Mura,Mura,Football Association of Slovenia,2.6
+2020-21,OFI Crete F.C.,OFI,Hellenic Football Federation,5.26
+2020-21,OGC Nice,Nice,French Football Federation,11.849
+2020-21,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,43.0
+2020-21,Olympique de Marseille,Marseille,French Football Federation,31.0
+2020-21,PAOK FC,PAOK,Hellenic Football Federation,21.0
+2020-21,PFC CSKA Moscow,CSKA Moscow,Russian Football Union,44.0
+2020-21,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,4.0
+2020-21,PFC Lokomotiv Plovdiv,Lokomotiv Plovdiv,Bulgarian Football Union,3.475
+2020-21,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,26.0
+2020-21,PFC Slavia Sofia,Slavia Sofia,Bulgarian Football Union,3.475
+2020-21,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,37.0
+2020-21,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,0.875
+2020-21,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,113.0
+2020-21,Piast Gliwice,Piast Gliwice,Polish Football Association,3.325
+2020-21,Puskás Akadémia FC,Puskás Akadémia,Hungarian Football Federation,2.575
+2020-21,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,21.0
+2020-21,RB Leipzig,RB Leipzig,German Football Association,49.0
+2020-21,Rangers F.C.,Rangers,Scottish Football Association,16.25
+2020-21,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,134.0
+2020-21,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,20.456
+2020-21,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,22.75
+2020-21,Riga FC,Riga,Latvian Football Federation,3.5
+2020-21,Rio Ave F.C.,Rio Ave,Portuguese Football Federation,9.889
+2020-21,Rosenborg BK,Rosenborg,Norwegian Football Federation,13.5
+2020-21,Royal Antwerp F.C.,Antwerp,Royal Belgian Football Association,7.58
+2020-21,Royal Charleroi S.C.,Charleroi,Royal Belgian Football Association,7.58
+2020-21,S.C. Braga,Braga,Portuguese Football Federation,41.0
+2020-21,S.L. Benfica,Benfica,Portuguese Football Federation,70.0
+2020-21,SC Gjilani,Gjilani,Football Federation of Kosovo,0.8
+2020-21,SK Rapid Wien,Rapid Wien,Austrian Football Association,22.0
+2020-21,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,27.5
+2020-21,SP La Fiorita,La Fiorita,San Marino Football Federation,3.0
+2020-21,SP Tre Penne,Tre Penne,San Marino Football Federation,2.25
+2020-21,SS Lazio,Lazio,Italian Football Federation,41.0
+2020-21,SSC Napoli,Napoli,Italian Football Federation,77.0
+2020-21,Servette FC,Servette,Swiss Football Association,5.28
+2020-21,Sevilla FC,Sevilla,Royal Spanish Football Federation,102.0
+2020-21,Shamakhi FK,Keşla,Association of Football Federations of Azerbaijan,3.75
+2020-21,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,3.75
+2020-21,Shirak SC,Shirak,Football Federation of Armenia,1.525
+2020-21,Sirens F.C.,Sirens,Malta Football Association,1.15
+2020-21,Sivasspor,Sivasspor,Turkish Football Federation,6.72
+2020-21,Sporting CP,Sporting CP,Portuguese Football Federation,50.0
+2020-21,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,1.75
+2020-21,Stade Rennais FC,Rennes,French Football Federation,14.0
+2020-21,Stade de Reims,Reims,French Football Federation,11.849
+2020-21,Standard Liège,Standard Liège,Royal Belgian Football Association,20.5
+2020-21,Sumgayit FK,Sumgayit,Association of Football Federations of Azerbaijan,3.75
+2020-21,Sønderjyske Fodbold,SønderjyskE,Danish Football Association,5.85
+2020-21,TSG 1899 Hoffenheim,TSG Hoffenheim,German Football Association,14.956
+2020-21,TSV Hartberg,Hartberg,Austrian Football Association,6.585
+2020-21,The New Saints F.C.,The New Saints,Football Association of Wales,7.0
+2020-21,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,85.0
+2020-21,Tre Fiori FC,Tre Fiori,San Marino Football Federation,1.5
+2020-21,UE Engordany,Engordany,Andorran Football Federation,2.0
+2020-21,Union Titus Pétange,Union Titus Pétange,Luxembourg Football Federation,1.6
+2020-21,Valletta F.C.,Valletta,Malta Football Association,5.25
+2020-21,Valmiera FC,Valmiera,Latvian Football Federation,1.525
+2020-21,VfL Wolfsburg,VfL Wolfsburg,German Football Association,36.0
+2020-21,Viking FK,Viking,Norwegian Football Federation,4.35
+2020-21,Villarreal CF,Villarreal,Royal Spanish Football Federation,56.0
+2020-21,Willem II Tilburg,Willem II,Royal Dutch Football Association,7.15
+2020-21,Wolfsberger AC,Wolfsberger AC,Austrian Football Association,6.585
+2020-21,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,21.5
+2020-21,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,7.0
+2021-22,1. FC Slovácko,Slovácko,Football Association of the Czech Republic,5.32
+2021-22,1. FC Union Berlin,Union Berlin,German Football Association,14.714
+2021-22,AC Milan,Milan,Italian Football Federation,31.0
+2021-22,AC Omonia,Omonia,Cyprus Football Association,5.55
+2021-22,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,17.5
+2021-22,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,19.5
+2021-22,AEL Limassol,AEL Limassol,Cyprus Football Association,5.55
+2021-22,AFC Ajax,Ajax,Royal Dutch Football Association,82.5
+2021-22,AS Monaco FC,Monaco,French Football Federation,36.0
+2021-22,AS Roma,Roma,Italian Football Federation,90.0
+2021-22,AZ Alkmaar,AZ,Royal Dutch Football Association,21.5
+2021-22,Aarhus Gymnastikforening,AGF,Danish Football Association,5.575
+2021-22,Aberdeen F.C.,Aberdeen,Scottish Football Association,7.5
+2021-22,Anorthosis Famagusta FC,Anorthosis Famagusta,Cyprus Football Association,5.55
+2021-22,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,13.5
+2021-22,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,5.2
+2021-22,Atalanta BC,Atalanta,Italian Football Federation,50.5
+2021-22,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,115.0
+2021-22,BK Häcken,BK Häcken,Swedish Football Association,4.1
+2021-22,BSC Young Boys,Young Boys,Swiss Football Association,35.0
+2021-22,Bala Town F.C.,Bala Town,Football Association of Wales,2.5
+2021-22,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,57.0
+2021-22,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,49.0
+2021-22,Birkirkara F.C.,Birkirkara,Malta Football Association,1.5
+2021-22,Bohemian F.C.,Bohemians,Football Association of Ireland,1.575
+2021-22,Borussia Dortmund,Borussia Dortmund,German Football Association,90.0
+2021-22,Breiðablik (men's football),Breiðablik,Football Association of Iceland,2.25
+2021-22,Brøndby IF,Brøndby,Danish Football Association,7.0
+2021-22,C.D. Santa Clara,Santa Clara,Portuguese Football Federation,9.709
+2021-22,CFR Cluj,CFR Cluj,Romanian Football Federation,16.5
+2021-22,CS Fola Esch,Fola Esch,Luxembourg Football Federation,5.25
+2021-22,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,6.0
+2021-22,Celtic F.C.,Celtic,Scottish Football Association,34.0
+2021-22,Chelsea F.C.,Chelsea,The Football Association,98.0
+2021-22,Club Brugge KV,Club Brugge,Royal Belgian Football Association,35.5
+2021-22,Coleraine F.C.,Coleraine,Irish Football Association,2.75
+2021-22,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,4.75
+2021-22,Dundalk F.C.,Dundalk,Football Association of Ireland,10.5
+2021-22,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,33.0
+2021-22,Europa F.C.,Europa,Gibraltar Football Association,4.0
+2021-22,F.C. Ashdod,Ashdod,Israel Football Association,4.875
+2021-22,F.C. Copenhagen,Copenhagen,Danish Football Association,43.5
+2021-22,F.C. Paços de Ferreira,Paços de Ferreira,Portuguese Football Federation,9.709
+2021-22,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,8.0
+2021-22,FC Alashkert,Alashkert,Football Federation of Armenia,6.5
+2021-22,FC Ararat Yerevan,Ararat Yerevan,Football Federation of Armenia,1.475
+2021-22,FC Arda Kardzhali,Arda,Bulgarian Football Union,4.075
+2021-22,FC Astana,Astana,Kazakhstan Football Federation,22.5
+2021-22,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,17.5
+2021-22,FC Barcelona,Barcelona,Royal Spanish Football Federation,122.0
+2021-22,FC Basel,Basel,Swiss Football Association,49.0
+2021-22,FC Bayern Munich,Bayern Munich,German Football Association,134.0
+2021-22,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,5.0
+2021-22,FC Dila Gori,Dila Gori,Georgian Football Federation,1.375
+2021-22,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,1.375
+2021-22,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,6.5
+2021-22,FC Drita,Drita,Football Federation of Kosovo,3.5
+2021-22,FC Dynamo Brest,Dynamo Brest,Football Federation of Belarus,5.0
+2021-22,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,47.0
+2021-22,FC Flora,Flora,Estonian Football Association,6.25
+2021-22,FC Gagra,Gagra,Georgian Football Federation,1.375
+2021-22,FC Honka,Honka,Football Association of Finland,1.375
+2021-22,FC Inter Turku,Inter Turku,Football Association of Finland,2.0
+2021-22,FC Kairat,Kairat,Kazakhstan Football Federation,6.0
+2021-22,FC Kolos Kovalivka,Kolos Kovalivka,Ukrainian Association of Football,6.62
+2021-22,FC Lokomotiv Moscow,Lokomotiv Moscow,Russian Football Union,31.0
+2021-22,FC Luzern,Luzern,Swiss Football Association,5.5
+2021-22,FC Midtjylland,Midtjylland,Danish Football Association,13.5
+2021-22,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,2.25
+2021-22,FC Noah,Noah,Football Federation of Armenia,1.475
+2021-22,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,3.0
+2021-22,FC Porto,Porto,Portuguese Football Federation,87.0
+2021-22,FC Prishtina,Prishtina,Football Federation of Kosovo,2.25
+2021-22,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,59.0
+2021-22,FC Rubin Kazan,Rubin Kazan,Russian Football Union,7.676
+2021-22,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,4.5
+2021-22,FC Sfîntul Gheorghe,Sfîntul Gheorghe,Moldovan Football Federation,1.5
+2021-22,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,79.0
+2021-22,FC Shakhter Karagandy,Shakhter Karagandy,Kazakhstan Football Federation,3.125
+2021-22,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,5.25
+2021-22,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,14.5
+2021-22,FC Spartak Moscow,Spartak Moscow,Russian Football Union,18.5
+2021-22,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,7.5
+2021-22,FC Struga,Struga,Football Federation of Macedonia,1.525
+2021-22,FC Swift Hesperange,Swift Hesperange,Luxembourg Football Federation,1.65
+2021-22,FC Tobol,Tobol,Kazakhstan Football Federation,3.125
+2021-22,FC Torpedo-BelAZ Zhodino,Torpedo-BelAZ Zhodino,Football Federation of Belarus,3.05
+2021-22,FC Urartu,Urartu,Football Federation of Armenia,2.25
+2021-22,FC Vaduz,Vaduz,Liechtenstein Football Association,5.5
+2021-22,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,33.5
+2021-22,FC Vorskla Poltava,Vorskla Poltava,Ukrainian Association of Football,6.62
+2021-22,FC Zenit Saint Petersburg,Zenit Saint Petersburg,Russian Football Union,50.0
+2021-22,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,15.0
+2021-22,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,3.75
+2021-22,FCSB,FCSB,Romanian Football Federation,21.0
+2021-22,FH (men's football),FH,Football Association of Iceland,5.0
+2021-22,FK Austria Wien,Austria Wien,Austrian Football Association,10.0
+2021-22,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,4.2
+2021-22,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,1.6
+2021-22,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,6.0
+2021-22,FK Dečić,Dečić,Football Association of Montenegro,1.0
+2021-22,FK Jablonec,Jablonec,Football Association of the Czech Republic,7.0
+2021-22,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,2.0
+2021-22,FK Liepāja,Liepāja,Latvian Football Federation,4.0
+2021-22,FK Panevėžys,Panevėžys,Lithuanian Football Federation,1.75
+2021-22,FK Partizan,Partizan,Football Association of Serbia,18.0
+2021-22,FK Partizani Tirana,Partizani,Albanian Football Federation,4.25
+2021-22,FK Podgorica,Podgorica,Football Association of Montenegro,1.0
+2021-22,FK RFS,RFS,Latvian Football Federation,2.0
+2021-22,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,6.25
+2021-22,FK Sileks,Sileks,Football Federation of Macedonia,1.75
+2021-22,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,4.75
+2021-22,FK Sūduva,Sūduva,Lithuanian Football Federation,8.75
+2021-22,FK Velež Mostar,Velež Mostar,Football Association of Bosnia and Herzegovina,1.6
+2021-22,FK Vojvodina,Vojvodina,Football Association of Serbia,5.35
+2021-22,FK Čukarički,Čukarički,Football Association of Serbia,5.35
+2021-22,FK Žalgiris,Žalgiris,Lithuanian Football Federation,6.5
+2021-22,Fehérvár FC,MOL Fehérvár,Hungarian Football Federation,11.5
+2021-22,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,19.5
+2021-22,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,13.5
+2021-22,Feyenoord,Feyenoord,Royal Dutch Football Association,21.0
+2021-22,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,44.5
+2021-22,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,17.0
+2021-22,Glentoran F.C.,Glentoran,Irish Football Association,1.391
+2021-22,Gżira United F.C.,Gżira United,Malta Football Association,2.5
+2021-22,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,8.0
+2021-22,HNK Rijeka,Rijeka,Croatian Football Federation,13.5
+2021-22,Hammarby Fotboll,Hammarby IF,Swedish Football Association,4.1
+2021-22,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,17.5
+2021-22,Havnar Bóltfelag,HB,Faroe Islands Football Association,2.25
+2021-22,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,5.5
+2021-22,Hibernian F.C.,Hibernian,Scottish Football Association,6.675
+2021-22,Hibernians F.C.,Hibernians,Malta Football Association,3.75
+2021-22,IF Elfsborg,IF Elfsborg,Swedish Football Association,4.1
+2021-22,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,1.5
+2021-22,Inter Milan,Inter Milan,Italian Football Federation,53.0
+2021-22,Juventus FC,Juventus,Italian Football Federation,120.0
+2021-22,KAA Gent,Gent,Royal Belgian Football Association,26.5
+2021-22,KF Laçi,Laçi,Albanian Football Federation,4.0
+2021-22,KF Llapi,Llapi,Football Federation of Kosovo,1.166
+2021-22,KF Shkupi,Shkupi,Football Federation of Macedonia,3.0
+2021-22,KF Shkëndija,Shkëndija,Football Federation of Macedonia,9.0
+2021-22,KF Teuta,Teuta,Albanian Football Federation,2.75
+2021-22,KF Vllaznia Shkodër,Vllaznia,Albanian Football Federation,1.45
+2021-22,KRC Genk,Genk,Royal Belgian Football Association,30.0
+2021-22,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,5.25
+2021-22,Kuopion Palloseura,KuPS,Football Association of Finland,5.0
+2021-22,LASK,LASK,Austrian Football Association,21.0
+2021-22,Larne F.C.,Larne,Irish Football Association,1.391
+2021-22,Legia Warsaw,Legia Warsaw,Polish Football Association,16.5
+2021-22,Leicester City F.C.,Leicester City,The Football Association,32.0
+2021-22,Lille OSC,Lille,French Football Federation,14.0
+2021-22,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,5.75
+2021-22,Linfield F.C.,Linfield,Irish Football Association,5.25
+2021-22,Liverpool F.C.,Liverpool,The Football Association,101.0
+2021-22,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,4.875
+2021-22,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,20.5
+2021-22,Malmö FF,Malmö FF,Swedish Football Association,18.5
+2021-22,Manchester City F.C.,Manchester City,The Football Association,125.0
+2021-22,Manchester United F.C.,Manchester United,The Football Association,113.0
+2021-22,Molde FK,Molde,Norwegian Football Federation,17.0
+2021-22,Mons Calpe S.C.,Mons Calpe,Gibraltar Football Association,1.133
+2021-22,Mosta F.C.,Mosta,Malta Football Association,1.275
+2021-22,MŠK Žilina,Žilina,Slovak Football Association,2.725
+2021-22,NK Domžale,Domžale,Football Association of Slovenia,5.5
+2021-22,NK Maribor,Maribor,Football Association of Slovenia,14.0
+2021-22,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,6.75
+2021-22,NK Osijek,Osijek,Croatian Football Federation,6.0
+2021-22,NK Široki Brijeg,Široki Brijeg,Football Association of Bosnia and Herzegovina,2.75
+2021-22,NSÍ Runavík,NSÍ,Faroe Islands Football Association,3.0
+2021-22,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,5.0
+2021-22,Newtown A.F.C.,Newtown,Football Association of Wales,1.0
+2021-22,NŠ Mura,Mura,Football Association of Slovenia,3.0
+2021-22,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,43.0
+2021-22,Olympique Lyonnais,Lyon,French Football Federation,76.0
+2021-22,Olympique de Marseille,Marseille,French Football Federation,28.0
+2021-22,PAOK FC,PAOK,Hellenic Football Federation,20.0
+2021-22,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,8.0
+2021-22,PFC Lokomotiv Plovdiv,Lokomotiv Plovdiv,Bulgarian Football Union,4.075
+2021-22,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,28.0
+2021-22,PFC Sochi,Sochi,Russian Football Union,7.676
+2021-22,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,29.0
+2021-22,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,1.0
+2021-22,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,113.0
+2021-22,Pogoń Szczecin,Pogoń Szczecin,Polish Football Association,3.025
+2021-22,Puskás Akadémia FC,Puskás Akadémia,Hungarian Football Federation,3.1
+2021-22,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,21.0
+2021-22,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,25.0
+2021-22,RB Leipzig,RB Leipzig,German Football Association,66.0
+2021-22,Racing FC Union Luxembourg,Racing Union,Luxembourg Football Federation,1.65
+2021-22,Raków Częstochowa,Raków Częstochowa,Polish Football Association,3.025
+2021-22,Randers FC,Randers,Danish Football Association,5.575
+2021-22,Rangers F.C.,Rangers,Scottish Football Association,31.25
+2021-22,Real Betis,Real Betis,Royal Spanish Football Federation,19.571
+2021-22,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,127.0
+2021-22,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,19.571
+2021-22,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,32.5
+2021-22,Riga FC,Riga,Latvian Football Federation,5.5
+2021-22,Rosenborg BK,Rosenborg,Norwegian Football Federation,14.0
+2021-22,Royal Antwerp F.C.,Antwerp,Royal Belgian Football Association,10.5
+2021-22,S.C. Braga,Braga,Portuguese Football Federation,35.0
+2021-22,S.L. Benfica,Benfica,Portuguese Football Federation,58.0
+2021-22,SBV Vitesse,Vitesse,Royal Dutch Football Association,7.84
+2021-22,SK Rapid Wien,Rapid Wien,Austrian Football Association,17.0
+2021-22,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,43.5
+2021-22,SK Sturm Graz,Sturm Graz,Austrian Football Association,7.165
+2021-22,SP La Fiorita,La Fiorita,San Marino Football Federation,3.25
+2021-22,SP Tre Penne,Tre Penne,San Marino Football Federation,2.75
+2021-22,SS Folgore Falciano Calcio,Folgore,San Marino Football Federation,1.0
+2021-22,SS Lazio,Lazio,Italian Football Federation,44.0
+2021-22,SSC Napoli,Napoli,Italian Football Federation,74.0
+2021-22,Sepsi OSK Sfântu Gheorghe,Sepsi OSK,Romanian Football Federation,3.64
+2021-22,Servette FC,Servette,Swiss Football Association,5.245
+2021-22,Sevilla FC,Sevilla,Royal Spanish Football Federation,98.0
+2021-22,Shamakhi FK,Keşla,Association of Football Federations of Azerbaijan,3.375
+2021-22,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,4.75
+2021-22,Sivasspor,Sivasspor,Turkish Football Federation,6.02
+2021-22,Sligo Rovers F.C.,Sligo Rovers,Football Association of Ireland,1.575
+2021-22,Sporting CP,Sporting CP,Portuguese Football Federation,45.5
+2021-22,St Johnstone F.C.,St Johnstone,Scottish Football Association,6.675
+2021-22,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,2.25
+2021-22,Stade Rennais FC,Rennes,French Football Federation,19.0
+2021-22,Stjarnan (men's football),Stjarnan,Football Association of Iceland,3.25
+2021-22,Sumgayit FK,Sumgayit,Association of Football Federations of Azerbaijan,3.375
+2021-22,The New Saints F.C.,The New Saints,Football Association of Wales,7.5
+2021-22,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,88.0
+2021-22,Trabzonspor,Trabzonspor,Turkish Football Federation,6.02
+2021-22,UE Sant Julià,Sant Julià,Andorran Football Federation,1.25
+2021-22,Valmiera FC,Valmiera,Latvian Football Federation,1.475
+2021-22,Valur (men's football),Valur,Football Association of Iceland,4.25
+2021-22,VfL Wolfsburg,VfL Wolfsburg,German Football Association,14.714
+2021-22,Villarreal CF,Villarreal,Royal Spanish Football Federation,63.0
+2021-22,Vålerenga Fotball,Vålerenga,Norwegian Football Federation,4.2
+2021-22,West Ham United F.C.,West Ham United,The Football Association,20.113
+2021-22,Újpest FC,Újpest,Hungarian Football Federation,3.1
+2021-22,Śląsk Wrocław,Śląsk Wrocław,Polish Football Association,3.025
+2021-22,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,7.5
+2022-23,1. FC Köln,1. FC Köln,German Football Association,15.042
+2022-23,1. FC Slovácko,Slovácko,Football Association of the Czech Republic,5.56
+2022-23,1. FC Union Berlin,Union Berlin,German Football Association,15.042
+2022-23,AC Milan,Milan,Italian Football Federation,38.0
+2022-23,AC Omonia,Omonia,Cyprus Football Association,7.0
+2022-23,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,13.5
+2022-23,ACF Fiorentina,Fiorentina,Italian Football Federation,15.38
+2022-23,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,7.5
+2022-23,AFC Ajax,Ajax,Royal Dutch Football Association,82.5
+2022-23,AIK Fotboll,AIK,Swedish Football Association,5.0
+2022-23,APOEL FC,APOEL,Cyprus Football Association,18.0
+2022-23,AS Monaco FC,Monaco,French Football Federation,26.0
+2022-23,AS Roma,Roma,Italian Football Federation,100.0
+2022-23,AZ Alkmaar,AZ,Royal Dutch Football Association,28.5
+2022-23,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,14.0
+2022-23,Aris Limassol FC,Aris Limassol,Cyprus Football Association,5.275
+2022-23,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,5.64
+2022-23,Arsenal F.C.,Arsenal,The Football Association,80.0
+2022-23,Atlètic Club d'Escaldes,Atlètic Club d'Escaldes,Andorran Football Federation,0.933
+2022-23,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,105.0
+2022-23,B36 Tórshavn,B36,Faroe Islands Football Association,4.75
+2022-23,BSC Young Boys,Young Boys,Swiss Football Association,37.0
+2022-23,Bala Town F.C.,Bala Town,Football Association of Wales,3.25
+2022-23,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,53.0
+2022-23,Borussia Dortmund,Borussia Dortmund,German Football Association,78.0
+2022-23,Botev Plovdiv,Botev Plovdiv,Bulgarian Football Union,3.9
+2022-23,Breiðablik (men's football),Breiðablik,Football Association of Iceland,4.0
+2022-23,Brøndby IF,Brøndby,Danish Football Association,8.5
+2022-23,CFR Cluj,CFR Cluj,Romanian Football Federation,19.5
+2022-23,CS Fola Esch,Fola Esch,Luxembourg Football Federation,7.5
+2022-23,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,7.5
+2022-23,Celtic F.C.,Celtic,Scottish Football Association,33.0
+2022-23,Chelsea F.C.,Chelsea,The Football Association,123.0
+2022-23,Cliftonville F.C.,Cliftonville,Irish Football Association,2.0
+2022-23,Club Brugge KV,Club Brugge,Royal Belgian Football Association,38.5
+2022-23,Crusaders F.C.,Crusaders,Irish Football Association,3.25
+2022-23,Derry City F.C.,Derry City,Football Association of Ireland,2.25
+2022-23,Djurgårdens IF Fotboll,Djurgårdens IF,Swedish Football Association,4.575
+2022-23,Dundee United F.C.,Dundee United,Scottish Football Association,7.38
+2022-23,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,61.0
+2022-23,Europa F.C.,Europa,Gibraltar Football Association,4.5
+2022-23,F.C. Copenhagen,Copenhagen,Danish Football Association,40.5
+2022-23,F.C. Magpies,FCB Magpies,Gibraltar Football Association,1.083
+2022-23,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,8.5
+2022-23,FC AP Brera Strumica,Akademija Pandev,Football Federation of Macedonia,1.4
+2022-23,FC Alashkert,Alashkert,Football Federation of Armenia,8.0
+2022-23,FC Ararat Yerevan,Ararat Yerevan,Football Federation of Armenia,1.625
+2022-23,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,5.0
+2022-23,FC Astana,Astana,Kazakhstan Football Federation,20.5
+2022-23,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,17.5
+2022-23,FC Ballkani,Ballkani,Football Federation of Kosovo,1.633
+2022-23,FC Barcelona,Barcelona,Royal Spanish Football Federation,114.0
+2022-23,FC Basel,Basel,Swiss Football Association,55.0
+2022-23,FC Bayern Munich,Bayern Munich,German Football Association,138.0
+2022-23,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,6.5
+2022-23,FC Differdange 03,Differdange 03,Luxembourg Football Federation,1.75
+2022-23,FC Dila Gori,Dila Gori,Georgian Football Federation,1.4
+2022-23,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,3.25
+2022-23,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,5.0
+2022-23,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,6.5
+2022-23,FC Drita,Drita,Football Federation of Kosovo,5.0
+2022-23,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,44.0
+2022-23,FC Flora,Flora,Estonian Football Association,9.75
+2022-23,FC Gomel,Gomel,Football Federation of Belarus,2.5
+2022-23,FC Iberia 1999,Saburtalo Tbilisi,Georgian Football Federation,3.0
+2022-23,FC Inter Turku,Inter Turku,Football Association of Finland,3.0
+2022-23,FC Kairat,Kairat,Kazakhstan Football Federation,8.0
+2022-23,FC Koper,Koper,Football Association of Slovenia,3.0
+2022-23,FC Kyzylzhar,Kyzylzhar,Kazakhstan Football Federation,3.15
+2022-23,FC Lugano,Lugano,Swiss Football Association,9.0
+2022-23,FC Midtjylland,Midtjylland,Danish Football Association,19.0
+2022-23,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,3.75
+2022-23,FC Nantes,Nantes,French Football Federation,12.016
+2022-23,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,4.5
+2022-23,FC Porto,Porto,Portuguese Football Federation,80.0
+2022-23,FC Pyunik,Pyunik,Football Federation of Armenia,4.25
+2022-23,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,71.0
+2022-23,FC Sfîntul Gheorghe,Sfîntul Gheorghe,Moldovan Football Federation,2.5
+2022-23,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,71.0
+2022-23,FC Shakhtyor Soligorsk,Shakhtyor Soligorsk,Football Federation of Belarus,6.25
+2022-23,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,22.5
+2022-23,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,8.5
+2022-23,FC Tobol,Tobol,Kazakhstan Football Federation,4.5
+2022-23,FC Twente,Twente,Royal Dutch Football Association,9.86
+2022-23,FC Vaduz,Vaduz,Liechtenstein Football Association,6.5
+2022-23,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,31.0
+2022-23,FC Vorskla Poltava,Vorskla Poltava,Ukrainian Association of Football,6.36
+2022-23,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,18.0
+2022-23,FC Zürich,Zürich,Swiss Football Association,7.0
+2022-23,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,4.75
+2022-23,FCSB,FCSB,Romanian Football Federation,17.5
+2022-23,FK Austria Wien,Austria Wien,Austrian Football Association,7.77
+2022-23,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,17.0
+2022-23,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,3.0
+2022-23,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,7.0
+2022-23,FK Dečić,Dečić,Football Association of Montenegro,1.0
+2022-23,FK Iskra Danilovgrad,Iskra,Football Association of Montenegro,1.0
+2022-23,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,3.5
+2022-23,FK Liepāja,Liepāja,Latvian Football Federation,4.5
+2022-23,FK Makedonija G.P.,Makedonija GP,Football Federation of Macedonia,1.4
+2022-23,FK Panevėžys,Panevėžys,Lithuanian Football Federation,2.0
+2022-23,FK Partizan,Partizan,Football Association of Serbia,24.5
+2022-23,FK Partizani Tirana,Partizani,Albanian Football Federation,4.25
+2022-23,FK RFS,RFS,Latvian Football Federation,4.0
+2022-23,FK Radnički Niš,Radnički Niš,Football Association of Serbia,6.675
+2022-23,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,6.25
+2022-23,FK Sūduva,Sūduva,Lithuanian Football Federation,10.0
+2022-23,FK Tuzla City,Tuzla City,Football Association of Bosnia and Herzegovina,1.825
+2022-23,FK Velež Mostar,Velež Mostar,Football Association of Bosnia and Herzegovina,2.0
+2022-23,FK Čukarički,Čukarički,Football Association of Serbia,6.675
+2022-23,FK Žalgiris,Žalgiris,Lithuanian Football Federation,8.0
+2022-23,Fehérvár FC,MOL Fehérvár,Hungarian Football Federation,11.5
+2022-23,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,14.5
+2022-23,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,15.5
+2022-23,Feyenoord,Feyenoord,Royal Dutch Football Association,40.0
+2022-23,Floriana F.C.,Floriana,Malta Football Association,2.25
+2022-23,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,49.5
+2022-23,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,3.5
+2022-23,Gil Vicente F.C.,Gil Vicente,Portuguese Football Federation,10.676
+2022-23,Gżira United F.C.,Gżira United,Malta Football Association,4.0
+2022-23,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,8.0
+2022-23,HNK Rijeka,Rijeka,Croatian Football Federation,15.0
+2022-23,Hamrun Spartans F.C.,Hamrun Spartans,Malta Football Association,1.4
+2022-23,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,14.0
+2022-23,Havnar Bóltfelag,HB,Faroe Islands Football Association,4.0
+2022-23,Heart of Midlothian F.C.,Heart of Midlothian,Scottish Football Association,7.38
+2022-23,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,8.5
+2022-23,Hibernians F.C.,Hibernians,Malta Football Association,5.5
+2022-23,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,7.0
+2022-23,IF Elfsborg,IF Elfsborg,Swedish Football Association,4.575
+2022-23,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,3.0
+2022-23,Inter Milan,Inter Milan,Italian Football Federation,67.0
+2022-23,Juventus FC,Juventus,Italian Football Federation,107.0
+2022-23,KAA Gent,Gent,Royal Belgian Football Association,27.5
+2022-23,KF Laçi,Laçi,Albanian Football Federation,6.0
+2022-23,KF Llapi,Llapi,Football Federation of Kosovo,1.633
+2022-23,KF Shkupi,Shkupi,Football Federation of Macedonia,4.5
+2022-23,KF Shkëndija,Shkëndija,Football Federation of Macedonia,9.0
+2022-23,KF Tirana,Tirana,Albanian Football Federation,2.75
+2022-23,KF Vllaznia Shkodër,Vllaznia,Albanian Football Federation,1.6
+2022-23,Kisvárda FC,Kisvárda,Hungarian Football Federation,3.275
+2022-23,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,6.25
+2022-23,Knattspyrnufélag Reykjavíkur,KR,Football Association of Iceland,3.0
+2022-23,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,1.075
+2022-23,Konyaspor,Konyaspor,Turkish Football Federation,5.42
+2022-23,Kuopion Palloseura,KuPS,Football Association of Finland,7.5
+2022-23,Larne F.C.,Larne,Irish Football Association,2.0
+2022-23,Lech Poznań,Lech Poznań,Polish Football Association,6.0
+2022-23,Lechia Gdańsk,Lechia Gdańsk,Polish Football Association,3.175
+2022-23,Lillestrøm SK,Lillestrøm,Norwegian Football Federation,5.45
+2022-23,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,7.25
+2022-23,Linfield F.C.,Linfield,Irish Football Association,7.0
+2022-23,Liverpool F.C.,Liverpool,The Football Association,134.0
+2022-23,MFK Ružomberok,Ružomberok,Slovak Football Association,3.125
+2022-23,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,7.0
+2022-23,Maccabi Netanya F.C.,Maccabi Netanya,Israel Football Association,4.875
+2022-23,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,24.5
+2022-23,Malmö FF,Malmö FF,Swedish Football Association,23.5
+2022-23,Manchester City F.C.,Manchester City,The Football Association,134.0
+2022-23,Manchester United F.C.,Manchester United,The Football Association,105.0
+2022-23,Molde FK,Molde,Norwegian Football Federation,19.0
+2022-23,Motherwell F.C.,Motherwell,Scottish Football Association,7.38
+2022-23,NK Maribor,Maribor,Football Association of Slovenia,14.0
+2022-23,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,7.75
+2022-23,NK Osijek,Osijek,Croatian Football Federation,8.0
+2022-23,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,7.0
+2022-23,Newtown A.F.C.,Newtown,Football Association of Wales,1.1
+2022-23,NŠ Mura,Mura,Football Association of Slovenia,5.5
+2022-23,OGC Nice,Nice,French Football Federation,12.016
+2022-23,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,41.0
+2022-23,Olympique de Marseille,Marseille,French Football Federation,44.0
+2022-23,PAOK FC,PAOK,Hellenic Football Federation,25.0
+2022-23,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,10.5
+2022-23,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,3.9
+2022-23,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,23.0
+2022-23,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,33.0
+2022-23,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,2.0
+2022-23,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,5.64
+2022-23,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,112.0
+2022-23,Pogoń Szczecin,Pogoń Szczecin,Polish Football Association,3.175
+2022-23,Puskás Akadémia FC,Puskás Akadémia,Hungarian Football Federation,3.275
+2022-23,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,25.0
+2022-23,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,11.5
+2022-23,RB Leipzig,RB Leipzig,German Football Association,83.0
+2022-23,Racing FC Union Luxembourg,Racing Union,Luxembourg Football Federation,2.0
+2022-23,Raków Częstochowa,Raków Częstochowa,Polish Football Association,3.175
+2022-23,Rangers F.C.,Rangers,Scottish Football Association,50.25
+2022-23,Real Betis,Real Betis,Royal Spanish Football Federation,21.0
+2022-23,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,124.0
+2022-23,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,26.0
+2022-23,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,46.0
+2022-23,Riga FC,Riga,Latvian Football Federation,8.0
+2022-23,Royal Antwerp F.C.,Antwerp,Royal Belgian Football Association,14.5
+2022-23,Royale Union Saint-Gilloise,Union Saint-Gilloise,Royal Belgian Football Association,6.12
+2022-23,S.C. Braga,Braga,Portuguese Football Federation,46.0
+2022-23,S.L. Benfica,Benfica,Portuguese Football Federation,61.0
+2022-23,SC Dnipro-1,Dnipro-1,Ukrainian Association of Football,6.36
+2022-23,SC Freiburg,SC Freiburg,German Football Association,15.042
+2022-23,SC Gjilani,Gjilani,Football Federation of Kosovo,1.633
+2022-23,SK Rapid Wien,Rapid Wien,Austrian Football Association,16.0
+2022-23,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,52.0
+2022-23,SK Sturm Graz,Sturm Graz,Austrian Football Association,7.77
+2022-23,SP La Fiorita,La Fiorita,San Marino Football Federation,4.0
+2022-23,SP Tre Penne,Tre Penne,San Marino Football Federation,3.25
+2022-23,SS Lazio,Lazio,Italian Football Federation,53.0
+2022-23,SSC Napoli,Napoli,Italian Football Federation,66.0
+2022-23,Seinäjoen Jalkapallokerho,SJK,Football Association of Finland,1.775
+2022-23,Sepsi OSK Sfântu Gheorghe,Sepsi OSK,Romanian Football Federation,3.43
+2022-23,Sevilla FC,Sevilla,Royal Spanish Football Federation,91.0
+2022-23,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,7.0
+2022-23,Silkeborg IF,Silkeborg,Danish Football Association,5.435
+2022-23,Sivasspor,Sivasspor,Turkish Football Federation,6.5
+2022-23,Sligo Rovers F.C.,Sligo Rovers,Football Association of Ireland,1.625
+2022-23,Sporting CP,Sporting CP,Portuguese Football Federation,55.5
+2022-23,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,3.25
+2022-23,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,1.625
+2022-23,Stade Rennais FC,Rennes,French Football Federation,33.0
+2022-23,The New Saints F.C.,The New Saints,Football Association of Wales,8.5
+2022-23,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,83.0
+2022-23,Trabzonspor,Trabzonspor,Turkish Football Federation,5.5
+2022-23,Tre Fiori FC,Tre Fiori,San Marino Football Federation,3.0
+2022-23,UE Santa Coloma,UE Santa Coloma,Andorran Football Federation,0.933
+2022-23,Valmiera FC,Valmiera,Latvian Football Federation,2.0
+2022-23,Viborg FF,Viborg,Danish Football Association,5.435
+2022-23,Viking FK,Viking,Norwegian Football Federation,5.45
+2022-23,Villarreal CF,Villarreal,Royal Spanish Football Federation,78.0
+2022-23,Vitória S.C.,Vitória de Guimarães,Portuguese Football Federation,10.676
+2022-23,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,2.5
+2022-23,West Ham United F.C.,West Ham United,The Football Association,21.328
+2022-23,Wolfsberger AC,Wolfsberger AC,Austrian Football Association,11.0
+2022-23,Zira FK,Zira,Association of Football Federations of Azerbaijan,3.4
+2022-23,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,25.0
+2022-23,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,13.0
+2023-24,1. FC Union Berlin,Union Berlin,German Football Association,17.0
+2023-24,AC Milan,Milan,Italian Football Federation,50.0
+2023-24,AC Omonia,Omonia,Cyprus Football Association,10.0
+2023-24,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,14.0
+2023-24,ACF Fiorentina,Fiorentina,Italian Football Federation,20.0
+2023-24,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,11.0
+2023-24,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,10.0
+2023-24,AFC Ajax,Ajax,Royal Dutch Football Association,89.0
+2023-24,APOEL FC,APOEL,Cyprus Football Association,14.5
+2023-24,AS Roma,Roma,Italian Football Federation,97.0
+2023-24,AZ Alkmaar,AZ,Royal Dutch Football Association,47.5
+2023-24,Aarhus Gymnastikforening,AGF,Danish Football Association,5.565
+2023-24,Aberdeen F.C.,Aberdeen,Scottish Football Association,8.0
+2023-24,Adana Demirspor,Adana Demirspor,Turkish Football Federation,6.42
+2023-24,Aris Limassol FC,Aris Limassol,Cyprus Football Association,4.895
+2023-24,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,7.0
+2023-24,Arsenal F.C.,Arsenal,The Football Association,76.0
+2023-24,Aston Villa F.C.,Aston Villa,The Football Association,21.914
+2023-24,Atalanta BC,Atalanta,Italian Football Federation,55.5
+2023-24,Atlètic Club d'Escaldes,Atlètic Club d'Escaldes,Andorran Football Federation,1.033
+2023-24,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,85.0
+2023-24,B36 Tórshavn,B36,Faroe Islands Football Association,6.5
+2023-24,BK Häcken,BK Häcken,Swedish Football Association,4.75
+2023-24,BSC Young Boys,Young Boys,Swiss Football Association,34.5
+2023-24,Balzan F.C.,Balzan,Malta Football Association,2.5
+2023-24,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,72.0
+2023-24,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,5.0
+2023-24,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,14.0
+2023-24,Birkirkara F.C.,Birkirkara,Malta Football Association,2.0
+2023-24,Bohemians 1905,Bohemians 1905,Football Association of the Czech Republic,5.81
+2023-24,Borussia Dortmund,Borussia Dortmund,German Football Association,86.0
+2023-24,Breiðablik (men's football),Breiðablik,Football Association of Iceland,6.0
+2023-24,Brighton &amp; Hove Albion F.C.,Brighton & Hove Albion,The Football Association,21.914
+2023-24,CA Osasuna,Osasuna,Royal Spanish Football Federation,18.599
+2023-24,CFR Cluj,CFR Cluj,Romanian Football Federation,27.5
+2023-24,Celtic F.C.,Celtic,Scottish Football Association,31.0
+2023-24,Club Brugge KV,Club Brugge,Royal Belgian Football Association,54.0
+2023-24,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,5.5
+2023-24,Crusaders F.C.,Crusaders,Irish Football Association,4.5
+2023-24,Debreceni VSC,Debrecen,Hungarian Football Federation,4.125
+2023-24,Derry City F.C.,Derry City,Football Association of Ireland,3.0
+2023-24,Djurgårdens IF Fotboll,Djurgårdens IF,Swedish Football Association,16.5
+2023-24,Dundalk F.C.,Dundalk,Football Association of Ireland,8.5
+2023-24,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,77.0
+2023-24,Europa F.C.,Europa,Gibraltar Football Association,5.0
+2023-24,F.C. Arouca,Arouca,Portuguese Football Federation,11.243
+2023-24,F.C. Copenhagen,Copenhagen,Danish Football Association,40.5
+2023-24,F.C. Magpies,FCB Magpies,Gibraltar Football Association,1.158
+2023-24,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,10.0
+2023-24,FC Aktobe,Aktobe,Kazakhstan Football Federation,2.525
+2023-24,FC Alashkert,Alashkert,Football Federation of Armenia,8.0
+2023-24,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,6.5
+2023-24,FC Astana,Astana,Kazakhstan Football Federation,14.0
+2023-24,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,15.0
+2023-24,FC Ballkani,Ballkani,Football Federation of Kosovo,3.0
+2023-24,FC Barcelona,Barcelona,Royal Spanish Football Federation,98.0
+2023-24,FC Basel,Basel,Swiss Football Association,53.0
+2023-24,FC Bayern Munich,Bayern Munich,German Football Association,136.0
+2023-24,FC CSKA 1948 Sofia,CSKA 1948,Bulgarian Football Union,4.0
+2023-24,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,8.5
+2023-24,FC Differdange 03,Differdange 03,Luxembourg Football Federation,2.0
+2023-24,FC Dila Gori,Dila Gori,Georgian Football Federation,2.0
+2023-24,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,4.5
+2023-24,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,5.5
+2023-24,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,7.5
+2023-24,FC Drita,Drita,Football Federation of Kosovo,6.5
+2023-24,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,35.0
+2023-24,FC Flora,Flora,Estonian Football Association,10.5
+2023-24,FC Haka,Haka,Football Association of Finland,2.05
+2023-24,FC Hegelmann,Hegelmann,Lithuanian Football Federation,2.0
+2023-24,FC Honka,Honka,Football Association of Finland,2.5
+2023-24,FC Lugano,Lugano,Swiss Football Association,6.335
+2023-24,FC Luzern,Luzern,Swiss Football Association,6.335
+2023-24,FC Midtjylland,Midtjylland,Danish Football Association,25.5
+2023-24,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,5.0
+2023-24,FC Neman Grodno,Neman Grodno,Football Federation of Belarus,1.975
+2023-24,FC Nordsjælland,Nordsjælland,Danish Football Association,5.565
+2023-24,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,2.525
+2023-24,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,6.5
+2023-24,FC Porto,Porto,Portuguese Football Federation,81.0
+2023-24,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,5.0
+2023-24,FC Pyunik,Pyunik,Football Federation of Armenia,8.0
+2023-24,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,59.0
+2023-24,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,5.0
+2023-24,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,63.0
+2023-24,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,19.5
+2023-24,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,10.5
+2023-24,FC Struga,Struga,Football Federation of Macedonia,1.1
+2023-24,FC Swift Hesperange,Swift Hesperange,Luxembourg Football Federation,1.8
+2023-24,FC Tobol,Tobol,Kazakhstan Football Federation,6.5
+2023-24,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,3.5
+2023-24,FC Torpedo-BelAZ Zhodino,Torpedo-BelAZ Zhodino,Football Federation of Belarus,1.975
+2023-24,FC Twente,Twente,Royal Dutch Football Association,11.98
+2023-24,FC Urartu,Urartu,Football Federation of Armenia,3.0
+2023-24,FC Vaduz,Vaduz,Liechtenstein Football Association,8.5
+2023-24,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,22.0
+2023-24,FC Vorskla Poltava,Vorskla Poltava,Ukrainian Association of Football,6.0
+2023-24,FC Zimbru Chișinău,Zimbru Chișinău,Moldovan Football Federation,2.45
+2023-24,FC Zorya Luhansk,Zorya Luhansk,Ukrainian Association of Football,16.0
+2023-24,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,6.0
+2023-24,FCSB,FCSB,Romanian Football Federation,11.0
+2023-24,FCV Farul Constanța,Farul Constanța,Romanian Football Federation,4.1
+2023-24,FK Arsenal Tivat,Arsenal Tivat,Football Association of Montenegro,0.95
+2023-24,FK Auda,Auda,Latvian Football Federation,2.125
+2023-24,FK Austria Wien,Austria Wien,Austrian Football Association,6.8
+2023-24,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,20.0
+2023-24,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,4.0
+2023-24,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,7.5
+2023-24,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,4.5
+2023-24,FK Makedonija G.P.,Makedonija GP,Football Federation of Macedonia,2.5
+2023-24,FK Panevėžys,Panevėžys,Lithuanian Football Federation,2.5
+2023-24,FK Partizan,Partizan,Football Association of Serbia,25.5
+2023-24,FK Partizani Tirana,Partizani,Albanian Football Federation,5.0
+2023-24,FK RFS,RFS,Latvian Football Federation,6.5
+2023-24,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,7.0
+2023-24,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,7.5
+2023-24,FK TSC,TSC,Football Association of Serbia,6.475
+2023-24,FK Vojvodina,Vojvodina,Football Association of Serbia,6.475
+2023-24,FK Čukarički,Čukarički,Football Association of Serbia,6.475
+2023-24,FK Žalgiris,Žalgiris,Lithuanian Football Federation,11.0
+2023-24,FK Željezničar Sarajevo,Željezničar,Football Association of Bosnia and Herzegovina,2.5
+2023-24,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,30.0
+2023-24,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,27.0
+2023-24,Feyenoord,Feyenoord,Royal Dutch Football Association,51.0
+2023-24,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,55.0
+2023-24,Gabala SC,Gabala,Association of Football Federations of Azerbaijan,4.0
+2023-24,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,31.5
+2023-24,Glentoran F.C.,Glentoran,Irish Football Association,2.0
+2023-24,Gżira United F.C.,Gżira United,Malta Football Association,6.0
+2023-24,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,9.0
+2023-24,HNK Rijeka,Rijeka,Croatian Football Federation,11.5
+2023-24,Hammarby Fotboll,Hammarby IF,Swedish Football Association,4.75
+2023-24,Hamrun Spartans F.C.,Hamrun Spartans,Malta Football Association,2.5
+2023-24,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,17.0
+2023-24,Haverfordwest County A.F.C.,Haverfordwest County,Football Association of Wales,1.233
+2023-24,Havnar Bóltfelag,HB,Faroe Islands Football Association,5.0
+2023-24,Heart of Midlothian F.C.,Heart of Midlothian,Scottish Football Association,7.28
+2023-24,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,11.0
+2023-24,Hibernian F.C.,Hibernian,Scottish Football Association,7.28
+2023-24,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,8.5
+2023-24,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,4.5
+2023-24,Inter Milan,Inter Milan,Italian Football Federation,96.0
+2023-24,JK Narva Trans,Narva Trans,Estonian Football Association,2.0
+2023-24,KAA Gent,Gent,Royal Belgian Football Association,37.5
+2023-24,KF Dukagjini,Dukagjini,Football Federation of Kosovo,2.208
+2023-24,KF Egnatia Rrogozhinë,Egnatia,Albanian Football Federation,1.25
+2023-24,KF Shkupi,Shkupi,Football Federation of Macedonia,7.0
+2023-24,KF Shkëndija,Shkëndija,Football Federation of Macedonia,9.5
+2023-24,KF Tirana,Tirana,Albanian Football Federation,4.0
+2023-24,KF Vllaznia Shkodër,Vllaznia,Albanian Football Federation,3.0
+2023-24,KRC Genk,Genk,Royal Belgian Football Association,18.0
+2023-24,Kalmar FF,Kalmar FF,Swedish Football Association,4.75
+2023-24,Kecskeméti TE,Kecskemét,Hungarian Football Federation,4.125
+2023-24,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,8.0
+2023-24,Knattspyrnufélag Akureyrar,KA,Football Association of Iceland,1.45
+2023-24,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,3.0
+2023-24,Kuopion Palloseura,KuPS,Football Association of Finland,9.5
+2023-24,LASK,LASK,Austrian Football Association,36.0
+2023-24,Larne F.C.,Larne,Irish Football Association,3.0
+2023-24,Lech Poznań,Lech Poznań,Polish Football Association,19.0
+2023-24,Legia Warsaw,Legia Warsaw,Polish Football Association,11.0
+2023-24,Lille OSC,Lille,French Football Federation,30.0
+2023-24,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,8.5
+2023-24,Linfield F.C.,Linfield,Irish Football Association,8.5
+2023-24,Liverpool F.C.,Liverpool,The Football Association,123.0
+2023-24,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,13.0
+2023-24,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,24.0
+2023-24,Manchester City F.C.,Manchester City,The Football Association,145.0
+2023-24,Manchester United F.C.,Manchester United,The Football Association,104.0
+2023-24,Molde FK,Molde,Norwegian Football Federation,24.0
+2023-24,MŠK Žilina,Žilina,Slovak Football Association,3.95
+2023-24,NK Celje,Celje,Football Association of Slovenia,2.5
+2023-24,NK Domžale,Domžale,Football Association of Slovenia,5.0
+2023-24,NK Maribor,Maribor,Football Association of Slovenia,9.5
+2023-24,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,9.0
+2023-24,NK Osijek,Osijek,Croatian Football Federation,8.0
+2023-24,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,9.0
+2023-24,Newcastle United F.C.,Newcastle United,The Football Association,21.914
+2023-24,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,39.0
+2023-24,Olympique de Marseille,Marseille,French Football Federation,33.0
+2023-24,PAOK FC,PAOK,Hellenic Football Federation,25.0
+2023-24,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,13.0
+2023-24,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,4.5
+2023-24,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,21.0
+2023-24,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,43.0
+2023-24,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,4.0
+2023-24,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,5.045
+2023-24,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,112.0
+2023-24,Penybont F.C.,Penybont,Football Association of Wales,1.233
+2023-24,Pogoń Szczecin,Pogoń Szczecin,Polish Football Association,4.15
+2023-24,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,25.0
+2023-24,RB Leipzig,RB Leipzig,German Football Association,84.0
+2023-24,RC Lens,Lens,French Football Federation,12.232
+2023-24,Raków Częstochowa,Raków Częstochowa,Polish Football Association,5.0
+2023-24,Rangers F.C.,Rangers,Scottish Football Association,54.0
+2023-24,Real Betis,Real Betis,Royal Spanish Football Federation,37.0
+2023-24,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,121.0
+2023-24,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,33.0
+2023-24,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,42.0
+2023-24,Riga FC,Riga,Latvian Football Federation,10.0
+2023-24,Rosenborg BK,Rosenborg,Norwegian Football Federation,11.0
+2023-24,Royal Antwerp F.C.,Antwerp,Royal Belgian Football Association,17.0
+2023-24,Royale Union Saint-Gilloise,Union Saint-Gilloise,Royal Belgian Football Association,19.0
+2023-24,S.C. Braga,Braga,Portuguese Football Federation,44.0
+2023-24,S.L. Benfica,Benfica,Portuguese Football Federation,82.0
+2023-24,S.S. Cosmos,Cosmos,San Marino Football Federation,0.399
+2023-24,SC Dnipro-1,Dnipro-1,Ukrainian Association of Football,8.0
+2023-24,SC Freiburg,SC Freiburg,German Football Association,16.496
+2023-24,SC Gjilani,Gjilani,Football Federation of Kosovo,2.208
+2023-24,SK Brann,Brann,Norwegian Football Federation,5.8
+2023-24,SK Rapid Wien,Rapid Wien,Austrian Football Association,18.5
+2023-24,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,52.0
+2023-24,SK Sturm Graz,Sturm Graz,Austrian Football Association,12.5
+2023-24,SP La Fiorita,La Fiorita,San Marino Football Federation,5.0
+2023-24,SP Tre Penne,Tre Penne,San Marino Football Federation,4.0
+2023-24,SS Lazio,Lazio,Italian Football Federation,42.0
+2023-24,SSC Napoli,Napoli,Italian Football Federation,81.0
+2023-24,Sabah FC (Azerbaijan),Sabah,Association of Football Federations of Azerbaijan,3.325
+2023-24,Sepsi OSK Sfântu Gheorghe,Sepsi OSK,Romanian Football Federation,4.1
+2023-24,Servette FC,Servette,Swiss Football Association,6.335
+2023-24,Sevilla FC,Sevilla,Royal Spanish Football Federation,91.0
+2023-24,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,9.0
+2023-24,Sporting CP,Sporting CP,Portuguese Football Federation,52.5
+2023-24,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,3.0
+2023-24,Stade Rennais FC,Rennes,French Football Federation,44.0
+2023-24,The New Saints F.C.,The New Saints,Football Association of Wales,9.0
+2023-24,Toulouse FC,Toulouse,French Football Federation,12.232
+2023-24,Valmiera FC,Valmiera,Latvian Football Federation,3.5
+2023-24,Villarreal CF,Villarreal,Royal Spanish Football Federation,82.0
+2023-24,Vitória S.C.,Vitória de Guimarães,Portuguese Football Federation,11.243
+2023-24,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,3.0
+2023-24,West Ham United F.C.,West Ham United,The Football Association,50.0
+2023-24,Zalaegerszegi TE,Zalaegerszeg,Hungarian Football Federation,4.125
+2023-24,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,24.5
+2024-25,1. FC Heidenheim,1. FC Heidenheim,German Football Association,17.324
+2024-25,AC Milan,Milan,Italian Football Federation,59.0
+2024-25,AC Omonia,Omonia,Cyprus Football Association,12.0
+2024-25,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,22.5
+2024-25,AC Virtus,Virtus,San Marino Football Federation,0.366
+2024-25,ACF Fiorentina,Fiorentina,Italian Football Federation,42.0
+2024-25,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,10.0
+2024-25,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,8.0
+2024-25,AFC Ajax,Ajax,Royal Dutch Football Association,67.0
+2024-25,APOEL FC,APOEL,Cyprus Football Association,14.5
+2024-25,AS Monaco FC,Monaco,French Football Federation,24.0
+2024-25,AS Roma,Roma,Italian Football Federation,101.0
+2024-25,AZ Alkmaar,AZ,Royal Dutch Football Association,50.0
+2024-25,Arsenal F.C.,Arsenal,The Football Association,72.0
+2024-25,Aston Villa F.C.,Aston Villa,The Football Association,20.86
+2024-25,Atalanta BC,Atalanta,Italian Football Federation,81.0
+2024-25,Athletic Bilbao,Athletic Bilbao,Royal Spanish Football Federation,17.897
+2024-25,Atlètic Club d'Escaldes,Atlètic Club d'Escaldes,Andorran Football Federation,2.5
+2024-25,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,89.0
+2024-25,B36 Tórshavn,B36,Faroe Islands Football Association,7.0
+2024-25,BK Häcken,BK Häcken,Swedish Football Association,6.0
+2024-25,BSC Young Boys,Young Boys,Swiss Football Association,34.5
+2024-25,Bala Town F.C.,Bala Town,Football Association of Wales,3.5
+2024-25,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,90.0
+2024-25,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,12.0
+2024-25,Bologna FC 1909,Bologna,Italian Football Federation,18.056
+2024-25,Borussia Dortmund,Borussia Dortmund,German Football Association,97.0
+2024-25,Botev Plovdiv,Botev Plovdiv,Bulgarian Football Union,4.075
+2024-25,Breiðablik (men's football),Breiðablik,Football Association of Iceland,8.5
+2024-25,Brøndby IF,Brøndby,Danish Football Association,7.0
+2024-25,CFR Cluj,CFR Cluj,Romanian Football Federation,26.5
+2024-25,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,7.0
+2024-25,Caernarfon Town F.C.,Caernarfon Town,Football Association of Wales,1.158
+2024-25,Celtic F.C.,Celtic,Scottish Football Association,32.0
+2024-25,Cercle Brugge K.S.V.,Cercle Brugge,Royal Belgian Football Association,9.76
+2024-25,Chelsea F.C.,Chelsea,The Football Association,96.0
+2024-25,Cliftonville F.C.,Cliftonville,Irish Football Association,2.0
+2024-25,Club Brugge KV,Club Brugge,Royal Belgian Football Association,64.0
+2024-25,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,5.5
+2024-25,Crusaders F.C.,Crusaders,Irish Football Association,4.5
+2024-25,Derry City F.C.,Derry City,Football Association of Ireland,4.0
+2024-25,Djurgårdens IF Fotboll,Djurgårdens IF,Swedish Football Association,16.5
+2024-25,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,60.0
+2024-25,F.C. Copenhagen,Copenhagen,Danish Football Association,51.5
+2024-25,F.C. Magpies,FCB Magpies,Gibraltar Football Association,2.0
+2024-25,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,8.5
+2024-25,FA Šiauliai,Šiauliai,Lithuanian Football Federation,1.7
+2024-25,FC Aktobe,Aktobe,Kazakhstan Football Federation,2.3
+2024-25,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,8.0
+2024-25,FC Astana,Astana,Kazakhstan Football Federation,11.0
+2024-25,FC Ballkani,Ballkani,Football Federation of Kosovo,6.0
+2024-25,FC Baník Ostrava,Baník Ostrava,Football Association of the Czech Republic,7.21
+2024-25,FC Barcelona,Barcelona,Royal Spanish Football Federation,91.0
+2024-25,FC Bayern Munich,Bayern Munich,German Football Association,144.0
+2024-25,FC CSKA 1948 Sofia,CSKA 1948,Bulgarian Football Union,4.075
+2024-25,FC Corvinul Hunedoara,Corvinul Hunedoara,Romanian Football Federation,4.275
+2024-25,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,8.0
+2024-25,FC Differdange 03,Differdange 03,Luxembourg Football Federation,3.5
+2024-25,FC Dinamo Batumi,Dinamo Batumi,Georgian Football Federation,5.5
+2024-25,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,4.5
+2024-25,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,8.0
+2024-25,FC Drita,Drita,Football Federation of Kosovo,6.5
+2024-25,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,26.5
+2024-25,FC Flora,Flora,Estonian Football Association,11.0
+2024-25,FC Iberia 1999,Iberia 1999,Georgian Football Federation,4.5
+2024-25,FC Isloch Minsk Raion,Isloch Minsk Raion,Football Federation of Belarus,1.325
+2024-25,FC Kryvbas Kryvyi Rih,Kryvbas Kryvyi Rih,Ukrainian Association of Football,5.6
+2024-25,FC Lugano,Lugano,Swiss Football Association,8.0
+2024-25,FC Midtjylland,Midtjylland,Danish Football Association,25.5
+2024-25,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,5.0
+2024-25,FC Neman Grodno,Neman Grodno,Football Federation of Belarus,2.0
+2024-25,FC Noah,Noah,Football Federation of Armenia,2.125
+2024-25,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,4.0
+2024-25,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,7.0
+2024-25,FC Polissya Zhytomyr,Polissya Zhytomyr,Ukrainian Association of Football,5.6
+2024-25,FC Porto,Porto,Portuguese Football Federation,77.0
+2024-25,FC Progrès Niederkorn,Progrès Niederkorn,Luxembourg Football Federation,4.5
+2024-25,FC Pyunik,Pyunik,Football Federation of Armenia,8.0
+2024-25,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,50.0
+2024-25,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,63.0
+2024-25,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,20.0
+2024-25,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,8.0
+2024-25,FC St. Gallen,St. Gallen,Swiss Football Association,6.595
+2024-25,FC Struga,Struga,Football Federation of Macedonia,3.5
+2024-25,FC Tobol,Tobol,Kazakhstan Football Federation,7.5
+2024-25,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,2.5
+2024-25,FC Torpedo-BelAZ Zhodino,Torpedo-BelAZ Zhodino,Football Federation of Belarus,3.0
+2024-25,FC Twente,Twente,Royal Dutch Football Association,12.26
+2024-25,FC UNA Strassen,UNA Strassen,Luxembourg Football Federation,1.725
+2024-25,FC Urartu,Urartu,Football Federation of Armenia,3.5
+2024-25,FC Vaduz,Vaduz,Liechtenstein Football Association,8.0
+2024-25,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,28.0
+2024-25,FC Zimbru Chișinău,Zimbru Chișinău,Moldovan Football Federation,2.625
+2024-25,FC Zürich,Zürich,Swiss Football Association,6.595
+2024-25,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,6.0
+2024-25,FCSB,FCSB,Romanian Football Federation,10.5
+2024-25,FK Auda,Auda,Latvian Football Federation,2.125
+2024-25,FK Austria Wien,Austria Wien,Austrian Football Association,8.0
+2024-25,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,28.0
+2024-25,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,5.5
+2024-25,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,8.0
+2024-25,FK Dečić,Dečić,Football Association of Montenegro,2.0
+2024-25,FK Liepāja,Liepāja,Latvian Football Federation,4.5
+2024-25,FK Mladá Boleslav,Mladá Boleslav,Football Association of the Czech Republic,7.21
+2024-25,FK Mornar,Mornar,Football Association of Montenegro,1.141
+2024-25,FK Panevėžys,Panevėžys,Lithuanian Football Federation,4.0
+2024-25,FK Partizan,Partizan,Football Association of Serbia,25.5
+2024-25,FK Partizani Tirana,Partizani,Albanian Football Federation,6.5
+2024-25,FK RFS,RFS,Latvian Football Federation,8.0
+2024-25,FK Radnički 1923,Radnički 1923,Football Association of Serbia,5.555
+2024-25,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,6.5
+2024-25,FK TSC,TSC,Football Association of Serbia,5.555
+2024-25,FK TransINVEST,TransINVEST,Lithuanian Football Federation,1.7
+2024-25,FK Velež Mostar,Velež Mostar,Football Association of Bosnia and Herzegovina,3.5
+2024-25,FK Vojvodina,Vojvodina,Football Association of Serbia,5.555
+2024-25,FK Žalgiris,Žalgiris,Lithuanian Football Federation,11.5
+2024-25,Fehérvár FC,Fehérvár,Hungarian Football Federation,7.5
+2024-25,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,36.0
+2024-25,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,35.0
+2024-25,Feyenoord,Feyenoord,Royal Dutch Football Association,57.0
+2024-25,Floriana F.C.,Floriana,Malta Football Association,3.0
+2024-25,GFK Tikvesh,Tikvesh,Football Federation of Macedonia,1.2
+2024-25,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,50.0
+2024-25,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,31.5
+2024-25,Girona FC,Girona,Royal Spanish Football Federation,17.897
+2024-25,Go Ahead Eagles,Go Ahead Eagles,Royal Dutch Football Association,12.26
+2024-25,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,9.0
+2024-25,HNK Rijeka,Rijeka,Croatian Football Federation,12.0
+2024-25,Hamrun Spartans F.C.,Hamrun Spartans,Malta Football Association,4.5
+2024-25,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,17.0
+2024-25,Havnar Bóltfelag,HB,Faroe Islands Football Association,6.0
+2024-25,Heart of Midlothian F.C.,Heart of Midlothian,Scottish Football Association,7.21
+2024-25,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,11.5
+2024-25,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,9.5
+2024-25,IF Elfsborg,IF Elfsborg,Swedish Football Association,4.3
+2024-25,Ilves (football),Ilves,Football Association of Finland,2.225
+2024-25,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,6.0
+2024-25,Inter Milan,Inter Milan,Italian Football Federation,101.0
+2024-25,JK Tallinna Kalev,Tallinna Kalev,Estonian Football Association,1.441
+2024-25,Jagiellonia Białystok,Jagiellonia Białystok,Polish Football Association,5.075
+2024-25,Juventus FC,Juventus,Italian Football Federation,80.0
+2024-25,KAA Gent,Gent,Royal Belgian Football Association,45.0
+2024-25,KF Egnatia Rrogozhinë,Egnatia,Albanian Football Federation,1.475
+2024-25,KF Llapi,Llapi,Football Federation of Kosovo,2.308
+2024-25,KF Malisheva,Malisheva,Football Federation of Kosovo,2.308
+2024-25,KF Shkëndija,Shkëndija,Football Federation of Macedonia,8.0
+2024-25,KF Tirana,Tirana,Albanian Football Federation,5.5
+2024-25,KF Vllaznia Shkodër,Vllaznia,Albanian Football Federation,4.0
+2024-25,Kilmarnock F.C.,Kilmarnock,Scottish Football Association,7.21
+2024-25,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,10.0
+2024-25,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,4.0
+2024-25,Kuopion Palloseura,KuPS,Football Association of Finland,10.0
+2024-25,LASK,LASK,Austrian Football Association,37.0
+2024-25,Larne F.C.,Larne,Irish Football Association,4.5
+2024-25,Legia Warsaw,Legia Warsaw,Polish Football Association,18.0
+2024-25,Lille OSC,Lille,French Football Federation,47.0
+2024-25,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,9.0
+2024-25,Linfield F.C.,Linfield,Irish Football Association,10.0
+2024-25,Liverpool F.C.,Liverpool,The Football Association,114.0
+2024-25,MFK Ružomberok,Ružomberok,Slovak Football Association,3.925
+2024-25,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,18.0
+2024-25,Maccabi Petah Tikva F.C.,Maccabi Petah Tikva,Israel Football Association,6.225
+2024-25,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,35.5
+2024-25,Malmö FF,Malmö FF,Swedish Football Association,18.5
+2024-25,Manchester City F.C.,Manchester City,The Football Association,148.0
+2024-25,Manchester United F.C.,Manchester United,The Football Association,92.0
+2024-25,Marsaxlokk F.C.,Marsaxlokk,Malta Football Association,1.65
+2024-25,Molde FK,Molde,Norwegian Football Federation,28.5
+2024-25,NK Bravo,Bravo,Football Association of Slovenia,2.65
+2024-25,NK Celje,Celje,Football Association of Slovenia,4.5
+2024-25,NK Maribor,Maribor,Football Association of Slovenia,9.5
+2024-25,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,10.5
+2024-25,NK Osijek,Osijek,Croatian Football Federation,8.5
+2024-25,OGC Nice,Nice,French Football Federation,17.0
+2024-25,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,48.0
+2024-25,Olympique Lyonnais,Lyon,French Football Federation,44.0
+2024-25,PAOK FC,PAOK,Hellenic Football Federation,37.0
+2024-25,PFC Cherno More Varna,Cherno More,Bulgarian Football Union,4.075
+2024-25,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,26.0
+2024-25,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,54.0
+2024-25,Pafos FC,Pafos,Cyprus Football Association,4.42
+2024-25,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,5.0
+2024-25,Paksi FC,Paks,Hungarian Football Federation,4.375
+2024-25,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,6.305
+2024-25,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,116.0
+2024-25,Puskás Akadémia FC,Puskás Akadémia,Hungarian Football Federation,4.375
+2024-25,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,33.0
+2024-25,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,14.5
+2024-25,RB Leipzig,RB Leipzig,German Football Association,97.0
+2024-25,RC Lens,Lens,French Football Federation,13.366
+2024-25,Rangers F.C.,Rangers,Scottish Football Association,63.0
+2024-25,Real Betis,Real Betis,Royal Spanish Football Federation,33.0
+2024-25,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,136.0
+2024-25,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,51.0
+2024-25,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,40.0
+2024-25,Riga FC,Riga,Latvian Football Federation,11.0
+2024-25,Royale Union Saint-Gilloise,Union Saint-Gilloise,Royal Belgian Football Association,27.0
+2024-25,S.C. Braga,Braga,Portuguese Football Federation,49.0
+2024-25,S.L. Benfica,Benfica,Portuguese Football Federation,79.0
+2024-25,SC Dnipro-1,Dnipro-1,Ukrainian Association of Football,10.5
+2024-25,SK Brann,Brann,Norwegian Football Federation,6.325
+2024-25,SK Rapid Wien,Rapid Wien,Austrian Football Association,14.0
+2024-25,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,53.0
+2024-25,SK Sturm Graz,Sturm Graz,Austrian Football Association,14.5
+2024-25,SP La Fiorita,La Fiorita,San Marino Football Federation,4.5
+2024-25,SP Tre Penne,Tre Penne,San Marino Football Federation,5.5
+2024-25,SS Lazio,Lazio,Italian Football Federation,54.0
+2024-25,Sabah FC (Azerbaijan),Sabah,Association of Football Federations of Azerbaijan,4.025
+2024-25,Servette FC,Servette,Swiss Football Association,9.0
+2024-25,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,9.5
+2024-25,Shelbourne F.C.,Shelbourne,Football Association of Ireland,2.175
+2024-25,Silkeborg IF,Silkeborg,Danish Football Association,6.29
+2024-25,Sliema Wanderers F.C.,Sliema Wanderers,Malta Football Association,1.65
+2024-25,Sporting CP,Sporting CP,Portuguese Football Federation,54.5
+2024-25,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,4.0
+2024-25,St Mirren F.C.,St Mirren,Scottish Football Association,7.21
+2024-25,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,4.0
+2024-25,Stade Brestois 29,Brest,French Football Federation,13.366
+2024-25,Stjarnan (men's football),Stjarnan,Football Association of Iceland,2.5
+2024-25,Sumgayit FK,Sumgayit,Association of Football Federations of Azerbaijan,4.025
+2024-25,TSG 1899 Hoffenheim,TSG Hoffenheim,German Football Association,17.324
+2024-25,The New Saints F.C.,The New Saints,Football Association of Wales,8.5
+2024-25,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,54.0
+2024-25,Trabzonspor,Trabzonspor,Turkish Football Federation,11.5
+2024-25,Tromsø IL,Tromsø,Norwegian Football Federation,6.325
+2024-25,UE Santa Coloma,UE Santa Coloma,Andorran Football Federation,1.199
+2024-25,Vaasan Palloseura,VPS,Football Association of Finland,2.225
+2024-25,Valur (men's football),Valur,Football Association of Iceland,3.0
+2024-25,VfB Stuttgart,VfB Stuttgart,German Football Association,17.324
+2024-25,Vitória S.C.,Vitória de Guimarães,Portuguese Football Federation,11.263
+2024-25,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,2.5
+2024-25,Wisła Kraków,Wisła Kraków,Polish Football Association,5.075
+2024-25,Zira FK,Zira,Association of Football Federations of Azerbaijan,4.025
+2024-25,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,29.0
+2024-25,Śląsk Wrocław,Śląsk Wrocław,Polish Football Association,5.075
+2024-25,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,30.5
+2025-26,1. FSV Mainz 05,Mainz 05,German Football Association,17.266
+2025-26,AC Omonia,Omonia,Cyprus Football Association,17.375
+2025-26,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,29.5
+2025-26,AC Virtus,Virtus,San Marino Football Federation,1.5
+2025-26,ACF Fiorentina,Fiorentina,Italian Football Federation,62.0
+2025-26,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,9.5
+2025-26,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,7.5
+2025-26,AFC Ajax,Ajax,Royal Dutch Football Association,67.25
+2025-26,AIK Fotboll,AIK,Swedish Football Association,5.425
+2025-26,AS Monaco FC,Monaco,French Football Federation,41.0
+2025-26,AS Roma,Roma,Italian Football Federation,104.5
+2025-26,AZ Alkmaar,AZ,Royal Dutch Football Association,54.5
+2025-26,Aberdeen F.C.,Aberdeen,Scottish Football Association,9.5
+2025-26,Araz-Naxçıvan PFK,Araz-Naxçıvan,Association of Football Federations of Azerbaijan,3.925
+2025-26,Aris Limassol FC,Aris Limassol,Cyprus Football Association,5.507
+2025-26,Aris Thessaloniki F.C.,Aris,Hellenic Football Federation,7.862
+2025-26,Arsenal F.C.,Arsenal,The Football Association,98.0
+2025-26,Aston Villa F.C.,Aston Villa,The Football Association,47.25
+2025-26,Atalanta BC,Atalanta,Italian Football Federation,82.0
+2025-26,Athletic Bilbao,Athletic Bilbao,Royal Spanish Football Federation,26.75
+2025-26,Atlètic Club d'Escaldes,Atlètic Club d'Escaldes,Andorran Football Federation,3.5
+2025-26,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,93.5
+2025-26,BFC Daugavpils,Daugavpils,Latvian Football Federation,2.45
+2025-26,BK Häcken,BK Häcken,Swedish Football Association,7.0
+2025-26,BSC Young Boys,Young Boys,Swiss Football Association,34.5
+2025-26,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,95.25
+2025-26,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,6.325
+2025-26,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,15.0
+2025-26,Birkirkara F.C.,Birkirkara,Malta Football Association,2.5
+2025-26,Bologna FC 1909,Bologna,Italian Football Federation,19.446
+2025-26,Borussia Dortmund,Borussia Dortmund,German Football Association,106.75
+2025-26,Breiðablik (men's football),Breiðablik,Football Association of Iceland,9.0
+2025-26,Brøndby IF,Brøndby,Danish Football Association,7.0
+2025-26,C.D. Santa Clara,Santa Clara,Portuguese Football Federation,12.453
+2025-26,CFR Cluj,CFR Cluj,Romanian Football Federation,19.0
+2025-26,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,6.5
+2025-26,Celtic F.C.,Celtic,Scottish Football Association,38.0
+2025-26,Chelsea F.C.,Chelsea,The Football Association,109.0
+2025-26,Cliftonville F.C.,Cliftonville,Irish Football Association,2.5
+2025-26,Club Brugge KV,Club Brugge,Royal Belgian Football Association,71.75
+2025-26,Crystal Palace F.C.,Crystal Palace,The Football Association,23.039
+2025-26,Dundee United F.C.,Dundee United,Scottish Football Association,7.11
+2025-26,Dungannon Swifts F.C.,Dungannon Swifts,Irish Football Association,1.666
+2025-26,Eintracht Frankfurt,Eintracht Frankfurt,German Football Association,74.0
+2025-26,F.C. Copenhagen,Copenhagen,Danish Football Association,44.875
+2025-26,F.C. Magpies,Magpies,Gibraltar Football Association,3.5
+2025-26,F91 Dudelange,F91 Dudelange,Luxembourg Football Federation,7.0
+2025-26,FC Aktobe,Aktobe,Kazakhstan Football Federation,3.0
+2025-26,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,7.5
+2025-26,FC Arda Kardzhali,Arda,Bulgarian Football Union,3.975
+2025-26,FC Astana,Astana,Kazakhstan Football Federation,12.0
+2025-26,FC Ballkani,Ballkani,Football Federation of Kosovo,8.0
+2025-26,FC Baník Ostrava,Baník Ostrava,Football Association of the Czech Republic,8.82
+2025-26,FC Barcelona,Barcelona,Royal Spanish Football Federation,103.25
+2025-26,FC Basel,Basel,Swiss Football Association,33.0
+2025-26,FC Bayern Munich,Bayern Munich,German Football Association,135.25
+2025-26,FC Differdange 03,Differdange 03,Luxembourg Football Federation,5.0
+2025-26,FC Dila Gori,Dila Gori,Georgian Football Federation,4.0
+2025-26,FC Dinamo City,Dinamo City,Albanian Football Federation,1.575
+2025-26,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,6.0
+2025-26,FC Drita,Drita,Football Federation of Kosovo,9.0
+2025-26,FC Dynamo Brest,Dynamo Brest,Football Federation of Belarus,4.0
+2025-26,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,23.5
+2025-26,FC Flora,Flora,Estonian Football Association,11.5
+2025-26,FC Hegelmann,Hegelmann,Lithuanian Football Federation,1.65
+2025-26,FC Iberia 1999,Iberia 1999,Georgian Football Federation,4.5
+2025-26,FC Kairat,Kairat,Kazakhstan Football Federation,5.5
+2025-26,FC Koper,Koper,Football Association of Slovenia,4.068
+2025-26,FC Košice (2018),Košice,Slovak Football Association,4.25
+2025-26,FC Lausanne-Sport,Lausanne-Sport,Swiss Football Association,6.725
+2025-26,FC Lugano,Lugano,Swiss Football Association,19.25
+2025-26,FC Midtjylland,Midtjylland,Danish Football Association,32.75
+2025-26,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,5.5
+2025-26,FC Neman Grodno,Neman Grodno,Football Federation of Belarus,3.5
+2025-26,FC Noah,Noah,Football Federation of Armenia,5.0
+2025-26,FC Oleksandriya,Oleksandriya,Ukrainian Association of Football,4.88
+2025-26,FC Ordabasy,Ordabasy,Kazakhstan Football Federation,4.5
+2025-26,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,8.5
+2025-26,FC Polissya Zhytomyr,Polissya Zhytomyr,Ukrainian Association of Football,4.88
+2025-26,FC Porto,Porto,Portuguese Football Federation,79.75
+2025-26,FC Prishtina,Prishtina,Football Federation of Kosovo,2.5
+2025-26,FC Pyunik,Pyunik,Football Federation of Armenia,8.5
+2025-26,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,48.0
+2025-26,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,4.0
+2025-26,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,52.0
+2025-26,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,20.0
+2025-26,FC Spaeri,Spaeri,Georgian Football Federation,1.325
+2025-26,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,8.5
+2025-26,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,3.0
+2025-26,FC Torpedo-BelAZ Zhodino,Torpedo-BelAZ Zhodino,Football Federation of Belarus,4.0
+2025-26,FC UNA Strassen,UNA Strassen,Luxembourg Football Federation,1.375
+2025-26,FC Universitatea Cluj,Universitatea Cluj,Romanian Football Federation,4.65
+2025-26,FC Urartu,Urartu,Football Federation of Armenia,4.0
+2025-26,FC Utrecht,Utrecht,Royal Dutch Football Association,13.43
+2025-26,FC Vaduz,Vaduz,Liechtenstein Football Association,7.5
+2025-26,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,39.25
+2025-26,FC Zimbru Chișinău,Zimbru Chișinău,Moldovan Football Federation,3.0
+2025-26,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,6.5
+2025-26,FCSB,FCSB,Romanian Football Federation,22.5
+2025-26,FK Auda,Auda,Latvian Football Federation,3.5
+2025-26,FK Austria Wien,Austria Wien,Austrian Football Association,7.5
+2025-26,FK Banga Gargždai,Banga,Lithuanian Football Federation,1.65
+2025-26,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,49.0
+2025-26,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,13.625
+2025-26,FK Budućnost Podgorica,Budućnost Podgorica,Football Association of Montenegro,8.0
+2025-26,FK Dečić,Dečić,Football Association of Montenegro,4.0
+2025-26,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,5.0
+2025-26,FK Novi Pazar,Novi Pazar,Football Association of Serbia,5.1
+2025-26,FK Partizan,Partizan,Football Association of Serbia,22.0
+2025-26,FK Partizani Tirana,Partizani,Albanian Football Federation,6.5
+2025-26,FK RFS,RFS,Latvian Football Federation,11.0
+2025-26,FK Rabotnichki,Rabotnicki,Football Federation of Macedonia,1.233
+2025-26,FK Radnički 1923,Radnički 1923,Football Association of Serbia,5.1
+2025-26,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,6.0
+2025-26,FK Sileks,Sileks,Football Federation of Macedonia,2.5
+2025-26,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,5.5
+2025-26,FK Vardar,Vardar,Football Federation of Macedonia,1.233
+2025-26,FK Žalgiris,Žalgiris,Lithuanian Football Federation,12.0
+2025-26,FK Željezničar Sarajevo,Željezničar,Football Association of Bosnia and Herzegovina,2.606
+2025-26,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,47.25
+2025-26,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,39.0
+2025-26,Feyenoord,Feyenoord,Royal Dutch Football Association,71.0
+2025-26,Floriana F.C.,Floriana,Malta Football Association,4.5
+2025-26,Fredrikstad FK,Fredrikstad,Norwegian Football Federation,7.937
+2025-26,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,56.0
+2025-26,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,38.25
+2025-26,Go Ahead Eagles,Go Ahead Eagles,Royal Dutch Football Association,13.43
+2025-26,Győri ETO FC,Győri ETO,Hungarian Football Federation,4.8
+2025-26,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,10.0
+2025-26,HNK Rijeka,Rijeka,Croatian Football Federation,12.0
+2025-26,Hammarby Fotboll,Hammarby IF,Swedish Football Association,5.5
+2025-26,Hamrun Spartans F.C.,Hamrun Spartans,Malta Football Association,6.0
+2025-26,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,16.5
+2025-26,Haverfordwest County A.F.C.,Haverfordwest County,Football Association of Wales,1.5
+2025-26,Havnar Bóltfelag,HB,Faroe Islands Football Association,6.0
+2025-26,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,12.5
+2025-26,Hibernian F.C.,Hibernian,Scottish Football Association,7.11
+2025-26,Hibernians F.C.,Hibernians,Malta Football Association,5.5
+2025-26,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,10.0
+2025-26,Ilves (football),Ilves,Football Association of Finland,3.0
+2025-26,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,7.5
+2025-26,Inter Milan,Inter Milan,Italian Football Federation,116.25
+2025-26,Jagiellonia Białystok,Jagiellonia Białystok,Polish Football Association,14.0
+2025-26,Juventus FC,Juventus,Italian Football Federation,74.25
+2025-26,KF Egnatia Rrogozhinë,Egnatia,Albanian Football Federation,2.5
+2025-26,KF Malisheva,Malisheva,Football Federation of Kosovo,2.408
+2025-26,KF Shkëndija,Shkëndija,Football Federation of Macedonia,7.5
+2025-26,KF Vllaznia Shkodër,Vllaznia,Albanian Football Federation,5.0
+2025-26,KRC Genk,Genk,Royal Belgian Football Association,11.37
+2025-26,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,11.0
+2025-26,Knattspyrnufélag Akureyrar,KA,Football Association of Iceland,2.704
+2025-26,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,10.75
+2025-26,Kuopion Palloseura,KuPS,Football Association of Finland,10.0
+2025-26,Larne F.C.,Larne,Irish Football Association,7.0
+2025-26,Lech Poznań,Lech Poznań,Polish Football Association,19.0
+2025-26,Legia Warsaw,Legia Warsaw,Polish Football Association,31.0
+2025-26,Lille OSC,Lille,French Football Federation,66.0
+2025-26,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,10.0
+2025-26,Linfield F.C.,Linfield,Irish Football Association,8.5
+2025-26,Liverpool F.C.,Liverpool,The Football Association,125.5
+2025-26,Maccabi Haifa F.C.,Maccabi Haifa,Israel Football Association,18.0
+2025-26,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,37.5
+2025-26,Malmö FF,Malmö FF,Swedish Football Association,14.5
+2025-26,Manchester City F.C.,Manchester City,The Football Association,137.75
+2025-26,MŠK Žilina,Žilina,Slovak Football Association,5.0
+2025-26,NK Celje,Celje,Football Association of Slovenia,14.0
+2025-26,NK Maribor,Maribor,Football Association of Slovenia,9.5
+2025-26,NK Olimpija Ljubljana,Olimpija Ljubljana,Football Association of Slovenia,17.375
+2025-26,NK Varaždin (2012),Varaždin,Croatian Football Federation,5.405
+2025-26,NSÍ Runavík,NSÍ,Faroe Islands Football Association,2.15
+2025-26,Newcastle United F.C.,Newcastle United,The Football Association,23.039
+2025-26,Nottingham Forest F.C.,Nottingham Forest,The Football Association,23.039
+2025-26,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,1.591
+2025-26,OGC Nice,Nice,French Football Federation,20.0
+2025-26,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,56.5
+2025-26,Olympique Lyonnais,Lyon,French Football Federation,43.75
+2025-26,Olympique de Marseille,Marseille,French Football Federation,48.0
+2025-26,PAOK FC,PAOK,Hellenic Football Federation,42.25
+2025-26,PFC Cherno More Varna,Cherno More,Bulgarian Football Union,3.975
+2025-26,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,4.5
+2025-26,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,24.0
+2025-26,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,69.25
+2025-26,Pafos FC,Pafos,Cyprus Football Association,11.125
+2025-26,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,7.0
+2025-26,Paksi FC,Paks,Hungarian Football Federation,4.8
+2025-26,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,16.0
+2025-26,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,118.5
+2025-26,Penybont F.C.,Penybont,Football Association of Wales,1.358
+2025-26,Puskás Akadémia FC,Puskás Akadémia,Hungarian Football Federation,6.5
+2025-26,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,32.0
+2025-26,R.S.C. Anderlecht,Anderlecht,Royal Belgian Football Association,28.25
+2025-26,RC Celta de Vigo,Celta Vigo,Royal Spanish Football Federation,18.89
+2025-26,RC Strasbourg Alsace,Strasbourg,French Football Federation,14.618
+2025-26,Racing FC Union Luxembourg,Racing Union,Luxembourg Football Federation,2.5
+2025-26,Raków Częstochowa,Raków Częstochowa,Polish Football Association,8.0
+2025-26,Rangers F.C.,Rangers,Scottish Football Association,71.25
+2025-26,Rayo Vallecano,Rayo Vallecano,Royal Spanish Football Federation,18.89
+2025-26,Real Betis,Real Betis,Royal Spanish Football Federation,52.25
+2025-26,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,143.5
+2025-26,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,44.0
+2025-26,Riga FC,Riga,Latvian Football Federation,10.0
+2025-26,Rosenborg BK,Rosenborg,Norwegian Football Federation,7.937
+2025-26,Royal Charleroi S.C.,Charleroi,Royal Belgian Football Association,11.37
+2025-26,Royale Union Saint-Gilloise,Union Saint-Gilloise,Royal Belgian Football Association,36.0
+2025-26,S.C. Braga,Braga,Portuguese Football Federation,46.0
+2025-26,S.L. Benfica,Benfica,Portuguese Football Federation,87.75
+2025-26,SC Freiburg,SC Freiburg,German Football Association,28.0
+2025-26,SK Brann,Brann,Norwegian Football Federation,7.937
+2025-26,SK Rapid Wien,Rapid Wien,Austrian Football Association,32.25
+2025-26,SK Sigma Olomouc,Sigma Olomouc,Football Association of the Czech Republic,8.82
+2025-26,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,51.0
+2025-26,SK Sturm Graz,Sturm Graz,Austrian Football Association,23.0
+2025-26,SP La Fiorita,La Fiorita,San Marino Football Federation,5.5
+2025-26,SSC Napoli,Napoli,Italian Football Federation,61.0
+2025-26,Sabah FC (Azerbaijan),Sabah,Association of Football Federations of Azerbaijan,4.0
+2025-26,Samsunspor,Samsunspor,Turkish Football Federation,8.78
+2025-26,Seinäjoen Jalkapallokerho,SJK,Football Association of Finland,2.35
+2025-26,Servette FC,Servette,Swiss Football Association,11.5
+2025-26,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,17.875
+2025-26,Shelbourne F.C.,Shelbourne,Football Association of Ireland,2.993
+2025-26,Silkeborg IF,Silkeborg,Danish Football Association,6.796
+2025-26,Sporting CP,Sporting CP,Portuguese Football Federation,59.0
+2025-26,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,4.0
+2025-26,St Patrick's Athletic F.C.,St Patrick's Athletic,Football Association of Ireland,5.5
+2025-26,The New Saints F.C.,The New Saints,Football Association of Wales,9.0
+2025-26,Tottenham Hotspur F.C.,Tottenham Hotspur,The Football Association,70.25
+2025-26,Tre Fiori FC,Tre Fiori,San Marino Football Federation,3.0
+2025-26,Valur (men's football),Valur,Football Association of Iceland,3.0
+2025-26,VfB Stuttgart,VfB Stuttgart,German Football Association,17.266
+2025-26,Viking FK,Viking,Norwegian Football Federation,7.937
+2025-26,Villarreal CF,Villarreal,Royal Spanish Football Federation,82.0
+2025-26,Víkingur Gøta,Víkingur Gøta,Faroe Islands Football Association,4.0
+2025-26,Wolfsberger AC,Wolfsberger AC,Austrian Football Association,9.5
+2025-26,Zira FK,Zira,Association of Football Federations of Azerbaijan,4.0
+2025-26,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,23.0
+2025-26,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,33.5
+2026-27,AC Milan,Milan,Italian Football Federation,66.0
+2026-27,AC Omonia,Omonia,Cyprus Football Association,21.25
+2026-27,AC Sparta Prague,Sparta Prague,Football Association of the Czech Republic,38.25
+2026-27,AC Virtus,Virtus,San Marino Football Federation,4.0
+2026-27,AEK Athens F.C.,AEK Athens,Hellenic Football Federation,24.0
+2026-27,AEK Larnaca FC,AEK Larnaca,Cyprus Football Association,20.25
+2026-27,AF Elbasani,Elbasani,Albanian Football Federation,1.625
+2026-27,AFC Ajax,Ajax,Royal Dutch Football Association,58.25
+2026-27,AFC Bournemouth,Bournemouth,The Football Association,23.903
+2026-27,AS Monaco FC,Monaco,French Football Federation,56.0
+2026-27,AS Roma,Roma,Italian Football Federation,97.75
+2026-27,AZ Alkmaar,AZ,Royal Dutch Football Association,62.875
+2026-27,Aarhus Gymnastikforening,AGF,Danish Football Association,8.421
+2026-27,Apollon Limassol FC,Apollon Limassol,Cyprus Football Association,7.138
+2026-27,Arsenal F.C.,Arsenal,The Football Association,119.0
+2026-27,Aston Villa F.C.,Aston Villa,The Football Association,83.0
+2026-27,Atalanta BC,Atalanta,Italian Football Federation,84.0
+2026-27,Atlètic Club d'Escaldes,Atlètic Club d'Escaldes,Andorran Football Federation,5.0
+2026-27,Atlético Madrid,Atlético Madrid,Royal Spanish Football Federation,104.75
+2026-27,Bayer 04 Leverkusen,Bayer Leverkusen,German Football Association,105.0
+2026-27,Beitar Jerusalem F.C.,Beitar Jerusalem,Israel Football Association,5.5
+2026-27,Beşiktaş J.K.,Beşiktaş,Turkish Football Federation,15.5
+2026-27,Bohemian F.C.,Bohemians,Football Association of Ireland,3.468
+2026-27,Borussia Dortmund,Borussia Dortmund,German Football Association,100.75
+2026-27,Brighton &amp; Hove Albion F.C.,Brighton & Hove Albion,The Football Association,23.903
+2026-27,CFR Cluj,CFR Cluj,Romanian Football Federation,17.5
+2026-27,CS Universitatea Craiova,Universitatea Craiova,Romanian Football Federation,10.5
+2026-27,Caernarfon Town F.C.,Caernarfon Town,Football Association of Wales,1.5
+2026-27,Celtic F.C.,Celtic,Scottish Football Association,44.0
+2026-27,Club Brugge KV,Club Brugge,Royal Belgian Football Association,75.25
+2026-27,Coleraine F.C.,Coleraine,Irish Football Association,1.45
+2026-27,Como 1907,Como,Italian Football Federation,19.989
+2026-27,Connah's Quay Nomads F.C.,Connah's Quay Nomads,Football Association of Wales,3.5
+2026-27,Crystal Palace F.C.,Crystal Palace,The Football Association,23.903
+2026-27,Debreceni VSC,Debrecen,Hungarian Football Federation,5.437
+2026-27,Derry City F.C.,Derry City,Football Association of Ireland,4.0
+2026-27,Europa F.C.,Europa,Gibraltar Football Association,3.0
+2026-27,F.C. Copenhagen,Copenhagen,Danish Football Association,54.375
+2026-27,FC Alashkert,Alashkert,Football Federation of Armenia,5.0
+2026-27,FC Ararat-Armenia,Ararat-Armenia,Football Federation of Armenia,7.0
+2026-27,FC Astana,Astana,Kazakhstan Football Federation,12.5
+2026-27,FC Atert Bissen,Atert Bissen,Luxembourg Football Federation,1.325
+2026-27,FC BATE Borisov,BATE Borisov,Football Federation of Belarus,5.5
+2026-27,FC Ballkani,Ballkani,Football Federation of Kosovo,10.0
+2026-27,FC Barcelona,Barcelona,Royal Spanish Football Federation,113.25
+2026-27,FC Bayern Munich,Bayern Munich,German Football Association,147.5
+2026-27,FC CSKA 1948 Sofia,CSKA 1948,Bulgarian Football Union,4.212
+2026-27,FC DAC 1904 Dunajská Streda,DAC Dunajská Streda,Slovak Football Association,6.0
+2026-27,FC Differdange 03,Differdange 03,Luxembourg Football Federation,6.5
+2026-27,FC Dila Gori,Dila Gori,Georgian Football Federation,5.5
+2026-27,FC Dinamo City,Dinamo City,Albanian Football Federation,2.5
+2026-27,FC Dinamo Minsk,Dinamo Minsk,Football Federation of Belarus,6.5
+2026-27,FC Dinamo Tbilisi,Dinamo Tbilisi,Georgian Football Federation,5.0
+2026-27,FC Drita,Drita,Football Federation of Kosovo,13.625
+2026-27,FC Dynamo Kyiv,Dynamo Kyiv,Ukrainian Association of Football,17.5
+2026-27,FC Flora,Flora,Estonian Football Association,10.0
+2026-27,FC Hegelmann,Hegelmann,Lithuanian Football Federation,2.0
+2026-27,FC Hradec Králové,Hradec Králové,Football Association of the Czech Republic,9.705
+2026-27,FC Iberia 1999,Iberia 1999,Georgian Football Federation,5.0
+2026-27,FC Inter Turku,Inter Turku,Football Association of Finland,2.8
+2026-27,FC Kairat,Kairat,Kazakhstan Football Federation,11.0
+2026-27,FC Koper,Koper,Football Association of Slovenia,4.893
+2026-27,FC LNZ Cherkasy,LNZ Cherkasy,Ukrainian Association of Football,5.182
+2026-27,FC Lugano,Lugano,Swiss Football Association,21.25
+2026-27,FC Maxline Vitebsk,ML Vitebsk,Football Federation of Belarus,1.325
+2026-27,FC Midtjylland,Midtjylland,Danish Football Association,48.25
+2026-27,FC Milsami Orhei,Milsami Orhei,Moldovan Football Federation,7.5
+2026-27,FC Noah,Noah,Football Federation of Armenia,10.75
+2026-27,FC Nordsjælland,Nordsjælland,Danish Football Association,8.421
+2026-27,FC Petrocub Hîncești,Petrocub Hîncești,Moldovan Football Federation,9.0
+2026-27,FC Polissya Zhytomyr,Polissya Zhytomyr,Ukrainian Association of Football,5.182
+2026-27,FC Porto,Porto,Portuguese Football Federation,80.75
+2026-27,FC Pyunik,Pyunik,Football Federation of Armenia,10.0
+2026-27,FC Red Bull Salzburg,Red Bull Salzburg,Austrian Football Association,45.0
+2026-27,FC Santa Coloma,FC Santa Coloma,Andorran Football Federation,5.0
+2026-27,FC Shakhtar Donetsk,Shakhtar Donetsk,Ukrainian Association of Football,56.25
+2026-27,FC Sheriff Tiraspol,Sheriff Tiraspol,Moldovan Football Federation,20.0
+2026-27,FC Sion,Sion,Swiss Football Association,6.94
+2026-27,FC Spartak Trnava,Spartak Trnava,Slovak Football Association,10.5
+2026-27,FC St. Gallen,St. Gallen,Swiss Football Association,6.94
+2026-27,FC Thun,Thun,Swiss Football Association,6.94
+2026-27,FC Tobol,Tobol,Kazakhstan Football Federation,8.0
+2026-27,FC Torpedo Kutaisi,Torpedo Kutaisi,Georgian Football Federation,4.5
+2026-27,FC Twente,Twente,Royal Dutch Football Association,13.585
+2026-27,FC UNA Strassen,UNA Strassen,Luxembourg Football Federation,2.5
+2026-27,FC Universitatea Cluj,Universitatea Cluj,Romanian Football Federation,5.05
+2026-27,FC Vaduz,Vaduz,Liechtenstein Football Association,8.5
+2026-27,FC Viktoria Plzeň,Viktoria Plzeň,Football Association of the Czech Republic,50.5
+2026-27,FC Yelimay,Yelimay,Kazakhstan Football Federation,2.75
+2026-27,FC Zimbru Chișinău,Zimbru Chișinău,Moldovan Football Federation,4.5
+2026-27,FCI Levadia Tallinn,FCI Levadia,Estonian Football Association,7.5
+2026-27,FCSB,FCSB,Romanian Football Federation,25.5
+2026-27,FK Auda,Auda,Latvian Football Federation,4.5
+2026-27,FK Austria Wien,Austria Wien,Austrian Football Association,9.5
+2026-27,FK Bodø/Glimt,Bodø/Glimt,Norwegian Football Federation,64.0
+2026-27,FK Borac Banja Luka,Borac Banja Luka,Football Association of Bosnia and Herzegovina,13.125
+2026-27,FK Dečić,Dečić,Football Association of Montenegro,5.5
+2026-27,FK Jablonec,Jablonec,Football Association of the Czech Republic,9.705
+2026-27,FK Kauno Žalgiris,Kauno Žalgiris,Lithuanian Football Federation,6.0
+2026-27,FK Liepāja,Liepāja,Latvian Football Federation,4.0
+2026-27,FK Mornar,Mornar,Football Association of Montenegro,2.0
+2026-27,FK Panevėžys,Panevėžys,Lithuanian Football Federation,6.5
+2026-27,FK Partizan,Partizan,Football Association of Serbia,22.0
+2026-27,FK RFS,RFS,Latvian Football Federation,12.5
+2026-27,FK Sarajevo,Sarajevo,Football Association of Bosnia and Herzegovina,5.0
+2026-27,FK Sileks,Sileks,Football Federation of Macedonia,2.0
+2026-27,FK Sutjeska Nikšić,Sutjeska,Football Association of Montenegro,6.0
+2026-27,FK Vardar,Vardar,Football Federation of Macedonia,1.551
+2026-27,FK Velež Mostar,Velež Mostar,Football Association of Bosnia and Herzegovina,4.5
+2026-27,FK Vojvodina,Vojvodina,Football Association of Serbia,5.5
+2026-27,FK Žalgiris,Žalgiris,Lithuanian Football Federation,12.0
+2026-27,FK Železničar Pančevo,Železničar Pančevo,Football Association of Serbia,5.15
+2026-27,Fenerbahçe S.K. (football),Fenerbahçe,Turkish Football Federation,57.75
+2026-27,Ferencvárosi TC,Ferencváros,Hungarian Football Federation,51.25
+2026-27,Feyenoord,Feyenoord,Royal Dutch Football Association,71.0
+2026-27,Floriana F.C.,Floriana,Malta Football Association,4.0
+2026-27,GAIS,GAIS,Swedish Football Association,5.925
+2026-27,GKS Katowice,GKS Katowice,Polish Football Association,9.35
+2026-27,GNK Dinamo Zagreb,Dinamo Zagreb,Croatian Football Federation,46.5
+2026-27,Galatasaray S.K. (football),Galatasaray,Turkish Football Federation,53.5
+2026-27,Getafe CF,Getafe,Royal Spanish Football Federation,19.409
+2026-27,Glentoran F.C.,Glentoran,Irish Football Association,2.0
+2026-27,Győri ETO FC,ETO Győr,Hungarian Football Federation,5.437
+2026-27,Górnik Zabrze,Górnik Zabrze,Polish Football Association,9.35
+2026-27,HNK Hajduk Split,Hajduk Split,Croatian Football Federation,10.0
+2026-27,HNK Rijeka,Rijeka,Croatian Football Federation,18.625
+2026-27,Hammarby Fotboll,Hammarby IF,Swedish Football Association,6.0
+2026-27,Hamrun Spartans F.C.,Hamrun Spartans,Malta Football Association,8.5
+2026-27,Hapoel Be'er Sheva F.C.,Hapoel Be'er Sheva,Israel Football Association,14.0
+2026-27,Hapoel Tel Aviv F.C.,Hapoel Tel Aviv,Israel Football Association,5.5
+2026-27,Havnar Bóltfelag,HB,Faroe Islands Football Association,7.0
+2026-27,Heart of Midlothian F.C.,Heart of Midlothian,Scottish Football Association,11.5
+2026-27,Helsingin Jalkapalloklubi,HJK,Football Association of Finland,14.0
+2026-27,Hibernian F.C.,Hibernian,Scottish Football Association,7.0
+2026-27,HŠK Zrinjski Mostar,Zrinjski Mostar,Football Association of Bosnia and Herzegovina,13.25
+2026-27,IFK Göteborg,IFK Göteborg,Swedish Football Association,5.925
+2026-27,Ilves (football),Ilves,Football Association of Finland,3.5
+2026-27,Inter Club d'Escaldes,Inter Club d'Escaldes,Andorran Football Federation,7.5
+2026-27,Inter Milan,Inter Milan,Italian Football Federation,127.0
+2026-27,Jagiellonia Białystok,Jagiellonia Białystok,Polish Football Association,22.0
+2026-27,Juventus FC,Juventus,Italian Football Federation,72.25
+2026-27,KAA Gent,Gent,Royal Belgian Football Association,39.0
+2026-27,KF Dukagjini,Dukagjini,Football Federation of Kosovo,2.797
+2026-27,KF Egnatia,Egnatia,Albanian Football Federation,4.5
+2026-27,KF Egnatia Rrogozhinë,Egnatia,Albanian Football Federation,4.5
+2026-27,KF Malisheva,Malisheva,Football Federation of Kosovo,2.797
+2026-27,KF Shkëndija,Shkëndija,Football Federation of Macedonia,10.875
+2026-27,KF Vllaznia,Vllaznia,Albanian Football Federation,6.5
+2026-27,Klaksvíkar Ítróttarfelag,KÍ,Faroe Islands Football Association,10.5
+2026-27,Knattspyrnufélagið Víkingur,Víkingur Reykjavík,Football Association of Iceland,11.75
+2026-27,Kuopion Palloseura,KuPS,Football Association of Finland,14.0
+2026-27,LASK,LASK,Austrian Football Association,21.0
+2026-27,Larne F.C.,Larne,Irish Football Association,9.0
+2026-27,Lech Poznań,Lech Poznań,Polish Football Association,27.25
+2026-27,Lille OSC,Lille,French Football Federation,68.75
+2026-27,Lillestrøm SK,Lillestrøm,Norwegian Football Federation,8.247
+2026-27,Lincoln Red Imps F.C.,Lincoln Red Imps,Gibraltar Football Association,13.5
+2026-27,Linfield F.C.,Linfield,Irish Football Association,9.5
+2026-27,Liverpool F.C.,Liverpool,The Football Association,130.0
+2026-27,Maccabi Tel Aviv F.C.,Maccabi Tel Aviv,Israel Football Association,32.5
+2026-27,Manchester City F.C.,Manchester City,The Football Association,125.5
+2026-27,Manchester United F.C.,Manchester United,The Football Association,76.5
+2026-27,Marsaxlokk F.C.,Marsaxlokk,Malta Football Association,1.8
+2026-27,Mjällby AIF,Mjällby AIF,Swedish Football Association,5.925
+2026-27,Motherwell F.C.,Motherwell,Scottish Football Association,6.41
+2026-27,MŠK Žilina,Žilina,Slovak Football Association,5.5
+2026-27,NEC Nijmegen,NEC,Royal Dutch Football Association,13.585
+2026-27,NK Aluminij,Aluminij,Football Association of Slovenia,4.893
+2026-27,NK Bravo,Bravo,Football Association of Slovenia,4.893
+2026-27,NK Celje,Celje,Football Association of Slovenia,23.0
+2026-27,NK Varaždin (2012),Varaždin,Croatian Football Federation,5.631
+2026-27,NSÍ Runavík,NSÍ,Faroe Islands Football Association,2.0
+2026-27,Neftçi PFK,Neftçi,Association of Football Federations of Azerbaijan,6.5
+2026-27,Nõmme Kalju FC,Nõmme Kalju,Estonian Football Association,1.641
+2026-27,OFI Crete F.C.,OFI,Hellenic Football Federation,9.682
+2026-27,OFK Petrovac,Petrovac,Football Association of Montenegro,1.316
+2026-27,Olympiacos F.C.,Olympiacos,Hellenic Football Federation,62.25
+2026-27,Olympique Lyonnais,Lyon,French Football Federation,65.75
+2026-27,Olympique de Marseille,Marseille,French Football Federation,54.0
+2026-27,PAOK FC,PAOK,Hellenic Football Federation,48.25
+2026-27,PFC CSKA Sofia,CSKA Sofia,Bulgarian Football Union,6.5
+2026-27,PFC Levski Sofia,Levski Sofia,Bulgarian Football Union,7.0
+2026-27,PFC Ludogorets Razgrad,Ludogorets Razgrad,Bulgarian Football Union,28.75
+2026-27,PSV Eindhoven,PSV Eindhoven,Royal Dutch Football Association,71.25
+2026-27,Pafos FC,Pafos,Cyprus Football Association,24.125
+2026-27,Paide Linnameeskond,Paide Linnameeskond,Estonian Football Association,7.5
+2026-27,Paksi FC,Paks,Hungarian Football Federation,5.437
+2026-27,Panathinaikos F.C.,Panathinaikos,Hellenic Football Federation,29.25
+2026-27,Paris Saint-Germain FC,Paris Saint-Germain,French Football Federation,132.0
+2026-27,Penybont F.C.,Penybont,Football Association of Wales,2.0
+2026-27,Qarabağ FK,Qarabağ,Association of Football Federations of Azerbaijan,42.75
+2026-27,RB Leipzig,RB Leipzig,German Football Association,61.0
+2026-27,RC Celta de Vigo,Celta Vigo,Royal Spanish Football Federation,19.409
+2026-27,RC Lens,Lens,French Football Federation,16.699
+2026-27,RSC Anderlecht,Anderlecht,Royal Belgian Football Association,30.75
+2026-27,Raków Częstochowa,Raków Częstochowa,Polish Football Association,22.25
+2026-27,Rangers F.C.,Rangers,Scottish Football Association,59.25
+2026-27,Real Betis,Real Betis,Royal Spanish Football Federation,74.5
+2026-27,Real Madrid CF,Real Madrid,Royal Spanish Football Federation,144.5
+2026-27,Real Sociedad,Real Sociedad,Royal Spanish Football Federation,57.0
+2026-27,Red Star Belgrade,Red Star Belgrade,Football Association of Serbia,46.5
+2026-27,Riga FC,Riga,Latvian Football Federation,10.5
+2026-27,Royale Union Saint-Gilloise,Union Saint-Gilloise,Royal Belgian Football Association,48.0
+2026-27,S.C. Braga,Braga,Portuguese Football Federation,63.75
+2026-27,S.C.U. Torreense,Torreense,Portuguese Football Federation,14.633
+2026-27,S.L. Benfica,Benfica,Portuguese Football Federation,90.0
+2026-27,SC Freiburg,SC Freiburg,German Football Association,56.5
+2026-27,SK Brann,Brann,Norwegian Football Federation,12.25
+2026-27,SK Rapid Wien,Rapid Wien,Austrian Football Association,29.75
+2026-27,SK Slavia Prague,Slavia Prague,Football Association of the Czech Republic,44.0
+2026-27,SK Sturm Graz,Sturm Graz,Austrian Football Association,28.0
+2026-27,SP La Fiorita,La Fiorita,San Marino Football Federation,6.0
+2026-27,SSC Napoli,Napoli,Italian Football Federation,63.0
+2026-27,Sabah FK (Azerbaijan),Sabah,Association of Football Federations of Azerbaijan,6.0
+2026-27,Shamrock Rovers F.C.,Shamrock Rovers,Football Association of Ireland,19.375
+2026-27,Shelbourne F.C.,Shelbourne,Football Association of Ireland,4.0
+2026-27,Sint-Truidense VV,Sint-Truiden,Royal Belgian Football Association,12.45
+2026-27,Sporting CP,Sporting CP,Portuguese Football Federation,84.0
+2026-27,St Joseph's F.C.,St Joseph's,Gibraltar Football Association,5.0
+2026-27,Stade Rennais FC,Rennes,French Football Federation,35.0
+2026-27,Stjarnan (men's football),Stjarnan,Football Association of Iceland,3.304
+2026-27,Sunderland A.F.C.,Sunderland,The Football Association,23.903
+2026-27,TSG 1899 Hoffenheim,TSG Hoffenheim,German Football Association,18.58
+2026-27,The New Saints F.C.,The New Saints,Football Association of Wales,9.0
+2026-27,Trabzonspor,Trabzonspor,Turkish Football Federation,11.0
+2026-27,Tre Fiori FC,Tre Fiori,San Marino Football Federation,2.5
+2026-27,Tromsø IL,Tromsø,Norwegian Football Federation,8.247
+2026-27,US Mondorf-les-Bains,Mondorf-les-Bains,Luxembourg Football Federation,1.325
+2026-27,Valletta F.C.,Valletta,Malta Football Association,1.8
+2026-27,Valur (men's football),Valur,Football Association of Iceland,4.5
+2026-27,Vestri (men's football),Vestri,Football Association of Iceland,3.304
+2026-27,VfB Stuttgart,VfB Stuttgart,German Football Association,27.5
+2026-27,Viking FK,Viking,Norwegian Football Federation,8.247
+2026-27,Villarreal CF,Villarreal,Royal Spanish Football Federation,59.0
+2026-27,Víkingur Gøta,Víkingur,Faroe Islands Football Association,6.0
+2026-27,Zira FK,Zira,Association of Football Federations of Azerbaijan,5.5
+2026-27,İstanbul Başakşehir F.K.,İstanbul Başakşehir,Turkish Football Federation,19.5
+2026-27,ŠK Slovan Bratislava,Slovan Bratislava,Slovak Football Association,36.0
