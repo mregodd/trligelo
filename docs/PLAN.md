@@ -1,6 +1,6 @@
 # Türk Ligleri Elo — Proje Planı
 
-> **Durum:** Taslak v0.4 (14 Kasım 2026). Faz 0, 1a ve 1b tamamlandı. Faz 0 bulguları için bkz. [faz-0-kesif.md](faz-0-kesif.md). Avrupa kaynağı Wikipedia'ya geçti (bkz. §3 ve §4.7).
+> **Durum:** v0.5 (14 Kasım 2026). Faz 0, 1a, 1b ve 2 tamamlandı; model v1.0. Faz 0 bulguları için bkz. [faz-0-kesif.md](faz-0-kesif.md). Avrupa kaynağı Wikipedia'ya geçti (bkz. §3 ve §4.7).
 > Sayılar ve parametreler **başlangıç önerisidir**. Son değerleri geçmiş veri üzerinde yapılacak geriye dönük test belirleyecek.
 
 ---
@@ -88,21 +88,26 @@ Maç sonrası değişim:
 
 Paydaki 400 değiştirilmez. Satranç ve ClubElo ile aynı anlamı taşısın: 200 puan fark ≈ güçlü takım için %76 beklenen skor.
 
-### 4.3 Parametreler (başlangıç değerleri, test ile ayarlanacak)
+### 4.3 Parametreler
 
-| Parametre | Başlangıç | Not |
-|---|---|---|
-| K | 20 | ClubElo'ya yakın |
-| H (ev sahibi avantajı) | ~65 | Türkiye verisinden ölçülecek. Tarafsız sahada 0. Seyircisiz oynanan pandemi maçları için ayrı ölçülür |
-| G (gol farkı) | 1 farkta 1; 2 farkta 1,5; N≥3 farkta (11+N)/8 | eloratings.net yaklaşımı |
-| W lig / play-off | 1,0 | |
-| W Türkiye Kupası | 0,75 (final 1,0) | Büyük takımlar erken turlarda rotasyon yapıyor |
-| W Süper Kupa | 0,75 | Tek maç, sezon başı |
-| W Avrupa | 1,0 | |
-| Geçici K | İlk 10 maçta ×1,5 | Sisteme yeni giren veya en az 2 sezon sonra dönen takımlar için |
-| Sezon arası ortalamaya çekme (α) | 0,10 | Her yaz `R ← R − α × (R − lig ortalaması)`. Kadro değişimini yansıtır, lig toplamını değiştirmez |
-| Yükselme/düşme düzeltmesi (P) | Bkz. §4.6 | |
-| Kupa şampiyonluğu bonusu (B) | Bkz. §4.6 | |
+Başlangıç değerleri planlamada seçildi. v1.0 değerleri Faz 2'deki geriye dönük testle belirlendi; bkz. [faz-2-rapor.md](faz-2-rapor.md). Sadece testin açıkça desteklediği değerler değiştirildi.
+
+| Parametre | Başlangıç | **v1.0** | Not |
+|---|---|---|---|
+| K | 20 | **24** | |
+| H (ev sahibi avantajı) | ~65 | **65** | Tarafsız sahada 0 |
+| H seyircisiz (pandemi) | — | **50** | Doğrudan ölçüldü: ev sahibinin ortalama skoru 0,582'den 0,566'ya düştü |
+| H Avrupa | — | **73** | Avrupa maçlarından a ve b ile birlikte uydurulur |
+| G (gol farkı) | 1 farkta 1; 2 farkta 1,5; N≥3 farkta (11+N)/8 | **Aynı** | eloratings.net yaklaşımı. Testte en büyük etkilerden biri |
+| W lig / play-off | 1,0 | **1,0** | |
+| W Türkiye Kupası | 0,75 (final 1,0) | **0,75 (final 1,0)** | Büyük takımlar erken turlarda rotasyon yapıyor |
+| W Süper Kupa | 0,75 | **0,75** | Tek maç, sezon başı |
+| W Avrupa | 1,0 | **1,0** | |
+| W amatörle kupa maçı | — | **Kupa ağırlığı × 1,5** | |
+| Geçici K | İlk 10 maçta ×1,5 | **Aynı** | Sisteme yeni giren veya amatörden dönen takımlar için |
+| Sezon arası ortalamaya çekme (α) | 0,10 | **0,30** | Her yaz `R ← R − α × (R − lig ortalaması)`. Kadro değişimini yansıtır, lig toplamını değiştirmez |
+| Yükselme/düşme düzeltmesi (P) | Bkz. §4.6 | **Aynı** | |
+| Kupa şampiyonluğu bonusu (B) | Bkz. §4.6 | **Aynı** | |
 
 Ek kurallar:
 - **Penaltılar:** Maç berabere sayılır. Uzatmalı maçlarda 120 dakikanın sonucu esas alınır.
@@ -276,6 +281,7 @@ turkish-leagues-elo/
 │   │   ├── http.py            # önbellekli, nazik HTTP istemcisi
 │   │   ├── tff/               # TFF: sayfa seçimi, ayrıştırıcılar, Süper Kupa
 │   │   ├── europe/            # Wikipedia: sayfa bulma, maç kutuları, katsayı tabloları
+│   │   ├── elo/               # Elo motoru, Avrupa rakip modeli, geriye dönük test
 │   │   ├── build.py           # CSV üretimi
 │   │   ├── validate.py        # TFF puan cetvelleriyle karşılaştırma
 │   │   └── cli.py             # uv run tlelo fetch | details | build | validate | europe-*
@@ -283,6 +289,7 @@ turkish-leagues-elo/
 ├── data/
 │   ├── matches/               # sezon bazında yurt içi maçlar (CSV)
 │   ├── europe/                # Türk takımlarının Avrupa maçları, kulüp ve ülke katsayıları
+│   ├── ratings/               # model çıktısı: current.csv (history.csv repoya girmez)
 │   ├── teams.csv, team_names.csv, team_seasons.csv
 │   ├── sources/               # elle tutulan dosyalar: TFF sayfa envanteri, düzeltmeler, eşleştirmeler
 │   └── raw/                   # ham sayfa önbelleği (repoya girmez)
@@ -291,7 +298,7 @@ turkish-leagues-elo/
 └── .github/workflows/         # update.yml (Faz 4)
 ```
 
-Elo motoru, geriye dönük test ve JSON üretimi Faz 2'de `tlelo` paketine eklenecek. Veri dosyalarının sütunları için bkz. [data/README.md](../data/README.md).
+Elo motoru ve geriye dönük test `tlelo/elo/` altında (Faz 2). Site için JSON üretimi Faz 3'te eklenecek. Veri dosyalarının sütunları için bkz. [data/README.md](../data/README.md).
 
 ## 6. Site sayfaları (ilk sürüm)
 
@@ -330,7 +337,7 @@ Siteyi inceleyen herkes puanların nasıl hesaplandığını açıkça görüp a
 | **0. Keşif** ✅ | Kalan kararları netleştirmek. TFF'den her ligin bir sezonunu ve bir kupa sezonunu deneme amaçlı çekmek. 2016-17'ye kadar arşivin eksiksiz olduğunu doğrulamak. ClubElo erişimini ve koşullarını doğrulamak | **Tamamlandı (14 Kasım 2026).** Bkz. [faz-0-kesif.md](faz-0-kesif.md) |
 | **1a. Veri katmanı: yurt içi** ✅ | Repo iskeleti, veri şeması, TFF kazıyıcısı (lig, play-off, kupa, Süper Kupa), takım kimlik tablosu, veri kalite testleri | 2016-17'den bugüne bütün yurt içi maçlar normalize CSV'de; puan durumları TFF ile tutarlı |
 | **1b. Veri katmanı: Avrupa** ✅ | Türk takımlarının Avrupa maçları (Wikipedia, openfootball ile çapraz doğrulama), UEFA kulüp ve ülke katsayı tabloları, yabancı kulüp ad eşleştirmesi | 2016-17'den bugüne Türk takımlarının bütün Avrupa maçları CSV'de, rakiplerin katsayısı eşleşmiş |
-| **2. Elo motoru ve test** | Motor ve birim testleri, geriye dönük test, parametre taraması, dağılım raporu, `METODOLOJI.md` ilk taslağı | Parametre raporu hazır; taban modelden daha iyi tahmin; model v1.0 |
+| **2. Elo motoru ve test** ✅ | Motor ve birim testleri, geriye dönük test, parametre taraması, dağılım raporu, `METODOLOJI.md` ilk taslağı | **Tamamlandı (14 Kasım 2026).** Model v1.0, kontrol sezonlarında log-loss 0,980 (taban 1,074). Bkz. [faz-2-rapor.md](faz-2-rapor.md) |
 | **3. Web sitesi** | Next.js statik site, 4 sayfa, maç hesap dökümü, mobil uyum | Yerelde bütün sayfalar gerçek veriyle çalışıyor |
 | **4. Otomasyon ve yayın** | GitHub Actions zamanlanmış görevi, Cloudflare kurulumu (adım adım), alan adı, hata bildirimi | Site kendi alan adında yayında ve kendi kendine güncelleniyor |
 | **5. Ek özellikler** | Tahminler, hesaplayıcı, İngilizce, indirilebilir veri | — |
@@ -354,6 +361,14 @@ Siteyi inceleyen herkes puanların nasıl hesaplandığını açıkça görüp a
 | Hükmen maçlar | Elo'da hariç: iki takımın da puanı değişmez. Resmi sonuç puan cetvelinde, yükselme/düşme ve kupa bonuslarında geçerli. Tek maçlık disiplin kararlarını en küçük farkla (1-0) sayan ara seçenek ileride yeniden değerlendirilecek |
 | Yayın | Cloudflare + alan adı |
 | Metodoloji | Kamuya açık, okuyucu dostu doküman ve sitede ayrı sayfa (§7) |
+| Hesaplama ve gösterim dönemi | 2016-17'den hesaplanır, 2021-22'den itibaren gösterilir (§4.8) |
+| P ve B'nin değerleri (Faz 2) | Plandaki değerler korundu. Test ikisinin de tahmini bozmadığını gösterdi (§4.6) |
+| Gol farkı (Faz 2) | Var. Kaldırmak tahmini belirgin biçimde kötüleştiriyor |
+| Sezon arası ortalamaya çekme (Faz 2) | Var, α = 0,30. Testte plandaki 0,10'dan daha iyi |
+| Penaltılar | Beraberlik. Uzatmada 120 dakikanın sonucu |
+| Ham maç verisi | Repoda, kaynak gösterilerek |
+| Avrupa'da turnuva seviyesi (Faz 2) | Ayrı terim yok. Testte bir katkısı çıkmadı (p = 0,91); seviye rakibin katsayısından geliyor (§4.7) |
+| Lig sıralaması bonusu (Faz 2) | Yok. Süper Lig şampiyonluk bonusu testte tahmine bir şey katmadı. Başarılar sitede rozet olarak gösterilir |
 
 ### 9.2 Karar bekleyenler
 
@@ -361,19 +376,11 @@ Aksi belirtilmedikçe önerilen seçenekle ilerlenecek.
 
 | # | Karar | Seçenekler | Önerim |
 |---|---|---|---|
-| 1 | Hesaplama ve gösterim dönemi | 10 yıl / pandemi sonrası 5 yıl | **2016-17'den hesapla, 2021-22'den itibaren göster** (§4.8) |
-| 2 | Görünürlük | #1'e bağlı | Gösterim döneminde profesyonel ligde oynamış takımlar |
-| 3 | P ve B'nin son değerleri | Elle / testle | Başlangıç değerleriyle başla, test raporuna göre birlikte karar ver |
-| 4 | Gol farkı etkisi | Var / yok | **Var** |
-| 5 | Sezon arası ortalamaya çekme | Var / yok | **Var ve küçük** |
-| 6 | Penaltılar | Beraberlik / küçük bonus | **Beraberlik** |
+| 2 | Görünürlük | — | Gösterim döneminde (2021-22 ve sonrası) profesyonel ligde oynamış takımlar |
 | 8 | Puan değişimini gösterme şekli | Maç maç / toplam +/− | **İkisi birden** |
-| 9 | Ham maç verisi repoda | Evet, kaynak gösterilerek / hayır | **Evet, kaynak gösterilerek** |
 | 10 | Lisans | — | Kod: **MIT**. Üretilen puan verisi: **CC BY-NC 4.0** (TFF'nin ticari olmayan kullanım şartıyla uyumlu) |
 | 11 | Dil | — | Arayüz ve dokümanlar Türkçe, kod İngilizce |
 | 12 | Proje/site adı ve alan adı | — | Sende |
-| 13 | Avrupa'da turnuva seviyesi (ŞL / AL / KL) | Ayrı çarpan / sadece rakip katsayısı / testle ek terim | **Rakip katsayısı yeterli, ek terim testle denenir** (§4.7) |
-| 14 | Sezon sonu lig sıralaması bonusu | Var / yok | **Yok.** Başarılar sitede rozet olarak gösterilir (§4.6) |
 
 ## 10. Riskler
 
