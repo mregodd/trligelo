@@ -1,6 +1,6 @@
 # Geriye dönük test: model v1.0
 
-> Bu dosya `uv run tlelo backtest` ile üretilir, elle düzenlenmez. Yorumlar için bkz. [faz-2-rapor.md](faz-2-rapor.md).
+> Bu dosya `uv run tlelo backtest` ile üretilir, elle düzenlenmez. Yorumlar için bkz. [METODOLOJI.md](METODOLOJI.md).
 
 - Ayar sezonları: 2021-22, 2022-23, 2023-24. Kontrol sezonları (ayarda hiç kullanılmadı): 2024-25, 2025-26, 2026-27.
 - Ölçüt: iki profesyonel takım arasındaki yurt içi maçlarda 90 dakika sonucunun (ev sahibi / beraberlik / deplasman) log-loss'u. Düşük olan daha iyi.

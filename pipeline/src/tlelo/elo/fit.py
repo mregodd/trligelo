@@ -1,12 +1,12 @@
 """Statistical fits: the Europe opponent model and the win/draw/loss model.
 
-Europe (PLAN §4.7): a foreign club's rating is ``a + b * ln(1 + coefficient)`` (plus an
+Europe (METODOLOJI §6): a foreign club's rating is ``a + b * ln(1 + coefficient)`` (plus an
 optional offset per competition). a and b are chosen so that the Elo expected scores of
 the Turkish clubs' European matches fit their results best (fractional logistic
 likelihood on the Elo score S: 1 / 0.5 / 0). The Turkish ratings themselves depend on
 a and b, so ``run_model`` alternates engine runs and fits until a and b settle.
 
-Win/draw/loss (PLAN §4.9): an ordered logistic model on the rating difference,
+Win/draw/loss (METODOLOJI §8): an ordered logistic model on the rating difference,
 ``P(away) = σ(c1 − β·d)``, ``P(home) = 1 − σ(c2 − β·d)``, ``d`` in hundreds of points.
 """
 

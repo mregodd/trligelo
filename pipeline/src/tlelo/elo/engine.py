@@ -1,4 +1,4 @@
-"""The Elo engine (docs/PLAN.md §4): one deterministic pass over every season.
+"""The Elo engine (docs/METODOLOJI.md): one deterministic pass over every season.
 
 Per season:
   1. transition from the previous season: promotion/relegation adjustment (P), Süper Lig

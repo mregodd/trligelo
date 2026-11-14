@@ -1,10 +1,10 @@
-"""Backtest (PLAN §4.9): how well do pre-match ratings predict results?
+"""Backtest (docs/METODOLOJI.md §8): how well do pre-match ratings predict results?
 
 Every game is predicted from ratings before it (the engine records them), so nothing
 leaks from the future. The outcome predicted is home win / draw / away win after 90
 minutes, through an ordered logistic model on the rating difference.
 
-Seasons: 2016-17 .. 2020-21 are warm-up (ratings settling, PLAN §4.8) and never scored.
+Seasons: 2016-17 .. 2020-21 are warm-up (ratings settling, METODOLOJI §7) and never scored.
 Parameters are tuned on ``TUNE`` and checked on ``HOLDOUT``, which the tuning never sees.
 The main score is the log-loss of domestic games between two professional clubs.
 """
@@ -193,7 +193,7 @@ def europe_residuals(res: RunResult, seasons) -> dict[str, tuple[int, float]]:
 
 def implied_gap(res: RunResult, seasons=TUNE) -> dict[tuple[int, int], tuple[int, float, float]]:
     """Cup games between clubs of different tiers: games, upper tier's mean score, and the
-    rating gap ``400·log10(p / (1 − p))`` that score implies (PLAN §4.4)."""
+    rating gap ``400·log10(p / (1 − p))`` that score implies."""
     acc: dict[tuple[int, int], list[float]] = {}
     for r in res.records:
         g = r.game

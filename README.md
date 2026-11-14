@@ -9,7 +9,7 @@ Türk profesyonel futbol ligleri (Süper Lig, 1. Lig, 2. Lig, 3. Lig) için aç�
 
 ## Durum
 
-Veri katmanı ve Elo motoru hazır (model v1.0). 2016-17'den bugüne yurt içi ve Avrupa maçları [data/](data/README.md) klasöründe, güncel puanlar [data/ratings/current.csv](data/ratings/current.csv) dosyasında. Puanların nasıl hesaplandığı: [docs/METODOLOJI.md](docs/METODOLOJI.md). Sıradaki adım web sitesi. Ayrıntılar için [docs/PLAN.md](docs/PLAN.md).
+Veri katmanı ve Elo motoru hazır (model v1.0). 2016-17'den bugüne yurt içi ve Avrupa maçları [data/](data/README.md) klasöründe, güncel puanlar [data/ratings/current.csv](data/ratings/current.csv) dosyasında. Puanların nasıl hesaplandığı: [docs/METODOLOJI.md](docs/METODOLOJI.md). Parametrelerin nasıl seçildiği: [docs/backtest.md](docs/backtest.md). Sıradaki adım web sitesi.
 
 ## Veri kaynakları
 

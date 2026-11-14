@@ -258,7 +258,7 @@ def cmd_backtest(args: argparse.Namespace) -> int:
     started = time.monotonic()
     text = backtest_report(load_dataset(paths.data_dir()))
     out = paths.repo_root() / "docs" / "backtest.md"
-    out.write_text(text, encoding="utf-8")
+    out.write_text(text, encoding="utf-8", newline="\n")
     log.info("wrote %s in %.0f s", out, time.monotonic() - started)
     return 0
 

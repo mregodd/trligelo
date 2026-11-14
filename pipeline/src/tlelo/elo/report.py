@@ -1,4 +1,4 @@
-"""``tlelo backtest``: the numbers behind docs/faz-2-rapor.md, as a Markdown report.
+"""``tlelo backtest``: how model v1.0 was chosen, as a Markdown report.
 
 Everything here is recomputed from the data on every run (about a minute).
 """
@@ -72,7 +72,7 @@ def backtest_report(data: Dataset) -> str:
         f"# Geriye dönük test: model {MODEL_VERSION}",
         "",
         "> Bu dosya `uv run tlelo backtest` ile üretilir, elle düzenlenmez. Yorumlar için "
-        "bkz. [faz-2-rapor.md](faz-2-rapor.md).",
+        "bkz. [METODOLOJI.md](METODOLOJI.md).",
         "",
         f"- Ayar sezonları: {', '.join(bt.TUNE)}. Kontrol sezonları (ayarda hiç "
         f"kullanılmadı): {', '.join(bt.HOLDOUT)}.",
