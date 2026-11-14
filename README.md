@@ -14,4 +14,5 @@ Planlama aşamasında. Ayrıntılar için [docs/PLAN.md](docs/PLAN.md).
 ## Veri kaynakları
 
 - Maç sonuçları: [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org). TFF kullanım şartları gereği kaynak gösterilerek ve ticari olmayan amaçla kullanılır.
-- Avrupa kupalarındaki rakiplerin gücü: [ClubElo](http://clubelo.com)
+- Avrupa kupası maç sonuçları: [openfootball](https://github.com/openfootball/champions-league) (CC0)
+- Avrupa kupalarındaki rakiplerin gücü: UEFA kulüp katsayıları ([kassiesa.net](https://kassiesa.net/uefa/))
