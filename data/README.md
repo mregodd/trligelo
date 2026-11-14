@@ -21,6 +21,8 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `europe/coefficients.csv` | Her sezonun çekiliş tablolarındaki UEFA kulüp katsayıları. Türk takımlarının rakiplerinden çok daha fazla kulüp içerir |
 | `europe/association_coefficients.csv` | Her sezonun ülke (federasyon) katsayı sıralaması. Kulüp katsayısı bulunamayan rakipler için yedek |
 | `sources/europe_tr_clubs.csv` | Türk kulübünün Wikipedia sayfası ile TFF `kulupID` eşleştirmesi (elle tutulur) |
+| `ratings/current.csv` | Model çıktısı: güncel sezonun takımları, Elo puanı sırasıyla (`uv run tlelo elo`) |
+| `ratings/history.csv` | Model çıktısı: her takımın her puan değişikliği (maçlar, yükselme/düşme, ortalamaya çekme, bonuslar, ölçek kayması). ~6 MB, **repoya girmez**, aynı komutla üretilir |
 | `raw/` | İndirilen ham sayfaların önbelleği (`raw/tff/`, `raw/wikipedia/`). **Repoya girmez** (`.gitignore`) |
 
 ## `matches/<sezon>.csv` sütunları
@@ -84,6 +86,8 @@ uv run tlelo validate       # TFF puan cetvelleriyle karşılaştırır
 uv run tlelo europe-fetch   # Wikipedia'daki UEFA turnuva sayfalarını indirir
 uv run tlelo europe-build   # europe/ CSV'lerini yazar
 uv run tlelo europe-check   # Avrupa verisindeki boşlukları raporlar
+uv run tlelo elo            # puanları hesaplar (model v1.0), ratings/ klasörüne yazar
+uv run tlelo backtest       # docs/backtest.md test raporunu yeniden üretir
 ```
 
 İlk TFF indirmesi yaklaşık 3–3,5 saat, Wikipedia indirmesi yaklaşık 5 dakika sürer. Sunuculara yük olmamak için istekler arasında 2 saniye beklenir. Wikipedia'da sadece robots.txt'nin izin verdiği makale sayfaları (`/wiki/`) okunur. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.
