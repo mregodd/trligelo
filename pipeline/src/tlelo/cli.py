@@ -8,6 +8,8 @@ Commands:
     europe-fetch  download the Wikipedia articles of the UEFA competitions
     europe-build  write data/europe/*.csv (Turkish clubs' UEFA matches, club coefficients)
     europe-check  list unresolved clubs, missing coefficients and incomplete ties
+    elo       compute the ratings (model v1.0) into data/ratings/
+    backtest  recompute the backtest report (docs/backtest.md)
 """
 
 from __future__ import annotations
@@ -227,6 +229,40 @@ def cmd_europe_check(args: argparse.Namespace) -> int:
     return 1 if bad else 0
 
 
+def cmd_elo(args: argparse.Namespace) -> int:
+    from tlelo.elo.data import load_dataset
+    from tlelo.elo.fit import run_model
+    from tlelo.elo.output import write_ratings
+    from tlelo.elo.params import MODEL_VERSION, V1
+
+    data = load_dataset(paths.data_dir())
+    res = run_model(data, V1)
+    n_cur, n_hist = write_ratings(paths.data_dir() / "ratings", res, data)
+    e = res.europe
+    log.info(
+        "model %s: %d clubs, %d history rows; Europe a=%.0f b=%.1f home=%.0f",
+        MODEL_VERSION,
+        n_cur,
+        n_hist,
+        e.a,
+        e.b,
+        e.home,
+    )
+    return 0
+
+
+def cmd_backtest(args: argparse.Namespace) -> int:
+    from tlelo.elo.data import load_dataset
+    from tlelo.elo.report import backtest_report
+
+    started = time.monotonic()
+    text = backtest_report(load_dataset(paths.data_dir()))
+    out = paths.repo_root() / "docs" / "backtest.md"
+    out.write_text(text, encoding="utf-8")
+    log.info("wrote %s in %.0f s", out, time.monotonic() - started)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="tlelo", description=__doc__.splitlines()[0])
     parser.add_argument("--log-file", help="also write logs to this file")
@@ -267,6 +303,8 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("-s", "--season", nargs="+", metavar="2016-17")
         p.add_argument("--current-only", action="store_true", help="only the running season")
         p.set_defaults(func=func)
+    sub.add_parser("elo", help="compute the ratings into data/ratings/").set_defaults(func=cmd_elo)
+    sub.add_parser("backtest", help="write docs/backtest.md").set_defaults(func=cmd_backtest)
 
     args = parser.parse_args(argv)
     handlers: list[logging.Handler] = [logging.StreamHandler(sys.stderr)]
