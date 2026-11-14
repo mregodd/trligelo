@@ -8,11 +8,13 @@ from collections import Counter, defaultdict
 from dataclasses import asdict, fields
 from pathlib import Path
 
+from tlelo.europe.collect import EuropeMatch, SeasonData
 from tlelo.tff.collect import CompetitionData, Match
 
 log = logging.getLogger(__name__)
 
 MATCH_COLUMNS = [f.name for f in fields(Match)]
+EUROPE_COLUMNS = [f.name for f in fields(EuropeMatch)]
 COMPETITION_ORDER = {"SL": 0, "1L": 1, "2L": 2, "3L": 3, "TK": 4, "SK": 5}
 
 
@@ -45,6 +47,40 @@ def write_matches(data_dir: Path, competitions: list[CompetitionData]) -> dict[s
         )
         counts[season] = len(matches)
     return counts
+
+
+def write_europe(europe_dir: Path, seasons: list[SeasonData]) -> tuple[int, int]:
+    """``europe/matches.csv`` (Turkish clubs' matches) and ``europe/coefficients.csv``.
+
+    The coefficient table keeps every club found in that season's draw tables.
+    """
+    matches = [m for s in seasons for m in s.matches]
+    _write_csv(
+        europe_dir / "matches.csv",
+        EUROPE_COLUMNS,
+        [{**asdict(m), "tr_home": int(m.tr_home)} for m in matches],
+    )
+    coef_rows = [
+        {"season": s.season, "team": title, "name": name, "association": assoc, "coefficient": v}
+        for s in seasons
+        for title, (name, assoc, v) in sorted(s.coefficients.items())
+    ]
+    _write_csv(
+        europe_dir / "coefficients.csv",
+        ["season", "team", "name", "association", "coefficient"],
+        coef_rows,
+    )
+    assoc_rows = [
+        {"season": s.season, "association": title, "country": name, "coefficient": v}
+        for s in seasons
+        for title, (name, v) in sorted(s.associations.items(), key=lambda kv: -kv[1][1])
+    ]
+    _write_csv(
+        europe_dir / "association_coefficients.csv",
+        ["season", "association", "country", "coefficient"],
+        assoc_rows,
+    )
+    return len(matches), len(coef_rows)
 
 
 def write_teams(data_dir: Path, competitions: list[CompetitionData]) -> int:

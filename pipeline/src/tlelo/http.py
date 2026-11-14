@@ -1,4 +1,4 @@
-"""A polite, caching HTTP client for tff.org.
+"""A polite, caching HTTP client (tff.org pages and Wikipedia articles).
 
 Every page is downloaded at most once and stored gzip-compressed (UTF-8) under the raw
 cache directory. Requests are spaced by ``min_interval`` seconds and retried with backoff
@@ -80,18 +80,25 @@ class PoliteClient:
         self.close()
 
     def is_cached(self, params: Params) -> bool:
-        return (self.cache_dir / cache_key(params)).exists()
+        return self.has(cache_key(params))
+
+    def has(self, key: Path) -> bool:
+        return (self.cache_dir / key).exists()
 
     def get(self, params: Params, *, refresh: bool = False) -> str:
-        """Return the page's HTML as text, from cache when possible."""
-        path = self.cache_dir / cache_key(params)
+        """Return a tff.org page's HTML as text, from cache when possible."""
+        return self.fetch(page_url(params), cache_key(params), refresh=refresh)
+
+    def fetch(self, url: str, key: Path, *, refresh: bool = False) -> str:
+        """Return ``url`` as text, cached under ``cache_dir / key``."""
+        path = self.cache_dir / key
         if path.exists() and not refresh:
             self.stats["cache"] += 1
             return gzip.decompress(path.read_bytes()).decode("utf-8")
         if self.offline:
-            raise MissingPage(page_url(params))
+            raise MissingPage(url)
 
-        text = self._download(page_url(params))
+        text = self._download(url)
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_suffix(".tmp")
         tmp.write_bytes(gzip.compress(text.encode("utf-8")))

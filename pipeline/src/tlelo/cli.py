@@ -5,6 +5,9 @@ Commands:
     details   download match detail pages (forfeit checks, play-off / final venues)
     build     write data/matches/*.csv and the team tables from the cache
     validate  compare parsed matches with TFF's standings tables
+    europe-fetch  download the Wikipedia articles of the UEFA competitions
+    europe-build  write data/europe/*.csv (Turkish clubs' UEFA matches, club coefficients)
+    europe-check  list unresolved clubs, missing coefficients and incomplete ties
 """
 
 from __future__ import annotations
@@ -15,7 +18,10 @@ import sys
 import time
 
 from tlelo import paths
-from tlelo.build import write_matches, write_teams
+from tlelo.build import write_europe, write_matches, write_teams
+from tlelo.europe import wiki
+from tlelo.europe.collect import SeasonData, collect_season, load_tr_clubs
+from tlelo.europe.validate import check_season
 from tlelo.http import MissingPage, PoliteClient
 from tlelo.tff.collect import (
     CompetitionData,
@@ -147,6 +153,80 @@ def cmd_validate(args: argparse.Namespace) -> int:
     return 1 if bad else 0
 
 
+def _europe_seasons(args: argparse.Namespace) -> tuple[list[str], str]:
+    """Selected seasons and the running one (same window as the domestic data)."""
+    pages = load_pages(paths.tff_pages_csv())
+    current = max(p.season for p in pages if p.current)
+    seasons = sorted({p.season for p in pages})
+    if args.season:
+        seasons = [s for s in seasons if s in args.season]
+    if args.current_only:
+        seasons = [current]
+    return seasons, current
+
+
+def cmd_europe_fetch(args: argparse.Namespace) -> int:
+    started = time.monotonic()
+    seasons, current = _europe_seasons(args)
+    with PoliteClient(paths.wiki_cache_dir(), min_interval=args.interval) as client:
+        for season in seasons:
+            refresh = args.refresh_current and season == current
+            for code in wiki.COMPETITIONS:
+                articles = wiki.season_articles(client, code, season, refresh=refresh)
+                if articles:
+                    log.info(
+                        "%s %s: %d articles, %s", code, season, len(articles), dict(client.stats)
+                    )
+        log.info(
+            "europe-fetch done in %.0f min: %s",
+            (time.monotonic() - started) / 60,
+            dict(client.stats),
+        )
+    return 0
+
+
+def _collect_europe(args: argparse.Namespace) -> list[SeasonData]:
+    seasons, _ = _europe_seasons(args)
+    tr_clubs = load_tr_clubs(paths.data_dir() / "sources" / "europe_tr_clubs.csv")
+    out = []
+    with PoliteClient(paths.wiki_cache_dir(), offline=True) as client:
+        for season in seasons:
+            articles = {
+                code: wiki.season_articles(client, code, season) for code in wiki.COMPETITIONS
+            }
+            out.append(collect_season(season, articles, tr_clubs))
+    return out
+
+
+def cmd_europe_build(args: argparse.Namespace) -> int:
+    data = _collect_europe(args)
+    n_matches, n_coefs = write_europe(paths.europe_dir(), data)
+    issues = sum(len(s.issues) for s in data)
+    log.info(
+        "%d matches, %d coefficients, %d issues (see `tlelo europe-check`)",
+        n_matches,
+        n_coefs,
+        issues,
+    )
+    return 0
+
+
+def cmd_europe_check(args: argparse.Namespace) -> int:
+    bad = 0
+    _, current = _europe_seasons(args)
+    for season in _collect_europe(args):
+        status: dict[str, int] = {}
+        for m in season.matches:
+            status[m.status] = status.get(m.status, 0) + 1
+        print(f"\n## {season.season}: {len(season.matches)} matches {status}")
+        problems = season.issues + check_season(season, finished=season.season != current)
+        bad += len(problems)
+        for line in problems:
+            print(f"   {line}")
+    print(f"\n{bad} problem(s)")
+    return 1 if bad else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="tlelo", description=__doc__.splitlines()[0])
     parser.add_argument("--log-file", help="also write logs to this file")
@@ -172,6 +252,21 @@ def main(argv: list[str] | None = None) -> int:
     add("validate", cmd_validate, "compare with TFF standings").add_argument(
         "-v", "--verbose", action="store_true"
     )
+
+    p = sub.add_parser("europe-fetch", help="download Wikipedia articles of UEFA competitions")
+    p.add_argument("-s", "--season", nargs="+", metavar="2016-17")
+    p.add_argument("--current-only", action="store_true", help="only the running season")
+    p.add_argument("--interval", type=float, default=2.0, help="seconds between requests")
+    p.add_argument("--refresh-current", action="store_true", help="re-download live pages")
+    p.set_defaults(func=cmd_europe_fetch)
+    for name, func, help_text in (
+        ("europe-build", cmd_europe_build, "write data/europe/*.csv from the cache"),
+        ("europe-check", cmd_europe_check, "report gaps in the European data"),
+    ):
+        p = sub.add_parser(name, help=help_text)
+        p.add_argument("-s", "--season", nargs="+", metavar="2016-17")
+        p.add_argument("--current-only", action="store_true", help="only the running season")
+        p.set_defaults(func=func)
 
     args = parser.parse_args(argv)
     handlers: list[logging.Handler] = [logging.StreamHandler(sys.stderr)]

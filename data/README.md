@@ -2,7 +2,9 @@
 
 Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzenlenmez; istisnalar aşağıda belirtilmiştir.
 
-**Kaynak:** Maç sonuçları [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org) sayfalarından derlenmiştir. TFF'nin kullanım şartları gereği kaynak gösterilerek ve **ticari olmayan amaçla** yayımlanır.
+**Kaynaklar:**
+- Yurt içi maç sonuçları [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org) sayfalarından derlenmiştir. TFF'nin kullanım şartları gereği kaynak gösterilerek ve **ticari olmayan amaçla** yayımlanır.
+- Avrupa kupası maçları ve UEFA katsayıları İngilizce [Wikipedia](https://en.wikipedia.org)'nın UEFA turnuva sayfalarından derlenmiştir ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)). Her maçın hangi sayfadan alındığı `source` sütununda yazar.
 
 ## Dosyalar
 
@@ -15,7 +17,11 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `sources/tff_pages.csv` | Hangi sezonun hangi TFF sayfasında olduğu (elle tutulur) |
 | `sources/supercup_extra.csv` | TFF'de maç kimliği bulunamayan Süper Kupa maçları. Elle, kaynağıyla birlikte girilir |
 | `sources/match_overrides.csv` | Fikstürde skoru olmayan ama TFF puan cetvelinin saydığı maçlar (disiplin kararıyla hükmen sayılanlar). Elle, açıklamasıyla girilir |
-| `raw/` | İndirilen ham sayfaların önbelleği. **Repoya girmez** (`.gitignore`) |
+| `europe/matches.csv` | Türk takımlarının UEFA turnuvalarındaki bütün maçları (Şampiyonlar Ligi, Avrupa Ligi, Konferans Ligi, ön elemeler dahil) |
+| `europe/coefficients.csv` | Her sezonun çekiliş tablolarındaki UEFA kulüp katsayıları. Türk takımlarının rakiplerinden çok daha fazla kulüp içerir |
+| `europe/association_coefficients.csv` | Her sezonun ülke (federasyon) katsayı sıralaması. Kulüp katsayısı bulunamayan rakipler için yedek |
+| `sources/europe_tr_clubs.csv` | Türk kulübünün Wikipedia sayfası ile TFF `kulupID` eşleştirmesi (elle tutulur) |
+| `raw/` | İndirilen ham sayfaların önbelleği (`raw/tff/`, `raw/wikipedia/`). **Repoya girmez** (`.gitignore`) |
 
 ## `matches/<sezon>.csv` sütunları
 
@@ -41,14 +47,43 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 
 **Hükmen tespiti:** TFF fikstürde hükmen sonuçları normal skor gibi gösterir. 3-0 veya 0-3 biten her maçın detay sayfasına bakılır. Hakem ataması yoksa maç `forfeit` olarak işaretlenir. Bazı maçlar ise sahada yarıda kalıp sonradan disiplin kararıyla sonuçlanır. TFF bunları fikstürde skorsuz bırakır ama puan cetveline işler. Bunlar `tlelo validate` ile bulunur ve `sources/match_overrides.csv` dosyasına elle eklenir.
 
+## `europe/matches.csv` sütunları
+
+Yabancı kulüpler İngilizce Wikipedia sayfa adıyla tanımlanır (örn. `S.L. Benfica`), Türk kulüpleri ayrıca TFF `kulupID` ile (`team_id`).
+
+| Sütun | Açıklama |
+|---|---|
+| `match_id` | UEFA'nın maç kimliği (uefa.com rapor bağlantısından). 2022-23'ten sonraki sayfalarda bu bağlantı olmadığı için çoğu yeni maçta boştur |
+| `season`, `competition` | Sezon ve turnuva: `UCL` (Şampiyonlar Ligi), `UEL` (Avrupa Ligi), `UECL` (Konferans Ligi) |
+| `round` | `PR` ön eleme turu, `Q1`–`Q3` eleme turları, `PO` play-off turu, `GS` grup aşaması, `LP` lig aşaması (2024-25'ten itibaren), `KPO` eleme play-off'u, `R32`, `R16`, `QF`, `SF`, `F` |
+| `group`, `leg` | Grup harfi. İki ayaklı eşleşmelerde 1. veya 2. maç |
+| `date`, `time` | Tarih ve yerel başlama saati |
+| `home_team`, `home_name`, `home_assoc` | Ev sahibinin Wikipedia sayfası, görünen adı ve ülke federasyonu (`away_*` deplasman için aynı) |
+| `team_id`, `tr_home` | Türk kulübünün `kulupID`'si. `tr_home` = 1 ise Türk kulübü ev sahibi |
+| `opponent`, `opponent_coefficient` | Rakibin Wikipedia sayfası ve o sezonki UEFA kulüp katsayısı |
+| `home_goals`, `away_goals` | 90 dakika skoru. Uzatmaya giden maçlarda gol dakikalarından hesaplanır |
+| `et_home`, `et_away`, `pen_home`, `pen_away` | Uzatmalar sonrası skor ve penaltı atışları (varsa) |
+| `status` | `played`, `forfeit`, `not_played` (güncel sezonun oynanmamış maçları) |
+| `venue`, `source` | Stat ve verinin alındığı Wikipedia sayfası |
+
+**Doğrulama:** `tlelo europe-check` şunları kontrol eder:
+- Grup aşamasında her kulübün 6, lig aşamasında 8 maçı (Konferans Ligi'nde 6) olmalı.
+- İki ayaklı eşleşmelerin iki maçı da bulunmalı. Pandemide tek maç oynanan turlar istisna.
+- Her rakibin kulüp ve ülke katsayısı bulunmalı.
+
+[openfootball](https://github.com/openfootball/champions-league) (CC0) ile çapraz doğrulandı. openfootball'daki 202 Türk takımı maçının 201'i skoruyla birebir aynı. Kalan maç PSG–Başakşehir (2020): yarıda kalıp ertesi gün tamamlanmış, tarihler farklı ama skor aynı.
+
 ## Yeniden üretmek
 
 ```bash
 cd pipeline
-uv run tlelo fetch      # sayfaları indirir (önbellekte olanları atlar)
-uv run tlelo details    # hükmen kontrolü ve stat için maç detayları
-uv run tlelo build      # CSV'leri yazar
-uv run tlelo validate   # TFF puan cetvelleriyle karşılaştırır
+uv run tlelo fetch          # TFF sayfalarını indirir (önbellekte olanları atlar)
+uv run tlelo details        # hükmen kontrolü ve stat için maç detayları
+uv run tlelo build          # yurt içi CSV'leri yazar
+uv run tlelo validate       # TFF puan cetvelleriyle karşılaştırır
+uv run tlelo europe-fetch   # Wikipedia'daki UEFA turnuva sayfalarını indirir
+uv run tlelo europe-build   # europe/ CSV'lerini yazar
+uv run tlelo europe-check   # Avrupa verisindeki boşlukları raporlar
 ```
 
-İlk indirme yaklaşık 3–3,5 saat sürer: TFF sunucusuna yük olmamak için istekler arasında 2 saniye beklenir. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.
+İlk TFF indirmesi yaklaşık 3–3,5 saat, Wikipedia indirmesi yaklaşık 5 dakika sürer. Sunuculara yük olmamak için istekler arasında 2 saniye beklenir. Wikipedia'da sadece robots.txt'nin izin verdiği makale sayfaları (`/wiki/`) okunur. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.

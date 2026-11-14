@@ -27,5 +27,14 @@ def raw_cache_dir() -> Path:
     return data_dir() / "raw" / "tff"
 
 
+def wiki_cache_dir() -> Path:
+    """Downloaded Wikipedia articles (git-ignored)."""
+    return data_dir() / "raw" / "wikipedia"
+
+
 def tff_pages_csv() -> Path:
     return data_dir() / "sources" / "tff_pages.csv"
+
+
+def europe_dir() -> Path:
+    return data_dir() / "europe"
