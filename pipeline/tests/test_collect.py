@@ -2,8 +2,17 @@
 
 from datetime import date
 
+import pytest
+
 from tlelo.http import MissingPage
-from tlelo.tff.collect import CompetitionData, Match, _apply_detail, needs_detail
+from tlelo.tff.collect import (
+    CompetitionData,
+    Match,
+    _apply_detail,
+    apply_overrides,
+    load_overrides,
+    needs_detail,
+)
 from tlelo.tff.crawl import CompetitionPage
 from tlelo.tff.parse import StandingRow
 from tlelo.validate import check_competition, computed_table
@@ -97,3 +106,37 @@ def test_computed_table_and_check():
     (check,) = check_competition(data)
     assert check.mismatches == []
     assert len(check.point_differences) == 1
+
+
+OVERRIDES = """match_id,status,home_goals,away_goals,note,source
+1,forfeit,3,0,"awarded, no score in fixture",x
+2,double_forfeit,,,both lost,x
+"""
+
+
+def test_overrides_fill_awarded_results(tmp_path):
+    path = tmp_path / "match_overrides.csv"
+    path.write_text(OVERRIDES, encoding="utf-8")
+    data = CompetitionData(
+        SL,
+        [
+            match(1, 10, 20, None, None, status="not_played"),
+            match(2, 10, 30, None, None, status="not_played"),
+            match(3, 20, 30, 1, 1),
+        ],
+    )
+    apply_overrides(data, load_overrides(path))
+    assert (data.matches[0].status, data.matches[0].regular_score) == ("forfeit", (3, 0))
+    assert data.matches[1].status == "double_forfeit"
+
+    table = computed_table(data, None)
+    assert table[10] == [2, 1, 0, 1, 3, 3, 3]  # won 3-0, lost the double forfeit 0-3
+    assert table[30] == [2, 0, 1, 1, 1, 4, 1]
+
+
+def test_overrides_reject_unknown_status(tmp_path):
+    path = tmp_path / "match_overrides.csv"
+    path.write_text("match_id,status,home_goals,away_goals,note,source\n1,hukmen,3,0,,\n")
+    with pytest.raises(ValueError):
+        load_overrides(path)
+    assert load_overrides(tmp_path / "missing.csv") == {}

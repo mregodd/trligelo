@@ -204,12 +204,18 @@ def parse_fixture(html: str) -> list[FixtureRow]:
     return list(rows.values())
 
 
-def rows_for_group(rows: list[FixtureRow], label: str | None) -> list[FixtureRow]:
+def rows_for_group(
+    rows: list[FixtureRow], label: str | None, teams: set[int] | None = None
+) -> list[FixtureRow]:
     """Keep the rows of one group when a page lists several groups' tables.
 
     Some seasons show the same (first) group's fixture list on every group page, so a
     table titled with another group is never borrowed. An empty result means the
     group's matches have to be read from its week views instead.
+
+    ``teams`` (the group's standings) filters an untitled fixture list: some group pages
+    list every group's matches without titles. A match is kept when either side is in the
+    group, so matches against a team later removed from the table survive.
     """
     if label is None:
         return rows
@@ -217,8 +223,10 @@ def rows_for_group(rows: list[FixtureRow], label: str | None) -> list[FixtureRow
     matching = [r for r in rows if r.table_group == key]
     if matching:
         return matching
-    if rows and all(r.table_group is None for r in rows):
-        return rows  # single table whose title does not name a group
+    if rows and all(r.table_group is None for r in rows):  # untitled table
+        if teams:
+            return [r for r in rows if r.home_id in teams or r.away_id in teams]
+        return rows
     return []
 
 
@@ -334,16 +342,21 @@ _NUMBER_SPAN = re.compile(r"<span[^>]*>\s*(-?\d+)\s*</span>")
 
 
 def parse_standings(html: str) -> list[StandingRow]:
-    """The overall standings table (O, G, B, M, A, Y, AV, P)."""
+    """The overall standings table (O, G, B, M, A, Y, AV, P).
+
+    A few pages carry the same table twice (two page modules); the first row per team wins.
+    """
     out: list[StandingRow] = []
+    seen: set[int] = set()
     for chunk in _split_rows(html):
         team = _STANDING_TEAM.search(chunk)
-        if not team:
+        if not team or int(team[1]) in seen:
             continue
         nums = [int(n) for n in _NUMBER_SPAN.findall(chunk[team.end() :])]
         if len(nums) < 8:
             continue
         played, won, drawn, lost, gf, ga, _gd, points = nums[:8]
+        seen.add(int(team[1]))
         out.append(StandingRow(int(team[1]), played, won, drawn, lost, gf, ga, points))
     return out
 

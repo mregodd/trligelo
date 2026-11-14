@@ -17,7 +17,13 @@ import time
 from tlelo import paths
 from tlelo.build import write_matches, write_teams
 from tlelo.http import MissingPage, PoliteClient
-from tlelo.tff.collect import CompetitionData, collect_competition, fetch_details
+from tlelo.tff.collect import (
+    CompetitionData,
+    apply_overrides,
+    collect_competition,
+    fetch_details,
+    load_overrides,
+)
 from tlelo.tff.crawl import CompetitionPage, fetch_competition, load_pages
 from tlelo.tff.supercup import collect_supercup, fetch_supercup
 from tlelo.validate import check_competition
@@ -46,6 +52,14 @@ def _supercup_extra():
 
 
 def _collect_all(args: argparse.Namespace) -> list[CompetitionData]:
+    out = _collect_raw(args)
+    overrides = load_overrides(paths.data_dir() / "sources" / "match_overrides.csv")
+    for data in out:
+        apply_overrides(data, overrides)
+    return out
+
+
+def _collect_raw(args: argparse.Namespace) -> list[CompetitionData]:
     out = []
     with PoliteClient(paths.raw_cache_dir(), offline=True) as client:
         for page in _selected(args):

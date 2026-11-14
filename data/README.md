@@ -14,6 +14,7 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `team_seasons.csv` | Kulübün her sezon hangi ligde ve grupta oynadığı. Bu dosyada olmayan kulüpler o sezon amatördü (PGL/BAL) |
 | `sources/tff_pages.csv` | Hangi sezonun hangi TFF sayfasında olduğu (elle tutulur) |
 | `sources/supercup_extra.csv` | TFF'de maç kimliği bulunamayan Süper Kupa maçları. Elle, kaynağıyla birlikte girilir |
+| `sources/match_overrides.csv` | Fikstürde skoru olmayan ama TFF puan cetvelinin saydığı maçlar (disiplin kararıyla hükmen sayılanlar). Elle, açıklamasıyla girilir |
 | `raw/` | İndirilen ham sayfaların önbelleği. **Repoya girmez** (`.gitignore`) |
 
 ## `matches/<sezon>.csv` sütunları
@@ -33,12 +34,12 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `home_goals`, `away_goals` | Normal süre skoru |
 | `et_home`, `et_away` | Uzatmalar sonrası skor (varsa) |
 | `pen_home`, `pen_away` | Penaltı atışları (varsa) |
-| `status` | `played` (oynandı), `forfeit` (hükmen), `not_played` (oynanmadı, örn. pandemide yarıda kalan sezon) |
+| `status` | `played` (oynandı), `forfeit` (hükmen), `double_forfeit` (iki takım da 0-3 hükmen mağlup; skor boş), `not_played` (oynanmadı: pandemide yarıda kalan sezon, sonradan başka kimlikle tekrar oynanan maç vb.) |
 | `venue_id`, `venue` | Stat (sadece detay sayfası çekilen maçlarda: play-off'lar, finaller, hükmen kontrolü yapılanlar) |
 
 **Kulüp kimliği:** TFF her kulübe değişmeyen bir `kulupID` verir. Sponsor adı değişse de kimlik aynı kalır. Örneğin "ATİKER KONYASPOR" (2016-17) ve "TÜMOSAN KONYASPOR" (2026-27) ikisi de `3600`.
 
-**Hükmen tespiti:** TFF fikstürde hükmen sonuçları normal skor gibi gösterir. 3-0 veya 0-3 biten her maçın detay sayfasına bakılır. Hakem ataması yoksa maç `forfeit` olarak işaretlenir.
+**Hükmen tespiti:** TFF fikstürde hükmen sonuçları normal skor gibi gösterir. 3-0 veya 0-3 biten her maçın detay sayfasına bakılır. Hakem ataması yoksa maç `forfeit` olarak işaretlenir. Bazı maçlar ise sahada yarıda kalıp sonradan disiplin kararıyla sonuçlanır. TFF bunları fikstürde skorsuz bırakır ama puan cetveline işler. Bunlar `tlelo validate` ile bulunur ve `sources/match_overrides.csv` dosyasına elle eklenir.
 
 ## Yeniden üretmek
 

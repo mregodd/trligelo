@@ -23,12 +23,18 @@ def computed_table(data: CompetitionData, group: str | None) -> dict[int, list[i
     """team_id -> [O, G, B, M, A, Y, P] from league matches with a result."""
     table: dict[int, list[int]] = defaultdict(lambda: [0] * 7)
     for m in data.matches:
-        if m.stage != "league" or m.group != group or m.home_goals is None:
+        if m.stage != "league" or m.group != group:
             continue
-        for team, gf, ga in (
-            (m.home_id, m.home_goals, m.away_goals),
-            (m.away_id, m.away_goals, m.home_goals),
-        ):
+        if m.status == "double_forfeit":  # both sides counted as 0-3 losers
+            sides = ((m.home_id, 0, 3), (m.away_id, 0, 3))
+        elif m.home_goals is None or m.away_goals is None:
+            continue
+        else:
+            sides = (
+                (m.home_id, m.home_goals, m.away_goals),
+                (m.away_id, m.away_goals, m.home_goals),
+            )
+        for team, gf, ga in sides:
             row = table[team]
             row[0] += 1
             row[4] += gf

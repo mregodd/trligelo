@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import csv
 import logging
 import re
 from dataclasses import dataclass, field
 from datetime import date
+from pathlib import Path
 
 from tlelo.http import MissingPage, PoliteClient
 from tlelo.tff.crawl import (
@@ -52,7 +54,7 @@ class Match:
     et_away: int | None = None
     pen_home: int | None = None
     pen_away: int | None = None
-    status: str = "played"  # played | forfeit | not_played
+    status: str = "played"  # played | forfeit | double_forfeit | not_played
     venue_id: int | None = None
     venue: str | None = None
 
@@ -172,6 +174,12 @@ def collect_competition(
 
         if table.rows:  # league: fixture list + dates from the week views
             for r in table.rows:
+                prev = matches.get(r.match_id)
+                if prev is not None and prev.stage == "league":
+                    data.issues.append(
+                        f"match {r.match_id} listed in groups {prev.group} and {table.label}"
+                    )
+                    continue
                 dated = week_rows.get(r.match_id, (None, None))[1]
                 if r.score is not None and dated is None:
                     data.issues.append(f"no date for match {r.match_id} (week {r.week})")
@@ -205,6 +213,42 @@ def _apply_detail(client: PoliteClient, m: Match, data: CompetitionData) -> None
     m.venue_id, m.venue = detail.venue_id, detail.venue
     if m.regular_score in FORFEIT_SCORES and not detail.has_officials:
         m.status = "forfeit"
+
+
+STATUSES = ("played", "forfeit", "double_forfeit", "not_played")
+
+
+@dataclass(frozen=True, slots=True)
+class Override:
+    """A hand-checked result for a match whose fixture entry is incomplete.
+
+    TFF leaves some matches decided by the disciplinary board without a score in the
+    fixture list while its standings count them (``double_forfeit``: both sides lose 0-3).
+    """
+
+    match_id: int
+    status: str
+    home_goals: int | None
+    away_goals: int | None
+
+
+def load_overrides(path: Path) -> dict[int, Override]:
+    if not path.exists():
+        return {}
+    out = {}
+    with path.open(encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["status"] not in STATUSES:
+                raise ValueError(f"{path.name}: bad status {r['status']!r} for {r['match_id']}")
+            goals = [int(r[k]) if r[k] else None for k in ("home_goals", "away_goals")]
+            out[int(r["match_id"])] = Override(int(r["match_id"]), r["status"], *goals)
+    return out
+
+
+def apply_overrides(data: CompetitionData, overrides: dict[int, Override]) -> None:
+    for m in data.matches:
+        if (o := overrides.get(m.match_id)) is not None:
+            m.status, m.home_goals, m.away_goals = o.status, o.home_goals, o.away_goals
 
 
 def fetch_details(client: PoliteClient, comp: CompetitionPage) -> None:

@@ -17,6 +17,7 @@ from tlelo.tff.parse import (
     FixtureRow,
     parse_fixture,
     parse_groups,
+    parse_standings,
     parse_week_dates,
     parse_week_links,
     rows_for_group,
@@ -77,7 +78,9 @@ def load_tables(client: PoliteClient, comp: CompetitionPage, *, refresh: bool = 
     tables = []
     for gid, label in groups.items():
         html = client.get({"pageID": comp.page_id, "grupID": gid}, refresh=refresh)
-        tables.append(GroupTable(gid, label, html, rows_for_group(parse_fixture(html), label)))
+        teams = {s.team_id for s in parse_standings(html)}
+        rows = rows_for_group(parse_fixture(html), label, teams)
+        tables.append(GroupTable(gid, label, html, rows))
     return main, tables
 
 

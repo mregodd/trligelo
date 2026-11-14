@@ -82,6 +82,17 @@ def test_rows_for_group_picks_the_requested_table():
     assert p.rows_for_group(only_first, "02") == []
 
 
+def test_rows_for_group_filters_an_untitled_list_by_the_group_teams():
+    # 2L 2026-27: the Kırmızı page lists both groups' matches without titles.
+    def row(mid, home, away):
+        return p.FixtureRow(mid, 1, None, home, f"T{home}", away, f"T{away}", (1, 0))
+
+    rows = [row(1, 10, 11), row(2, 20, 21), row(3, 10, 99)]
+    kept = p.rows_for_group(rows, "Kırmızı", teams={10, 11})
+    assert [r.match_id for r in kept] == [1, 3]  # 99 left the table, its match stays
+    assert p.rows_for_group(rows, "Kırmızı") == rows  # no standings: keep everything
+
+
 def test_parse_groups():
     html = """
     <a href="Default.aspx?pageID=1415&grupID=1354#grp"> Beyaz </a>
@@ -200,6 +211,11 @@ STANDINGS = """
 
 def test_parse_standings():
     assert p.parse_standings(STANDINGS) == [p.StandingRow(3604, 34, 20, 4, 10, 65, 40, 64)]
+
+
+def test_parse_standings_ignores_a_repeated_table():
+    # 1L 2022-23 shows the standings module twice.
+    assert len(p.parse_standings(STANDINGS + STANDINGS.replace("ctl04", "ctl01"))) == 1
 
 
 def test_match_detail_forfeit_has_no_officials():
