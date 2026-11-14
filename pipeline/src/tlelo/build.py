@@ -1,0 +1,93 @@
+"""Write normalized CSVs (matches, teams) from the cached pages."""
+
+from __future__ import annotations
+
+import csv
+import logging
+from collections import Counter, defaultdict
+from dataclasses import asdict, fields
+from pathlib import Path
+
+from tlelo.tff.collect import CompetitionData, Match
+
+log = logging.getLogger(__name__)
+
+MATCH_COLUMNS = [f.name for f in fields(Match)]
+COMPETITION_ORDER = {"SL": 0, "1L": 1, "2L": 2, "3L": 3, "TK": 4, "SK": 5}
+
+
+def _write_csv(path: Path, columns: list[str], rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=columns, lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: "" if v is None else v for k, v in row.items()})
+
+
+def write_matches(data_dir: Path, competitions: list[CompetitionData]) -> dict[str, int]:
+    """One CSV per season: ``data/matches/<season>.csv``."""
+    by_season: dict[str, list[Match]] = defaultdict(list)
+    for comp in competitions:
+        by_season[comp.comp.season].extend(comp.matches)
+    counts = {}
+    for season, matches in sorted(by_season.items()):
+        matches.sort(
+            key=lambda m: (
+                m.date.isoformat() if m.date else "9999",
+                m.time or "",
+                COMPETITION_ORDER[m.competition],
+                m.match_id,
+            )
+        )
+        _write_csv(
+            data_dir / "matches" / f"{season}.csv", MATCH_COLUMNS, [asdict(m) for m in matches]
+        )
+        counts[season] = len(matches)
+    return counts
+
+
+def write_teams(data_dir: Path, competitions: list[CompetitionData]) -> int:
+    """``teams.csv`` (one row per club), ``team_names.csv`` and ``team_seasons.csv``.
+
+    A club's league in a season comes from its league matches; clubs that only appear in
+    the cup that season were amateur (PGL / BAL) at the time.
+    """
+    names: dict[tuple[int, str], Counter[str]] = defaultdict(Counter)
+    leagues: dict[tuple[int, str], tuple[str, str]] = {}
+    for comp in competitions:
+        for m in comp.matches:
+            for team_id, name in ((m.home_id, m.home_name), (m.away_id, m.away_name)):
+                names[(team_id, m.season)][name] += 1
+                if m.stage == "league":
+                    leagues[(team_id, m.season)] = (m.competition, m.group or "")
+
+    name_rows = [
+        {"team_id": tid, "season": season, "name": counter.most_common(1)[0][0]}
+        for (tid, season), counter in sorted(names.items())
+    ]
+    season_rows = [
+        {"team_id": tid, "season": season, "competition": comp, "group": group}
+        for (tid, season), (comp, group) in sorted(leagues.items())
+    ]
+
+    teams: dict[int, dict] = {}
+    for row in name_rows:  # sorted by season, so the last name wins
+        t = teams.setdefault(
+            row["team_id"], {"team_id": row["team_id"], "first_seen": row["season"]}
+        )
+        t["name"], t["last_seen"] = row["name"], row["season"]
+    pro_seasons = Counter(tid for tid, _ in leagues)
+    for tid, t in teams.items():
+        t["pro_seasons"] = pro_seasons.get(tid, 0)
+
+    _write_csv(
+        data_dir / "teams.csv",
+        ["team_id", "name", "first_seen", "last_seen", "pro_seasons"],
+        [teams[t] for t in sorted(teams)],
+    )
+    _write_csv(data_dir / "team_names.csv", ["team_id", "season", "name"], name_rows)
+    _write_csv(
+        data_dir / "team_seasons.csv", ["team_id", "season", "competition", "group"], season_rows
+    )
+    return len(teams)
