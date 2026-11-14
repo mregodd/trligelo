@@ -9,10 +9,10 @@ Türk profesyonel futbol ligleri (Süper Lig, 1. Lig, 2. Lig, 3. Lig) için aç�
 
 ## Durum
 
-Planlama aşamasında. Ayrıntılar için [docs/PLAN.md](docs/PLAN.md).
+Veri katmanı hazır: 2016-17'den bugüne yurt içi maçlar ve Türk takımlarının Avrupa maçları [data/](data/README.md) klasöründe. Sıradaki adım Elo motoru. Ayrıntılar için [docs/PLAN.md](docs/PLAN.md).
 
 ## Veri kaynakları
 
-- Maç sonuçları: [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org). TFF kullanım şartları gereği kaynak gösterilerek ve ticari olmayan amaçla kullanılır.
-- Avrupa kupası maç sonuçları: [openfootball](https://github.com/openfootball/champions-league) (CC0)
-- Avrupa kupalarındaki rakiplerin gücü: UEFA kulüp katsayıları ([kassiesa.net](https://kassiesa.net/uefa/))
+- Yurt içi maç sonuçları: [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org). TFF kullanım şartları gereği kaynak gösterilerek ve ticari olmayan amaçla kullanılır.
+- Avrupa kupası maç sonuçları ve UEFA kulüp/ülke katsayıları: [Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League) (İngilizce) turnuva sayfaları, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Avrupa maçlarının çapraz doğrulaması: [openfootball](https://github.com/openfootball/champions-league) (CC0)

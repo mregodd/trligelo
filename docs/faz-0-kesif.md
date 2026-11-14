@@ -124,6 +124,8 @@ Ham sayfalar bir kez indirilip önbelleğe alınır (repoya girmez). Repoya sade
 
 ## 5. Avrupa kupaları: maç sonuçları
 
+> **Güncelleme (Faz 1b):** Wikipedia birincil kaynak oldu. Çünkü maç kutularıyla birlikte çekiliş tablolarındaki kulüp katsayılarını da veriyor ve bütün sezonları kapsıyor. openfootball çapraz doğrulama için kullanıldı: 202 ortak maçın 201'i birebir aynı. Bkz. [PLAN.md §3](PLAN.md).
+
 | Kaynak | Kapsam | Lisans | Not |
 |---|---|---|---|
 | TFF `pageID=593` | Güncel sezon, haber başlıkları ("Celtic 3-2 Beşiktaş") | Kaynak gösterilerek | Yapılandırılmış değil. Kadın takımlarının maçları da aynı akışta |
@@ -139,6 +141,8 @@ Ham sayfalar bir kez indirilip önbelleğe alınır (repoya girmez). Repoya sade
 **Bulgular:**
 - `api.clubelo.com` her adres için 502 dönüyor. Geliştirici raporlarına göre bu durum 1 Eylül 2026'dan beri sürüyor. API'nin kimlik doğrulama arkasına taşındığı ya da kapatıldığı konuşuluyor. Resmi bir açıklama bulamadık.
 - `clubelo.com` Cloudflare bot korumasıyla 403 dönüyor. Bu korumayı aşmaya çalışmayacağız.
+
+> **Güncelleme (Faz 1b):** kassiesa.net'in robots.txt dosyası bütün otomatik istemcileri engelliyor (`User-agent: *`, `Disallow: /`). Faz 0'da bu gözden kaçmıştı. Site kullanılmıyor. Katsayılar Wikipedia'daki çekiliş tablolarından alınıyor.
 
 **Alternatif A (öneri): UEFA kulüp katsayısı.**
 - UEFA'nın 5 sezonluk kulüp katsayıları her sezon için yayımlanıyor. kassiesa.net'teki 2026 tablosunda ~410 kulüp var, Türk takımları da içinde.

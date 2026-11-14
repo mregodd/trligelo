@@ -1,6 +1,6 @@
 # Türk Ligleri Elo — Proje Planı
 
-> **Durum:** Taslak v0.3 (14 Kasım 2026). Faz 0 tamamlandı, bulgular için bkz. [faz-0-kesif.md](faz-0-kesif.md). Avrupa kupaları kararı yeniden açıldı (bkz. §4.7 ve §9).
+> **Durum:** Taslak v0.4 (14 Kasım 2026). Faz 0, 1a ve 1b tamamlandı. Faz 0 bulguları için bkz. [faz-0-kesif.md](faz-0-kesif.md). Avrupa kaynağı Wikipedia'ya geçti (bkz. §3 ve §4.7).
 > Sayılar ve parametreler **başlangıç önerisidir**. Son değerleri geçmiş veri üzerinde yapılacak geriye dönük test belirleyecek.
 
 ---
@@ -28,11 +28,12 @@
 | Kaynak | Kapsam | Maliyet / koşul | Karar |
 |---|---|---|---|
 | **tff.org** | 4 profesyonel lig, gruplar, play-off'lar, kupa, arşiv | Ücretsiz. Kullanım Şartları: *"kaynak gösterilmek suretiyle yayımlanabilir; ancak bu bilgiler ticari amaçlarla kullanılamaz."* | **Birincil kaynak.** Sitede ve repoda kaynak gösterilir. |
-| UEFA kulüp katsayıları (kassiesa.net) | Her sezon için Avrupa kupalarında oynayan ~400 kulübün 5 sezonluk katsayısı | Ücretsiz, kaynak gösterilir | Avrupa'daki rakiplerin gücü için önerilen kaynak (bkz. §4.7) |
-| openfootball/champions-league | Avrupa kupası maç sonuçları (kısmi kapsam) | CC0 | Türk takımlarının geçmiş Avrupa maçları için temel kaynak. Eksikler Wikipedia'dan tamamlanır |
+| **Wikipedia (İngilizce), UEFA turnuva sayfaları** | Türk takımlarının bütün Avrupa maçları (ön elemeler dahil). Çekiliş tablolarındaki UEFA kulüp katsayıları. Sezon sayfalarındaki ülke katsayısı sıralaması | CC BY-SA 4.0, kaynak gösterilir. Sadece makale sayfaları (`/wiki/`) okunur; robots.txt bunlara izin veriyor | **Avrupa için birincil kaynak** (bkz. §4.7) |
+| openfootball/champions-league | Avrupa kupası maç sonuçları (kısmi kapsam: 202 Türk takımı maçı) | CC0 | Çapraz doğrulama: 201 maç birebir aynı, 1 maçta tarih farkı (yarıda kalıp ertesi gün tamamlanan PSG–Başakşehir) |
+| kassiesa.net | Bütün sezonların UEFA kulüp ve ülke katsayıları | robots.txt bütün otomatik istemcileri engelliyor (`User-agent: *`, `Disallow: /`) | **Kullanılmayacak** |
 | ClubElo (api.clubelo.com) | Avrupa kulüplerinin günlük Elo puanları | API 1 Eylül 2026'dan beri 502 veriyor, site bot korumasının arkasında | **Şu an kullanılamıyor.** Geri gelirse yeniden değerlendirilir |
 | football-data.co.uk | Sadece Süper Lig, 1994'ten bu yana, CSV ve **bahis oranları** | Ücretsiz | Çapraz kontrol ve testte piyasa kıyası |
-| Wikipedia | Çoğu lig için sezon sayfaları | CC BY-SA | Çapraz doğrulama |
+| Wikipedia, yurt içi lig sayfaları | Çoğu lig için sezon sayfaları | CC BY-SA | Gerekirse çapraz doğrulama |
 | TheSportsDB | Süper Lig, 1. Lig | Ücretsiz anahtarın sınırları var | Yedek |
 | API-Football | Bütün Türk ligleri | Ücretsiz plan güncel sezonu kapsamıyor (yalnızca 2022–2024) | Elendi |
 | football-data.org | Süper Lig ve 1. Lig | Sadece ücretli planlarda | Elendi |
@@ -162,18 +163,25 @@ Elo'da sadece puan farkları anlamlıdır. Bütün puanlara aynı sabit eklenirs
 - Bu puan bir rakipten alınmadığı için havuza eklenir. Ölçek sabitlemesi (§4.5) bunu dengeler.
 - Testte bonusun tahmin başarısını bozmadığı kontrol edilecek. Elo mantığına daha yakın bir alternatif de var: Kupanın son turlarına daha yüksek W vermek. İkisi birlikte de kullanılabilir.
 
+**Lig sıralaması bonusu yok (önerim, §9.2 #14):** Ligi kaç numarada bitirdiği, takımın o sezonki maç sonuçlarının toplamıdır ve bu sonuçlar Elo'ya zaten işlenmiştir. Şampiyonluğa ya da ilk dörde ayrıca puan vermek aynı başarıyı iki kez saymak olur. Kupada durum farklı: Penaltıyla kazanılan tur Elo'da beraberlik sayıldığı için kupayı kazanmak maç sonuçlarına tam yansımaz. B bu boşluğu kapatır. P ise bir ödül değil, ligler arası ölçeği düzelten yapısal bir düzeltmedir. Başarılar (şampiyonluk, kupa, yükselme, Avrupa'da tur atlama) sitede puan değil **rozet** olarak gösterilir.
+
 ### 4.7 Avrupa kupaları ve amatör (PGL/BAL) rakipler
 
 **Avrupa:** Yabancı rakip **sabit referans** olarak ele alınır. Maçtan sonra **sadece Türk takımının puanı değişir.** Avrupa'da iyi oynayan takım kazandığı puanı kendi ligine taşır ve lig zamanla güçlenir.
 
-> **Değişiklik (Faz 0):** İlk karar rakibin puanını ClubElo'dan almaktı. ClubElo'nun API'si 1 Eylül 2026'dan beri çalışmıyor (bkz. [faz-0-kesif.md §6](faz-0-kesif.md)). Yerine önerilen yöntem aşağıda, onay bekliyor.
+> **Değişiklik (Faz 0):** İlk karar rakibin puanını ClubElo'dan almaktı. ClubElo'nun API'si 1 Eylül 2026'dan beri çalışmıyor (bkz. [faz-0-kesif.md §6](faz-0-kesif.md)). Yerine UEFA kulüp katsayısı seçildi.
+>
+> **Değişiklik (Faz 1b):** Katsayılar kassiesa.net'ten alınacaktı. Sitenin robots.txt dosyası otomatik istemcileri engellediği için katsayılar Wikipedia'daki çekiliş tablolarından alınıyor. Bunlar o sezonun çekilişlerinde UEFA'nın kullandığı resmi kulüp katsayıları.
 
-**Önerilen yöntem: UEFA kulüp katsayısı.**
+**Yöntem: UEFA kulüp katsayısı.**
 - Rakibin o sezonki 5 yıllık UEFA kulüp katsayısı bizim ölçeğimize dönüştürülür: `R = a + b × ln(1 + katsayı puanı)`.
-- a ve b, Türk takımlarının geçmiş ~500 Avrupa maçının sonuçlarını en iyi açıklayacak şekilde veriden hesaplanır.
-- **Yedek:** Katsayı tablosunda bulunmayan rakiplere ülkelerinin UEFA katsayısına göre bir puan bandı atanır.
-- Katsayı tabloları sezonda bir kez çekilir, maliyeti önemsiz.
+- a ve b, Türk takımlarının geçmiş Avrupa maçlarının (2016-17'den bu yana 446 oynanmış maç) sonuçlarını en iyi açıklayacak şekilde veriden hesaplanır.
+- **Yedek:** Katsayı tablosunda bulunmayan rakiplere ülkelerinin UEFA katsayısına göre bir puan bandı atanır. Faz 1b sonunda bütün rakiplerin kulüp katsayısı bulundu; yedek sadece ileride bulunamayan bir rakip için var.
+- Katsayılar her sezon ilgili Wikipedia sayfalarından okunur. Ek maliyeti yok.
 - ClubElo geri gelirse onun puanı da kullanılabilir.
+- **Tarafsız saha:** Wikipedia kutuları maçın tarafsız sahada oynandığını ayrıca belirtmiyor. Faz 2'de ev sahibi avantajı için elle tutulan kısa bir liste kullanılacak.
+- **Turnuva seviyesi (ŞL / AL / KL):** Ayrı bir çarpan yok. Seviye farkı rakibin puanından gelir: Bayern'i yenmek, katsayısı düşük bir Konferans Ligi rakibini yenmekten çok daha fazla puan kazandırır, ona kaybetmek ise az kaybettirir. Katsayı 5 yıllık olduğu için yavaş değişir. O yüzden testte `R = a + b × ln(1 + katsayı) + c_turnuva` biçimi de denenecek. Örneğin katsayısı düşük ama Şampiyonlar Ligi'ne kalmış rakipler beklenenden güçlü çıkıyorsa c anlamlı olur ve modele eklenir (§9.2 #13).
+- **Avrupa'da oynayan takımların puanı şişer mi?** a ve b, Türk takımlarının Avrupa sonuçlarına uydurulduğu için bütün Avrupa maçlarından gelen net puan yaklaşık sıfırdır. Beklentinin üstünde oynayan kazanır, altında oynayan kaybeder. Gruptan puansız çıkan takım puan kaybeder. Testte Avrupa maçları dahil ve hariç iki model de kurulacak. Ölçüt, yurt içi maçları tahmin başarısı. Avrupa maçları yurt içi tahminleri kötüleştiriyorsa W düşürülür.
 
 **Amatör takımlar (Türkiye Kupası):** TFF'deki adıyla "Profesyonelliğe Geçiş Ligi" (PGL), eski adıyla BAL. Sabit bir puan (örneğin 3. Lig ortalamasının ~100 altı) ve düşük W. Sadece profesyonel takımın puanı değişir. Profesyonel ve amatör takımlar arasındaki maçlar yılda birkaç kez oynandığı için etkisi küçük.
 
@@ -204,13 +212,14 @@ Elo'da sadece puan farkları anlamlıdır. Bütün puanlara aynı sabit eklenirs
 - Galibiyet, beraberlik ve mağlubiyet olasılıkları için puan farkına dayalı bir sıralı lojistik model kurulur.
 - **Kıyaslar:** (a) "her zaman ev sahibi kazanır" gibi basit bir taban, (b) Süper Lig için bahis oranları (football-data.co.uk).
 - K, H, G, W, α, P, B ve seviye farkları ızgara araması (grid search) ile taranır.
+- Model seçimleri de testle yapılır: Avrupa maçları dahil/hariç, Avrupa turnuva terimi var/yok, kupa bonusu var/yok.
 - **Çıktı:** Parametre raporu, lig bazında puan dağılımı grafikleri ve en iyi/en kötü takım arasındaki marj.
 
 ### 4.10 Özel durumlar
 
 | Durum | Kural |
 |---|---|
-| Hükmen maç | Hariç |
+| Hükmen maç | Elo'da hariç. Resmi sonuç puan cetvelinde ve bonuslarda geçerli (§9.1) |
 | Ligden çekilen takım (örn. 2023 depremi sonrası) | Sahada oynanmış maçlar işlenir, oynanmayanlar hariç |
 | Tarafsız saha (Süper Kupa, kupa finali, play-off finali) | H = 0 |
 | Seyircisiz maç (pandemi) | Ev avantajı ayrı ölçülür |
@@ -266,14 +275,16 @@ turkish-leagues-elo/
 │   ├── src/tlelo/
 │   │   ├── http.py            # önbellekli, nazik HTTP istemcisi
 │   │   ├── tff/               # TFF: sayfa seçimi, ayrıştırıcılar, Süper Kupa
+│   │   ├── europe/            # Wikipedia: sayfa bulma, maç kutuları, katsayı tabloları
 │   │   ├── build.py           # CSV üretimi
 │   │   ├── validate.py        # TFF puan cetvelleriyle karşılaştırma
-│   │   └── cli.py             # uv run tlelo fetch | details | build | validate
+│   │   └── cli.py             # uv run tlelo fetch | details | build | validate | europe-*
 │   └── tests/
 ├── data/
-│   ├── matches/               # sezon bazında maçlar (CSV)
+│   ├── matches/               # sezon bazında yurt içi maçlar (CSV)
+│   ├── europe/                # Türk takımlarının Avrupa maçları, kulüp ve ülke katsayıları
 │   ├── teams.csv, team_names.csv, team_seasons.csv
-│   ├── sources/               # TFF sayfa envanteri, elle girilen maçlar
+│   ├── sources/               # elle tutulan dosyalar: TFF sayfa envanteri, düzeltmeler, eşleştirmeler
 │   └── raw/                   # ham sayfa önbelleği (repoya girmez)
 ├── web/                       # Next.js (Faz 3)
 ├── docs/                      # bu plan, Faz raporları, METODOLOJI.md
@@ -318,7 +329,7 @@ Siteyi inceleyen herkes puanların nasıl hesaplandığını açıkça görüp a
 |---|---|---|
 | **0. Keşif** ✅ | Kalan kararları netleştirmek. TFF'den her ligin bir sezonunu ve bir kupa sezonunu deneme amaçlı çekmek. 2016-17'ye kadar arşivin eksiksiz olduğunu doğrulamak. ClubElo erişimini ve koşullarını doğrulamak | **Tamamlandı (14 Kasım 2026).** Bkz. [faz-0-kesif.md](faz-0-kesif.md) |
 | **1a. Veri katmanı: yurt içi** ✅ | Repo iskeleti, veri şeması, TFF kazıyıcısı (lig, play-off, kupa, Süper Kupa), takım kimlik tablosu, veri kalite testleri | 2016-17'den bugüne bütün yurt içi maçlar normalize CSV'de; puan durumları TFF ile tutarlı |
-| **1b. Veri katmanı: Avrupa** | Türk takımlarının Avrupa maçları (openfootball + Wikipedia), UEFA kulüp ve ülke katsayı tabloları, yabancı kulüp ad eşleştirmesi | 2016-17'den bugüne Türk takımlarının bütün Avrupa maçları CSV'de, rakiplerin katsayısı eşleşmiş |
+| **1b. Veri katmanı: Avrupa** ✅ | Türk takımlarının Avrupa maçları (Wikipedia, openfootball ile çapraz doğrulama), UEFA kulüp ve ülke katsayı tabloları, yabancı kulüp ad eşleştirmesi | 2016-17'den bugüne Türk takımlarının bütün Avrupa maçları CSV'de, rakiplerin katsayısı eşleşmiş |
 | **2. Elo motoru ve test** | Motor ve birim testleri, geriye dönük test, parametre taraması, dağılım raporu, `METODOLOJI.md` ilk taslağı | Parametre raporu hazır; taban modelden daha iyi tahmin; model v1.0 |
 | **3. Web sitesi** | Next.js statik site, 4 sayfa, maç hesap dökümü, mobil uyum | Yerelde bütün sayfalar gerçek veriyle çalışıyor |
 | **4. Otomasyon ve yayın** | GitHub Actions zamanlanmış görevi, Cloudflare kurulumu (adım adım), alan adı, hata bildirimi | Site kendi alan adında yayında ve kendi kendine güncelleniyor |
@@ -338,8 +349,9 @@ Siteyi inceleyen herkes puanların nasıl hesaplandığını açıkça görüp a
 | Ölçek | Okunabilir aralık, kabaca 700–2000 (§4.5) |
 | Yükselme/düşme | Lig seviyesine göre puan eklenir/düşülür (§4.6) |
 | Kupa başarısı | Türkiye Kupası ve Süper Kupa şampiyonuna bonus (§4.6) |
-| Avrupa kupaları | Sadece Türk takımının puanı değişir (§4.7). Rakip puanının kaynağı yeniden açıldı (bkz. §9.2 #0) |
+| Avrupa kupaları | Sadece Türk takımının puanı değişir. Rakibin puanı UEFA kulüp katsayısından türetilir (§4.7) |
 | BAL takımları | Sabit puan (§4.7) |
+| Hükmen maçlar | Elo'da hariç: iki takımın da puanı değişmez. Resmi sonuç puan cetvelinde, yükselme/düşme ve kupa bonuslarında geçerli. Tek maçlık disiplin kararlarını en küçük farkla (1-0) sayan ara seçenek ileride yeniden değerlendirilecek |
 | Yayın | Cloudflare + alan adı |
 | Metodoloji | Kamuya açık, okuyucu dostu doküman ve sitede ayrı sayfa (§7) |
 
@@ -349,19 +361,19 @@ Aksi belirtilmedikçe önerilen seçenekle ilerlenecek.
 
 | # | Karar | Seçenekler | Önerim |
 |---|---|---|---|
-| 0 | Avrupa'daki rakiplerin puanı (ClubElo kullanılamıyor) | UEFA kulüp katsayısı / kendi küçük Avrupa Elo'muz / ClubElo'yu beklemek | **UEFA kulüp katsayısı** (§4.7) |
 | 1 | Hesaplama ve gösterim dönemi | 10 yıl / pandemi sonrası 5 yıl | **2016-17'den hesapla, 2021-22'den itibaren göster** (§4.8) |
 | 2 | Görünürlük | #1'e bağlı | Gösterim döneminde profesyonel ligde oynamış takımlar |
 | 3 | P ve B'nin son değerleri | Elle / testle | Başlangıç değerleriyle başla, test raporuna göre birlikte karar ver |
 | 4 | Gol farkı etkisi | Var / yok | **Var** |
 | 5 | Sezon arası ortalamaya çekme | Var / yok | **Var ve küçük** |
 | 6 | Penaltılar | Beraberlik / küçük bonus | **Beraberlik** |
-| 7 | Hükmen maçlar | Hariç / mağlubiyet sayılır | **Hariç** |
 | 8 | Puan değişimini gösterme şekli | Maç maç / toplam +/− | **İkisi birden** |
 | 9 | Ham maç verisi repoda | Evet, kaynak gösterilerek / hayır | **Evet, kaynak gösterilerek** |
 | 10 | Lisans | — | Kod: **MIT**. Üretilen puan verisi: **CC BY-NC 4.0** (TFF'nin ticari olmayan kullanım şartıyla uyumlu) |
 | 11 | Dil | — | Arayüz ve dokümanlar Türkçe, kod İngilizce |
 | 12 | Proje/site adı ve alan adı | — | Sende |
+| 13 | Avrupa'da turnuva seviyesi (ŞL / AL / KL) | Ayrı çarpan / sadece rakip katsayısı / testle ek terim | **Rakip katsayısı yeterli, ek terim testle denenir** (§4.7) |
+| 14 | Sezon sonu lig sıralaması bonusu | Var / yok | **Yok.** Başarılar sitede rozet olarak gösterilir (§4.6) |
 
 ## 10. Riskler
 
@@ -370,7 +382,8 @@ Aksi belirtilmedikçe önerilen seçenekle ilerlenecek.
 | TFF sitesinin yapısı değişir, kazıyıcı bozulur | Kazıyıcı için testler, Actions hata bildirimi. Bozulursa site son geçerli veriyle yayında kalır |
 | 2016-17 sonrası alt lig verisinde eksik veya hata | Faz 0'da doğrulama, puan durumlarıyla otomatik tutarlılık kontrolü |
 | Takım kimliği eşleştirme hataları | Kanonik takım tablosu, elle gözden geçirilen eşleme listesi, testler |
-| ClubElo'ya erişilemiyor (**gerçekleşti**, Eylül 2026) | Ana yöntem UEFA kulüp katsayısına geçiyor |
-| Avrupa maç sonuçlarında boşluk (openfootball kısmi) | Eksikler Wikipedia'dan tamamlanır. Güncel sezon küçük bir CSV ile yarı otomatik tutulur |
+| ClubElo'ya erişilemiyor (**gerçekleşti**, Eylül 2026) | Ana yöntem UEFA kulüp katsayısına geçti |
+| Wikipedia'da hatalı veya vandalize edilmiş bir skor | Tutarlılık kontrolleri (grup maç sayısı, iki ayaklı eşleşmeler), openfootball ile çapraz doğrulama. Güncel sezon sayfaları her güncellemede yeniden çekilir |
+| Wikipedia sayfa yapısı değişir | Ayrıştırıcı testleri gerçek sayfa yapısından örneklerle yazıldı. `tlelo europe-check` boşlukları raporlar |
 | Bonuslar ve düzeltmeler tahmin başarısını bozar | Testte ölçülür, değerleri ona göre ayarlanır |
-| TFF sunucusuna gereksiz yük bindirmek | Düşük sıklık, önbellek, sadece değişen sayfaları çekmek, projeyi tanıtan bir User-Agent |
+| TFF ve Wikipedia sunucularına gereksiz yük bindirmek | Düşük sıklık, önbellek, istekler arasında 2 saniye, sadece değişen sayfaları çekmek. robots.txt kurallarına uyulur |
