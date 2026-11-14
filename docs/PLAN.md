@@ -317,7 +317,7 @@ Siteyi inceleyen herkes puanların nasıl hesaplandığını açıkça görüp a
 | Faz | İçerik | Tamamlanma ölçütü |
 |---|---|---|
 | **0. Keşif** ✅ | Kalan kararları netleştirmek. TFF'den her ligin bir sezonunu ve bir kupa sezonunu deneme amaçlı çekmek. 2016-17'ye kadar arşivin eksiksiz olduğunu doğrulamak. ClubElo erişimini ve koşullarını doğrulamak | **Tamamlandı (14 Kasım 2026).** Bkz. [faz-0-kesif.md](faz-0-kesif.md) |
-| **1a. Veri katmanı: yurt içi** 🔄 | Repo iskeleti, veri şeması, TFF kazıyıcısı (lig, play-off, kupa, Süper Kupa), takım kimlik tablosu, veri kalite testleri | 2016-17'den bugüne bütün yurt içi maçlar normalize CSV'de; puan durumları TFF ile tutarlı |
+| **1a. Veri katmanı: yurt içi** ✅ | Repo iskeleti, veri şeması, TFF kazıyıcısı (lig, play-off, kupa, Süper Kupa), takım kimlik tablosu, veri kalite testleri | 2016-17'den bugüne bütün yurt içi maçlar normalize CSV'de; puan durumları TFF ile tutarlı |
 | **1b. Veri katmanı: Avrupa** | Türk takımlarının Avrupa maçları (openfootball + Wikipedia), UEFA kulüp ve ülke katsayı tabloları, yabancı kulüp ad eşleştirmesi | 2016-17'den bugüne Türk takımlarının bütün Avrupa maçları CSV'de, rakiplerin katsayısı eşleşmiş |
 | **2. Elo motoru ve test** | Motor ve birim testleri, geriye dönük test, parametre taraması, dağılım raporu, `METODOLOJI.md` ilk taslağı | Parametre raporu hazır; taban modelden daha iyi tahmin; model v1.0 |
 | **3. Web sitesi** | Next.js statik site, 4 sayfa, maç hesap dökümü, mobil uyum | Yerelde bütün sayfalar gerçek veriyle çalışıyor |
