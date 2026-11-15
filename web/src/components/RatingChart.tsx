@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { dateLong, delta, rating } from "@/lib/format";
+import { fmt } from "@/lib/format";
+import type { Lang } from "@/lib/i18n";
 import type { LeagueCode } from "@/lib/types";
 
 import styles from "./RatingChart.module.css";
@@ -35,14 +36,17 @@ function niceStep(span: number) {
 }
 
 export function RatingChart({
+  lang,
   points,
   bands,
   summary,
 }: {
+  lang: Lang;
   points: ChartPoint[];
   bands: ChartBand[];
   summary: string;
 }) {
+  const f = fmt(lang);
   const box = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
   const [hi, setHi] = useState<number | null>(null);
@@ -113,12 +117,12 @@ export function RatingChart({
     <div>
       {/* Above the plot, never on it: the line under the cursor stays visible. */}
       <p className={styles.readout} aria-live="polite">
-        <strong>{rating(shown.r)}</strong>
+        <strong>{f.rating(shown.r)}</strong>
         <span className={shown.d > 0 ? "gain" : shown.d < 0 ? "loss" : "muted"}>
-          {delta(shown.d)}
+          {f.delta(shown.d)}
         </span>
         <span>{shown.label}</span>
-        <span className={styles.readDate}>{dateLong(shown.date)}</span>
+        <span className={styles.readDate}>{f.dateLong(shown.date)}</span>
       </p>
       <div
         ref={box}

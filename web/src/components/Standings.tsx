@@ -2,9 +2,11 @@
 
 import { useMemo, useState } from "react";
 
-import { delta, rating } from "@/lib/format";
+import { fmt } from "@/lib/format";
+import { href, type Lang } from "@/lib/i18n";
 import { groupName, LEAGUES, leagueName } from "@/lib/labels";
 import type { LeagueCode, TeamSummary } from "@/lib/types";
+import { msg } from "@/messages";
 
 import { ClubLogo } from "./ClubLogo";
 import { Form } from "./Form";
@@ -13,6 +15,7 @@ import { Ruler } from "./Ruler";
 import styles from "./Standings.module.css";
 
 interface Props {
+  lang: Lang;
   teams: TeamSummary[];
   rulerLabel: string;
   aside: React.ReactNode;
@@ -21,9 +24,11 @@ interface Props {
 
 type Filter = "all" | LeagueCode;
 
-const trLower = (s: string) => s.toLocaleLowerCase("tr-TR");
+const trLower = (s: string) => s.toLocaleLowerCase("tr-TR"); // club names are Turkish in both languages
 
-export function Standings({ teams, rulerLabel, aside, heading }: Props) {
+export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
+  const t = msg(lang).standings;
+  const f = fmt(lang);
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
   const [showInactive, setShowInactive] = useState(false);
@@ -52,6 +57,7 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
             onHover={setLit}
             focusLeague={filter === "all" ? undefined : filter}
             label={rulerLabel}
+            lang={lang}
           />
         </div>
       </section>
@@ -59,8 +65,8 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
       <div className={`wrap ${styles.layout}`}>
         <div className={styles.main}>
           <div className={styles.controls}>
-            <div className={styles.tabs} role="group" aria-label="Lige göre süz">
-              {[{ code: "all" as Filter, name: "Tümü" }, ...LEAGUES].map((l) => (
+            <div className={styles.tabs} role="group" aria-label={t.filter}>
+              {[{ code: "all" as Filter, name: t.all }, ...LEAGUES].map((l) => (
                 <button
                   key={l.code}
                   type="button"
@@ -72,10 +78,10 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
               ))}
             </div>
             <label className={styles.search}>
-              <span className="visually-hidden">Kulüp ara</span>
+              <span className="visually-hidden">{t.search}</span>
               <input
                 type="search"
-                placeholder="Kulüp ara"
+                placeholder={t.search}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -84,64 +90,64 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
 
           <table className={styles.table}>
             <caption className="visually-hidden">
-              Elo puanına göre sıralama{filter !== "all" ? `, ${leagueName(filter)}` : ""}
+              {t.caption}{filter !== "all" ? `, ${leagueName(filter)}` : ""}
             </caption>
             <thead>
               <tr>
                 <th scope="col" className="num">
-                  Sıra
+                  {t.rank}
                 </th>
-                <th scope="col">Kulüp</th>
+                <th scope="col">{t.club}</th>
                 <th scope="col" className={styles.wideOnly}>
-                  Lig
+                  {t.league}
                 </th>
                 <th scope="col" className="num">
-                  Puan
+                  {t.rating}
                 </th>
-                <th scope="col" className="num" title="Son 7 gündeki değişim">
-                  7 gün
+                <th scope="col" className="num" title={t.weekTitle}>
+                  {t.week}
                 </th>
                 <th scope="col" className={styles.formCol}>
-                  Son 5 maç
+                  {t.form}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {rows.map((t) => (
+              {rows.map((c) => (
                 <tr
-                  key={t.slug}
-                  data-league={t.active ? t.league : undefined}
-                  data-lit={t.slug === lit || undefined}
-                  data-inactive={!t.active || undefined}
-                  onPointerEnter={() => setLit(t.slug)}
+                  key={c.slug}
+                  data-league={c.active ? c.league : undefined}
+                  data-lit={c.slug === lit || undefined}
+                  data-inactive={!c.active || undefined}
+                  onPointerEnter={() => setLit(c.slug)}
                   onPointerLeave={() => setLit(null)}
-                  onFocus={() => setLit(t.slug)}
+                  onFocus={() => setLit(c.slug)}
                   onBlur={() => setLit(null)}
                 >
-                  <td className="num">{t.rank ?? "–"}</td>
+                  <td className="num">{c.rank ?? "–"}</td>
                   <th scope="row" className={styles.club}>
-                    <ClubLogo src={t.logo} keepSpace />
-                    <a href={`/takim/${t.slug}/`}>{t.name}</a>
+                    <ClubLogo src={c.logo} keepSpace />
+                    <a href={href(lang, `/takim/${c.slug}/`)}>{c.name}</a>
                     <span className={styles.sub}>
-                      <LeagueKey code={t.league} />
-                      {t.active
-                        ? leagueName(t.league)
-                        : t.withdrawn
-                          ? `${t.lastSeason}'de ${leagueName(t.league)}'den çekildi`
-                          : `${t.lastSeason} sezonunda ${leagueName(t.league)}`}
+                      <LeagueKey code={c.league} />
+                      {c.active
+                        ? leagueName(c.league)
+                        : c.withdrawn
+                          ? t.withdrew(c.lastSeason, leagueName(c.league))
+                          : t.left(c.lastSeason, leagueName(c.league))}
                     </span>
                   </th>
                   <td className={styles.wideOnly}>
-                    <LeagueKey code={t.league} />
-                    {leagueName(t.league)}
-                    {t.group ? <span className="muted">, {groupName(t.group)}</span> : null}
+                    <LeagueKey code={c.league} />
+                    {leagueName(c.league)}
+                    {c.group ? <span className="muted">, {groupName(c.group, lang)}</span> : null}
                   </td>
-                  <td className={`num ${styles.rating}`}>{rating(t.rating)}</td>
-                  <td className={`num ${t.week > 0 ? "gain" : t.week < 0 ? "loss" : "muted"}`}>
-                    {t.active ? delta(t.week) : ""}
+                  <td className={`num ${styles.rating}`}>{f.rating(c.rating)}</td>
+                  <td className={`num ${c.week > 0 ? "gain" : c.week < 0 ? "loss" : "muted"}`}>
+                    {c.active ? f.delta(c.week) : ""}
                   </td>
                   <td className={styles.formCol}>
-                    <Form form={t.form} />
+                    <Form form={c.form} lang={lang} />
                   </td>
                 </tr>
               ))}
@@ -150,9 +156,9 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
 
           {rows.length === 0 && (
             <p className={styles.empty}>
-              “{query}” ile eşleşen kulüp yok.{" "}
+              {t.none(query)}{" "}
               <button type="button" onClick={() => setQuery("")}>
-                Aramayı temizle
+                {t.clear}
               </button>
             </p>
           )}
@@ -164,7 +170,7 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
                 checked={showInactive}
                 onChange={(e) => setShowInactive(e.target.checked)}
               />
-              2021-22'den beri profesyonel ligden ayrılan kulüpleri de göster
+              {t.inactive}
             </label>
           )}
         </div>

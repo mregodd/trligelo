@@ -2,6 +2,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
+import type { Lang } from "./i18n";
 import type { Fixtures, League, Meta, TeamDetail, TeamSummary } from "./types";
 
 const DATA = path.join(process.cwd(), "src", "data");
@@ -41,7 +42,14 @@ export function getTeam(slug: string): TeamDetail {
   return read<TeamDetail>(path.join("teams", `${slug}.json`));
 }
 
-export function readMethodology(): string {
-  // The single source of the methodology page is docs/METODOLOJI.md in the repository.
-  return readFileSync(path.join(process.cwd(), "..", "docs", "METODOLOJI.md"), "utf-8");
+/** The methodology page's single source: docs/METODOLOJI.md, or its translation METHODOLOGY.md. */
+export const methodologyFile = (lang: Lang) => (lang === "en" ? "METHODOLOGY.md" : "METODOLOJI.md");
+
+export function readMethodology(lang: Lang): string {
+  return readFileSync(path.join(process.cwd(), "..", "docs", methodologyFile(lang)), "utf-8");
+}
+
+/** A long page of the site in one language: web/content/<lang>/<name>.md. */
+export function readContent(lang: Lang, name: string): string {
+  return readFileSync(path.join(process.cwd(), "content", lang, `${name}.md`), "utf-8");
 }

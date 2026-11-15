@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from "react";
 
+import type { Lang } from "@/lib/i18n";
+import { msg } from "@/messages";
+
 import styles from "./ThemeToggle.module.css";
 
 type Choice = "system" | "light" | "dark";
 
 const NEXT: Record<Choice, Choice> = { system: "light", light: "dark", dark: "system" };
-const LABEL: Record<Choice, string> = { system: "Sistem", light: "Açık", dark: "Koyu" };
 
-/** One button that cycles the colour theme: Sistem, Açık, Koyu. */
-export function ThemeToggle() {
+/** One button that cycles the colour theme: system, light, dark. */
+export function ThemeToggle({ lang }: { lang: Lang }) {
   const [choice, setChoice] = useState<Choice>("system");
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export function ThemeToggle() {
       type="button"
       className={styles.toggle}
       onClick={change}
-      aria-label={`Renk teması: ${LABEL[choice]}. Değiştir`}
+      aria-label={msg(lang).theme.aria(msg(lang).theme[choice])}
     >
       <svg viewBox="0 0 16 16" aria-hidden="true">
         {choice === "light" ? (
@@ -57,7 +59,7 @@ export function ThemeToggle() {
           </g>
         )}
       </svg>
-      {LABEL[choice]}
+      {msg(lang).theme[choice]}
     </button>
   );
 }

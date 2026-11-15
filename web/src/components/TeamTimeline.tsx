@@ -2,15 +2,18 @@
 
 import { useMemo } from "react";
 
-import { dateLong, rating } from "@/lib/format";
-import { ADJUSTMENTS, leagueName } from "@/lib/labels";
+import { fmt } from "@/lib/format";
+import { href, type Lang } from "@/lib/i18n";
+import { adjustments, leagueName } from "@/lib/labels";
 import type { TeamEvent, TeamSeason } from "@/lib/types";
+import { msg } from "@/messages";
 
 import { History } from "./History";
 import { type ChartBand, type ChartPoint, RatingChart } from "./RatingChart";
 import styles from "./TeamTimeline.module.css";
 
 interface Props {
+  lang: Lang;
   team: string;
   events: TeamEvent[];
   seasons: TeamSeason[];
@@ -21,8 +24,11 @@ interface Props {
 }
 
 /** The club's chart and match list, from one copy of its events (the page ships them once). */
-export function TeamTimeline({ team, events, seasons, peak, low, current, lastMatch }: Props) {
+export function TeamTimeline({ lang, team, events, seasons, peak, low, current, lastMatch }: Props) {
+  const t = msg(lang).timeline;
+  const f = fmt(lang);
   const { points, bands } = useMemo(() => {
+    const adj = adjustments(lang);
     const points: ChartPoint[] = events
       .filter((e) => e.date)
       .map((e) => ({
@@ -32,8 +38,8 @@ export function TeamTimeline({ team, events, seasons, peak, low, current, lastMa
         d: e.d,
         label:
           e.t === "match"
-            ? `${e.opp.name} ${e.gf}-${e.ga}${e.venue === "a" ? ", deplasman" : ""}`
-            : ADJUSTMENTS[e.t].name,
+            ? `${e.opp.name} ${e.gf}-${e.ga}${e.venue === "a" ? msg(lang).timeline.away : ""}`
+            : adj[e.t].name,
       }));
     const starts = seasons.map((s) => {
       const first = events.find((e) => e.season === s.season && e.date);
@@ -50,39 +56,45 @@ export function TeamTimeline({ team, events, seasons, peak, low, current, lastMa
       }))
       .filter((b) => !Number.isNaN(b.start));
     return { points, bands };
-  }, [events, seasons]);
+  }, [events, seasons, lang]);
 
   const first = points[0];
   return (
     <>
       <section className={styles.chartSection} aria-labelledby="chart-title">
         <div className={styles.chartHead}>
-          <h2 id="chart-title">Puan geçmişi</h2>
+          <h2 id="chart-title">{t.title}</h2>
           <p>
-            {first ? `${dateLong(first.date)} – ${dateLong(lastMatch)}` : ""}
+            {first ? `${f.dateLong(first.date)} – ${f.dateLong(lastMatch)}` : ""}
             {peak && low && (
               <>
-                . En yüksek {rating(peak.r)} ({dateLong(peak.date)}), en düşük {rating(low.r)} (
-                {dateLong(low.date)}).
+                . {t.high} {f.rating(peak.r)} ({f.dateLong(peak.date)}), {t.low} {f.rating(low.r)} (
+                {f.dateLong(low.date)}).
               </>
             )}
           </p>
         </div>
         {points.length > 1 && (
           <RatingChart
+            lang={lang}
             points={points}
             bands={bands}
-            summary={`${team} puan grafiği: ${points.length} değişiklik, en yüksek ${peak ? rating(peak.r) : "–"}, en düşük ${low ? rating(low.r) : "–"}, şu an ${rating(current)}. Bütün değerler aşağıdaki maç listesinde.`}
+            summary={t.summary(
+              team,
+              points.length,
+              peak ? f.rating(peak.r) : "–",
+              low ? f.rating(low.r) : "–",
+              f.rating(current),
+            )}
           />
         )}
       </section>
 
-      <section className={styles.matches} aria-label="Maç maç puan değişimi">
+      <section className={styles.matches} aria-label={t.list}>
         <p className={styles.hint}>
-          Bir maçın satırını açınca o maçın puan hesabı görünür.{" "}
-          <a href="/metodoloji/">Hesabın kuralları</a>
+          {t.hint} <a href={href(lang, "/metodoloji/")}>{t.rules}</a>
         </p>
-        <History team={team} events={events} seasons={seasons} />
+        <History lang={lang} team={team} events={events} seasons={seasons} />
       </section>
     </>
   );

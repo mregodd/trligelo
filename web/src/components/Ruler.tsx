@@ -3,7 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
 
-import { rating as fmtRating } from "@/lib/format";
+import { fmt } from "@/lib/format";
+import { href, type Lang } from "@/lib/i18n";
 import { LEAGUES } from "@/lib/labels";
 import type { LeagueCode } from "@/lib/types";
 
@@ -27,6 +28,7 @@ interface Props {
   /** Club page: this club is always marked. */
   pinned?: string;
   label: string;
+  lang: Lang;
 }
 
 const LANE_VAR: Record<LeagueCode, string> = {
@@ -36,7 +38,7 @@ const LANE_VAR: Record<LeagueCode, string> = {
   "3L": "var(--band-l3)",
 };
 
-export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label }: Props) {
+export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label, lang }: Props) {
   const router = useRouter();
   const [hover, setHover] = useState<{ slug: string; lane: LeagueCode } | null>(null);
   const tracks = useRef<Partial<Record<LeagueCode, HTMLDivElement | null>>>({});
@@ -83,7 +85,7 @@ export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label }:
 
   function up(lane: LeagueCode, e: React.PointerEvent) {
     const t = nearest(lane, e.clientX);
-    if (t && e.pointerType === "mouse") router.push(`/takim/${t.slug}/`);
+    if (t && e.pointerType === "mouse") router.push(href(lang, `/takim/${t.slug}/`));
   }
 
   const lit = hover?.slug ?? highlight ?? null;
@@ -147,8 +149,8 @@ export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label }:
                   pct(shown.rating) > 70 ? "end" : pct(shown.rating) < 30 ? "start" : undefined
                 }
               >
-                <strong>{fmtRating(shown.rating)}</strong>
-                <a href={`/takim/${shown.slug}/`} tabIndex={-1}>
+                <strong>{fmt(lang).rating(shown.rating)}</strong>
+                <a href={href(lang, `/takim/${shown.slug}/`)} tabIndex={-1}>
                   {shown.name}
                 </a>
               </div>
