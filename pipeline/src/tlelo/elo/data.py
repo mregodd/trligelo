@@ -51,6 +51,7 @@ class Game:
     neutral: bool
     home_is_tr_venue: bool  # Europe: the match was played in Turkey (de facto home)
     closed: bool  # behind closed doors
+    goals90: tuple[int, int] | None = None  # after 90 minutes, when extra time was played
 
     @property
     def score(self) -> float:
@@ -126,6 +127,7 @@ def _domestic(row: dict, tiers: dict[int, int]) -> Game | None:
         neutral=neutral,
         home_is_tr_venue=False,
         closed=_closed(d),
+        goals90=(hg, ag) if row["et_home"] else None,
     )
 
 
@@ -164,6 +166,7 @@ def _europe(row: dict) -> Game | None:
         neutral=(country is not None and country != TURKEY) or row["round"] == "F",
         home_is_tr_venue=country == TURKEY,
         closed=_closed(d),
+        goals90=(hg, ag) if row["et_home"] else None,
     )
 
 

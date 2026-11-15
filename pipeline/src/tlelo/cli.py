@@ -10,6 +10,7 @@ Commands:
     europe-check  list unresolved clubs, missing coefficients and incomplete ties
     elo       compute the ratings (model v1.0) into data/ratings/
     backtest  recompute the backtest report (docs/backtest.md)
+    site      write the website's JSON data (web/src/data/)
 """
 
 from __future__ import annotations
@@ -251,6 +252,20 @@ def cmd_elo(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_site(args: argparse.Namespace) -> int:
+    from tlelo.elo.data import load_dataset
+    from tlelo.elo.fit import run_model
+    from tlelo.elo.params import V1
+    from tlelo.site.export import build, write
+
+    data = load_dataset(paths.data_dir())
+    built = build(run_model(data, V1), data, paths.data_dir())
+    out = paths.repo_root() / "web" / "src" / "data"
+    n = write(out, built)
+    log.info("wrote %s: %d clubs (%d active)", out, n, built["meta"]["activeTeams"])
+    return 0
+
+
 def cmd_backtest(args: argparse.Namespace) -> int:
     from tlelo.elo.data import load_dataset
     from tlelo.elo.report import backtest_report
@@ -305,6 +320,7 @@ def main(argv: list[str] | None = None) -> int:
         p.set_defaults(func=func)
     sub.add_parser("elo", help="compute the ratings into data/ratings/").set_defaults(func=cmd_elo)
     sub.add_parser("backtest", help="write docs/backtest.md").set_defaults(func=cmd_backtest)
+    sub.add_parser("site", help="write web/src/data/*.json").set_defaults(func=cmd_site)
 
     args = parser.parse_args(argv)
     handlers: list[logging.Handler] = [logging.StreamHandler(sys.stderr)]

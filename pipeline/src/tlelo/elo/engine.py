@@ -60,6 +60,10 @@ class GameRecord:
     weight: float  # W
     delta_home: float  # rating change of each side (0 for a fixed side)
     delta_away: float
+    k_home: float = 0.0  # K used for each side (provisional factor included)
+    k_away: float = 0.0
+    margin: float = 1.0  # G
+    seq: int = 0  # processing order across games and adjustments
 
     @property
     def diff(self) -> float:
@@ -75,6 +79,7 @@ class Adjustment:
     delta: float
     rating: float  # after the adjustment
     date: date | None = None  # cup bonuses: the final; season transitions: None
+    seq: int = 0  # processing order across games and adjustments
 
 
 @dataclass(slots=True)
@@ -97,6 +102,11 @@ class Engine:
         self.provisional: set[int] = set()
         self.records: list[GameRecord] = []
         self.adjustments: list[Adjustment] = []
+        self._seq = 0
+
+    def _next(self) -> int:
+        self._seq += 1
+        return self._seq
 
     # --- ratings of the two kinds of fixed sides ---------------------------------------
 
@@ -154,16 +164,15 @@ class Engine:
         w = self.weight(g)
         gm = margin_factor(g.goals[0] - g.goals[1]) if self.p.margin else 1.0
         surprise = g.score - e
-        dh = da = 0.0
-        if g.home.kind == "pro":
-            dh = self.k_for(g.home) * w * gm * surprise
-        if g.away.kind == "pro":
-            da = -self.k_for(g.away) * w * gm * surprise
+        kh = self.k_for(g.home) if g.home.kind == "pro" else 0.0
+        ka = self.k_for(g.away) if g.away.kind == "pro" else 0.0
+        dh = kh * w * gm * surprise
+        da = -ka * w * gm * surprise
         for side, d in ((g.home, dh), (g.away, da)):
             if side.kind == "pro":
                 self.r[side.team] += d
                 self.played[side.team] += 1
-        self.records.append(GameRecord(g, rh, ra, h, e, w, dh, da))
+        self.records.append(GameRecord(g, rh, ra, h, e, w, dh, da, kh, ka, gm, self._next()))
 
         if (g.round or "").startswith("Final") and g.competition in ("TK", "SK"):
             bonus = self.p.bonus_cup if g.competition == "TK" else self.p.bonus_supercup
@@ -178,7 +187,9 @@ class Engine:
         self, season: str, team: int, kind: str, delta: float, when: date | None = None
     ) -> None:
         self.r[team] += delta
-        self.adjustments.append(Adjustment(season, team, kind, delta, self.r[team], when))
+        self.adjustments.append(
+            Adjustment(season, team, kind, delta, self.r[team], when, self._next())
+        )
 
     def start_season(self, season: str, previous: str | None) -> None:
         p = self.p
@@ -188,7 +199,9 @@ class Engine:
                 self.r[team] = p.seeds[tier - 1]
                 if p.provisional_initial:
                     self.provisional.add(team)
-                self.adjustments.append(Adjustment(season, team, "seed", 0.0, self.r[team]))
+                self.adjustments.append(
+                    Adjustment(season, team, "seed", 0.0, self.r[team], None, self._next())
+                )
             return
 
         before = self.data.tiers.get(previous, {})
@@ -226,7 +239,9 @@ class Engine:
                 self.r[team] = entry
                 self.provisional.add(team)
                 self.played[team] = 0
-                self.adjustments.append(Adjustment(season, team, "newcomer", 0.0, entry))
+                self.adjustments.append(
+                    Adjustment(season, team, "newcomer", 0.0, entry, None, self._next())
+                )
             elif team not in before:
                 self.provisional.add(team)
                 self.played[team] = 0
@@ -238,7 +253,9 @@ class Engine:
             for t in self.r:  # clubs not playing this season move too, silently
                 self.r[t] += shift
                 if t in tiers:
-                    self.adjustments.append(Adjustment(season, t, "anchor", shift, self.r[t]))
+                    self.adjustments.append(
+                        Adjustment(season, t, "anchor", shift, self.r[t], None, self._next())
+                    )
 
     def run(self) -> RunResult:
         previous = None

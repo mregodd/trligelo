@@ -28,6 +28,8 @@ uv run ruff check . && uv run ruff format --check .
 | `tlelo/elo/params.py` | `Params` (plan starting values) and `V1` (model v1.0) |
 | `tlelo/elo/backtest.py`, `report.py` | Scoring, baselines, parameter search, `docs/backtest.md` |
 | `tlelo/elo/output.py` | `data/ratings/current.csv` and `history.csv` |
+| `tlelo/site/names.py` | Readable club names (legal form dropped, Turkish title case, hand-kept overrides) and URL slugs |
+| `tlelo/site/export.py` | The website's JSON (`web/src/data/`): summaries, leagues, every club's events in the display window |
 | `tlelo/build.py` | Writes `data/matches/*.csv`, the team tables and `data/europe/*.csv` |
 | `tlelo/validate.py` | Recomputes league tables and compares them with TFF's standings |
 
