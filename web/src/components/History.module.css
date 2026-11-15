@@ -169,6 +169,12 @@
 .row {
   scroll-margin-top: 12px;
 }
+.explain {
+  max-width: 66ch;
+}
+.explain p {
+  margin: 0 0 8px;
+}
 .calc dl {
   margin: 0;
   display: grid;

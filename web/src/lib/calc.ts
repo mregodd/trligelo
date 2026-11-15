@@ -1,16 +1,34 @@
-// The arithmetic behind one rating change, as plain sentences (same steps as METODOLOJI §3).
+// A match's rating change told in plain words. The formula itself is on the methodology page
+// (docs/METODOLOJI.md §2); these sentences say what moved the number and why.
 import meta from "@/data/meta.json"; // bundled: the model numbers of the run that built the site
 
 import { delta, factor, num, RESULT_WORD, result } from "./format";
 import { COMPETITIONS } from "./labels";
 import type { MatchEvent } from "./types";
 
-export interface CalcStep {
-  label: string;
-  text: string;
+const { params: P, outcome } = meta;
+
+const expit = (x: number) => 1 / (1 + Math.exp(-x));
+
+/** Home win, draw, away win from the home side's lead (home advantage included). */
+function homeChances(lead: number): number[] {
+  const z = (outcome.beta * lead) / 100;
+  const away = expit(outcome.c1 - z);
+  const home = 1 - expit(outcome.c2 - z);
+  return [home, 1 - home - away, away];
 }
 
-const { europe, params: P } = meta;
+/** The club's chances before the match, in whole percent adding up to 100. */
+export function chances(m: MatchEvent): { win: number; draw: number; loss: number } {
+  const lead = m.r + m.h - m.ro; // the club's lead, its side of the home advantage included
+  const asHome = homeChances(lead);
+  const asAway = homeChances(-lead).reverse();
+  const [w, , l] =
+    m.venue === "h" ? asHome : m.venue === "a" ? asAway : asHome.map((p, i) => (p + asAway[i]) / 2);
+  const win = Math.round(w * 100);
+  const loss = Math.round(l * 100);
+  return { win, draw: 100 - win - loss, loss };
+}
 
 function scoreLine(m: MatchEvent): string {
   let s = `${m.gf}-${m.ga}`;
@@ -19,69 +37,72 @@ function scoreLine(m: MatchEvent): string {
   return s;
 }
 
-export function steps(team: string, m: MatchEvent): CalcStep[] {
-  const out: CalcStep[] = [];
+// Names never take a suffix here (Turkish suffixes follow the word's sounds): sentences are
+// built so the club names stand alone.
+export function explain(team: string, m: MatchEvent): string[] {
   const opp = m.opp.name;
+  const out: string[] = [];
 
-  let oppSource = `${opp} ${num(m.ro, 1)}`;
-  if (m.opp.kind === "foreign" && m.opp.coef != null) {
-    oppSource =
-      `${opp} ${num(m.ro, 1)}: UEFA kulüp katsayısı ${num(m.opp.coef, 3)}, ` +
-      `puanı ${num(europe.a, 0)} + ${num(europe.b, 1)} × ln(1 + ${num(m.opp.coef, 3)})`;
-  } else if (m.opp.kind === "amateur") {
-    oppSource = `${opp} ${num(m.ro, 1)}: amatör takım, sabit puan (3. Lig ortalaması)`;
+  let before = `Maç öncesi ${team} ${num(m.r, 0)}, ${opp} ${num(m.ro, 0)} puandaydı.`;
+  if (m.opp.kind === "foreign") before += " Yabancı rakibin puanı UEFA kulüp katsayısından hesaplanır.";
+  if (m.opp.kind === "amateur") before += " Amatör rakiplerin puanı her maçta aynıdır.";
+  const h = Math.round(Math.abs(m.h));
+  if (m.venue === "n") {
+    before += " Maç tarafsız sahada oynandı, ev avantajı yok.";
+  } else {
+    const host = m.venue === "h" ? team : opp;
+    before +=
+      h === Math.round(P.homeClosed)
+        ? ` ${host} ev sahibiydi; maç seyircisiz oynandığı için ev avantajı ${h} puan sayıldı.`
+        : ` ${host} ev sahibi olduğu için ${h} puanlık avantajla başladı.`;
   }
-  out.push({ label: "Maç öncesi puanlar", text: `${team} ${num(m.r, 1)}; ${oppSource}.` });
+  out.push(before);
 
-  const h = Math.abs(m.h);
-  const closed = Math.round(h) === Math.round(P.homeClosed) ? " (seyircisiz maç)" : "";
-  const where =
-    m.venue === "n"
-      ? "Tarafsız saha, ev avantajı yok."
-      : m.venue === "h"
-        ? `${team} ev sahibi: +${num(h, 0)} puan${closed}.`
-        : `${opp} ev sahibi: ${team} için −${num(h, 0)} puan${closed}.`;
-  out.push({ label: "Saha", text: where });
-
-  const diff = m.r + m.h - m.ro;
-  const hTerm = m.h === 0 ? "" : m.h > 0 ? ` + ${num(h, 0)}` : ` − ${num(h, 0)}`;
-  out.push({
-    label: "Fark",
-    text: `${num(m.r, 1)}${hTerm} − ${num(m.ro, 1)} = ${num(diff, 1)}`,
-  });
-  out.push({
-    label: "Beklenen skor",
-    text: `E = 1 / (1 + 10^(${num(-diff, 1)} / 400)) = ${num(m.e, 3)}`,
-  });
+  const c = chances(m);
+  out.push(
+    `Bu puanlarla ${team} için şanslar: galibiyet %${c.win}, beraberlik %${c.draw}, yenilgi %${c.loss}.`,
+  );
 
   const r = result(m.s);
-  let res = `${scoreLine(m)}, ${RESULT_WORD[r]}: S = ${factor(m.s)}.`;
+  const fav = m.e >= 0.55 ? 1 : m.e <= 0.45 ? -1 : 0; // favourite, underdog, or even
+  const why = {
+    G: ["Sürpriz bir galibiyet olduğu için puanı çok artırdı", "Denk bir maçı kazandı",
+        "Favori olduğu için galibiyet puanı az artırdı"],
+    B: ["Zayıf görülen taraf olduğu için beraberlik puan kazandırdı",
+        "Denk bir maçta beraberlik puanı pek değiştirmedi",
+        "Favori olduğu için beraberlik puan kaybettirdi"],
+    M: ["Beklenen bir yenilgi olduğu için puanı az düşürdü", "Denk bir maçı kaybetti",
+        "Beklenmeyen bir yenilgi olduğu için puanı çok düşürdü"],
+  }[r][fav + 1];
+  let res = `Sonuç ${scoreLine(m)}, ${RESULT_WORD[r]}. ${why}: ${delta(m.d)}.`;
   if (m.pens) res += " Penaltı atışları Elo'da beraberlik sayılır.";
-  out.push({ label: "Sonuç", text: res });
+  out.push(res);
 
-  const factors: string[] = [];
-  factors.push(
-    m.k === P.k
-      ? `K = ${num(m.k, 0)}`
-      : `K = ${num(m.k, 0)} (yeni takımın ilk ${P.provisionalGames} maçı: ${num(P.k, 0)} × ${factor(P.provisionalFactor)})`,
-  );
-  const comp = COMPETITIONS[m.comp]?.name ?? m.comp;
-  const wWhy = m.opp.kind === "amateur" ? `${comp}, amatör rakip` : comp;
-  factors.push(`W = ${factor(m.w)} (${wWhy})`);
   const margin = Math.abs(m.gf - m.ga);
-  factors.push(
-    margin <= 1
-      ? `G = 1`
-      : `G = ${factor(m.g)} (${margin} farklı)`,
-  );
-  out.push({ label: "Çarpanlar", text: factors.join(", ") + "." });
-
-  out.push({
-    label: "Değişim",
-    text:
-      `${factor(m.k)} × ${factor(m.w)} × ${factor(m.g)} × ` +
-      `(${factor(m.s)} − ${num(m.e, 3)}) = ${delta(m.d, 1)}. ` +
-      `Yeni puan ${num(m.ra, 1)}.`,
-  });
+  if (m.g > 1) out.push(`Fark ${margin} gol olduğu için değişim ${factor(m.g)} katına çıktı.`);
+  if (m.w !== 1) {
+    const comp = COMPETITIONS[m.comp]?.name ?? m.comp;
+    out.push(
+      m.opp.kind === "amateur"
+        ? `Amatör bir rakiple oynanan kupa maçı ${factor(m.w)} ağırlıkla sayılır.`
+        : `${comp} maçları ${factor(m.w)} ağırlıkla sayılır.`,
+    );
+  }
+  if (m.k !== P.k) {
+    out.push(
+      `Kulübün profesyonel liglerdeki ilk ${P.provisionalGames} maçından biri olduğu için ` +
+        `değişim ${factor(P.provisionalFactor)} katına çıktı.`,
+    );
+  }
   return out;
+}
+
+/** A summer regression with its numbers: how far from the league mean, how much was closed. */
+export function regressionText(d: number): string {
+  const gap = num(Math.abs(d) / P.regression);
+  const side = d < 0 ? "üstündeydi" : "altındaydı";
+  return (
+    `Ligin ortalamasının ${gap} puan ${side}. Yaz aylarında kadrolar değiştiği için bu fark ` +
+    `%${num(P.regression * 100)} oranında kapatıldı: ${delta(d)}.`
+  );
 }

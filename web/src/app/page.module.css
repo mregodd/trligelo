@@ -8,5 +8,8 @@
 .heading p {
   margin: 6px 0 0;
   color: var(--band-ink-2);
-  max-width: 60ch;
+  max-width: 68ch;
+}
+.heading a {
+  color: var(--band-ink);
 }

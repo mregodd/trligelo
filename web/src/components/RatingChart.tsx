@@ -107,70 +107,68 @@ export function RatingChart({
 
   const p = hi != null ? points[hi] : null;
   const px = p ? x(p.t) : 0;
+  const shown = p ?? points[points.length - 1]; // the readout rests on the latest change
 
   return (
-    <div
-      ref={box}
-      className={styles.chart}
-      style={{ height }}
-      tabIndex={0}
-      role="img"
-      aria-label={summary}
-      onPointerMove={(e) => setHi(nearest(e.clientX))}
-      onPointerDown={(e) => setHi(nearest(e.clientX))}
-      onPointerLeave={(e) => e.pointerType === "mouse" && setHi(null)}
-      onKeyDown={onKey}
-      onBlur={() => setHi(null)}
-    >
-      {width > 0 && (
-        <svg width={width} height={height} aria-hidden="true">
-          {bands.map((b) => {
-            const bx = x(b.start);
-            const bw = Math.max(0, x(b.end) - bx);
-            return (
-              <g key={b.season}>
-                <rect x={bx} y={m.t} width={bw} height={ih} fill={BAND_FILL[b.league]} opacity={0.09} />
-                <line x1={bx} x2={bx} y1={m.t} y2={m.t + ih} className={styles.season} />
-                {bw > 34 && (
-                  <text x={bx + 4} y={m.t - 8} className={styles.bandLabel}>
-                    {/* Narrow bands keep the time reference: "21-22". */}
-                    {bw > 120 ? `${b.season} ${b.leagueName}` : b.season.slice(2)}
-                  </text>
-                )}
+    <div>
+      {/* Above the plot, never on it: the line under the cursor stays visible. */}
+      <p className={styles.readout} aria-live="polite">
+        <strong>{rating(shown.r)}</strong>
+        <span className={shown.d > 0 ? "gain" : shown.d < 0 ? "loss" : "muted"}>
+          {delta(shown.d)}
+        </span>
+        <span>{shown.label}</span>
+        <span className={styles.readDate}>{dateLong(shown.date)}</span>
+      </p>
+      <div
+        ref={box}
+        className={styles.chart}
+        style={{ height }}
+        tabIndex={0}
+        role="img"
+        aria-label={summary}
+        onPointerMove={(e) => setHi(nearest(e.clientX))}
+        onPointerDown={(e) => setHi(nearest(e.clientX))}
+        onPointerLeave={(e) => e.pointerType === "mouse" && setHi(null)}
+        onKeyDown={onKey}
+        onBlur={() => setHi(null)}
+      >
+        {width > 0 && (
+          <svg width={width} height={height} aria-hidden="true">
+            {bands.map((b) => {
+              const bx = x(b.start);
+              const bw = Math.max(0, x(b.end) - bx);
+              return (
+                <g key={b.season}>
+                  <rect x={bx} y={m.t} width={bw} height={ih} fill={BAND_FILL[b.league]} opacity={0.09} />
+                  <line x1={bx} x2={bx} y1={m.t} y2={m.t + ih} className={styles.season} />
+                  {bw > 34 && (
+                    <text x={bx + 4} y={m.t - 8} className={styles.bandLabel}>
+                      {/* Narrow bands keep the time reference: "21-22". */}
+                      {bw > 120 ? `${b.season} ${b.leagueName}` : b.season.slice(2)}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+            {geo.ticks.map((v) => (
+              <g key={v}>
+                <line x1={m.l} x2={m.l + iw} y1={y(v)} y2={y(v)} className={styles.grid} />
+                <text x={m.l - 8} y={y(v)} dy="0.32em" textAnchor="end" className={styles.tick}>
+                  {v}
+                </text>
               </g>
-            );
-          })}
-          {geo.ticks.map((v) => (
-            <g key={v}>
-              <line x1={m.l} x2={m.l + iw} y1={y(v)} y2={y(v)} className={styles.grid} />
-              <text x={m.l - 8} y={y(v)} dy="0.32em" textAnchor="end" className={styles.tick}>
-                {v}
-              </text>
-            </g>
-          ))}
-          <path d={path} className={styles.line} />
-          {p && (
-            <g>
-              <line x1={px} x2={px} y1={m.t} y2={m.t + ih} className={styles.cross} />
-              <circle cx={px} cy={y(p.r)} r={4.5} className={styles.dot} />
-            </g>
-          )}
-        </svg>
-      )}
-      {p && (
-        <div
-          className={styles.tip}
-          style={{
-            left: Math.min(Math.max(px, 90), width - 90),
-            top: Math.max(4, y(p.r) - 64),
-          }}
-        >
-          <strong>{rating(p.r)}</strong>
-          <span className={p.d > 0 ? "gain" : p.d < 0 ? "loss" : "muted"}> {delta(p.d)}</span>
-          <span className={styles.tipLabel}>{p.label}</span>
-          <span className={styles.tipDate}>{dateLong(p.date)}</span>
-        </div>
-      )}
+            ))}
+            <path d={path} className={styles.line} />
+            {p && (
+              <g>
+                <line x1={px} x2={px} y1={m.t} y2={m.t + ih} className={styles.cross} />
+                <circle cx={px} cy={y(p.r)} r={4.5} className={styles.dot} />
+              </g>
+            )}
+          </svg>
+        )}
+      </div>
     </div>
   );
 }

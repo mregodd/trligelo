@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { steps } from "@/lib/calc";
+import { explain, regressionText } from "@/lib/calc";
 import { dateLong, dateShort, delta, num, rating } from "@/lib/format";
 import { ADJUSTMENTS, COMPETITIONS, competitionLabel, groupName, leagueName } from "@/lib/labels";
 import type { AdjustmentEvent, MatchEvent, TeamEvent, TeamSeason } from "@/lib/types";
@@ -140,18 +140,16 @@ function MatchRow({ team, m }: { team: string; m: MatchEvent }) {
             </p>
             <p className={styles.calcLinks}>
               {m.opp.slug && <a href={`/takim/${m.opp.slug}/`}>{m.opp.name} puan sayfası</a>}
+              <a href="/metodoloji/#2-formül">Hesabın formülü</a>
               <a href={`#mac-${m.seq}`} className={styles.permalink}>
                 Bu hesabın bağlantısı
               </a>
             </p>
-            <dl>
-              {steps(team, m).map((s) => (
-                <div key={s.label}>
-                  <dt>{s.label}</dt>
-                  <dd>{s.text}</dd>
-                </div>
+            <div className={styles.explain}>
+              {explain(team, m).map((text) => (
+                <p key={text}>{text}</p>
               ))}
-            </dl>
+            </div>
           </div>
         )}
       </details>
@@ -213,8 +211,9 @@ function StartRow({ season, items }: { season: string; items: AdjustmentEvent[] 
               <div key={e.seq}>
                 <dt>{ADJUSTMENTS[e.t].name}</dt>
                 <dd>
-                  {e.t === "newcomer" ? `Başlangıç puanı ${num(e.ra, 1)}.` : `${delta(e.d)}.`}{" "}
-                  {ADJUSTMENTS[e.t].why}
+                  {e.t === "regression"
+                    ? regressionText(e.d)
+                    : `${e.t === "newcomer" ? `Başlangıç puanı ${num(e.ra, 1)}.` : `${delta(e.d)}.`} ${ADJUSTMENTS[e.t].why}`}
                 </dd>
               </div>
             ))}

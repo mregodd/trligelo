@@ -30,6 +30,8 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
   const [lit, setLit] = useState<string | null>(null);
 
   const active = useMemo(() => teams.filter((t) => t.active), [teams]);
+  // The toggle only where it adds rows: departed clubs nearly all left from the 3. Lig.
+  const hasInactive = teams.some((t) => !t.active && (filter === "all" || t.league === filter));
   const rows = useMemo(() => {
     const q = trLower(query.trim());
     return teams
@@ -154,14 +156,16 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
             </p>
           )}
 
-          <label className={styles.toggle}>
-            <input
-              type="checkbox"
-              checked={showInactive}
-              onChange={(e) => setShowInactive(e.target.checked)}
-            />
-            2021-22'den beri profesyonel ligden ayrılan kulüpleri de göster
-          </label>
+          {hasInactive && (
+            <label className={styles.toggle}>
+              <input
+                type="checkbox"
+                checked={showInactive}
+                onChange={(e) => setShowInactive(e.target.checked)}
+              />
+              2021-22'den beri profesyonel ligden ayrılan kulüpleri de göster
+            </label>
+          )}
         </div>
         <aside className={styles.aside}>{aside}</aside>
       </div>

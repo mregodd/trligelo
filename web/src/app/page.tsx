@@ -23,10 +23,16 @@ export default function Home() {
       rulerLabel={`Bütün kulüplerin puanları tek ölçekte. Puan aralıkları: ${ranges}.`}
       heading={
         <div className={styles.heading}>
-          <h1>Bütün profesyonel kulüpler, tek cetvelde</h1>
+          <h1>Türkiye'nin profesyonel kulüpleri, tek cetvelde</h1>
           <p>
-            Süper Lig'den 3. Lig'e {meta.activeTeams} kulüp aynı Elo ölçeğinde. Puanlar{" "}
-            {dateLong(meta.lastMatch)} maçlarına kadar güncel.
+            Elo, maç sonuçlarından hesaplanan bir güç puanı: her maçtan sonra iki takım arasında
+            puan el değiştirir, beklenmeyen sonuç daha çok puan taşır. Süper Lig'den 3. Lig'e{" "}
+            {meta.activeTeams} kulüp aynı ölçekte; Avrupa kupalarındaki maçlar da sayılır,
+            yabancı rakiplerin gücü UEFA katsayısından gelir.
+          </p>
+          <p>
+            Puanlar {dateLong(meta.lastMatch)} maçlarına kadar güncel.{" "}
+            <a href="/metodoloji/">Puanlar nasıl hesaplanıyor?</a>
           </p>
         </div>
       }

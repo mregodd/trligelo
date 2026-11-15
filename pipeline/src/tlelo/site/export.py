@@ -21,8 +21,10 @@ from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+from tlelo.elo.backtest import arrays
 from tlelo.elo.data import Dataset
 from tlelo.elo.engine import RunResult
+from tlelo.elo.fit import OrderedLogit
 from tlelo.elo.params import MODEL_VERSION
 from tlelo.site.logos import logo_path
 from tlelo.site.names import clean_name, display_name, load_masked, load_overrides, unique_slugs
@@ -191,6 +193,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
                        for g, ts in sorted(by_group.items())],
         })  # fmt: skip
 
+    ol = OrderedLogit.fit(*arrays(res, window)[:2])
     meta = {
         "model": MODEL_VERSION,
         "generatedAt": datetime.now(UTC).isoformat(timespec="seconds"),
@@ -207,6 +210,9 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
             "provisionalGames": p.provisional_games, "homeClosed": p.home_closed,
             "regression": p.regression, "newcomer": p.newcomer, "anchor": p.anchor,
         },
+        # Win / draw / loss chances from the rating difference (the backtest's ordered logit,
+        # fitted on the displayed seasons): the match explanations quote them.
+        "outcome": {"beta": round(ol.beta, 5), "c1": round(ol.c1, 5), "c2": round(ol.c2, 5)},
     }  # fmt: skip
     seasons = {
         t: [
