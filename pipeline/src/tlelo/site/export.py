@@ -20,11 +20,14 @@ from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+import numpy as np
+
 from tlelo.elo.backtest import arrays
 from tlelo.elo.data import Dataset
-from tlelo.elo.engine import RunResult
+from tlelo.elo.engine import RunResult, expected
 from tlelo.elo.fit import OrderedLogit
 from tlelo.elo.params import MODEL_VERSION
+from tlelo.site.fixtures import LEAGUES, chances, load_rows, stakes, upcoming
 from tlelo.site.logos import logo_path, transparent_png
 from tlelo.site.names import clean_name, display_name, load_masked, load_overrides, unique_slugs
 
@@ -213,6 +216,28 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         # fitted on the displayed seasons): the match explanations quote them.
         "outcome": {"beta": round(ol.beta, 5), "c1": round(ol.c1, 5), "c2": round(ol.c2, 5)},
     }  # fmt: skip
+    # Upcoming matches: each league group's next round, dated cup ties, and per club its next.
+    rounds, cup = upcoming(load_rows(data_dir / "matches" / f"{current}.csv"), last_match,
+                           set(withdrawn))  # fmt: skip
+    side_of = {t: {"slug": slugs[t], "name": names[t], "logo": logo_urls.get(slugs[t])}
+               for t in visible}  # fmt: skip
+    order = sorted(rounds, key=lambda k: (LEAGUES.index(k[0]), k[1]))
+
+    def matches(rows: list[dict]) -> list[dict]:
+        return [m for r in rows if (m := _fixture(r, side_of, ol, res))]
+
+    fixtures = {
+        "rounds": [{"league": comp, "group": g or None, "week": rounds[(comp, g)][0],
+                    "matches": matches(rounds[(comp, g)][1])} for comp, g in order],
+        "cup": matches(cup),
+    }  # fmt: skip
+    next_of: dict[str, list[dict]] = defaultdict(list)
+    for m in [m for rnd in fixtures["rounds"] for m in rnd["matches"]] + fixtures["cup"]:
+        for side in ("home", "away"):
+            mine = next_of[m[side]["slug"]]
+            if not any(x["comp"] == m["comp"] for x in mine):  # one league match, one cup tie
+                mine.append(m)
+
     seasons = {
         t: [
             {
@@ -227,7 +252,29 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     }
     return {
         "meta": meta, "teams": summaries, "leagues": leagues, "details": teams, "seasons": seasons,
-        "logos": logos,
+        "logos": logos, "fixtures": fixtures, "next": next_of,
+    }  # fmt: skip
+
+
+def _fixture(row: dict, side_of: dict, ol: OrderedLogit, res: RunResult) -> dict | None:
+    """One upcoming match between two clubs of the site: chances and what each result is worth."""
+    home, away = int(row["home_id"]), int(row["away_id"])
+    if home not in side_of or away not in side_of:
+        return None  # an amateur club or one outside the display window (cup ties)
+    p = res.params
+    rh, ra = res.ratings[home], res.ratings[away]
+    lead = rh + p.home - ra
+    e = expected(lead)
+    w = {"TK": p.w_cup_final if row["round"].startswith("Final") else p.w_cup,
+         "SK": p.w_supercup}.get(row["competition"], p.w_league)  # fmt: skip
+    pa, pd, ph = ol.probabilities(np.array([lead]))[0]
+    return {
+        "date": row["date"] or None, "time": row["time"] or None, "comp": row["competition"],
+        "week": int(row["week"]) if row["week"] else None, "round": row["round"] or None,
+        "home": side_of[home] | {"r": _r(rh)}, "away": side_of[away] | {"r": _r(ra)},
+        "h": p.home, "p": chances(pa, pd, ph),
+        "stakes": {"home": stakes(res.k_next[home], w, e),
+                   "away": stakes(res.k_next[away], w, 1 - e)},
     }  # fmt: skip
 
 
@@ -268,9 +315,11 @@ def write(out_dir: Path, built: dict) -> int:
     dump(out_dir / "meta.json", built["meta"])
     dump(out_dir / "teams.json", built["teams"])
     dump(out_dir / "leagues.json", built["leagues"])
+    dump(out_dir / "fixtures.json", built["fixtures"])
     summaries = {s["slug"]: s for s in built["teams"]}
     for tm in built["details"].values():
-        detail = {**summaries[tm.slug], "seasons": built["seasons"][tm.id], "events": tm.events}
+        detail = {**summaries[tm.slug], "seasons": built["seasons"][tm.id],
+                  "next": built["next"].get(tm.slug, []), "events": tm.events}  # fmt: skip
         dump(out_dir / "teams" / f"{tm.slug}.json", detail)
     return len(built["details"])
 

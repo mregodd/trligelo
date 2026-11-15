@@ -6,6 +6,7 @@ import styles from "./Nav.module.css";
 
 const LINKS = [
   { href: "/", label: "Sıralama" },
+  { href: "/maclar/", label: "Maçlar" },
   { href: "/lig/super-lig/", label: "Süper Lig" },
   { href: "/lig/1-lig/", label: "1. Lig" },
   { href: "/lig/2-lig/", label: "2. Lig" },

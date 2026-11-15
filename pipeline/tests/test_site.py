@@ -6,6 +6,7 @@ from tlelo.elo.data import Dataset, Game, Side
 from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
 from tlelo.site.export import build, load_withdrawals
+from tlelo.site.fixtures import stakes, upcoming
 from tlelo.site.logos import logo_url, transparent_png
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
@@ -112,3 +113,30 @@ def test_logo_background_becomes_transparent_but_white_inside_the_crest_stays(tm
     assert out.getpixel((0, 0))[3] == 0  # background gone
     assert out.getpixel((12, 12))[3] == 255  # crest kept
     assert out.getpixel((20, 20))[3] == 255  # enclosed white kept
+
+
+def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
+    def row(comp, week, d, home, away, status, rnd=""):
+        return {"competition": comp, "stage": "league" if comp == "SL" else "cup", "group": "",
+                "week": week, "date": d, "time": "", "round": rnd, "home_id": str(home),
+                "away_id": str(away), "status": status}  # fmt: skip
+
+    rows = [
+        row("SL", "1", "2026-08-10", 1, 2, "played"),
+        row("SL", "2", "", 3, 4, "not_played"),  # postponed: before the last week with a result
+        row("SL", "3", "2026-08-24", 2, 3, "played"),
+        row("SL", "4", "", 1, 3, "not_played"),  # the next round
+        row("SL", "4", "", 9, 2, "not_played"),  # 9 has withdrawn
+        row("SL", "5", "", 1, 2, "not_played"),
+        row("TK", "", "2026-08-20", 1, 4, "not_played", "1.Tur"),  # in the past: left over
+        row("TK", "", "2026-09-02", 2, 4, "not_played", "2.Tur"),
+    ]
+    rounds, cup = upcoming(rows, date(2026, 8, 30), skip={9})
+    week, matches = rounds[("SL", "")]
+    assert week == 4 and [(m["home_id"], m["away_id"]) for m in matches] == [("1", "3")]
+    assert [m["round"] for m in cup] == ["2.Tur"]
+
+
+def test_stakes_mirror_between_the_two_sides():
+    home, away = stakes(24, 1.0, 0.75), stakes(24, 1.0, 0.25)
+    assert home == [6.0, -6.0, -18.0] and away == [18.0, 6.0, -6.0]

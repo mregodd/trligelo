@@ -91,3 +91,11 @@
   white-space: nowrap;
   color: var(--band-ink-2);
 }
+
+.next {
+  margin-top: 32px;
+}
+.next h2 {
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+}

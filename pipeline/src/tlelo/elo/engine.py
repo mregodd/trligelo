@@ -90,6 +90,7 @@ class RunResult:
     ratings: dict[int, float]
     europe: EuropeModel
     tiers: dict[str, dict[int, int]] = field(default_factory=dict)
+    k_next: dict[int, float] = field(default_factory=dict)  # each club's K for its next game
 
 
 class Engine:
@@ -279,4 +280,5 @@ class Engine:
             dict(self.r),
             self.europe,
             self.data.tiers,
+            {t: self.k_for(Side("pro", t, "")) for t in self.r},
         )

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ClubLogo } from "@/components/ClubLogo";
+import { FixtureList } from "@/components/FixtureCard";
 import { Ruler } from "@/components/Ruler";
 import { TeamTimeline } from "@/components/TeamTimeline";
 import { getMeta, getTeam, getTeams } from "@/lib/data";
@@ -113,6 +114,12 @@ export default async function TeamPage({ params }: Params) {
       </section>
 
       <div className="wrap">
+        {team.next.length > 0 && (
+          <section className={styles.next} aria-labelledby="next-title">
+            <h2 id="next-title">{team.next.length > 1 ? "Sıradaki maçlar" : "Sıradaki maç"}</h2>
+            <FixtureList fixtures={team.next} withCompetition />
+          </section>
+        )}
         <TeamTimeline
           team={team.name}
           events={team.events}

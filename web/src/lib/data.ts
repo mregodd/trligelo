@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-import type { League, Meta, TeamDetail, TeamSummary } from "./types";
+import type { Fixtures, League, Meta, TeamDetail, TeamSummary } from "./types";
 
 const DATA = path.join(process.cwd(), "src", "data");
 
@@ -31,6 +31,7 @@ function load() {
 export const getMeta = () => load().meta;
 export const getTeams = () => load().teams;
 export const getLeagues = () => load().leagues;
+export const getFixtures = () => read<Fixtures>("fixtures.json");
 
 export function getTeamMap(): Map<string, TeamSummary> {
   return new Map(getTeams().map((t) => [t.slug, t]));

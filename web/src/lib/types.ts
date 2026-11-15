@@ -103,7 +103,34 @@ export interface TeamSeason {
 
 export interface TeamDetail extends TeamSummary {
   seasons: TeamSeason[];
+  next: Fixture[]; // its next league match and next dated cup tie, if known
   events: TeamEvent[];
+}
+
+export interface FixtureSide {
+  slug: string;
+  name: string;
+  logo: string | null;
+  r: number; // rating now
+}
+
+/** An upcoming match: chances and what each result is worth, from today's ratings. */
+export interface Fixture {
+  date: string | null; // TFF gives dates only a week or two ahead
+  time: string | null;
+  comp: string;
+  week: number | null;
+  round: string | null;
+  home: FixtureSide;
+  away: FixtureSide;
+  h: number; // home advantage used
+  p: [number, number, number]; // home win, draw, away win, % (sum 100)
+  stakes: { home: [number, number, number]; away: [number, number, number] }; // win, draw, loss by one goal
+}
+
+export interface Fixtures {
+  rounds: { league: LeagueCode; group: string | null; week: number; matches: Fixture[] }[];
+  cup: Fixture[];
 }
 
 export interface LeagueGroup {
