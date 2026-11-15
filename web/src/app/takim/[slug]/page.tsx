@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Ruler } from "@/components/Ruler";
 import { TeamTimeline } from "@/components/TeamTimeline";
 import { getMeta, getTeam, getTeams } from "@/lib/data";
-import { dateShort, delta, rating } from "@/lib/format";
+import { dateLong, dateShort, delta, rating } from "@/lib/format";
 import { groupName, leagueName, leagueSlug } from "@/lib/labels";
 import type { MatchEvent } from "@/lib/types";
 
@@ -48,6 +48,12 @@ export default async function TeamPage({ params }: Params) {
                     <a href={`/lig/${leagueSlug(team.league)}/`}>{leagueName(team.league)}</a>
                     {team.group ? `, ${groupName(team.group)}` : ""}
                   </>
+                ) : team.withdrawn ? (
+                  <>
+                    {team.lastSeason} sezonunda {leagueName(team.league)}'den çekildi:{" "}
+                    {dateLong(team.withdrawn)} tarihinden beri maçları hükmen sayılıyor ve puanını
+                    değiştirmiyor.
+                  </>
                 ) : (
                   <>
                     Son olarak {team.lastSeason} sezonunda {leagueName(team.league)}'de oynadı. Şu an
@@ -55,7 +61,7 @@ export default async function TeamPage({ params }: Params) {
                   </>
                 )}
               </p>
-              {team.official !== team.name.toLocaleUpperCase("tr-TR") && (
+              {team.official && team.official !== team.name.toLocaleUpperCase("tr-TR") && (
                 <p className={styles.official}>TFF'deki adı: {team.official}</p>
               )}
             </div>

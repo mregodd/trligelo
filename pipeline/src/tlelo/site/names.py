@@ -78,6 +78,14 @@ def load_overrides(path: Path) -> dict[int, str]:
         return {int(r["team_id"]): r["display_name"] for r in csv.DictReader(fh)}
 
 
+def load_masked(path: Path) -> set[int]:
+    """Clubs the site shows only by their display name (``mask`` = 1): no TFF name, no logo."""
+    if not path.exists():
+        return set()
+    with path.open(encoding="utf-8", newline="") as fh:
+        return {int(r["team_id"]) for r in csv.DictReader(fh) if r.get("mask") == "1"}
+
+
 def display_name(team: int, official: str, overrides: dict[int, str]) -> str:
     return overrides.get(team) or clean_name(official)
 

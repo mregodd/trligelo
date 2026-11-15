@@ -23,8 +23,9 @@ export interface TeamSummary {
   id: number;
   slug: string;
   name: string;
-  official: string;
+  official: string; // "" when the club is shown by its display name only
   active: boolean;
+  withdrawn: string | null; // date it left the league this season (forfeits from then on)
   league: LeagueCode;
   group: string | null;
   lastSeason: string;

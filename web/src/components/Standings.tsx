@@ -119,7 +119,11 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
                     <a href={`/takim/${t.slug}/`}>{t.name}</a>
                     <span className={styles.sub}>
                       <LeagueKey code={t.league} />
-                      {t.active ? leagueName(t.league) : `${t.lastSeason} sezonunda ${leagueName(t.league)}`}
+                      {t.active
+                        ? leagueName(t.league)
+                        : t.withdrawn
+                          ? `${t.lastSeason}'de ${leagueName(t.league)}'den çekildi`
+                          : `${t.lastSeason} sezonunda ${leagueName(t.league)}`}
                     </span>
                   </th>
                   <td className={styles.wideOnly}>

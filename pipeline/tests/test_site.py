@@ -5,7 +5,7 @@ from datetime import date
 from tlelo.elo.data import Dataset, Game, Side
 from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
-from tlelo.site.export import build
+from tlelo.site.export import build, load_withdrawals
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
 
@@ -67,3 +67,19 @@ def test_inactive_club_shows_the_rating_it_left_with(tmp_path):
     gone = summary[3]
     assert not gone["active"] and gone["week"] == 0 and gone["rank"] is None
     assert gone["rating"] != round(res.ratings[3], 1)  # the silent shift did happen
+
+
+def test_withdrawal_is_a_trailing_run_of_lost_forfeits(tmp_path):
+    lines = [
+        "competition,date,home_id,away_id,home_goals,away_goals,status",
+        "3L,2026-09-06,9,1,0,2,played",
+        "3L,2026-09-13,8,9,3,0,forfeit",  # 8 wins; 9's run of lost forfeits starts
+        "3L,2026-09-20,9,2,0,3,forfeit",
+        "3L,2026-09-27,3,9,3,0,forfeit",
+        "3L,2026-10-04,7,8,0,3,forfeit",  # 7: a single forfeit, then it plays again
+        "3L,2026-10-11,7,1,1,1,played",
+        "3L,2026-10-18,9,4,,,not_played",
+    ]
+    path = tmp_path / "2026-27.csv"
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    assert load_withdrawals(path) == {9: date(2026, 9, 13)}

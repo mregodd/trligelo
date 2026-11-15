@@ -23,7 +23,7 @@ from pathlib import Path
 from tlelo.elo.data import Dataset
 from tlelo.elo.engine import RunResult
 from tlelo.elo.params import MODEL_VERSION
-from tlelo.site.names import clean_name, display_name, load_overrides, unique_slugs
+from tlelo.site.names import clean_name, display_name, load_masked, load_overrides, unique_slugs
 
 DISPLAY_FROM = "2021-22"
 LEAGUE_CODES = {1: "SL", 2: "1L", 3: "2L", 4: "3L"}
@@ -45,6 +45,29 @@ def _r(x: float, nd: int = 1) -> float:
 def load_groups(path: Path) -> dict[tuple[int, str], str]:
     with path.open(encoding="utf-8", newline="") as fh:
         return {(int(r["team_id"]), r["season"]): r["group"] for r in csv.DictReader(fh)}
+
+
+def load_withdrawals(path: Path) -> dict[int, date]:
+    """Clubs that left their league during the season, by TFF's own record: their last three
+    or more league results are forfeits they lost, with nothing played after. Value: the
+    date of the first of those forfeits."""
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as fh:
+        rows = [r for r in csv.DictReader(fh) if r["competition"] in LEAGUE_CODES.values()]
+    rows = [r for r in rows if r["status"] != "not_played"]
+    runs: dict[int, list[date]] = defaultdict(list)  # each club's trailing forfeit losses
+    for r in sorted(rows, key=lambda r: r["date"]):
+        for side, other in (("home", "away"), ("away", "home")):
+            team = int(r[f"{side}_id"])
+            lost = r["status"] == "double_forfeit" or (
+                r["status"] == "forfeit" and int(r[f"{side}_goals"]) < int(r[f"{other}_goals"])
+            )
+            if lost:
+                runs[team].append(date.fromisoformat(r["date"]))
+            else:
+                runs[team].clear()
+    return {t: ds[0] for t, ds in runs.items() if len(ds) >= 3}
 
 
 def _match_event(rec, is_home: bool, slugs: dict[int, str], names: dict[int, str]) -> dict:
@@ -88,15 +111,18 @@ def _match_event(rec, is_home: bool, slugs: dict[int, str], names: dict[int, str
 
 def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     overrides = load_overrides(data_dir / "sources" / "team_display_names.csv")
+    masked = load_masked(data_dir / "sources" / "team_display_names.csv")
     groups = load_groups(data_dir / "team_seasons.csv")
     window = [s for s in data.seasons if s >= DISPLAY_FROM]
     current = data.seasons[-1]
+    withdrawn = load_withdrawals(data_dir / "matches" / f"{current}.csv")
     p = res.params
     visible = sorted({t for s in window for t in data.tiers.get(s, {})})
     names = {t: display_name(t, data.names[t], overrides) for t in data.names}
     slugs = unique_slugs({t: names[t] for t in visible})
 
-    teams = {t: TeamOut(t, slugs[t], names[t], data.names[t]) for t in visible}
+    teams = {t: TeamOut(t, slugs[t], names[t], "" if t in masked else data.names[t])
+             for t in visible}  # fmt: skip
     first_game = {s: gs[0].date for s, gs in data.games.items() if gs}
     for rec in res.records:
         if rec.game.season not in window:
@@ -119,7 +145,8 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     last_match = max(r.game.date for r in res.records)
     cutoff = last_match - timedelta(days=7)
     tiers_now = data.tiers[current]
-    active = sorted((t for t in visible if t in tiers_now), key=lambda t: -res.ratings[t])
+    active = sorted((t for t in visible if t in tiers_now and t not in withdrawn),
+                    key=lambda t: -res.ratings[t])  # fmt: skip
     rank = {t: i for i, t in enumerate(active, start=1)}
     league_rank: dict[int, int] = {}
     by_league: dict[int, list[int]] = defaultdict(list)
@@ -135,9 +162,9 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         last_season = max(s for s in window if t in data.tiers.get(s, {}))
         tier = data.tiers[last_season][t]
         # Inactive clubs show the rating they left with: later anchor shifts move them silently.
-        r = res.ratings[t] if t in tiers_now else tm.events[-1]["ra"]
+        r = res.ratings[t] if t in rank else tm.events[-1]["ra"]
         summaries.append(_summary(tm, r, last_season, tier, groups, rank, league_rank,
-                                  cutoff, current))  # fmt: skip
+                                  cutoff, withdrawn.get(t)))  # fmt: skip
 
     leagues = []
     for tier in (1, 2, 3, 4):
@@ -185,7 +212,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     }  # fmt: skip
 
 
-def _summary(tm, rating, last_season, tier, groups, rank, league_rank, cutoff, current):
+def _summary(tm, rating, last_season, tier, groups, rank, league_rank, cutoff, withdrawn):
     events = tm.events
     matches = [e for e in events if e["t"] == "match"]
     before = [e for e in events if e["date"] and date.fromisoformat(e["date"]) <= cutoff]
@@ -197,7 +224,8 @@ def _summary(tm, rating, last_season, tier, groups, rank, league_rank, cutoff, c
     form = [{"s": e["s"], "d": e["d"]} for e in matches[-5:]]
     return {
         "id": tm.id, "slug": tm.slug, "name": tm.name, "official": tm.official,
-        "active": last_season == current,
+        "active": tm.id in rank,
+        "withdrawn": withdrawn.isoformat() if withdrawn else None,
         "league": LEAGUE_CODES[tier], "group": groups.get((tm.id, last_season)) or None,
         "lastSeason": last_season,
         "rating": _r(rating), "rank": rank.get(tm.id), "leagueRank": league_rank.get(tm.id),
