@@ -110,6 +110,7 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
               {rows.map((t) => (
                 <tr
                   key={t.slug}
+                  data-league={t.active ? t.league : undefined}
                   data-lit={t.slug === lit || undefined}
                   data-inactive={!t.active || undefined}
                   onPointerEnter={() => setLit(t.slug)}

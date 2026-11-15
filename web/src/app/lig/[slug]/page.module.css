@@ -1,5 +1,5 @@
 .band {
-  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  --focus: var(--band-sl); /* focus rings stay visible on the night band */
   background: var(--band);
   color: var(--band-ink);
   padding-block: 20px 8px;

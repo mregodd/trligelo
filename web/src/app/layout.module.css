@@ -1,5 +1,5 @@
 .header {
-  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  --focus: var(--band-sl); /* focus rings stay visible on the night band */
   background: var(--band);
   color: var(--band-ink);
 }
@@ -61,4 +61,24 @@
 }
 .skip:focus {
   top: 8px;
+}
+
+/* Phones: the theme button shares the wordmark's row and the menu takes the next one.
+   Wide screens: menu, then the theme button, on the right. */
+.bar > nav {
+  flex-basis: 100%;
+}
+.bar > button {
+  margin-left: auto;
+}
+@media (min-width: 900px) {
+  .bar > nav {
+    flex-basis: auto;
+    order: 1;
+    margin-left: auto;
+  }
+  .bar > button {
+    order: 2;
+    margin-left: 0;
+  }
 }

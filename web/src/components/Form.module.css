@@ -2,9 +2,8 @@
   display: inline-flex;
   gap: 3px;
 }
-/* Results in ink tones, lighter than the rating figure beside them (green and brick are
-   reserved for rating changes): G a pale tint with ink letter, B outlined, M dashed and
-   lighter. The letter carries the meaning. */
+/* Results as filled chips: G green, B yellow, M red. The letter is always printed, so the
+   meaning never rests on colour alone. */
 .cell {
   display: inline-grid;
   place-items: center;
@@ -14,16 +13,16 @@
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
-  border: 1px solid var(--rule-strong);
-  color: var(--ink-2);
 }
 .cell[data-r="G"] {
-  background: var(--hover);
-  border-color: var(--rule-strong);
-  color: var(--ink);
+  background: var(--form-g);
+  color: var(--form-g-ink);
+}
+.cell[data-r="B"] {
+  background: var(--form-b);
+  color: var(--form-b-ink);
 }
 .cell[data-r="M"] {
-  border-style: dashed;
-  color: var(--ink-3);
-  font-weight: 500;
+  background: var(--form-m);
+  color: var(--form-m-ink);
 }

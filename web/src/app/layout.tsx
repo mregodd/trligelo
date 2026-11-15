@@ -2,8 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Semi_Condensed } from "next/font/google";
 
 import { Nav } from "@/components/Nav";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { getMeta } from "@/lib/data";
 import { dateLong } from "@/lib/format";
+import { THEME_SCRIPT } from "@/lib/theme";
 import { REPO, SITE } from "@/lib/site";
 
 import styles from "./layout.module.css";
@@ -29,13 +31,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d3a40",
+  themeColor: "#13235e", // the night band
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const meta = getMeta();
   return (
-    <html lang="tr" className={`${text.variable} ${display.variable}`}>
+    // data-theme is set by THEME_SCRIPT before React hydrates, hence the warning suppression.
+    <html lang="tr" className={`${text.variable} ${display.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body>
         <a href="#icerik" className={styles.skip}>
           İçeriğe geç
@@ -45,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/" className={styles.wordmark}>
               {SITE}
             </a>
+            <ThemeToggle />
             <Nav />
           </div>
         </header>

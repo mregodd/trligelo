@@ -4,7 +4,3 @@
   object-fit: contain;
   vertical-align: middle;
 }
-img.logo {
-  background: var(--logo-tile); /* only a real logo gets the tile, never the empty square */
-  border-radius: 4px;
-}

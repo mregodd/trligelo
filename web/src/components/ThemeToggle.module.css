@@ -1,0 +1,23 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--band-rule);
+  border-radius: var(--radius);
+  background: none;
+  color: var(--band-ink-2);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.toggle:hover {
+  color: var(--band-ink);
+  background: var(--nav-hover);
+}
+.toggle svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}

@@ -23,7 +23,7 @@
 }
 .nav a:hover {
   color: var(--band-ink);
-  background: rgba(234, 244, 242, 0.08);
+  background: var(--nav-hover);
 }
 .nav a[aria-current="page"] {
   color: var(--band-ink);

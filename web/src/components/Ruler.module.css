@@ -100,7 +100,7 @@
   height: 80%;
   width: 3px;
   margin-left: -1.5px;
-  background: var(--band-ink) !important;
+  background: var(--flare) !important; /* the one selected club, lit like a tribune flare */
   box-shadow: 0 0 0 2px var(--band);
   z-index: 2;
 }

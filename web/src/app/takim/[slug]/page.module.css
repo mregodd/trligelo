@@ -1,5 +1,5 @@
 .band {
-  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  --focus: var(--band-sl); /* focus rings stay visible on the night band */
   background: var(--band);
   color: var(--band-ink);
   padding-block: 20px 8px;
@@ -21,13 +21,9 @@
   font-size: clamp(1.875rem, 5vw, 3rem);
 }
 .title {
-  --logo-tile: #f2f5f4; /* the band is dark in both schemes */
   display: flex;
   align-items: center;
   gap: 14px;
-}
-.title img {
-  padding: 4px;
 }
 .where {
   margin: 6px 0 0;

@@ -1,5 +1,5 @@
 .band {
-  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  --focus: var(--band-sl); /* focus rings stay visible on the night band */
   background: var(--band);
   color: var(--band-ink);
   padding-block: 20px 8px;
@@ -102,8 +102,20 @@
 .table thead th:global(.num) {
   text-align: right;
 }
+/* League tone: one hue (the Süper Lig step) in even lightness steps, deepest for the top
+   league and none for the 3. Lig. Text on the deepest step still clears 4.5:1. */
+.table tbody tr[data-league="SL"] {
+  background: color-mix(in srgb, var(--sl) 16%, var(--surface));
+}
+.table tbody tr[data-league="1L"] {
+  background: color-mix(in srgb, var(--sl) 10.5%, var(--surface));
+}
+.table tbody tr[data-league="2L"] {
+  background: color-mix(in srgb, var(--sl) 5%, var(--surface));
+}
+/* The lit row takes the flare's tint, like its mark on the ruler (after the league tones). */
 .table tbody tr[data-lit] {
-  background: var(--hover);
+  background: color-mix(in srgb, var(--flare) 14%, var(--surface));
 }
 .table tbody tr[data-inactive] {
   color: var(--ink-3);

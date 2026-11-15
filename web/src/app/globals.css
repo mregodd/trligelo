@@ -1,40 +1,50 @@
-/* Tokens. Values checked for contrast (text >= 4.5:1) and the league ramps with the
-   dataviz palette validator (ordinal: one hue, monotone lightness, light end clears the
-   surface). Club colours are deliberately absent. */
+/* Tokens: "Gece maçı" (a floodlit night match). Night-blue band, floodlight-white to blue
+   league ramp, flare orange for the one selected club. Values checked for contrast (text
+   >= 4.5:1, focus and flare >= 3:1) and the league ramps with the dataviz palette validator
+   (ordinal: one hue, monotone lightness, light end clears the surface). Club colours are
+   deliberately absent. */
 :root {
-  --paper: #f2f5f4;
+  --paper: #f2f4f8;
   --surface: #ffffff;
-  --ink: #0f2b30;
-  --ink-2: #3f5a5e;
-  --ink-3: #5a7175;
-  --rule: #d3dedc;
-  --rule-strong: #b7c7c4;
-  --hover: #e8efed;
-  --gain: #17734a;
-  --loss: #a33e2d;
-  --focus: #1b666c;
+  --ink: #101b3d;
+  --ink-2: #3d4a6b;
+  --ink-3: #4f5c82;
+  --rule: #d6dcea;
+  --rule-strong: #b9c2d8;
+  --hover: #e9edf6;
+  --gain: #0b6a3d;
+  --loss: #ad1f33;
+  --focus: #d9480f;
 
   /* The measuring band (header and ruler). In the dark scheme only the band ground
-     deepens (#0a2b30) so it still reads as a band above the darker page. */
-  --band: #0d3a40;
-  --band-ink: #eaf4f2;
-  --band-ink-2: #a9c6c2;
-  --band-ink-3: #8db0ab;
-  --band-rule: #2a5a60;
+     deepens (#08102b) so it still reads as a band above the darker page. */
+  --band: #13235e;
+  --band-ink: #f4f6ff;
+  --band-ink-2: #c3cced;
+  --band-ink-3: #a3afdc;
+  --band-rule: #2c3d82;
+  --nav-hover: rgba(244, 246, 255, 0.1);
+  /* The tribune flare: only the selected club on the ruler. */
+  --flare: #ff7a1a;
 
   /* Leagues: ordinal ramp, top tier darkest on light surfaces... */
-  --sl: #0b4049;
-  --l1: #1b666c;
-  --l2: #3c8a86;
-  --l3: #6aa9a2;
+  --sl: #13235e;
+  --l1: #2a49b0;
+  --l2: #5b7fd6;
+  --l3: #9db3e8;
   /* ...and lightest on the dark band (anchor flips on dark). */
-  --band-sl: #d6f2ec;
-  --band-l1: #a3dbd2;
-  --band-l2: #78c0b8;
-  --band-l3: #53a39c;
+  --band-sl: #edf1ff;
+  --band-l1: #c7d2f5;
+  --band-l2: #93a6e3;
+  --band-l3: #6b80c8;
 
-  /* Club logos are drawn for light grounds: on dark ones they sit on a light tile. */
-  --logo-tile: transparent;
+  /* Form: last results as filled chips, letter always printed (G/B/M). */
+  --form-g: #1f7a45;
+  --form-g-ink: #ffffff;
+  --form-b: #f0c23a;
+  --form-b-ink: #1a1a1a;
+  --form-m: #c0322f;
+  --form-m-ink: #ffffff;
 
   --radius: 6px;
   --gutter: 16px;
@@ -43,28 +53,35 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0a1c1f;
-    --surface: #10262a;
-    --ink: #e4efed;
-    --ink-2: #a9c2bf;
-    --ink-3: #8ba5a2;
-    --rule: #22403f;
-    --rule-strong: #34585a;
-    --hover: #16323a;
-    --gain: #55c38f;
-    --loss: #f0907c;
-    --focus: #78c0b8;
-    --band: #0a2b30;
-    --band-rule: #22494f;
-    --sl: #d6f2ec;
-    --l1: #a3dbd2;
-    --l2: #78c0b8;
-    --l3: #53a39c;
-    --logo-tile: #f2f5f4;
-    color-scheme: dark;
-  }
+/* Dark scheme: set on <html> by lib/theme.ts before the first paint, from the visitor's
+   choice (the header's theme button) or else the system setting. */
+:root[data-theme="dark"] {
+  --paper: #0b1230;
+  --surface: #111a3d;
+  --ink: #eef1fb;
+  --ink-2: #b9c3e0;
+  --ink-3: #a1accd;
+  --rule: #233063;
+  --rule-strong: #34468a;
+  --hover: #182352;
+  --gain: #4ccf8f;
+  --loss: #ff8a96;
+  --focus: #ff8a3d;
+  --band: #08102b;
+  --band-rule: #22306a;
+  --nav-hover: rgba(244, 246, 255, 0.08);
+  --flare: #ff8a3d;
+  --sl: #e3e9ff;
+  --l1: #a9b8f0;
+  --l2: #7a8fe0;
+  --l3: #5468c4;
+  --form-g: #3fae6e;
+  --form-g-ink: #0d1a12;
+  --form-b: #e9bd3c;
+  --form-b-ink: #1a1a1a;
+  --form-m: #e5605a;
+  --form-m-ink: #1a0d0c;
+  color-scheme: dark;
 }
 
 @media (min-width: 720px) {
