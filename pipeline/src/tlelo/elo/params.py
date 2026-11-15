@@ -30,6 +30,8 @@ class Params:
     return_pull: float = 0.5  # club back from the amateur level: pulled toward `newcomer`
     # Season transitions (METODOLOJI §5)
     regression: float = 0.10  # alpha: R <- R - alpha * (R - league mean)
+    regression_own: float = 0.0  # target moves this share toward the club's own mean (v1.1 test)
+    regression_seasons: int = 3  # end-of-season ratings that make the club's own mean
     seeds: tuple[float, float, float, float] = (1450.0, 1275.0, 1125.0, 1000.0)
     anchor: float = 1000.0  # 3. Lig mean at every season start
     promotion: tuple[float, float, float] = (30.0, 25.0, 20.0)  # SL/1L, 1L/2L, 2L/3L

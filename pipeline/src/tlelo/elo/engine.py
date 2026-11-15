@@ -102,6 +102,7 @@ class Engine:
         self.provisional: set[int] = set()
         self.records: list[GameRecord] = []
         self.adjustments: list[Adjustment] = []
+        self.ends: dict[int, list[float]] = defaultdict(list)  # rating at each season's end
         self._seq = 0
 
     def _next(self) -> int:
@@ -205,6 +206,9 @@ class Engine:
             return
 
         before = self.data.tiers.get(previous, {})
+        for team in before:
+            if team in self.r:
+                self.ends[team].append(self.r[team])
         # Promotion / relegation adjustment, one P per boundary crossed.
         for team, tier in tiers.items():
             old = before.get(team)
@@ -229,7 +233,11 @@ class Engine:
             for teams in continuing.values():
                 mean = sum(self.r[t] for t in teams) / len(teams)
                 for t in teams:
-                    self._adjust(season, t, "regression", -p.regression * (self.r[t] - mean))
+                    target = mean
+                    if p.regression_own:
+                        own = self.ends[t][-p.regression_seasons :]
+                        target += p.regression_own * (sum(own) / len(own) - mean)
+                    self._adjust(season, t, "regression", -p.regression * (self.r[t] - target))
         # New clubs (from the amateur level) start `newcomer` points above the mean of the
         # continuing 3. Lig clubs; clubs back from the amateur level are pulled toward it.
         bottom_now = continuing.get(4) or [t for t in self.r if t in tiers]

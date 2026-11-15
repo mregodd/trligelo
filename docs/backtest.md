@@ -55,6 +55,8 @@ v1.0 üzerine tek bir değişiklik (pozitif: seçenek kötüleştiriyor).
 | Avrupa'da turnuva terimi (ŞL/AL/KL) | +0.0000 ± 0.0000 | +0.0000 ± 0.0000 |
 | Gol farkı çarpanı yok (G = 1) | +0.0035 ± 0.0007 | +0.0052 ± 0.0009 |
 | Geçici K yok | -0.0001 ± 0.0002 | +0.0000 ± 0.0003 |
+| Kulübün son 3 sezon ortalamasına çekme | -0.0001 ± 0.0006 | +0.0025 ± 0.0008 |
+| Lig ortalaması ile kulübün ortalamasının ortasına çekme | -0.0004 ± 0.0003 | +0.0008 ± 0.0004 |
 
 ## Avrupa
 

@@ -163,3 +163,14 @@ def test_europe_fit_recovers_a_and_b():
     assert model.b == pytest.approx(b, rel=0.12)
     assert model.home == pytest.approx(home, abs=20)
     assert model.rating(20.0, "UEL") == pytest.approx(a + b * np.log1p(20.0), abs=25)
+
+
+def test_regression_toward_own_mean():
+    # With the club's own mean over one season as the target, nobody is pulled at all.
+    tiers = {"2016-17": {1: 4, 2: 4}, "2017-18": {1: 4, 2: 4}}
+    games = [game(pro(1), pro(2), (3, 0))]
+    p = FLAT.with_(regression=0.5, regression_own=1.0, regression_seasons=1)
+    res = run(games, tiers, p)
+    assert [a.delta for a in res.adjustments if a.kind == "regression"] == [0.0, 0.0]
+    league = run(games, tiers, p.with_(regression_own=0.0))
+    assert all(a.delta != 0 for a in league.adjustments if a.kind == "regression")

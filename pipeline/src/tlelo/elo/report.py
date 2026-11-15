@@ -60,6 +60,8 @@ VARIANTS = [
     ("Avrupa'da turnuva terimi (ŞL/AL/KL)", dict(europe_competition_terms=True)),
     ("Gol farkı çarpanı yok (G = 1)", dict(margin=False)),
     ("Geçici K yok", dict(provisional_factor=1.0)),
+    ("Kulübün son 3 sezon ortalamasına çekme", dict(regression_own=1.0)),
+    ("Lig ortalaması ile kulübün ortalamasının ortasına çekme", dict(regression_own=0.5)),
 ]
 
 
