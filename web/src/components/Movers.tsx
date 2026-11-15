@@ -1,3 +1,4 @@
+import { ClubLogo } from "@/components/ClubLogo";
 import { dateShort, delta, rating } from "@/lib/format";
 import { leagueName } from "@/lib/labels";
 import type { Meta, TeamSummary } from "@/lib/types";
@@ -33,7 +34,9 @@ function List({ title, teams }: { title: string; teams: TeamSummary[] }) {
         <ol className={styles.list}>
           {teams.map((t) => (
             <li key={t.slug}>
-              <a href={`/takim/${t.slug}/`}>{t.name}</a>
+              <a href={`/takim/${t.slug}/`}>
+                <ClubLogo src={t.logo} size={16} keepSpace /> {t.name}
+              </a>
               <span className={`num ${t.week > 0 ? "gain" : "loss"}`}>{delta(t.week)}</span>
               <span className={styles.meta}>
                 {leagueName(t.league)}, {rating(t.rating)}

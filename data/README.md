@@ -24,7 +24,7 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `sources/team_display_names.csv` | Sitede gösterilen kulüp adları: sponsor adı taşıyan kulüpler için taraftarın kullandığı ad (örn. EKENLER BETON SİVASSPOR → Sivasspor). Elle tutulur; listede olmayan kulüplerin adı TFF adından şirket ekleri atılarak üretilir. `mask` = 1 olan kulüp sitede yalnızca bu adla görünür: TFF'deki adı ve logosu gösterilmez, aramada çıkmaz |
 | `ratings/current.csv` | Model çıktısı: güncel sezonun takımları, Elo puanı sırasıyla (`uv run tlelo elo`) |
 | `ratings/history.csv` | Model çıktısı: her takımın her puan değişikliği (maçlar, yükselme/düşme, ortalamaya çekme, bonuslar, ölçek kayması). ~6 MB, **repoya girmez**, aynı komutla üretilir |
-| `raw/` | İndirilen ham sayfaların önbelleği (`raw/tff/`, `raw/wikipedia/`). **Repoya girmez** (`.gitignore`) |
+| `raw/` | İndirilen ham sayfaların önbelleği (`raw/tff/`, `raw/wikipedia/`; kulüp sayfaları ve logolar `raw/tff/clubs/`, `raw/tff/logos/`). **Repoya girmez** (`.gitignore`) |
 
 ## `matches/<sezon>.csv` sütunları
 
@@ -89,7 +89,8 @@ uv run tlelo europe-build   # europe/ CSV'lerini yazar
 uv run tlelo europe-check   # Avrupa verisindeki boşlukları raporlar
 uv run tlelo elo            # puanları hesaplar (model v1.0), ratings/ klasörüne yazar
 uv run tlelo backtest       # docs/backtest.md test raporunu yeniden üretir
-uv run tlelo site           # web sitesinin verisini web/src/data/ klasörüne yazar
+uv run tlelo logos          # sitedeki kulüplerin logolarını TFF'deki kulüp sayfalarından indirir (~12 dakika, bir kez)
+uv run tlelo site           # web sitesinin verisini web/src/data/ klasörüne yazar, logoları web/public/logos/ klasörüne kopyalar
 ```
 
 İlk TFF indirmesi yaklaşık 3–3,5 saat, Wikipedia indirmesi yaklaşık 5 dakika sürer. Sunuculara yük olmamak için istekler arasında 2 saniye beklenir. Wikipedia'da sadece robots.txt'nin izin verdiği makale sayfaları (`/wiki/`) okunur. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.

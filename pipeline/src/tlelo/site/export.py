@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import json
+import shutil
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
@@ -23,6 +24,7 @@ from pathlib import Path
 from tlelo.elo.data import Dataset
 from tlelo.elo.engine import RunResult
 from tlelo.elo.params import MODEL_VERSION
+from tlelo.site.logos import logo_path
 from tlelo.site.names import clean_name, display_name, load_masked, load_overrides, unique_slugs
 
 DISPLAY_FROM = "2021-22"
@@ -40,6 +42,11 @@ class TeamOut:
 
 def _r(x: float, nd: int = 1) -> float:
     return round(float(x), nd)
+
+
+def visible_teams(data: Dataset) -> list[int]:
+    """Clubs with a page on the site: every club in the display window."""
+    return sorted({t for s in data.seasons if s >= DISPLAY_FROM for t in data.tiers.get(s, {})})
 
 
 def load_groups(path: Path) -> dict[tuple[int, str], str]:
@@ -70,7 +77,7 @@ def load_withdrawals(path: Path) -> dict[int, date]:
     return {t: ds[0] for t, ds in runs.items() if len(ds) >= 3}
 
 
-def _match_event(rec, is_home: bool, slugs: dict[int, str], names: dict[int, str]) -> dict:
+def _match_event(rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict) -> dict:
     g = rec.game
     side, other = (g.home, g.away) if is_home else (g.away, g.home)
     h = rec.h if is_home else -rec.h
@@ -78,7 +85,8 @@ def _match_event(rec, is_home: bool, slugs: dict[int, str], names: dict[int, str
     pens = (g.pens if is_home else g.pens[::-1]) if g.pens else None
     opp: dict = {"kind": other.kind}
     if other.kind == "pro":
-        opp |= {"name": names[other.team], "slug": slugs.get(other.team)}
+        slug = slugs.get(other.team)
+        opp |= {"name": names[other.team], "slug": slug, "logo": logo_urls.get(slug)}
     elif other.kind == "amateur":
         opp |= {"name": clean_name(other.name)}
     else:
@@ -117,9 +125,12 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     current = data.seasons[-1]
     withdrawn = load_withdrawals(data_dir / "matches" / f"{current}.csv")
     p = res.params
-    visible = sorted({t for s in window for t in data.tiers.get(s, {})})
+    visible = visible_teams(data)
     names = {t: display_name(t, data.names[t], overrides) for t in data.names}
     slugs = unique_slugs({t: names[t] for t in visible})
+    logos = {slugs[t]: f for t in visible
+             if t not in masked and (f := logo_path(data_dir / "raw" / "tff", t))}  # fmt: skip
+    logo_urls = {slug: f"/logos/{slug}{f.suffix}" for slug, f in logos.items()}
 
     teams = {t: TeamOut(t, slugs[t], names[t], "" if t in masked else data.names[t])
              for t in visible}  # fmt: skip
@@ -130,7 +141,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         for is_home in (True, False):
             side = rec.game.home if is_home else rec.game.away
             if side.kind == "pro" and side.team in teams:
-                teams[side.team].events.append(_match_event(rec, is_home, slugs, names))
+                teams[side.team].events.append(_match_event(rec, is_home, slugs, names, logo_urls))
     for adj in res.adjustments:
         if adj.season not in window or adj.team not in teams or adj.kind == "seed":
             continue
@@ -163,8 +174,10 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         tier = data.tiers[last_season][t]
         # Inactive clubs show the rating they left with: later anchor shifts move them silently.
         r = res.ratings[t] if t in rank else tm.events[-1]["ra"]
-        summaries.append(_summary(tm, r, last_season, tier, groups, rank, league_rank,
-                                  cutoff, withdrawn.get(t)))  # fmt: skip
+        summary = _summary(tm, r, last_season, tier, groups, rank, league_rank, cutoff,
+                           withdrawn.get(t))  # fmt: skip
+        summary["logo"] = logo_urls.get(tm.slug)
+        summaries.append(summary)
 
     leagues = []
     for tier in (1, 2, 3, 4):
@@ -209,6 +222,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     }
     return {
         "meta": meta, "teams": summaries, "leagues": leagues, "details": teams, "seasons": seasons,
+        "logos": logos,
     }  # fmt: skip
 
 
@@ -254,3 +268,13 @@ def write(out_dir: Path, built: dict) -> int:
         detail = {**summaries[tm.slug], "seasons": built["seasons"][tm.id], "events": tm.events}
         dump(out_dir / "teams" / f"{tm.slug}.json", detail)
     return len(built["details"])
+
+
+def write_logos(out_dir: Path, built: dict) -> int:
+    """Copy the cached logos into the website (``web/public/logos/<slug>.<ext>``)."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for old in out_dir.iterdir():
+        old.unlink()
+    for slug, src in built["logos"].items():
+        shutil.copyfile(src, out_dir / f"{slug}{src.suffix}")
+    return len(built["logos"])

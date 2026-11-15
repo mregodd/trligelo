@@ -98,15 +98,33 @@ class PoliteClient:
         if self.offline:
             raise MissingPage(url)
 
-        text = self._download(url)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(".tmp")
-        tmp.write_bytes(gzip.compress(text.encode("utf-8")))
-        tmp.replace(path)
-        self.stats["downloaded"] += 1
+        response = self._download(url, lambda body: b"</html>" in body[-2000:].lower())
+        charset = response.charset_encoding or "windows-1254"
+        text = response.content.decode(charset, errors="replace")
+        self._store(path, gzip.compress(text.encode("utf-8")))
         return text
 
-    def _download(self, url: str) -> str:
+    def fetch_bytes(self, url: str, key: Path) -> bytes:
+        """Return ``url`` (an image) as bytes, cached unchanged under ``cache_dir / key``."""
+        path = self.cache_dir / key
+        if path.exists():
+            self.stats["cache"] += 1
+            return path.read_bytes()
+        if self.offline:
+            raise MissingPage(url)
+        body = self._download(url, bool).content
+        self._store(path, body)
+        return body
+
+    def _store(self, path: Path, body: bytes) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(".tmp")
+        tmp.write_bytes(body)
+        tmp.replace(path)
+        self.stats["downloaded"] += 1
+
+    def _download(self, url: str, complete) -> httpx.Response:
+        """GET with retries; ``complete(body)`` tells a whole response from a cut one."""
         for attempt, delay in enumerate((*RETRY_DELAYS, None), start=1):
             self._wait_turn()
             try:
@@ -114,9 +132,8 @@ class PoliteClient:
             except httpx.TransportError as exc:
                 problem = f"{type(exc).__name__}: {exc}"
             else:
-                if response.status_code == 200 and b"</html>" in response.content[-2000:].lower():
-                    charset = response.charset_encoding or "windows-1254"
-                    return response.content.decode(charset, errors="replace")
+                if response.status_code == 200 and complete(response.content):
+                    return response
                 if response.status_code < 500 and response.status_code not in (200, 429):
                     response.raise_for_status()
                 problem = f"HTTP {response.status_code}"

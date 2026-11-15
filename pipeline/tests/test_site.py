@@ -6,6 +6,7 @@ from tlelo.elo.data import Dataset, Game, Side
 from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
 from tlelo.site.export import build, load_withdrawals
+from tlelo.site.logos import logo_url
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
 
@@ -83,3 +84,12 @@ def test_withdrawal_is_a_trailing_run_of_lost_forfeits(tmp_path):
     path = tmp_path / "2026-27.csv"
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     assert load_withdrawals(path) == {9: date(2026, 9, 13)}
+
+
+def test_logo_url_from_a_club_page():
+    page = (
+        '<img id="ctl00_MPane_m_28_190_ctnr_m_28_190_dtKulupBilgisi_ad" '
+        r'src="https://fys.tff.org/TFFUploadFolder/KulupLogolari\000158_120x120.png" />'
+    )
+    assert logo_url(page) == "https://fys.tff.org/TFFUploadFolder/KulupLogolari/000158_120x120.png"
+    assert logo_url("<html><img src='/x.png'></html>") is None

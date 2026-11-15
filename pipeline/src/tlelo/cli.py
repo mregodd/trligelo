@@ -10,7 +10,8 @@ Commands:
     europe-check  list unresolved clubs, missing coefficients and incomplete ties
     elo       compute the ratings (model v1.0) into data/ratings/
     backtest  recompute the backtest report (docs/backtest.md)
-    site      write the website's JSON data (web/src/data/)
+    site      write the website's JSON data (web/src/data/) and copy the club logos
+    logos     download the logos of the site's clubs from their TFF pages into the cache
 """
 
 from __future__ import annotations
@@ -256,13 +257,31 @@ def cmd_site(args: argparse.Namespace) -> int:
     from tlelo.elo.data import load_dataset
     from tlelo.elo.fit import run_model
     from tlelo.elo.params import V1
-    from tlelo.site.export import build, write
+    from tlelo.site.export import build, write, write_logos
 
     data = load_dataset(paths.data_dir())
     built = build(run_model(data, V1), data, paths.data_dir())
     out = paths.repo_root() / "web" / "src" / "data"
     n = write(out, built)
-    log.info("wrote %s: %d clubs (%d active)", out, n, built["meta"]["activeTeams"])
+    logos = write_logos(paths.repo_root() / "web" / "public" / "logos", built)
+    active = built["meta"]["activeTeams"]
+    log.info("wrote %s: %d clubs (%d active), %d logos", out, n, active, logos)
+    return 0
+
+
+def cmd_logos(args: argparse.Namespace) -> int:
+    from tlelo.elo.data import load_dataset
+    from tlelo.http import PoliteClient
+    from tlelo.site.export import visible_teams
+    from tlelo.site.logos import fetch_logos
+    from tlelo.site.names import load_masked
+
+    data = load_dataset(paths.data_dir())
+    masked = load_masked(paths.data_dir() / "sources" / "team_display_names.csv")
+    teams = [t for t in visible_teams(data) if t not in masked]
+    with PoliteClient(paths.raw_cache_dir(), min_interval=args.interval) as client:
+        got = fetch_logos(client, teams)
+        log.info("logos: %d of %d clubs (%s)", len(got), len(teams), dict(client.stats))
     return 0
 
 
@@ -321,6 +340,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("elo", help="compute the ratings into data/ratings/").set_defaults(func=cmd_elo)
     sub.add_parser("backtest", help="write docs/backtest.md").set_defaults(func=cmd_backtest)
     sub.add_parser("site", help="write web/src/data/*.json").set_defaults(func=cmd_site)
+    p = sub.add_parser("logos", help="download the site's club logos from TFF into the cache")
+    p.add_argument("--interval", type=float, default=2.0, help="seconds between requests")
+    p.set_defaults(func=cmd_logos)
 
     args = parser.parse_args(argv)
     handlers: list[logging.Handler] = [logging.StreamHandler(sys.stderr)]

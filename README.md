@@ -14,5 +14,6 @@ Veri katmanı ve Elo motoru hazır (model v1.0). 2016-17'den bugüne yurt içi v
 ## Veri kaynakları
 
 - Yurt içi maç sonuçları: [Türkiye Futbol Federasyonu (tff.org)](https://www.tff.org). TFF kullanım şartları gereği kaynak gösterilerek ve ticari olmayan amaçla kullanılır.
+- Kulüp logoları: kulüplerin TFF sayfaları. Logolar kulüplerin markasıdır; repoda yer almaz, site derlenirken indirilen önbellekten kopyalanır ve bu reponun lisansına girmez.
 - Avrupa kupası maç sonuçları ve UEFA kulüp/ülke katsayıları: [Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League) (İngilizce) turnuva sayfaları, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - Avrupa maçlarının çapraz doğrulaması: [openfootball](https://github.com/openfootball/champions-league) (CC0)

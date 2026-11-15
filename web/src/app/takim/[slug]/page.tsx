@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { ClubLogo } from "@/components/ClubLogo";
 import { Ruler } from "@/components/Ruler";
 import { TeamTimeline } from "@/components/TeamTimeline";
 import { getMeta, getTeam, getTeams } from "@/lib/data";
@@ -41,7 +42,10 @@ export default async function TeamPage({ params }: Params) {
         <div className="wrap">
           <div className={styles.top}>
             <div>
-              <h1>{team.name}</h1>
+              <div className={styles.title}>
+                <ClubLogo src={team.logo} size={56} />
+                <h1>{team.name}</h1>
+              </div>
               <p className={styles.where}>
                 {team.active ? (
                   <>

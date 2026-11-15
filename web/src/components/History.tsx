@@ -7,6 +7,7 @@ import { dateLong, dateShort, delta, num, rating } from "@/lib/format";
 import { ADJUSTMENTS, COMPETITIONS, competitionLabel, groupName, leagueName } from "@/lib/labels";
 import type { AdjustmentEvent, MatchEvent, TeamEvent, TeamSeason } from "@/lib/types";
 
+import { ClubLogo } from "./ClubLogo";
 import styles from "./History.module.css";
 
 const SEASON_START = new Set([
@@ -115,7 +116,7 @@ function MatchRow({ team, m }: { team: string; m: MatchEvent }) {
             <span className={styles.comp}>{comp}</span>
           </span>
           <span className={styles.opp}>
-            {m.opp.name}
+            <ClubLogo src={m.opp.logo ?? null} size={16} keepSpace /> {m.opp.name}
             {venue && <span className={styles.venue}>{venue}</span>}
           </span>
           <span className={`num ${styles.score}`}>

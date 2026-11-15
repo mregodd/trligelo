@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { ClubLogo } from "@/components/ClubLogo";
 import { Form } from "@/components/Form";
 import { Ruler } from "@/components/Ruler";
 import { getLeagues, getMeta, getTeamMap, getTeams } from "@/lib/data";
@@ -92,6 +93,7 @@ export default async function LeaguePage({ params }: Params) {
                     <tr key={s}>
                       <td className="num">{i + 1}</td>
                       <th scope="row" className={table.club}>
+                        <ClubLogo src={t.logo} keepSpace />
                         <a href={`/takim/${s}/`}>{t.name}</a>
                       </th>
                       <td className={`num ${table.rating}`}>{rating(t.rating)}</td>

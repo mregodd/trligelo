@@ -26,6 +26,7 @@ export interface TeamSummary {
   official: string; // "" when the club is shown by its display name only
   active: boolean;
   withdrawn: string | null; // date it left the league this season (forfeits from then on)
+  logo: string | null; // "/logos/<slug>.png", from the club's TFF page
   league: LeagueCode;
   group: string | null;
   lastSeason: string;
@@ -43,6 +44,7 @@ export interface Opponent {
   kind: "pro" | "amateur" | "foreign";
   name: string;
   slug?: string | null;
+  logo?: string | null;
   coef?: number | null;
 }
 

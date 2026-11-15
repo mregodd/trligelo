@@ -6,6 +6,7 @@ import { delta, rating } from "@/lib/format";
 import { groupName, LEAGUES, leagueName } from "@/lib/labels";
 import type { LeagueCode, TeamSummary } from "@/lib/types";
 
+import { ClubLogo } from "./ClubLogo";
 import { Form } from "./Form";
 import { LeagueKey } from "./LeagueKey";
 import { Ruler } from "./Ruler";
@@ -116,6 +117,7 @@ export function Standings({ teams, rulerLabel, aside, heading }: Props) {
                 >
                   <td className="num">{t.rank ?? "–"}</td>
                   <th scope="row" className={styles.club}>
+                    <ClubLogo src={t.logo} keepSpace />
                     <a href={`/takim/${t.slug}/`}>{t.name}</a>
                     <span className={styles.sub}>
                       <LeagueKey code={t.league} />

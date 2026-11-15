@@ -116,6 +116,17 @@
 .club a {
   text-decoration: none;
 }
+/* The logo hangs in the cell's left padding, so a name that wraps and the line under it
+   both start where the name does. */
+.table .club {
+  position: relative;
+  padding-left: 36px;
+}
+.club > :first-child {
+  position: absolute;
+  left: 8px;
+  top: 9px;
+}
 .club a:hover {
   text-decoration: underline;
 }

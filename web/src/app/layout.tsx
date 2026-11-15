@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {meta.model}. <a href="/metodoloji/">Puanlar nasıl hesaplanıyor?</a>
             </p>
             <p>
-              Yurt içi maç sonuçları{" "}
+              Yurt içi maç sonuçları ve kulüp logoları{" "}
               <a href="https://www.tff.org" rel="noopener">
                 Türkiye Futbol Federasyonu
               </a>

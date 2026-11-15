@@ -20,6 +20,15 @@
 .top h1 {
   font-size: clamp(1.875rem, 5vw, 3rem);
 }
+.title {
+  --logo-tile: #f2f5f4; /* the band is dark in both schemes */
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.title img {
+  padding: 4px;
+}
 .where {
   margin: 6px 0 0;
   color: var(--band-ink-2);
