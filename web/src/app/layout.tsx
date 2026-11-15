@@ -60,22 +60,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className={`wrap ${styles.footerGrid}`}>
             <p>
               Puanlar son olarak {dateLong(meta.lastMatch)} tarihli maçlara göre hesaplandı. Model{" "}
-              {meta.model}. <a href="/metodoloji/">Puanlar nasıl hesaplanıyor?</a>
+              {meta.model}.
             </p>
-            <p>
-              Yurt içi maç sonuçları ve kulüp logoları{" "}
-              <a href="https://www.tff.org" rel="noopener">
-                Türkiye Futbol Federasyonu
-              </a>
-              , Avrupa maçları ve UEFA katsayıları{" "}
-              <a href="https://en.wikipedia.org" rel="noopener">
-                Wikipedia
-              </a>{" "}
-              (CC BY-SA 4.0) kaynaklıdır. Ticari olmayan bir projedir: reklam ve üyelik yok.
-            </p>
-            <p>
-              Kod ve veri açık: <a href={REPO}>GitHub</a>
-            </p>
+            <nav aria-label="Site bilgileri">
+              <ul className={styles.footerLinks}>
+                <li>
+                  <a href="/metodoloji/">Puanlar nasıl hesaplanıyor?</a>
+                </li>
+                <li>
+                  <a href="/hakkinda/">Hakkında</a>
+                </li>
+                <li>
+                  <a href="/kaynaklar/">Kaynaklar</a>
+                </li>
+                <li>
+                  <a href="/gizlilik/">Gizlilik</a>
+                </li>
+                <li>
+                  <a href={REPO}>GitHub</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </footer>
       </body>

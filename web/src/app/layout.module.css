@@ -43,9 +43,32 @@
   max-width: 60ch;
 }
 
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footerLinks a {
+  display: block;
+  padding: 5px 12px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.footerLinks a:hover {
+  border-color: var(--ink-3);
+  color: var(--ink);
+}
+
 @media (min-width: 900px) {
   .footerGrid {
-    grid-template-columns: 1fr 1.4fr auto;
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 }
 
