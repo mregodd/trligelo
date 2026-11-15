@@ -1,0 +1,64 @@
+.header {
+  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  background: var(--band);
+  color: var(--band-ink);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 24px;
+  padding-block: 14px 10px;
+}
+
+.wordmark {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--band-ink);
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding-block: 28px 40px;
+  color: var(--ink-2);
+  font-size: 0.875rem;
+}
+
+.footerGrid {
+  display: grid;
+  gap: 8px 32px;
+}
+.footerGrid p {
+  margin: 0;
+  max-width: 60ch;
+}
+
+@media (min-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1.4fr auto;
+  }
+}
+
+.skip {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  padding: 8px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: var(--radius);
+  z-index: 10;
+}
+.skip:focus {
+  top: 8px;
+}

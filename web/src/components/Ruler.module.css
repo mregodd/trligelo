@@ -1,0 +1,164 @@
+.figure {
+  margin: 0;
+  --label-w: 64px;
+  --lane-h: 30px;
+  --scale-h: 26px;
+  --readout-h: 34px;
+}
+@media (min-width: 720px) {
+  .figure {
+    --label-w: 84px;
+    --lane-h: 34px;
+  }
+}
+
+.ruler {
+  position: relative;
+  padding-bottom: var(--readout-h);
+  color: var(--band-ink);
+  user-select: none;
+}
+
+/* Scale: ticks every 50 points, numbers every 100 (every 200 on narrow screens). */
+.scale {
+  position: relative;
+  height: var(--scale-h);
+  margin-left: var(--label-w);
+  border-bottom: 1px solid var(--band-ink-3); /* the ruler edge */
+}
+.major,
+.minor {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  background: var(--band-ink-3);
+}
+.major {
+  height: 9px;
+  background: var(--band-ink);
+}
+.minor {
+  height: 5px;
+  background: var(--band-ink-3);
+}
+.tickLabel {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--band-ink-2);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 599px) {
+  .odd {
+    display: none;
+  }
+}
+
+.lane {
+  display: grid;
+  grid-template-columns: var(--label-w) 1fr;
+  align-items: center;
+  height: var(--lane-h);
+  border-top: 1px solid var(--band-rule);
+}
+.lanes {
+  border-bottom: 1px solid var(--band-rule);
+}
+
+.laneLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--band-ink-2);
+  white-space: nowrap;
+}
+@media (min-width: 720px) {
+  .laneLabel {
+    font-size: 0.875rem;
+  }
+}
+
+.track {
+  position: relative;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: pan-y;
+}
+
+.mark {
+  position: absolute;
+  top: 28%;
+  height: 44%;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 1px;
+}
+.mark[data-lit] {
+  top: 10%;
+  height: 80%;
+  width: 3px;
+  margin-left: -1.5px;
+  background: var(--band-ink) !important;
+  box-shadow: 0 0 0 2px var(--band);
+  z-index: 2;
+}
+
+.lane[data-dim] .mark:not([data-lit]) {
+  opacity: 0.3;
+}
+.lane[data-dim] .laneLabel {
+  color: var(--band-ink-3);
+}
+
+/* Readout under the lanes, aligned with the club's position. */
+.overlay {
+  position: absolute;
+  left: var(--label-w);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+.guide,
+.tip {
+  transition: left 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.guide {
+  position: absolute;
+  top: var(--scale-h);
+  bottom: var(--readout-h);
+  width: 1px;
+  background: var(--band-ink-3);
+  opacity: 0.6;
+}
+.tip {
+  position: absolute;
+  bottom: 6px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 0.9375rem;
+  pointer-events: auto;
+}
+.tip[data-edge="end"] {
+  transform: translateX(-100%);
+}
+.tip[data-edge="start"] {
+  transform: none;
+}
+.tip strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.tip a {
+  color: var(--band-ink-2);
+  text-decoration: none;
+}
+.tip a:hover {
+  color: var(--band-ink);
+  text-decoration: underline;
+}

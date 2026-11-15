@@ -1,0 +1,214 @@
+.band {
+  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  background: var(--band);
+  color: var(--band-ink);
+  padding-block: 20px 8px;
+}
+
+.layout {
+  display: grid;
+  gap: 32px;
+  padding-top: 24px;
+}
+@media (min-width: 1000px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 48px;
+  }
+  .main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .aside {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.main {
+  min-width: 0;
+}
+
+/* One filter row above the table it scopes. */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.tabs button {
+  font: inherit;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.tabs button:hover {
+  color: var(--ink);
+  border-color: var(--ink-3);
+}
+.tabs button[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--surface);
+}
+
+.search input {
+  font: inherit;
+  width: min(240px, 100%);
+  padding: 6px 10px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+}
+.search input::placeholder {
+  color: var(--ink-3);
+}
+.search {
+  flex: 1 1 160px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table {
+  background: var(--surface);
+  border-top: 2px solid var(--ink);
+}
+.table th,
+.table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: baseline;
+}
+.table thead th {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-3);
+  padding-block: 8px;
+}
+.table thead th:global(.num) {
+  text-align: right;
+}
+.table tbody tr[data-lit] {
+  background: var(--hover);
+}
+.table tbody tr[data-inactive] {
+  color: var(--ink-3);
+}
+
+.club {
+  font-weight: 500;
+  width: 100%;
+}
+.club a {
+  text-decoration: none;
+}
+.club a:hover {
+  text-decoration: underline;
+}
+.sub {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.rating {
+  font-weight: 600;
+}
+
+.wideOnly,
+.formCol {
+  display: none;
+}
+@media (min-width: 720px) {
+  .wideOnly {
+    display: table-cell;
+    white-space: nowrap;
+  }
+  .sub {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  .formCol {
+    display: table-cell;
+    white-space: nowrap;
+  }
+}
+
+.empty {
+  padding: 24px 8px;
+  color: var(--ink-2);
+}
+.empty button,
+.toggle input {
+  font: inherit;
+}
+.empty button {
+  border: 0;
+  background: none;
+  color: var(--ink);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+.toggle input {
+  accent-color: var(--ink);
+  width: 16px;
+  height: 16px;
+}
+
+.aside {
+  min-width: 0;
+}
+
+/* Phones: league tabs scroll sideways, search takes the full width. */
+@media (max-width: 719px) {
+  .controls {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs button {
+    white-space: nowrap;
+  }
+  .search {
+    flex: none;
+  }
+  .search input {
+    width: 100%;
+  }
+}
+
+/* Muted labels keep 4.5:1 on the lit-row tint. */
+.table tbody tr[data-lit] .sub {
+  color: var(--ink-2);
+}

@@ -1,0 +1,242 @@
+.history {
+  display: grid;
+  gap: 40px;
+  /* A reading width: name, score and change stay close on wide screens. */
+  max-width: 820px;
+}
+
+.season h2 {
+  font-size: 1.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 10px;
+}
+.seasonMeta {
+  font-family: var(--font-text), sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+/* Row grid shared by the column header, match rows and adjustment rows. */
+.head,
+.row > summary,
+.adjust {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) 4.25rem 4rem 3.25rem;
+  column-gap: 10px;
+  align-items: baseline;
+  padding: 8px 8px 8px 28px; /* room for the disclosure mark */
+}
+@media (min-width: 720px) {
+  .head,
+  .row > summary,
+  .adjust {
+    grid-template-columns: 6.5rem minmax(0, 1fr) 6rem 5rem 4rem;
+    column-gap: 16px;
+  }
+}
+
+.head {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  border-bottom: 2px solid var(--ink);
+  padding-block: 6px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+}
+.list > li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.row > summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+.chev {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  color: var(--ink-3);
+  transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.row[open] > summary .chev {
+  transform: rotate(90deg);
+  color: var(--ink);
+}
+.row > summary::-webkit-details-marker {
+  display: none;
+}
+.row > summary:hover {
+  background: var(--hover);
+}
+.row[open] > summary {
+  background: var(--hover);
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  line-height: 1.3;
+}
+@media (min-width: 720px) {
+  .date {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+.comp {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.opp {
+  font-weight: 500;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.opp a {
+  text-decoration: none;
+}
+.opp a:hover {
+  text-decoration: underline;
+}
+.venue,
+.why {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.score small {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.delta {
+  font-weight: 600;
+}
+.after {
+  color: var(--ink-2);
+}
+
+.adjust {
+  color: var(--ink-2);
+}
+.startRow > summary .date,
+.startRow > summary .opp {
+  color: var(--ink-2);
+  font-weight: 400;
+}
+
+/* The calculation of one match. */
+.calc {
+  padding: 4px 8px 16px;
+  font-size: 0.9375rem;
+  max-width: 76ch;
+}
+@media (min-width: 720px) {
+  .calc {
+    padding-left: calc(6.5rem + 44px);
+  }
+}
+.calcTitle {
+  margin: 6px 0 10px;
+  color: var(--ink-2);
+}
+.calcLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: -4px 0 12px;
+  font-size: 0.875rem;
+}
+.permalink {
+  color: var(--ink-3);
+}
+.row {
+  scroll-margin-top: 12px;
+}
+.calc dl {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.calc dl > div {
+  display: grid;
+  gap: 2px 16px;
+}
+@media (min-width: 720px) {
+  .calc dl > div {
+    grid-template-columns: 9.5rem 1fr;
+  }
+}
+.calc dt {
+  color: var(--ink-3);
+  font-size: 0.875rem;
+}
+.calc dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Phones: two lines per match so the opponent's name keeps its width.
+   Line 1: opponent, score, change. Line 2: date and competition, rating after. */
+@media (max-width: 719px) {
+  .head {
+    display: none;
+  }
+  .row > summary,
+  .adjust {
+    padding-left: 28px;
+    grid-template-columns: minmax(0, 1fr) auto 3.75rem;
+    grid-template-areas:
+      "opp score delta"
+      "date date after";
+    row-gap: 2px;
+    column-gap: 12px;
+    padding-block: 10px;
+  }
+  .opp {
+    grid-area: opp;
+  }
+  .score {
+    grid-area: score;
+  }
+  .delta {
+    grid-area: delta;
+  }
+  .date {
+    grid-area: date;
+    flex-direction: row;
+    gap: 6px;
+  }
+  .after {
+    grid-area: after;
+    font-size: 0.875rem;
+    color: var(--ink-3);
+  }
+  .blank {
+    display: none;
+  }
+}
+
+/* Muted labels keep 4.5:1 on the lit / open row tint. */
+.row > summary:hover .comp,
+.row > summary:hover .venue,
+.row[open] > summary .comp,
+.row[open] > summary .venue {
+  color: var(--ink-2);
+}

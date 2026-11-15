@@ -1,0 +1,20 @@
+.key {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: 0.05em;
+}
+.key[data-league="SL"] {
+  background: var(--sl);
+}
+.key[data-league="1L"] {
+  background: var(--l1);
+}
+.key[data-league="2L"] {
+  background: var(--l2);
+}
+.key[data-league="3L"] {
+  background: var(--l3);
+}

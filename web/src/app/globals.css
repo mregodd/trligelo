@@ -1,0 +1,181 @@
+/* Tokens. Values checked for contrast (text >= 4.5:1) and the league ramps with the
+   dataviz palette validator (ordinal: one hue, monotone lightness, light end clears the
+   surface). Club colours are deliberately absent. */
+:root {
+  --paper: #f2f5f4;
+  --surface: #ffffff;
+  --ink: #0f2b30;
+  --ink-2: #3f5a5e;
+  --ink-3: #5a7175;
+  --rule: #d3dedc;
+  --rule-strong: #b7c7c4;
+  --hover: #e8efed;
+  --gain: #17734a;
+  --loss: #a33e2d;
+  --focus: #1b666c;
+
+  /* The measuring band (header and ruler). In the dark scheme only the band ground
+     deepens (#0a2b30) so it still reads as a band above the darker page. */
+  --band: #0d3a40;
+  --band-ink: #eaf4f2;
+  --band-ink-2: #a9c6c2;
+  --band-ink-3: #8db0ab;
+  --band-rule: #2a5a60;
+
+  /* Leagues: ordinal ramp, top tier darkest on light surfaces... */
+  --sl: #0b4049;
+  --l1: #1b666c;
+  --l2: #3c8a86;
+  --l3: #6aa9a2;
+  /* ...and lightest on the dark band (anchor flips on dark). */
+  --band-sl: #d6f2ec;
+  --band-l1: #a3dbd2;
+  --band-l2: #78c0b8;
+  --band-l3: #53a39c;
+
+  --radius: 6px;
+  --gutter: 16px;
+  --measure: 70ch;
+  --wide: 1200px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0a1c1f;
+    --surface: #10262a;
+    --ink: #e4efed;
+    --ink-2: #a9c2bf;
+    --ink-3: #8ba5a2;
+    --rule: #22403f;
+    --rule-strong: #34585a;
+    --hover: #16323a;
+    --gain: #55c38f;
+    --loss: #f0907c;
+    --focus: #78c0b8;
+    --band: #0a2b30;
+    --band-rule: #22494f;
+    --sl: #d6f2ec;
+    --l1: #a3dbd2;
+    --l2: #78c0b8;
+    --l3: #53a39c;
+    color-scheme: dark;
+  }
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+@media (min-width: 1100px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--rule-strong) var(--paper);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-kerning: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-text), sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wide);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.gain {
+  color: var(--gain);
+}
+.loss {
+  color: var(--loss);
+}
+.muted {
+  color: var(--ink-3);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

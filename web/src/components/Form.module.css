@@ -1,0 +1,29 @@
+.form {
+  display: inline-flex;
+  gap: 3px;
+}
+/* Results in ink tones, lighter than the rating figure beside them (green and brick are
+   reserved for rating changes): G a pale tint with ink letter, B outlined, M dashed and
+   lighter. The letter carries the meaning. */
+.cell {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border: 1px solid var(--rule-strong);
+  color: var(--ink-2);
+}
+.cell[data-r="G"] {
+  background: var(--hover);
+  border-color: var(--rule-strong);
+  color: var(--ink);
+}
+.cell[data-r="M"] {
+  border-style: dashed;
+  color: var(--ink-3);
+  font-weight: 500;
+}

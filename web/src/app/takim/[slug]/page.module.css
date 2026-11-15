@@ -1,0 +1,88 @@
+.band {
+  --focus: var(--band-sl); /* focus rings stay visible on the petrol band */
+  background: var(--band);
+  color: var(--band-ink);
+  padding-block: 20px 8px;
+}
+
+.top {
+  display: grid;
+  gap: 16px 32px;
+  margin-bottom: 16px;
+}
+@media (min-width: 900px) {
+  .top {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+}
+
+.top h1 {
+  font-size: clamp(1.875rem, 5vw, 3rem);
+}
+.where {
+  margin: 6px 0 0;
+  color: var(--band-ink-2);
+  max-width: 60ch;
+}
+.where a {
+  color: var(--band-ink);
+}
+.official {
+  margin: 4px 0 0;
+  font-size: 0.8125rem;
+  color: var(--band-ink-3);
+}
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px 28px;
+  margin: 0;
+}
+.figures dt {
+  font-size: 0.8125rem;
+  color: var(--band-ink-2);
+}
+.figures dd {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.figures dd span {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--band-ink-2);
+}
+.hero dd {
+  font-size: 3.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+
+.last dd a {
+  color: var(--band-ink);
+  text-decoration-color: var(--band-ink-3);
+}
+/* Every figure keeps the same note line below its value, so the values share a baseline;
+   only "Son maç" fills it (opponent, score, date). */
+.figures > div::after {
+  content: "";
+  display: block;
+  height: 1.25rem;
+}
+.figures > .last::after {
+  display: none;
+}
+.last dd span {
+  display: block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  white-space: nowrap;
+  color: var(--band-ink-2);
+}
