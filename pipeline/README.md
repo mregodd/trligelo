@@ -30,7 +30,7 @@ uv run ruff check . && uv run ruff format --check .
 | `tlelo/elo/output.py` | `data/ratings/current.csv` and `history.csv` |
 | `tlelo/site/names.py` | Readable club names (legal form dropped, Turkish title case, hand-kept overrides) and URL slugs |
 | `tlelo/site/export.py` | The website's JSON (`web/src/data/`): summaries, leagues, every club's events in the display window; withdrawals; logo copies |
-| `tlelo/site/logos.py` | Club logos from the clubs' TFF pages, cached in `data/raw/tff/` |
+| `tlelo/site/logos.py` | Club logos from the clubs' TFF pages, cached in `data/raw/tff/`; plain light backgrounds made transparent for the site |
 | `tlelo/build.py` | Writes `data/matches/*.csv`, the team tables and `data/europe/*.csv` |
 | `tlelo/validate.py` | Recomputes league tables and compares them with TFF's standings |
 

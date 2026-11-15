@@ -15,7 +15,6 @@ from __future__ import annotations
 
 import csv
 import json
-import shutil
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
@@ -26,7 +25,7 @@ from tlelo.elo.data import Dataset
 from tlelo.elo.engine import RunResult
 from tlelo.elo.fit import OrderedLogit
 from tlelo.elo.params import MODEL_VERSION
-from tlelo.site.logos import logo_path
+from tlelo.site.logos import logo_path, transparent_png
 from tlelo.site.names import clean_name, display_name, load_masked, load_overrides, unique_slugs
 
 DISPLAY_FROM = "2021-22"
@@ -132,7 +131,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     slugs = unique_slugs({t: names[t] for t in visible})
     logos = {slugs[t]: f for t in visible
              if t not in masked and (f := logo_path(data_dir / "raw" / "tff", t))}  # fmt: skip
-    logo_urls = {slug: f"/logos/{slug}{f.suffix}" for slug, f in logos.items()}
+    logo_urls = {slug: f"/logos/{slug}.png" for slug in logos}  # see write_logos
 
     teams = {t: TeamOut(t, slugs[t], names[t], "" if t in masked else data.names[t])
              for t in visible}  # fmt: skip
@@ -277,10 +276,10 @@ def write(out_dir: Path, built: dict) -> int:
 
 
 def write_logos(out_dir: Path, built: dict) -> int:
-    """Copy the cached logos into the website (``web/public/logos/<slug>.<ext>``)."""
+    """The cached logos, background removed, into the website (``web/public/logos/<slug>.png``)."""
     out_dir.mkdir(parents=True, exist_ok=True)
     for old in out_dir.iterdir():
         old.unlink()
     for slug, src in built["logos"].items():
-        shutil.copyfile(src, out_dir / f"{slug}{src.suffix}")
+        transparent_png(src, out_dir / f"{slug}.png")
     return len(built["logos"])

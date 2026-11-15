@@ -12,6 +12,10 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+import numpy as np
+from PIL import Image
+from scipy import ndimage
+
 from tlelo.http import PoliteClient
 
 log = logging.getLogger(__name__)
@@ -42,3 +46,27 @@ def fetch_logos(client: PoliteClient, teams: list[int]) -> dict[int, Path]:
         client.fetch_bytes(url, key)
         out[team] = client.cache_dir / key
     return out
+
+
+def transparent_png(src: Path, dst: Path) -> None:
+    """Save a logo as PNG with its plain light background removed.
+
+    TFF serves most logos as JPEG on white, which shows as a white square on tinted rows and
+    dark grounds. Near-white pixels connected to the image edge become transparent; white
+    inside the crest (not touching the edge) stays. A 2px fringe around the removed area
+    fades with its lightness, so anti-aliased edges leave no light halo.
+    """
+    rgba = np.array(Image.open(src).convert("RGBA"))
+    lightness = rgba[..., :3].min(axis=2).astype(float)
+    spread = rgba[..., :3].max(axis=2).astype(float) - lightness
+    light = (lightness >= 232) & (spread <= 24)
+    labels, _ = ndimage.label(light)
+    edge = np.unique(np.concatenate([labels[0], labels[-1], labels[:, 0], labels[:, -1]]))
+    background = np.isin(labels, edge[edge > 0])
+    fringe = ndimage.binary_dilation(background, iterations=2) & ~background
+    alpha = rgba[..., 3].astype(float)
+    alpha[background] = 0
+    fade = np.clip((255 - lightness) / (255 - 180), 0, 1)  # lighter fringe pixels fade more
+    alpha[fringe] *= fade[fringe]
+    rgba[..., 3] = alpha.round().astype(np.uint8)
+    Image.fromarray(rgba).save(dst, optimize=True)

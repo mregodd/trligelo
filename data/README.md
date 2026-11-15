@@ -90,7 +90,7 @@ uv run tlelo europe-check   # Avrupa verisindeki boşlukları raporlar
 uv run tlelo elo            # puanları hesaplar (model v1.0), ratings/ klasörüne yazar
 uv run tlelo backtest       # docs/backtest.md test raporunu yeniden üretir
 uv run tlelo logos          # sitedeki kulüplerin logolarını TFF'deki kulüp sayfalarından indirir (~12 dakika, bir kez)
-uv run tlelo site           # web sitesinin verisini web/src/data/ klasörüne yazar, logoları web/public/logos/ klasörüne kopyalar
+uv run tlelo site           # web sitesinin verisini web/src/data/ klasörüne yazar, logoları arka planlarını saydam yapıp web/public/logos/ klasörüne koyar
 ```
 
 İlk TFF indirmesi yaklaşık 3–3,5 saat, Wikipedia indirmesi yaklaşık 5 dakika sürer. Sunuculara yük olmamak için istekler arasında 2 saniye beklenir. Wikipedia'da sadece robots.txt'nin izin verdiği makale sayfaları (`/wiki/`) okunur. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.

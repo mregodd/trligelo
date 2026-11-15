@@ -6,7 +6,7 @@ from tlelo.elo.data import Dataset, Game, Side
 from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
 from tlelo.site.export import build, load_withdrawals
-from tlelo.site.logos import logo_url
+from tlelo.site.logos import logo_url, transparent_png
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
 
@@ -93,3 +93,22 @@ def test_logo_url_from_a_club_page():
     )
     assert logo_url(page) == "https://fys.tff.org/TFFUploadFolder/KulupLogolari/000158_120x120.png"
     assert logo_url("<html><img src='/x.png'></html>") is None
+
+
+def test_logo_background_becomes_transparent_but_white_inside_the_crest_stays(tmp_path):
+    from PIL import Image
+
+    img = Image.new("RGB", (40, 40), "white")  # JPEG-style white background
+    for x in range(10, 30):
+        for y in range(10, 30):
+            img.putpixel((x, y), (20, 40, 120))  # the crest
+    for x in range(16, 24):
+        for y in range(16, 24):
+            img.putpixel((x, y), (255, 255, 255))  # white inside the crest
+    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    img.save(src, quality=95)
+    transparent_png(src, dst)
+    out = Image.open(dst)
+    assert out.getpixel((0, 0))[3] == 0  # background gone
+    assert out.getpixel((12, 12))[3] == 255  # crest kept
+    assert out.getpixel((20, 20))[3] == 255  # enclosed white kept
