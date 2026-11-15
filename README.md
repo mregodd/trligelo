@@ -17,3 +17,7 @@ Veri katmanı ve Elo motoru hazır (model v1.0). 2016-17'den bugüne yurt içi v
 - Kulüp logoları: kulüplerin TFF sayfaları. Logolar kulüplerin markasıdır; repoda yer almaz, site derlenirken indirilen önbellekten kopyalanır ve bu reponun lisansına girmez.
 - Avrupa kupası maç sonuçları ve UEFA kulüp/ülke katsayıları: [Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League) (İngilizce) turnuva sayfaları, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - Avrupa maçlarının çapraz doğrulaması: [openfootball](https://github.com/openfootball/champions-league) (CC0)
+
+## Lisans
+
+Kod [MIT](LICENSE) lisanslıdır. Veriler kaynaklarının koşullarına tabidir (TFF verisi ticari olmayan amaçla ve kaynak gösterilerek, Wikipedia'dan türeyen veri CC BY-SA 4.0); ayrıntılar [data/README.md](data/README.md#lisans).

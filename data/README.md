@@ -94,3 +94,16 @@ uv run tlelo site           # web sitesinin verisini web/src/data/ klasörüne y
 ```
 
 İlk TFF indirmesi yaklaşık 3–3,5 saat, Wikipedia indirmesi yaklaşık 5 dakika sürer. Sunuculara yük olmamak için istekler arasında 2 saniye beklenir. Wikipedia'da sadece robots.txt'nin izin verdiği makale sayfaları (`/wiki/`) okunur. Sonraki çalıştırmalar sadece eksik ya da değişen sayfaları indirir.
+
+## Lisans
+
+Bu klasördeki veriler kodun MIT lisansına girmez; her biri kaynağının koşullarına tabidir:
+
+| Dosyalar | Kaynak | Koşullar |
+|---|---|---|
+| `matches/`, `teams.csv`, `team_names.csv`, `team_seasons.csv` | Türkiye Futbol Federasyonu (tff.org) | TFF'nin kullanım şartları: ticari olmayan amaçla, kaynak gösterilerek |
+| `europe/` | İngilizce Wikipedia | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): kaynak gösterilerek, türetilen veri aynı lisansla |
+| `ratings/` | Yukarıdaki iki kaynaktan hesaplanır | İkisinin koşulları birlikte: ticari olmayan amaçla, kaynak gösterilerek, aynı lisansla |
+| `sources/` | Projenin elle tuttuğu eşleştirme ve düzeltmeler | Kodla aynı, MIT |
+
+Kulüp logoları repoda yer almaz; kulüplerin markasıdır. Bu bir hukuk görüşü değildir; koşulların kesin metni kaynaklardadır.
