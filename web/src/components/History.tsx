@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useId, useMemo, useState } from "react";
 
 import { chances, closedDoors, model, regressionText, stakes } from "@/lib/calc";
 import { fmt, result, type Result } from "@/lib/format";
@@ -92,11 +92,11 @@ interface Props {
 export function History({ lang, team, events, seasons }: Props) {
   const t = msg(lang).history;
   const runs = useMemo(() => streaks(events), [events]);
-  // A link like /takim/<club>/#mac-<n> opens that match and its calculation.
+  // A link like /club/<club>/#match-<n> opens that match and its calculation.
   useEffect(() => {
     const openFromHash = () => {
-      const id = window.location.hash.slice(1); // ids are plain ASCII ("mac-123"): no decoding
-      const el = id.startsWith("mac-") ? document.getElementById(id) : null;
+      const id = window.location.hash.slice(1); // ids are plain ASCII ("match-123"): no decoding
+      const el = id.startsWith("match-") ? document.getElementById(id) : null;
       if (el instanceof HTMLDetailsElement) {
         el.open = true;
         el.scrollIntoView({ block: "start" });
@@ -167,7 +167,7 @@ function MatchRow({ lang, team, m, streak }: RowProps) {
   return (
     <li>
       <details
-        id={`mac-${m.seq}`}
+        id={`match-${m.seq}`}
         className={styles.row}
         onToggle={(e) => setOpen(e.currentTarget.open)}
       >
@@ -234,7 +234,7 @@ function MatchCalc({ lang, team, m, streak }: RowProps) {
   const r = result(m.s);
   const fav = m.e >= 0.55 ? 1 : m.e <= 0.45 ? -1 : 0; // favourite, underdog, or even
   const had = r === "G" ? c.win : r === "M" ? c.loss : c.draw; // the result's chance before
-  const opp = m.opp.slug ? <a href={href(lang, `/takim/${m.opp.slug}/`)}>{m.opp.name}</a> : m.opp.name;
+  const opp = m.opp.slug ? <a href={href(lang, `/club/${m.opp.slug}/`)}>{m.opp.name}</a> : m.opp.name;
   let score = `${m.gf}-${m.ga}`;
   if (m.g90) score += t.extraTime(m.g90[0], m.g90[1]);
   if (m.pens) score += t.shootout(m.pens[0], m.pens[1]);
@@ -260,7 +260,7 @@ function MatchCalc({ lang, team, m, streak }: RowProps) {
         {m.opp.kind === "foreign" && t.foreign}
         {m.opp.kind === "amateur" && t.amateur}
       </p>
-      <p>
+      <p className={styles.withHint}>
         {m.venue === "n"
           ? t.neutral
           : fill(m.venue === "h" ? t.hostTeam : t.hostOpp, {
@@ -268,6 +268,7 @@ function MatchCalc({ lang, team, m, streak }: RowProps) {
               opp,
               with: pct(c.win),
               without: pct(c.neutralWin),
+              q: <Hint label={t.neutralLabel} text={t.neutralHint} />,
             })}
         {closedDoors(m) && t.closed}
       </p>
@@ -280,6 +281,28 @@ function MatchCalc({ lang, team, m, streak }: RowProps) {
       </p>
       {notes.length > 0 && <p className={styles.notes}>{notes.join(" ")}</p>}
     </div>
+  );
+}
+
+/** A "?" after a term: its meaning shows above the sentence on hover, keyboard focus or tap. */
+function Hint({ label, text }: { label: string; text: string }) {
+  const [open, setOpen] = useState(false);
+  const id = useId();
+  return (
+    <span className={styles.hint} data-open={open || undefined}>
+      <button
+        type="button"
+        aria-label={label}
+        aria-describedby={id}
+        onClick={() => setOpen(!open)}
+        onBlur={() => setOpen(false)}
+      >
+        ?
+      </button>
+      <span id={id} role="tooltip" className={styles.tip}>
+        {text}
+      </span>
+    </span>
   );
 }
 

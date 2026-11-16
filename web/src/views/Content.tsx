@@ -9,8 +9,7 @@ import { CONTACT, REPO, SITE } from "@/lib/site";
 import { msg } from "@/messages";
 
 /** The long pages: title and lead in messages/, the body in content/<lang>/<file>.md. */
-const PAGES = { about: "hakkinda", sources: "kaynaklar", privacy: "gizlilik" } as const;
-export type ContentPage = keyof typeof PAGES;
+export type ContentPage = "about" | "sources" | "privacy";
 
 export function contentMetadata(lang: Lang, page: ContentPage): Metadata {
   const t = msg(lang).pages[page];
@@ -18,11 +17,11 @@ export function contentMetadata(lang: Lang, page: ContentPage): Metadata {
 }
 
 // shortcut: the privacy page describes the launch setup (Cloudflare Pages + Cloudflare Web
-// Analytics, decided for Faz 4); update content/*/gizlilik.md if hosting or statistics change.
+// Analytics, decided for Faz 4); update content/*/privacy.md if hosting or statistics change.
 export function ContentView({ lang, page }: { lang: Lang; page: ContentPage }) {
   const t = msg(lang).pages[page];
   const meta = getMeta();
-  const markdown = fill(readContent(lang, PAGES[page]), {
+  const markdown = fill(readContent(lang, page), {
     site: SITE,
     date: fmt(lang).dateLong(meta.lastMatch),
     model: meta.model,

@@ -7,7 +7,7 @@ from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
 from tlelo.site.export import build, load_withdrawals
 from tlelo.site.fixtures import stakes, upcoming
-from tlelo.site.logos import logo_url, transparent_png
+from tlelo.site.logos import cut_out, fill_square, logo_url
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
 
@@ -106,10 +106,9 @@ def test_logo_background_becomes_transparent_but_white_inside_the_crest_stays(tm
     for x in range(16, 24):
         for y in range(16, 24):
             img.putpixel((x, y), (255, 255, 255))  # white inside the crest
-    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    src = tmp_path / "logo.jpg"
     img.save(src, quality=95)
-    transparent_png(src, dst)
-    out = Image.open(dst)
+    out = Image.fromarray(cut_out(src))
     assert out.getpixel((0, 0))[3] == 0  # background gone
     assert out.getpixel((12, 12))[3] == 255  # crest kept
     assert out.getpixel((20, 20))[3] == 255  # enclosed white kept
@@ -125,10 +124,9 @@ def test_white_inside_a_crest_stays_where_its_outline_has_a_gap(tmp_path):
             gap = x < 11 and 18 <= y < 20  # a 2 px break joins the inside to the background
             if outline and not gap:
                 img.putpixel((x, y), (20, 40, 120))
-    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    src = tmp_path / "logo.jpg"
     img.save(src, quality=95)
-    transparent_png(src, dst)
-    out = Image.open(dst)
+    out = Image.fromarray(cut_out(src))
     assert out.getpixel((0, 0))[3] == 0
     assert out.getpixel((20, 20))[3] == 255
 
@@ -141,10 +139,9 @@ def test_a_black_ground_goes_too_but_black_inside_the_crest_stays(tmp_path):
         for y in range(8, 32):
             if not (11 <= x < 29 and 11 <= y < 29):
                 img.putpixel((x, y), (255, 255, 255))  # a white ring, black inside
-    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    src = tmp_path / "logo.jpg"
     img.save(src, quality=95)
-    transparent_png(src, dst)
-    out = Image.open(dst)
+    out = Image.fromarray(cut_out(src))
     assert out.getpixel((0, 0))[3] == 0
     assert out.getpixel((9, 20))[3] == 255  # the ring
     assert out.getpixel((20, 20))[3] == 255  # black inside the ring
@@ -161,10 +158,9 @@ def test_a_graded_grey_ground_goes_end_to_end(tmp_path):
     for x in range(14, 26):
         for y in range(14, 26):
             img.putpixel((x, y), (20, 40, 120))
-    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    src = tmp_path / "logo.jpg"
     img.save(src, quality=95)
-    transparent_png(src, dst)
-    out = Image.open(dst)
+    out = Image.fromarray(cut_out(src))
     assert out.getpixel((0, 0))[3] == 0
     assert out.getpixel((39, 39))[3] == 0
     assert out.getpixel((20, 20))[3] == 255
@@ -179,10 +175,9 @@ def test_a_logo_that_comes_cut_out_is_kept_as_it_is(tmp_path):
             img.putpixel((x, y), (255, 255, 255, 255))  # white part of the crest at its edge
     for x in range(10, 30):
         img.putpixel((x, 20), (20, 40, 120, 255))
-    src, dst = tmp_path / "logo.png", tmp_path / "out.png"
+    src = tmp_path / "logo.png"
     img.save(src)
-    transparent_png(src, dst)
-    out = Image.open(dst)
+    out = Image.fromarray(cut_out(src))
     assert out.getpixel((0, 0))[3] == 0
     assert out.getpixel((15, 15))[3] == 255
 
@@ -225,3 +220,14 @@ def test_every_european_opponents_association_has_a_country_code():
         used = {r[f"{side}_assoc"] for r in csv.DictReader(fh) for side in ("home", "away")}
     assert used - {"Turkish Football Federation"} - codes.keys() == set()
     assert all(len(c) == 3 and c.isupper() for c in codes.values())
+
+
+def test_a_crest_fills_its_square_whatever_margin_it_came_with():
+    import numpy as np
+
+    img = np.zeros((40, 30, 4), np.uint8)  # not square, wide margins
+    img[5:25, 10:20] = (20, 40, 120, 255)  # a tall 10x20 crest
+    out = fill_square(img)
+    assert out.shape == (20, 20, 4)
+    assert out[10, 10, 3] == 255  # centred
+    assert out[10, 0, 3] == 0 and out[10, 19, 3] == 0  # the sides of a tall crest stay clear

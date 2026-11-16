@@ -23,7 +23,7 @@ function Side({ lang, side, stakes, align }: { lang: Lang; side: FixtureSide; st
   const f = fmt(lang);
   return (
     <div className={styles.side} data-align={align}>
-      <a href={href(lang, `/takim/${side.slug}/`)} className={styles.club}>
+      <a href={href(lang, `/club/${side.slug}/`)} className={styles.club}>
         <ClubLogo src={side.logo} size={24} />
         <span>{side.name}</span>
       </a>

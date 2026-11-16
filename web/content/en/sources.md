@@ -10,7 +10,7 @@ European matches are also checked against [openfootball](https://github.com/open
 
 ## The ratings
 
-The ratings are computed from this data with the [Elo method](/en/metodoloji/). Raw data, ratings and code are on [GitHub]({repo}).
+The ratings are computed from this data with the [Elo method](/en/methodology/). Raw data, ratings and code are on [GitHub]({repo}).
 
 ## Licence
 

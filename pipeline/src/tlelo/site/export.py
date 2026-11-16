@@ -90,7 +90,7 @@ def load_codes(path: Path) -> dict[str, str]:
 
 
 def _match_event(
-    rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict, codes: dict
+    rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict, codes: dict, masked: set
 ) -> dict:
     g = rec.game
     side, other = (g.home, g.away) if is_home else (g.away, g.home)
@@ -101,8 +101,10 @@ def _match_event(
     if other.kind == "pro":
         slug = slugs.get(other.team)
         opp |= {"name": names[other.team], "slug": slug, "logo": logo_urls.get(slug)}
+        if opp["logo"] is None and other.team not in masked:
+            opp["country"] = "TUR"  # no logo: the country stands in, as for foreign clubs
     elif other.kind == "amateur":
-        opp |= {"name": clean_name(other.name)}
+        opp |= {"name": clean_name(other.name), "country": "TUR"}  # amateur clubs: no logos
     else:
         # No logo for foreign clubs (no freely licensed source): the site shows the country.
         opp |= {"name": other.name, "coef": other.coefficient, "country": codes.get(other.assoc)}
@@ -157,7 +159,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         for is_home in (True, False):
             side = rec.game.home if is_home else rec.game.away
             if side.kind == "pro" and side.team in teams:
-                event = _match_event(rec, is_home, slugs, names, logo_urls, codes)
+                event = _match_event(rec, is_home, slugs, names, logo_urls, codes, masked)
                 teams[side.team].events.append(event)
     for adj in res.adjustments:
         if adj.season not in window or adj.team not in teams or adj.kind == "seed":

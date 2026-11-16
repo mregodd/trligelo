@@ -198,6 +198,51 @@
 .calc > p strong {
   font-weight: 600;
 }
+/* A "?" after a term; its explanation spans the sentence above it, so it never runs off
+   a narrow screen. */
+.withHint {
+  position: relative;
+}
+.hint button {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  padding: 0;
+  border: 1px solid var(--ink-3);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink-2);
+  font: 600 0.6875rem/1 var(--font-text), sans-serif;
+  vertical-align: 1px;
+  cursor: help;
+}
+.hint button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.tip {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 6px);
+  z-index: 3;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.hint:hover .tip,
+.hint:focus-within .tip,
+.hint[data-open] .tip {
+  display: block;
+}
+
 .calc > .result {
   margin-top: 14px; /* the result opens the last part of the account */
   font-weight: 600;

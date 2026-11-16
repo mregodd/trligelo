@@ -1,4 +1,4 @@
-{site}, Süper Lig'den 3. Lig'e Türkiye'deki bütün profesyonel futbol kulüplerini tek bir Elo ölçeğinde sıralar. Her maçtan sonra puanın neden ve ne kadar değiştiği, kulüp sayfalarında maç maç anlatılır. Yöntemin tamamı [Puanlar nasıl hesaplanıyor?](/metodoloji/) sayfasında.
+{site}, Süper Lig'den 3. Lig'e Türkiye'deki bütün profesyonel futbol kulüplerini tek bir Elo ölçeğinde sıralar. Her maçtan sonra puanın neden ve ne kadar değiştiği, kulüp sayfalarında maç maç anlatılır. Yöntemin tamamı [Puanlar nasıl hesaplanıyor?](/methodology/) sayfasında.
 
 Puanlar son olarak {date} tarihli maçlara göre hesaplandı (model {model}).
 
@@ -8,7 +8,7 @@ Siteyi Egemen Derbedek geliştiriyor. Ticari olmayan, kişisel bir projedir: rek
 
 ## Kod ve veri
 
-Verileri toplayan ve puanları hesaplayan kod, ham veriler ve bu sitenin kodu [GitHub'da]({repo}) herkese açık. Verilerin nereden geldiği [Kaynaklar](/kaynaklar/) sayfasında.
+Verileri toplayan ve puanları hesaplayan kod, ham veriler ve bu sitenin kodu [GitHub'da]({repo}) herkese açık. Verilerin nereden geldiği [Kaynaklar](/sources/) sayfasında.
 
 ## İletişim
 

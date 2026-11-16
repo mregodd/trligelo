@@ -48,7 +48,7 @@ export function TeamView({ lang, slug }: { lang: Lang; slug: string }) {
               <p className={styles.where}>
                 {team.active ? (
                   <>
-                    <a href={href(lang, `/lig/${leagueSlug(team.league)}/`)}>{leagueName(team.league)}</a>
+                    <a href={href(lang, `/league/${leagueSlug(team.league)}/`)}>{leagueName(team.league)}</a>
                     {team.group ? `, ${groupName(team.group, lang)}` : ""}
                   </>
                 ) : team.withdrawn ? (
@@ -87,7 +87,7 @@ export function TeamView({ lang, slug }: { lang: Lang; slug: string }) {
                 <div className={styles.last}>
                   <dt>{t.last}</dt>
                   <dd>
-                    <a href={`#mac-${last.seq}`}>{f.delta(last.d)}</a>
+                    <a href={`#match-${last.seq}`}>{f.delta(last.d)}</a>
                     <span>
                       {last.opp.name} {last.gf}-{last.ga}, {f.dateShort(last.date)}
                     </span>

@@ -52,7 +52,27 @@ _DISK = np.hypot(*np.mgrid[-2:3, -2:3]) <= 2  # closes breaks of up to ~4 px in 
 
 
 def transparent_png(src: Path, dst: Path) -> None:
-    """Save a logo as PNG with its plain light background removed.
+    """Save a logo as a square PNG, its background removed and the crest filling the square."""
+    Image.fromarray(fill_square(cut_out(src))).save(dst, optimize=True)
+
+
+def fill_square(rgba: np.ndarray) -> np.ndarray:
+    """Crop to the crest and centre it on a square: images come with margins of every size
+    (and some are not square), which would leave some crests small in their slot."""
+    ys, xs = np.nonzero(rgba[..., 3] > 16)
+    if len(ys) == 0:
+        return rgba
+    crop = rgba[ys.min() : ys.max() + 1, xs.min() : xs.max() + 1]
+    h, w = crop.shape[:2]
+    side = max(h, w)
+    out = np.zeros((side, side, 4), np.uint8)
+    top, left = (side - h) // 2, (side - w) // 2
+    out[top : top + h, left : left + w] = crop
+    return out
+
+
+def cut_out(src: Path) -> np.ndarray:
+    """A logo as RGBA with its plain background made transparent.
 
     TFF serves most logos as JPEG on white, which shows as a white square on tinted rows and
     dark grounds; a few come on black or on a white-to-grey gradient. Logos that already come
@@ -65,8 +85,7 @@ def transparent_png(src: Path, dst: Path) -> None:
     """
     rgba = np.array(Image.open(src).convert("RGBA"))
     if (_edge(rgba[..., 3]) < 128).mean() > 0.5:
-        Image.fromarray(rgba).save(dst, optimize=True)
-        return
+        return rgba
     rgb = rgba[..., :3].astype(float)
     low, high = rgb.min(axis=2), rgb.max(axis=2)
     neutral = high - low <= 24
@@ -90,7 +109,7 @@ def transparent_png(src: Path, dst: Path) -> None:
     alpha[background] = 0
     alpha[fringe] *= fade[fringe]
     rgba[..., 3] = alpha.round().astype(np.uint8)
-    Image.fromarray(rgba).save(dst, optimize=True)
+    return rgba
 
 
 def _edge(a: np.ndarray) -> np.ndarray:

@@ -10,7 +10,7 @@ Avrupa maçları ayrıca [openfootball](https://github.com/openfootball) (kamu m
 
 ## Hesaplanan puanlar
 
-Puanlar bu verilerden [Elo yöntemiyle](/metodoloji/) hesaplanır. Ham veriler, hesaplanan puanlar ve kod [GitHub'da]({repo}).
+Puanlar bu verilerden [Elo yöntemiyle](/methodology/) hesaplanır. Ham veriler, hesaplanan puanlar ve kod [GitHub'da]({repo}).
 
 ## Lisans
 

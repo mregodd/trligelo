@@ -39,7 +39,7 @@ function List({ title, teams, lang }: { title: string; teams: TeamSummary[]; lan
         <ol className={styles.list}>
           {teams.map((c) => (
             <li key={c.slug}>
-              <a href={href(lang, `/takim/${c.slug}/`)}>
+              <a href={href(lang, `/club/${c.slug}/`)}>
                 <ClubLogo src={c.logo} size={16} keepSpace /> {c.name}
               </a>
               <span className={`num ${c.week > 0 ? "gain" : "loss"}`}>{f.delta(c.week)}</span>

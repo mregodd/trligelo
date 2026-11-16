@@ -40,7 +40,7 @@ export function HomeView({ lang }: { lang: Lang }) {
           <h1>{t.title}</h1>
           <p>{t.intro(meta.activeTeams)}</p>
           <p>
-            {t.updated(f.dateLong(meta.lastMatch))} <a href={href(lang, "/metodoloji/")}>{t.how}</a>
+            {t.updated(f.dateLong(meta.lastMatch))} <a href={href(lang, "/methodology/")}>{t.how}</a>
           </p>
         </div>
       }

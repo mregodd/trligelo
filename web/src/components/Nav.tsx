@@ -10,12 +10,12 @@ import styles from "./Nav.module.css";
 // Link texts are in messages/ (nav); league names are the same in every language.
 const LINKS: { href: string; label: (m: Messages) => string }[] = [
   { href: "/", label: (m) => m.nav.rankings },
-  { href: "/maclar/", label: (m) => m.nav.fixtures },
-  { href: "/lig/super-lig/", label: () => "Süper Lig" },
-  { href: "/lig/1-lig/", label: () => "1. Lig" },
-  { href: "/lig/2-lig/", label: () => "2. Lig" },
-  { href: "/lig/3-lig/", label: () => "3. Lig" },
-  { href: "/metodoloji/", label: (m) => m.nav.methodology },
+  { href: "/fixtures/", label: (m) => m.nav.fixtures },
+  { href: "/league/super-lig/", label: () => "Süper Lig" },
+  { href: "/league/1-lig/", label: () => "1. Lig" },
+  { href: "/league/2-lig/", label: () => "2. Lig" },
+  { href: "/league/3-lig/", label: () => "3. Lig" },
+  { href: "/methodology/", label: (m) => m.nav.methodology },
 ];
 
 export function Nav({ lang }: { lang: Lang }) {

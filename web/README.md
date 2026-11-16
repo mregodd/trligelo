@@ -11,7 +11,7 @@ npm run build                        # static site in out/
 npm test                             # the match box's streak rules (src/lib/streaks.test.mjs)
 ```
 
-Pages, in Turkish at the root and in English under `/en/` with the same paths: overall ranking (`/`), upcoming matches (`/maclar/`), league tables (`/lig/<lig>/`), club pages (`/takim/<kulüp>/`), methodology (`/metodoloji/`, rendered from `../docs/METODOLOJI.md` or `../docs/METHODOLOGY.md`), about, sources and privacy (`/hakkinda/`, `/kaynaklar/`, `/gizlilik/`, from `content/<lang>/*.md`).
+Pages, in Turkish at the root and in English under `/en/` with the same paths: overall ranking (`/`), upcoming matches (`/fixtures/`), league tables (`/league/<lig>/`), club pages (`/club/<kulüp>/`), methodology (`/methodology/`, rendered from `../docs/METODOLOJI.md` or `../docs/METHODOLOGY.md`), about, sources and privacy (`/about/`, `/sources/`, `/privacy/`, from `content/<lang>/*.md`).
 
 | Path | Role |
 |---|---|

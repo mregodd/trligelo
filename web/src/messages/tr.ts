@@ -231,8 +231,11 @@ export const tr = {
     foreign: " Yabancı rakibin puanı UEFA kulüp katsayısından hesaplanır.",
     amateur: " Amatör rakiplerin puanı her maçta aynıdır.",
     neutral: "Maç tarafsız sahada oynandı, ev avantajı yok.",
-    hostTeam: "{team} ev sahibiydi: kazanma şansı ev avantajıyla {with}, tarafsız sahada {without} olurdu.",
-    hostOpp: "{opp} ev sahibiydi: {team} için kazanma şansı deplasmanda {with}, tarafsız sahada {without} olurdu.",
+    hostTeam: "{team} ev sahibiydi: kazanma şansı ev avantajıyla {with}, tarafsız sahada{q} {without} olurdu.",
+    hostOpp: "{opp} ev sahibiydi: {team} için kazanma şansı deplasmanda {with}, tarafsız sahada{q} {without} olurdu.",
+    neutralHint:
+      "Tarafsız saha: iki takımdan hiçbiri ev avantajı almasaydı, yalnızca maç öncesi Elo puanlarına göre kazanma şansı.",
+    neutralLabel: "Tarafsız saha ne demek?",
     closed: " Maç seyircisiz oynandığı için ev avantajı daha küçük sayıldı.",
     chances: "Maç öncesi şanslar",
     chancesNote: "Kalın olan gerçekleşen sonuç. Değişimler bir farklı sonuç içindir, fark büyüdükçe artar.",

@@ -85,7 +85,7 @@ export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label, l
 
   function up(lane: LeagueCode, e: React.PointerEvent) {
     const t = nearest(lane, e.clientX);
-    if (t && e.pointerType === "mouse") router.push(href(lang, `/takim/${t.slug}/`));
+    if (t && e.pointerType === "mouse") router.push(href(lang, `/club/${t.slug}/`));
   }
 
   const lit = hover?.slug ?? highlight ?? null;
@@ -150,7 +150,7 @@ export function Ruler({ teams, highlight, onHover, focusLeague, pinned, label, l
                 }
               >
                 <strong>{fmt(lang).rating(shown.rating)}</strong>
-                <a href={href(lang, `/takim/${shown.slug}/`)} tabIndex={-1}>
+                <a href={href(lang, `/club/${shown.slug}/`)} tabIndex={-1}>
                   {shown.name}
                 </a>
               </div>

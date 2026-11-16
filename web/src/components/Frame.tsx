@@ -14,7 +14,7 @@ export function Frame({ lang, children }: { lang: Lang; children: React.ReactNod
   const t = msg(lang).frame;
   return (
     <div lang={lang} className={styles.frame}>
-      <a href="#icerik" className={styles.skip}>
+      <a href="#content" className={styles.skip}>
         {t.skip}
       </a>
       <header className={styles.header}>
@@ -37,7 +37,7 @@ export function Frame({ lang, children }: { lang: Lang; children: React.ReactNod
           <Nav lang={lang} />
         </div>
       </header>
-      <main id="icerik" className={styles.main}>
+      <main id="content" className={styles.main}>
         {children}
       </main>
       <footer className={styles.footer}>
@@ -46,16 +46,16 @@ export function Frame({ lang, children }: { lang: Lang; children: React.ReactNod
           <nav aria-label={t.footerNav}>
             <ul className={styles.footerLinks}>
               <li>
-                <a href={href(lang, "/metodoloji/")}>{t.how}</a>
+                <a href={href(lang, "/methodology/")}>{t.how}</a>
               </li>
               <li>
-                <a href={href(lang, "/hakkinda/")}>{t.about}</a>
+                <a href={href(lang, "/about/")}>{t.about}</a>
               </li>
               <li>
-                <a href={href(lang, "/kaynaklar/")}>{t.sources}</a>
+                <a href={href(lang, "/sources/")}>{t.sources}</a>
               </li>
               <li>
-                <a href={href(lang, "/gizlilik/")}>{t.privacy}</a>
+                <a href={href(lang, "/privacy/")}>{t.privacy}</a>
               </li>
               <li>
                 <a href={REPO}>GitHub</a>

@@ -91,7 +91,7 @@ export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {
                       <td className="num">{i + 1}</td>
                       <th scope="row" className={table.club}>
                         <ClubLogo src={c.logo} keepSpace />
-                        <a href={href(lang, `/takim/${s}/`)}>{c.name}</a>
+                        <a href={href(lang, `/club/${s}/`)}>{c.name}</a>
                       </th>
                       <td className={`num ${table.rating}`}>{f.rating(c.rating)}</td>
                       <td className={`num ${c.week > 0 ? "gain" : c.week < 0 ? "loss" : "muted"}`}>
@@ -109,7 +109,7 @@ export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {
           </section>
         ))}
         <p className={styles.note}>
-          {t.note} <a href={href(lang, "/metodoloji/")}>{t.how}</a>
+          {t.note} <a href={href(lang, "/methodology/")}>{t.how}</a>
         </p>
       </div>
     </>

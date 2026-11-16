@@ -223,8 +223,11 @@ export const en: Messages = {
     foreign: " A foreign opponent's rating comes from its UEFA club coefficient.",
     amateur: " Amateur opponents always have the same rating.",
     neutral: "Neutral ground, no home advantage.",
-    hostTeam: "{team} were at home: their chance of winning was {with}, and would have been {without} on neutral ground.",
-    hostOpp: "{opp} were at home: {team}'s chance of winning away was {with}, and would have been {without} on neutral ground.",
+    hostTeam: "{team} were at home: their chance of winning was {with}, and would have been {without} on neutral ground{q}.",
+    hostOpp: "{opp} were at home: {team}'s chance of winning away was {with}, and would have been {without} on neutral ground{q}.",
+    neutralHint:
+      "Neutral ground: the chance of winning from the two clubs' Elo ratings alone, as if neither side had home advantage.",
+    neutralLabel: "What does neutral ground mean?",
     closed: " Behind closed doors, home advantage counted for less.",
     chances: "Chances before the match",
     chancesNote: "The result that happened is in bold. Changes are for a one-goal result and grow with the margin.",

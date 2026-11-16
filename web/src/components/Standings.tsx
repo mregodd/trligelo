@@ -127,7 +127,7 @@ export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
                   <td className="num">{c.rank ?? "–"}</td>
                   <th scope="row" className={styles.club}>
                     <ClubLogo src={c.logo} keepSpace />
-                    <a href={href(lang, `/takim/${c.slug}/`)}>{c.name}</a>
+                    <a href={href(lang, `/club/${c.slug}/`)}>{c.name}</a>
                     <span className={styles.sub}>
                       <LeagueKey code={c.league} />
                       {c.active

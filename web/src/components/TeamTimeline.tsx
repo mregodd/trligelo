@@ -92,7 +92,7 @@ export function TeamTimeline({ lang, team, events, seasons, peak, low, current, 
 
       <section className={styles.matches} aria-label={t.list}>
         <p className={styles.hint}>
-          {t.hint} <a href={href(lang, "/metodoloji/")}>{t.rules}</a>
+          {t.hint} <a href={href(lang, "/methodology/")}>{t.rules}</a>
         </p>
         <History lang={lang} team={team} events={events} seasons={seasons} />
       </section>

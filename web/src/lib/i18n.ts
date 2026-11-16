@@ -1,5 +1,5 @@
 // Two languages: Turkish at the site root, English under /en/ with the same paths after it
-// (/takim/galatasaray/ and /en/takim/galatasaray/), so switching is a prefix change.
+// (/club/galatasaray/ and /en/club/galatasaray/), so switching is a prefix change.
 
 export type Lang = "tr" | "en";
 
