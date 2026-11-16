@@ -26,5 +26,6 @@ Pages, in Turkish at the root and in English under `/en/` with the same paths: o
 | `src/components/Standings.tsx` | Ranking table with league filter and search, linked to the ruler |
 | `src/components/TeamTimeline.tsx` | A club's rating chart and match list from one copy of its events |
 | `src/app/globals.css` | Colour, type and spacing tokens (light and dark) |
+| `src/app/icon.svg` | The site's mark (a ruler with a corner flag) on a 16-unit grid. `favicon.ico` (16, 32, 48 px) and `apple-icon.png` (180 px) beside it are rendered from it; the header in `Frame.tsx` repeats it without the tile, so change both together |
 
 Translating: short texts are in `src/messages/`. `en.ts` must have exactly the shape of `tr.ts`, so a missing or extra key fails the build; sentences that take numbers or names are functions there. To add a language, copy `en.ts`, translate it, register it in `src/messages/index.ts` and add its routes like `src/app/en/`. Long pages are Markdown in `content/<lang>/` (placeholders such as `{date}` are filled at build time); the methodology is `../docs/METODOLOJI.md` and its translations. Club and league names are the same in every language. Club names come from TFF without the legal form; sponsored names use the common name from `../data/sources/team_display_names.csv`.

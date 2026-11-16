@@ -14,12 +14,20 @@
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: baseline; /* the mark's ruler sits on the name's baseline */
+  gap: 8px;
   font-family: var(--font-display), sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--band-ink);
+}
+.mark {
+  flex: none;
+  width: 24px; /* 2 px per unit of the icon's 16-unit grid keeps every edge on a pixel */
+  height: 20px;
 }
 
 .main {

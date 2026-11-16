@@ -20,6 +20,14 @@ export function Frame({ lang, children }: { lang: Lang; children: React.ReactNod
       <header className={styles.header}>
         <div className={`wrap ${styles.bar}`}>
           <a href={href(lang, "/")} className={styles.wordmark}>
+            {/* The favicon (app/icon.svg) without its tile: the band is the tile here. */}
+            <svg className={styles.mark} viewBox="2 3 12 10" aria-hidden="true">
+              <path
+                d="M2 12h12v1H2zM2 9h1v3H2zM4 10h1v2H4zM6 9h1v3H6zM8 10h1v2H8zM12 10h1v2h-1z"
+                fill="var(--band-ink)"
+              />
+              <path d="M10 3h1v9h-1zM11 3h3l-1 2 1 2h-3z" fill="var(--flare)" />
+            </svg>
             {SITE}
           </a>
           <div className={styles.tools}>
