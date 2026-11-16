@@ -1,4 +1,4 @@
-# turkish-leagues-elo
+# trligelo
 
 Türk profesyonel futbol ligleri (Süper Lig, 1. Lig, 2. Lig, 3. Lig) için açık kaynaklı, düzenli güncellenen bir Elo puanlama sistemi.
 

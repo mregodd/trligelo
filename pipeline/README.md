@@ -1,6 +1,6 @@
 # pipeline
 
-Data pipeline and Elo engine for turkish-leagues-elo. How the ratings work: [`../docs/METODOLOJI.md`](../docs/METODOLOJI.md).
+Data pipeline and Elo engine for trligelo. How the ratings work: [`../docs/METODOLOJI.md`](../docs/METODOLOJI.md).
 
 ```bash
 uv sync                       # install dependencies (Python 3.13)

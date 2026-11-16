@@ -46,6 +46,7 @@ export const tr = {
   },
 
   home: {
+    docTitle: (site: string) => `${site}: Türk futbol kulüplerinin Elo puanları`,
     description:
       "Süper Lig, 1. Lig, 2. Lig ve 3. Lig'deki bütün profesyonel kulüpler tek bir Elo cetvelinde. Her maçın puan hesabı açık.",
     title: "Türkiye'nin profesyonel kulüpleri, tek cetvelde",
@@ -160,7 +161,7 @@ export const tr = {
   },
   methodology: {
     title: "Puanlar nasıl hesaplanıyor?",
-    description: "Türk Ligleri Elo'nun yöntemi: formül, parametreler, test sonuçları ve sınırlamalar.",
+    description: "trligelo'nun yöntemi: formül, parametreler, test sonuçları ve sınırlamalar.",
     lead: "Formül, parametreler ve bunların nasıl seçildiği. Bu sayfa repodaki",
     leadEnd: "dosyasından üretilir.",
   },

@@ -39,6 +39,7 @@ export const en: Messages = {
   },
 
   home: {
+    docTitle: (site) => `${site}: Elo ratings for Turkish football clubs`,
     description:
       "Every professional football club in Turkey, from the Süper Lig to the 3. Lig, on one Elo scale. Every rating change explained.",
     title: "Turkey's professional clubs, on one ruler",
@@ -151,7 +152,7 @@ export const en: Messages = {
   },
   methodology: {
     title: "How the ratings work",
-    description: "The method behind Türk Ligleri Elo: formula, parameters, test results and limits.",
+    description: "The method behind trligelo: formula, parameters, test results and limits.",
     lead: "The formula, the parameters and how they were chosen. This page is generated from",
     leadEnd: "in the repository.",
   },

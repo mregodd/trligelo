@@ -129,8 +129,8 @@ European opponents' strength comes from the five-year UEFA coefficient, which ch
 ## 10. Calculate it yourself
 
 ```bash
-git clone <repository address>
-cd turkish-leagues-elo/pipeline
+git clone https://github.com/mregodd/trligelo.git
+cd trligelo/pipeline
 uv sync
 uv run tlelo elo          # writes the ratings to data/ratings/
 uv run tlelo backtest     # rebuilds the test report docs/backtest.md

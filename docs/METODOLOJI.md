@@ -129,8 +129,8 @@ Avrupa'daki rakiplerin gücü 5 yıllık UEFA katsayısından gelir ve yavaş de
 ## 10. Kendin hesapla
 
 ```bash
-git clone <repo adresi>
-cd turkish-leagues-elo/pipeline
+git clone https://github.com/mregodd/trligelo.git
+cd trligelo/pipeline
 uv sync
 uv run tlelo elo          # puanları data/ratings/ klasörüne yazar
 uv run tlelo backtest     # docs/backtest.md test raporunu yeniden üretir
