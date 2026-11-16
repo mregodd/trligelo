@@ -6,7 +6,8 @@
     "data": "cd ../pipeline && uv run tlelo site",
     "dev": "next dev",
     "build": "next build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/lib/streaks.test.mjs"
   },
   "dependencies": {
     "marked": "18.1.2",

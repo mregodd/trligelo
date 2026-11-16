@@ -115,6 +115,78 @@ def test_logo_background_becomes_transparent_but_white_inside_the_crest_stays(tm
     assert out.getpixel((20, 20))[3] == 255  # enclosed white kept
 
 
+def test_white_inside_a_crest_stays_where_its_outline_has_a_gap(tmp_path):
+    from PIL import Image
+
+    img = Image.new("RGB", (40, 40), "white")
+    for x in range(8, 32):
+        for y in range(8, 32):
+            outline = not (11 <= x < 29 and 11 <= y < 29)
+            gap = x < 11 and 18 <= y < 20  # a 2 px break joins the inside to the background
+            if outline and not gap:
+                img.putpixel((x, y), (20, 40, 120))
+    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    img.save(src, quality=95)
+    transparent_png(src, dst)
+    out = Image.open(dst)
+    assert out.getpixel((0, 0))[3] == 0
+    assert out.getpixel((20, 20))[3] == 255
+
+
+def test_a_black_ground_goes_too_but_black_inside_the_crest_stays(tmp_path):
+    from PIL import Image
+
+    img = Image.new("RGB", (40, 40), "black")
+    for x in range(8, 32):
+        for y in range(8, 32):
+            if not (11 <= x < 29 and 11 <= y < 29):
+                img.putpixel((x, y), (255, 255, 255))  # a white ring, black inside
+    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    img.save(src, quality=95)
+    transparent_png(src, dst)
+    out = Image.open(dst)
+    assert out.getpixel((0, 0))[3] == 0
+    assert out.getpixel((9, 20))[3] == 255  # the ring
+    assert out.getpixel((20, 20))[3] == 255  # black inside the ring
+
+
+def test_a_graded_grey_ground_goes_end_to_end(tmp_path):
+    from PIL import Image
+
+    img = Image.new("RGB", (40, 40))
+    for x in range(40):
+        for y in range(40):
+            v = 255 - 65 * (x + y) // 78  # white in one corner, grey (190) in the other
+            img.putpixel((x, y), (v, v, v))
+    for x in range(14, 26):
+        for y in range(14, 26):
+            img.putpixel((x, y), (20, 40, 120))
+    src, dst = tmp_path / "logo.jpg", tmp_path / "logo.png"
+    img.save(src, quality=95)
+    transparent_png(src, dst)
+    out = Image.open(dst)
+    assert out.getpixel((0, 0))[3] == 0
+    assert out.getpixel((39, 39))[3] == 0
+    assert out.getpixel((20, 20))[3] == 255
+
+
+def test_a_logo_that_comes_cut_out_is_kept_as_it_is(tmp_path):
+    from PIL import Image
+
+    img = Image.new("RGBA", (40, 40), (255, 255, 255, 0))  # transparent, white underneath
+    for x in range(10, 30):
+        for y in range(10, 30):
+            img.putpixel((x, y), (255, 255, 255, 255))  # white part of the crest at its edge
+    for x in range(10, 30):
+        img.putpixel((x, 20), (20, 40, 120, 255))
+    src, dst = tmp_path / "logo.png", tmp_path / "out.png"
+    img.save(src)
+    transparent_png(src, dst)
+    out = Image.open(dst)
+    assert out.getpixel((0, 0))[3] == 0
+    assert out.getpixel((15, 15))[3] == 255
+
+
 def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
     def row(comp, week, d, home, away, status, rnd=""):
         return {"competition": comp, "stage": "league" if comp == "SL" else "cup", "group": "",
@@ -140,3 +212,16 @@ def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
 def test_stakes_mirror_between_the_two_sides():
     home, away = stakes(24, 1.0, 0.75), stakes(24, 1.0, 0.25)
     assert home == [6.0, -6.0, -18.0] and away == [18.0, 6.0, -6.0]
+
+
+def test_every_european_opponents_association_has_a_country_code():
+    import csv
+
+    from tlelo import paths
+    from tlelo.site.export import load_codes
+
+    codes = load_codes(paths.data_dir() / "sources" / "association_codes.csv")
+    with (paths.data_dir() / "europe" / "matches.csv").open(encoding="utf-8", newline="") as fh:
+        used = {r[f"{side}_assoc"] for r in csv.DictReader(fh) for side in ("home", "away")}
+    assert used - {"Turkish Football Federation"} - codes.keys() == set()
+    assert all(len(c) == 3 and c.isupper() for c in codes.values())

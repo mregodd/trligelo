@@ -1,8 +1,8 @@
 """Download the tff.org pages needed for each competition-season into the cache.
 
 ``fetch_competition`` gets the season page, one page per group, and one week view per
-played week (week views are the only place that shows kick-off dates). Match detail pages
-are a second pass, see ``tlelo.tff.collect.fetch_details``.
+played week plus the coming one (week views are the only place that shows kick-off dates).
+Match detail pages are a second pass, see ``tlelo.tff.collect.fetch_details``.
 """
 
 from __future__ import annotations
@@ -91,12 +91,17 @@ def played_weeks(rows: list[FixtureRow]) -> list[int]:
 def weeks_to_read(comp: CompetitionPage, table: GroupTable) -> list[int]:
     """Week views needed for a table.
 
-    With a fixture list: every week with a played match. Without one (cup group stages,
-    and league groups whose fixture list TFF does not show), the group's matches only
-    exist on the week views linked from the group page.
+    With a fixture list: every week with a played match and, in the running season, the
+    coming week, whose view carries the kick-off dates TFF has set so far. Without one (cup
+    group stages, and league groups whose fixture list TFF does not show), the group's
+    matches only exist on the week views linked from the group page.
     """
     if table.rows:
-        return played_weeks(table.rows)
+        played = played_weeks(table.rows)
+        coming = played[-1] + 1 if played else min(r.week for r in table.rows)
+        if comp.current and any(r.week == coming for r in table.rows):
+            return [*played, coming]
+        return played
     if table.group_id is not None:
         return parse_week_links(table.html)
     return []
@@ -108,9 +113,15 @@ def fetch_competition(
     refresh = comp.current and refresh_current
     _, tables = load_tables(client, comp, refresh=refresh)
     for table in tables:
+        played = set(played_weeks(table.rows))
         for week in weeks_to_read(comp, table):
             params = week_params(comp.page_id, table.group_id, week)
-            stale = refresh and (not table.rows or _week_is_stale(client, params, table.rows, week))
+            # The coming week's view changes until it is played: TFF sets the dates in stages.
+            stale = refresh and (
+                not table.rows
+                or week not in played
+                or _week_is_stale(client, params, table.rows, week)
+            )
             client.get(params, refresh=stale)
     log.info("%s: %s", comp.label(), dict(client.stats))
 

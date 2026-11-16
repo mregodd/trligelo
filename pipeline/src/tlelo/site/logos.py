@@ -48,25 +48,51 @@ def fetch_logos(client: PoliteClient, teams: list[int]) -> dict[int, Path]:
     return out
 
 
+_DISK = np.hypot(*np.mgrid[-2:3, -2:3]) <= 2  # closes breaks of up to ~4 px in an outline
+
+
 def transparent_png(src: Path, dst: Path) -> None:
     """Save a logo as PNG with its plain light background removed.
 
     TFF serves most logos as JPEG on white, which shows as a white square on tinted rows and
-    dark grounds. Near-white pixels connected to the image edge become transparent; white
-    inside the crest (not touching the edge) stays. A 2px fringe around the removed area
-    fades with its lightness, so anti-aliased edges leave no light halo.
+    dark grounds; a few come on black or on a white-to-grey gradient. Logos that already come
+    cut out (a mostly transparent edge) are kept as they are. Otherwise the plain ground,
+    told by the colour of the image edge, becomes transparent where it is connected to the
+    edge, except inside the crest's silhouette: its other parts with small breaks in the
+    outline closed and the inside filled, so white within the outline stays even where the
+    outline is broken. A 2px fringe around the removed area fades by how close it is to the
+    ground, so anti-aliased edges leave no halo.
     """
     rgba = np.array(Image.open(src).convert("RGBA"))
-    lightness = rgba[..., :3].min(axis=2).astype(float)
-    spread = rgba[..., :3].max(axis=2).astype(float) - lightness
-    light = (lightness >= 232) & (spread <= 24)
-    labels, _ = ndimage.label(light)
-    edge = np.unique(np.concatenate([labels[0], labels[-1], labels[:, 0], labels[:, -1]]))
+    if (_edge(rgba[..., 3]) < 128).mean() > 0.5:
+        Image.fromarray(rgba).save(dst, optimize=True)
+        return
+    rgb = rgba[..., :3].astype(float)
+    low, high = rgb.min(axis=2), rgb.max(axis=2)
+    neutral = high - low <= 24
+    edge_neutral = _edge(neutral)
+    if (edge_neutral & (_edge(high) <= 23)).mean() > 0.5:  # on black
+        plain, fade = neutral & (high <= 23), np.clip(high / 75, 0, 1)
+    else:
+        # On a gradient the ground runs from white down to light grey; plain white otherwise.
+        edge_light = _edge(low)[edge_neutral & (_edge(low) >= 180)]
+        graded = len(edge_light) > edge_neutral.size / 2 and np.percentile(edge_light, 25) < 225
+        plain = neutral & (low >= (180 if graded else 232))
+        fade = np.clip((255 - low) / (255 - 180), 0, 1)
+    pad = len(_DISK)  # room for the closing at the image edge
+    inked = ndimage.binary_closing(np.pad(~plain, pad), _DISK)
+    shape = ndimage.binary_fill_holes(inked)[pad:-pad, pad:-pad]
+    labels, _ = ndimage.label(plain & ~shape)
+    edge = np.unique(_edge(labels))
     background = np.isin(labels, edge[edge > 0])
     fringe = ndimage.binary_dilation(background, iterations=2) & ~background
     alpha = rgba[..., 3].astype(float)
     alpha[background] = 0
-    fade = np.clip((255 - lightness) / (255 - 180), 0, 1)  # lighter fringe pixels fade more
     alpha[fringe] *= fade[fringe]
     rgba[..., 3] = alpha.round().astype(np.uint8)
     Image.fromarray(rgba).save(dst, optimize=True)
+
+
+def _edge(a: np.ndarray) -> np.ndarray:
+    """The outermost pixels of an image (or of one of its channels), in one run."""
+    return np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]])

@@ -81,7 +81,17 @@ def load_withdrawals(path: Path) -> dict[int, date]:
     return {t: ds[0] for t, ds in runs.items() if len(ds) >= 3}
 
 
-def _match_event(rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict) -> dict:
+def load_codes(path: Path) -> dict[str, str]:
+    """National associations (as Wikipedia names them) to FIFA country codes."""
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as fh:
+        return {r["association"]: r["code"] for r in csv.DictReader(fh)}
+
+
+def _match_event(
+    rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict, codes: dict
+) -> dict:
     g = rec.game
     side, other = (g.home, g.away) if is_home else (g.away, g.home)
     h = rec.h if is_home else -rec.h
@@ -94,7 +104,8 @@ def _match_event(rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict) 
     elif other.kind == "amateur":
         opp |= {"name": clean_name(other.name)}
     else:
-        opp |= {"name": other.name, "coef": other.coefficient}
+        # No logo for foreign clubs (no freely licensed source): the site shows the country.
+        opp |= {"name": other.name, "coef": other.coefficient, "country": codes.get(other.assoc)}
     return {
         "t": "match",
         "seq": rec.seq,
@@ -124,6 +135,7 @@ def _match_event(rec, is_home: bool, slugs: dict, names: dict, logo_urls: dict) 
 def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
     overrides = load_overrides(data_dir / "sources" / "team_display_names.csv")
     masked = load_masked(data_dir / "sources" / "team_display_names.csv")
+    codes = load_codes(data_dir / "sources" / "association_codes.csv")
     groups = load_groups(data_dir / "team_seasons.csv")
     window = [s for s in data.seasons if s >= DISPLAY_FROM]
     current = data.seasons[-1]
@@ -145,7 +157,8 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         for is_home in (True, False):
             side = rec.game.home if is_home else rec.game.away
             if side.kind == "pro" and side.team in teams:
-                teams[side.team].events.append(_match_event(rec, is_home, slugs, names, logo_urls))
+                event = _match_event(rec, is_home, slugs, names, logo_urls, codes)
+                teams[side.team].events.append(event)
     for adj in res.adjustments:
         if adj.season not in window or adj.team not in teams or adj.kind == "seed":
             continue

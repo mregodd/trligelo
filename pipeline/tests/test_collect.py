@@ -13,8 +13,8 @@ from tlelo.tff.collect import (
     load_overrides,
     needs_detail,
 )
-from tlelo.tff.crawl import CompetitionPage
-from tlelo.tff.parse import StandingRow
+from tlelo.tff.crawl import CompetitionPage, GroupTable, weeks_to_read
+from tlelo.tff.parse import FixtureRow, StandingRow
 from tlelo.validate import check_competition, computed_table
 
 SL = CompetitionPage("SL", "2022-23", 1628, current=False)
@@ -140,3 +140,17 @@ def test_overrides_reject_unknown_status(tmp_path):
     with pytest.raises(ValueError):
         load_overrides(path)
     assert load_overrides(tmp_path / "missing.csv") == {}
+
+
+def test_the_coming_week_is_read_too_for_its_kick_off_dates():
+    def table(*weeks):  # (week, played) pairs
+        rows = [FixtureRow(i, w, None, 1, "A", 2, "B", (1, 0) if p else None)
+                for i, (w, p) in enumerate(weeks)]  # fmt: skip
+        return GroupTable(None, None, "", rows)
+
+    live = CompetitionPage("SL", "2026-27", 1, current=True)
+    assert weeks_to_read(live, table((1, True), (2, True), (3, False), (4, False))) == [1, 2, 3]
+    assert weeks_to_read(live, table((1, False), (2, False))) == [1]  # before the first round
+    assert weeks_to_read(live, table((1, True), (2, True))) == [1, 2]  # all played
+    # A finished season's unplayed weeks never come (2019-20 stopped in the pandemic).
+    assert weeks_to_read(SL, table((1, True), (2, True), (3, False))) == [1, 2]

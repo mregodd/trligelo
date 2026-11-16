@@ -46,6 +46,7 @@ export interface Opponent {
   slug?: string | null;
   logo?: string | null;
   coef?: number | null;
+  country?: string | null; // foreign clubs: FIFA code of their country, shown instead of a logo
 }
 
 export interface MatchEvent {

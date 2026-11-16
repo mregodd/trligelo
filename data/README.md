@@ -21,6 +21,7 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `europe/coefficients.csv` | Her sezonun çekiliş tablolarındaki UEFA kulüp katsayıları. Türk takımlarının rakiplerinden çok daha fazla kulüp içerir |
 | `europe/association_coefficients.csv` | Her sezonun ülke (federasyon) katsayı sıralaması. Kulüp katsayısı bulunamayan rakipler için yedek |
 | `sources/europe_tr_clubs.csv` | Türk kulübünün Wikipedia sayfası ile TFF `kulupID` eşleştirmesi (elle tutulur) |
+| `sources/association_codes.csv` | Avrupa'daki rakiplerin ülke federasyonu (Wikipedia'daki adıyla) ve FIFA ülke kodu (POL, ESP gibi). Yabancı kulüplerin logosu yok; sitede onun yerine bu kod görünür. Elle tutulur; yeni bir ülkeden rakip gelince test hangi federasyonun eksik olduğunu söyler |
 | `sources/team_display_names.csv` | Sitede gösterilen kulüp adları: sponsor adı taşıyan kulüpler için taraftarın kullandığı ad (örn. EKENLER BETON SİVASSPOR → Sivasspor). Elle tutulur; listede olmayan kulüplerin adı TFF adından şirket ekleri atılarak üretilir. `mask` = 1 olan kulüp sitede yalnızca bu adla görünür: TFF'deki adı ve logosu gösterilmez, aramada çıkmaz |
 | `ratings/current.csv` | Model çıktısı: güncel sezonun takımları, Elo puanı sırasıyla (`uv run tlelo elo`) |
 | `ratings/history.csv` | Model çıktısı: her takımın her puan değişikliği (maçlar, yükselme/düşme, ortalamaya çekme, bonuslar, ölçek kayması). ~6 MB, **repoya girmez**, aynı komutla üretilir |

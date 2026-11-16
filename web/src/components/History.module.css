@@ -97,9 +97,15 @@
     gap: 8px;
   }
 }
+/* The competition as a small tag, so it reads apart from the date. */
 .comp {
-  font-size: 0.8125rem;
-  color: var(--ink-3);
+  width: fit-content;
+  padding: 0 5px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-2);
 }
 
 .opp {
@@ -113,12 +119,38 @@
 .opp a:hover {
   text-decoration: underline;
 }
-.venue,
 .why {
   display: block;
   font-size: 0.8125rem;
   font-weight: 400;
   color: var(--ink-3);
+}
+
+/* Opponent: home, away or neutral as an icon, then its logo (or its country, for clubs
+   from abroad) in a slot of one width, so names line up. */
+.venue svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  color: var(--ink-3);
+}
+.mark {
+  display: inline-flex;
+  justify-content: center;
+  width: 26px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.country {
+  padding: 0 2px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
 }
 
 .score small {
@@ -156,24 +188,98 @@
   margin: 6px 0 10px;
   color: var(--ink-2);
 }
-.calcLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 20px;
-  margin: -4px 0 12px;
-  font-size: 0.875rem;
-}
-.permalink {
-  color: var(--ink-3);
-}
 .row {
   scroll-margin-top: 12px;
 }
-.explain {
+.calc > p {
   max-width: 66ch;
-}
-.explain p {
   margin: 0 0 8px;
+}
+.calc > p strong {
+  font-weight: 600;
+}
+.calc > .result {
+  margin-top: 14px; /* the result opens the last part of the account */
+  font-weight: 600;
+}
+.notes {
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+
+/* Chances before the match: one bar in the form colours, each result with its chance and
+   what it was worth; the result that happened in the ink colour and bold. */
+.odds {
+  max-width: 30rem;
+  margin: 12px 0 4px;
+}
+.oddsTitle {
+  margin: 0 0 6px;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+.bar {
+  display: flex;
+  gap: 2px;
+  height: 8px;
+}
+.bar span {
+  border-radius: 2px;
+}
+.bar span[data-r="G"] {
+  background: var(--form-g);
+}
+.bar span[data-r="B"] {
+  background: var(--form-b);
+}
+.bar span[data-r="M"] {
+  background: var(--form-m);
+}
+.outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2);
+}
+.outcomes li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.outcomes li[data-actual] {
+  color: var(--ink);
+  font-weight: 600;
+}
+.chip {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.chip[data-r="G"] {
+  background: var(--form-g);
+  color: var(--form-g-ink);
+}
+.chip[data-r="B"] {
+  background: var(--form-b);
+  color: var(--form-b-ink);
+}
+.chip[data-r="M"] {
+  background: var(--form-m);
+  color: var(--form-m-ink);
+}
+.oddsNote {
+  margin: 6px 0 0;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
 }
 .calc dl {
   margin: 0;
@@ -239,10 +345,8 @@
   }
 }
 
-/* Muted labels keep 4.5:1 on the lit / open row tint. */
-.row > summary:hover .comp,
-.row > summary:hover .venue,
-.row[open] > summary .comp,
-.row[open] > summary .venue {
+/* Muted marks stay readable on the lit / open row tint. */
+.row > summary:hover .venue svg,
+.row[open] > summary .venue svg {
   color: var(--ink-2);
 }

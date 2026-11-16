@@ -127,14 +127,11 @@ export const tr = {
     season: (s: string) => `${s} sezonu`,
     matches: (n: number) => `${n} maç`,
     head: ["Tarih", "Rakip", "Skor", "Değişim", "Puan"],
+    home: "iç saha",
     away: "deplasman",
     neutral: "tarafsız saha",
     pens: "pen.",
     et: "uz.",
-    oppPage: (name: string) => `${name} puan sayfası`,
-    formula: "Hesabın formülü",
-    formulaAnchor: "#2-formül", // the methodology's "2. Formül" heading
-    permalink: "Bu hesabın bağlantısı",
     start: "Sezon başı",
     startRow: (s: string) => `${s} öncesi ayarlar`,
     newcomer: (rating: string) => `Başlangıç puanı ${rating}.`,
@@ -226,21 +223,32 @@ export const tr = {
     return: { name: "Profesyonel lige döndü", why: "Amatöre düşüp dönen takım yeni gelen gibi başlar." },
   }),
 
-  // A match told in plain words (lib/calc.ts). Club names never take a suffix here, since
-  // Turkish suffixes follow the word's sounds: sentences are built for names to stand alone.
+  // A match told in plain words (components/History.tsx). Club names never take a suffix
+  // here, since Turkish suffixes follow the word's sounds: sentences are built for names to
+  // stand alone. {name} marks where a club or a number goes (it can be a link or bold).
   explain: {
-    before: (team: string, r: string, opp: string, ro: string) =>
-      `Maç öncesi ${team} ${r}, ${opp} ${ro} puandaydı.`,
+    before: "Maç öncesi {team} {r}, {opp} {ro} puandaydı.",
     foreign: " Yabancı rakibin puanı UEFA kulüp katsayısından hesaplanır.",
     amateur: " Amatör rakiplerin puanı her maçta aynıdır.",
-    neutral: " Maç tarafsız sahada oynandı, ev avantajı yok.",
-    closed: (host: string, h: number) =>
-      ` ${host} ev sahibiydi; maç seyircisiz oynandığı için ev avantajı ${h} puan sayıldı.`,
-    home: (host: string, h: number) => ` ${host} ev sahibi olduğu için ${h} puanlık avantajla başladı.`,
-    chances: (team: string, w: number, d: number, l: number) =>
-      `Bu puanlarla ${team} için şanslar: galibiyet %${w}, beraberlik %${d}, yenilgi %${l}.`,
-    result: (score: string, word: string, why: string, delta: string) =>
-      `Sonuç ${score}, ${word}. ${why}: ${delta}.`,
+    neutral: "Maç tarafsız sahada oynandı, ev avantajı yok.",
+    hostTeam: "{team} ev sahibiydi: kazanma şansı ev avantajıyla {with}, tarafsız sahada {without} olurdu.",
+    hostOpp: "{opp} ev sahibiydi: {team} için kazanma şansı deplasmanda {with}, tarafsız sahada {without} olurdu.",
+    closed: " Maç seyircisiz oynandığı için ev avantajı daha küçük sayıldı.",
+    chances: "Maç öncesi şanslar",
+    chancesNote: "Kalın olan gerçekleşen sonuç. Değişimler bir farklı sonuç içindir, fark büyüdükçe artar.",
+    result: (score: string, word: string, delta: string) => `Sonuç ${score}, ${word}: ${delta}.`,
+    surprise: (p: number, n: number) =>
+      ` Maç öncesi ihtimali %${p} olan bir sonuçtu, yani yaklaşık ${n} maçta bir olur.`,
+    streak: {
+      wins: (n: number) => `Üst üste ${n}. galibiyeti.`,
+      losses: (n: number) => `Üst üste ${n}. yenilgisi.`,
+      unbeaten: (n: number) => `Yenilmezlik serisi ${n} maça çıktı.`,
+      winless: (n: number) => `Galibiyetsiz seri ${n} maça çıktı.`,
+      endedWins: (n: number) => `${n} maçlık galibiyet serisi sona erdi.`,
+      endedLosses: (n: number) => `${n} maçlık yenilgi serisine son verdi.`,
+      endedUnbeaten: (n: number) => `${n} maçlık yenilmezlik serisi sona erdi.`,
+      endedWinless: (n: number) => `${n} maçlık galibiyet hasretine son verdi.`,
+    },
     why: {
       G: ["Sürpriz bir galibiyet olduğu için puanı çok artırdı", "Denk bir maçı kazandı",
           "Favori olduğu için galibiyet puanı az artırdı"],

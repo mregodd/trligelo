@@ -32,6 +32,7 @@ class Side:
     team: int | None  # TFF kulupID for pro and amateur sides
     name: str
     coefficient: float | None = None  # foreign: UEFA club coefficient that season
+    assoc: str | None = None  # foreign: its national association, as Wikipedia names it
 
 
 @dataclass(frozen=True, slots=True)
@@ -145,7 +146,13 @@ def _europe(row: dict) -> Game | None:
     tr_home = row["tr_home"] == "1"
     tr = Side("pro", int(row["team_id"]), row["home_name"] if tr_home else row["away_name"])
     coef = float(row["opponent_coefficient"]) if row["opponent_coefficient"] else None
-    foreign = Side("foreign", None, row["away_name"] if tr_home else row["home_name"], coef)
+    foreign = Side(
+        "foreign",
+        None,
+        row["away_name"] if tr_home else row["home_name"],
+        coef,
+        row["away_assoc"] if tr_home else row["home_assoc"],
+    )
     country = venue_country(row["venue"])
     d = date.fromisoformat(row["date"])
     ident = row["match_id"] or f"{row['date']}:{row['opponent']}"
