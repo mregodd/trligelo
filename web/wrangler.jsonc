@@ -4,6 +4,10 @@
 {
   "name": "trligelo",
   "compatibility_date": "2026-11-01",
+  // Cloudflare creates the DNS record and the certificate. workers.dev stays on as a fallback;
+  // the pages' canonical links point search engines to trligelo.com.
+  "routes": [{ "pattern": "trligelo.com", "custom_domain": true }],
+  "workers_dev": true,
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
