@@ -12,3 +12,9 @@ export const langOf = (pathname: string): Lang =>
 /** The same page in the other language. */
 export const otherLangPath = (pathname: string) =>
   langOf(pathname) === "en" ? pathname.slice(3) || "/" : `/en${pathname}`;
+
+/** Canonical and hreflang links of a page, from its Turkish path ("/club/galatasaray/"). */
+export const alternates = (lang: Lang, path: string) => ({
+  canonical: href(lang, path),
+  languages: { tr: path, en: href("en", path), "x-default": path },
+});

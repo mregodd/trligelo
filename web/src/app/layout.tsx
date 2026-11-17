@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Semi_Condensed } from "next/font/google";
 
-import { SITE } from "@/lib/site";
+import { SITE, SITE_URL } from "@/lib/site";
 import { THEME_SCRIPT } from "@/lib/theme";
 import { msg } from "@/messages";
 
@@ -21,6 +21,7 @@ const display = Barlow_Semi_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: { default: SITE, template: `%s | ${SITE}` },
   description: msg("tr").home.description,
 };

@@ -6,7 +6,7 @@ import { Ruler } from "@/components/Ruler";
 import { TeamTimeline } from "@/components/TeamTimeline";
 import { getMeta, getTeam, getTeams } from "@/lib/data";
 import { fmt } from "@/lib/format";
-import { href, type Lang } from "@/lib/i18n";
+import { alternates, href, type Lang } from "@/lib/i18n";
 import { groupName, leagueName, leagueSlug } from "@/lib/labels";
 import type { MatchEvent } from "@/lib/types";
 import { msg } from "@/messages";
@@ -21,6 +21,7 @@ export function teamMetadata(lang: Lang, slug: string): Metadata {
   return {
     title: t.title(c.name),
     description: t.description(c.name, fmt(lang).rating(c.rating), leagueName(c.league)),
+    alternates: alternates(lang, `/club/${slug}/`),
   };
 }
 

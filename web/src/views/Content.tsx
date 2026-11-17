@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { TextPage } from "@/components/TextPage";
 import { getMeta, readContent } from "@/lib/data";
 import { fmt } from "@/lib/format";
-import type { Lang } from "@/lib/i18n";
+import { alternates, type Lang } from "@/lib/i18n";
 import { fill, renderMarkdown } from "@/lib/markdown";
 import { CONTACT, REPO, SITE } from "@/lib/site";
 import { msg } from "@/messages";
@@ -13,7 +13,7 @@ export type ContentPage = "about" | "sources" | "privacy";
 
 export function contentMetadata(lang: Lang, page: ContentPage): Metadata {
   const t = msg(lang).pages[page];
-  return { title: t.title, description: t.description(SITE) };
+  return { title: t.title, description: t.description(SITE), alternates: alternates(lang, `/${page}/`) };
 }
 
 // shortcut: the privacy page describes the launch setup (Cloudflare Workers + Cloudflare Web

@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 
 import { TextPage } from "@/components/TextPage";
 import { methodologyFile, readMethodology } from "@/lib/data";
-import type { Lang } from "@/lib/i18n";
+import { alternates, type Lang } from "@/lib/i18n";
 import { renderMarkdown } from "@/lib/markdown";
 import { REPO } from "@/lib/site";
 import { msg } from "@/messages";
 
 export function methodologyMetadata(lang: Lang): Metadata {
-  return { title: msg(lang).methodology.title, description: msg(lang).methodology.description };
+  return {
+    title: msg(lang).methodology.title,
+    description: msg(lang).methodology.description,
+    alternates: alternates(lang, "/methodology/"),
+  };
 }
 
 export function MethodologyView({ lang }: { lang: Lang }) {

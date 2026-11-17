@@ -7,7 +7,7 @@ import { Ruler } from "@/components/Ruler";
 import table from "@/components/Standings.module.css";
 import { getLeagues, getMeta, getTeamMap, getTeams } from "@/lib/data";
 import { fmt } from "@/lib/format";
-import { href, type Lang } from "@/lib/i18n";
+import { alternates, href, type Lang } from "@/lib/i18n";
 import { groupName, LEAGUES } from "@/lib/labels";
 import { msg } from "@/messages";
 
@@ -17,7 +17,10 @@ export const leagueParams = () => LEAGUES.map((l) => ({ slug: l.slug }));
 
 export function leagueMetadata(lang: Lang, slug: string): Metadata {
   const league = LEAGUES.find((l) => l.slug === slug);
-  return { title: league ? msg(lang).league.title(league.name) : "Lig" };
+  return {
+    title: league ? msg(lang).league.title(league.name) : "Lig",
+    alternates: alternates(lang, `/league/${slug}/`),
+  };
 }
 
 export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {

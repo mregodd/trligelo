@@ -4,7 +4,7 @@ import { Movers } from "@/components/Movers";
 import { Standings } from "@/components/Standings";
 import { getMeta, getTeams } from "@/lib/data";
 import { fmt } from "@/lib/format";
-import { href, type Lang } from "@/lib/i18n";
+import { alternates, href, type Lang } from "@/lib/i18n";
 import { LEAGUES } from "@/lib/labels";
 import { SITE } from "@/lib/site";
 import { msg } from "@/messages";
@@ -14,7 +14,11 @@ import styles from "./Home.module.css";
 export function homeMetadata(lang: Lang): Metadata {
   const t = msg(lang).home;
   // The short name alone says little in a tab or a search result, so the home page spells it out.
-  return { title: { absolute: t.docTitle(SITE) }, description: t.description };
+  return {
+    title: { absolute: t.docTitle(SITE) },
+    description: t.description,
+    alternates: alternates(lang, "/"),
+  };
 }
 
 export function HomeView({ lang }: { lang: Lang }) {

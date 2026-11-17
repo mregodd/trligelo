@@ -3,14 +3,18 @@ import type { Metadata } from "next";
 import { FixtureList } from "@/components/FixtureCard";
 import { getFixtures, getMeta } from "@/lib/data";
 import { fmt } from "@/lib/format";
-import type { Lang } from "@/lib/i18n";
+import { alternates, type Lang } from "@/lib/i18n";
 import { competitionName, groupName, leagueName, leagueSlug } from "@/lib/labels";
 import { msg } from "@/messages";
 
 import styles from "./Matches.module.css";
 
 export function matchesMetadata(lang: Lang): Metadata {
-  return { title: msg(lang).matches.title, description: msg(lang).matches.description };
+  return {
+    title: msg(lang).matches.title,
+    description: msg(lang).matches.description,
+    alternates: alternates(lang, "/fixtures/"),
+  };
 }
 
 export function MatchesView({ lang }: { lang: Lang }) {
