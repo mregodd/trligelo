@@ -78,11 +78,13 @@ def _collect_raw(args: argparse.Namespace) -> list[CompetitionData]:
             except MissingPage as exc:
                 log.warning("%s: not downloaded yet (%s)", page.label(), exc)
         if _wants_supercup(args):
+            current = {p.season for p in load_pages(paths.tff_pages_csv()) if p.current}
             try:
                 out += [
                     d
                     for d in collect_supercup(client, _supercup_extra())
-                    if not args.season or d.comp.season in args.season
+                    if (not args.season or d.comp.season in args.season)
+                    and (not args.current_only or d.comp.season in current)
                 ]
             except MissingPage as exc:
                 log.warning("SK: not downloaded yet (%s)", exc)
@@ -116,7 +118,7 @@ def cmd_details(args: argparse.Namespace) -> int:
 def cmd_build(args: argparse.Namespace) -> int:
     data = _collect_all(args)
     counts = write_matches(paths.data_dir(), data)
-    teams = write_teams(paths.data_dir(), data)
+    teams = write_teams(paths.data_dir())
     for season, n in counts.items():
         log.info("%s: %d matches", season, n)
     issues = sum(len(d.issues) for d in data)
