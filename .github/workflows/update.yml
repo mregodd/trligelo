@@ -32,7 +32,8 @@ jobs:
 
       # Raw pages of the running season and the club logos (~10 MB). Past seasons come from the
       # committed CSVs, so a lost cache costs one ~20 min refetch, not the full ~3 h backfill.
-      - uses: actions/cache@v6
+      # Saved in the last step even when the run fails, so TFF is not asked twice.
+      - uses: actions/cache/restore@v6
         with:
           path: data/raw
           key: raw-${{ github.run_id }}
@@ -86,3 +87,9 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      - uses: actions/cache/save@v6
+        if: always()
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}

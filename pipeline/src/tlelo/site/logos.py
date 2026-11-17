@@ -12,6 +12,7 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+import httpx
 import numpy as np
 from PIL import Image
 from scipy import ndimage
@@ -35,15 +36,25 @@ def logo_path(cache_dir: Path, team: int) -> Path | None:
 
 
 def fetch_logos(client: PoliteClient, teams: list[int]) -> dict[int, Path]:
+    """Logos are cosmetic, so a failure never stops the data update: a club whose page or
+    image is refused is skipped, and when TFF stops answering the rest waits for the next
+    run (the cache keeps what was downloaded)."""
     out: dict[int, Path] = {}
     for team in teams:
-        html = client.fetch(CLUB_URL.format(team), Path("clubs") / f"{team}.html.gz")
-        url = logo_url(html)
-        if url is None:
-            log.warning("club %d: no logo on its TFF page", team)
+        try:
+            html = client.fetch(CLUB_URL.format(team), Path("clubs") / f"{team}.html.gz")
+            url = logo_url(html)
+            if url is None:
+                log.warning("club %d: no logo on its TFF page", team)
+                continue
+            key = Path("logos") / f"{team}{Path(urlparse(url).path).suffix.lower() or '.png'}"
+            client.fetch_bytes(url, key)
+        except httpx.HTTPStatusError as exc:
+            log.warning("club %d: logo skipped (%s)", team, exc)
             continue
-        key = Path("logos") / f"{team}{Path(urlparse(url).path).suffix.lower() or '.png'}"
-        client.fetch_bytes(url, key)
+        except RuntimeError as exc:  # retries used up
+            log.warning("club %d: %s; remaining logos left for the next run", team, exc)
+            break
         out[team] = client.cache_dir / key
     return out
 
