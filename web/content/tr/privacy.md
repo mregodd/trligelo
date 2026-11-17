@@ -8,7 +8,7 @@ Sitenin ne kadar kullanıldığını görmek için Cloudflare Web Analytics kull
 
 ## Barındırma
 
-Site Cloudflare Pages üzerinde yayınlanır. Her web sunucusu gibi Cloudflare da sayfaları gönderirken isteklerin teknik kayıtlarını tutabilir.
+Site Cloudflare Workers üzerinde yayınlanır. Her web sunucusu gibi Cloudflare da sayfaları gönderirken isteklerin teknik kayıtlarını tutabilir.
 
 ## Tema tercihi
 

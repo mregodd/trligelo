@@ -1,0 +1,88 @@
+# Refreshes the running season from TFF (and Wikipedia once a day), recomputes the ratings,
+# rebuilds the static site, deploys it to Cloudflare and commits the changed data CSVs.
+name: update
+
+on:
+  schedule: # UTC; Türkiye is UTC+3
+    - cron: "17 3 * * *" # 06:17: daily run, European matches included
+    - cron: "17 13-21/2 * * *" # 16:17 to 00:17 every 2 hours: match evenings
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write # the data commit
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      # Raw pages of the running season and the club logos (~10 MB). Past seasons come from the
+      # committed CSVs, so a lost cache costs one ~20 min refetch, not the full ~3 h backfill.
+      - uses: actions/cache@v6
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Domestic data
+        working-directory: pipeline
+        run: |
+          uv run tlelo fetch --current-only --refresh-current
+          uv run tlelo details --current-only
+          uv run tlelo build --current-only
+          uv run tlelo validate --current-only
+
+      - name: European data
+        if: github.event.schedule != '17 13-21/2 * * *'
+        working-directory: pipeline
+        run: |
+          uv run tlelo europe-fetch --current-only --refresh-current
+          uv run tlelo europe-build --current-only
+          uv run tlelo europe-check --current-only
+
+      - name: Ratings and site data
+        working-directory: pipeline
+        run: |
+          uv run tlelo elo
+          uv run tlelo logos
+          uv run tlelo site
+          uv run pytest -q
+
+      - name: Site
+        working-directory: web
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: web
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if ! git diff --cached --quiet; then
+            git commit -m "update-data"
+            git pull --rebase
+            git push
+          fi

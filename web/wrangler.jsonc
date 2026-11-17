@@ -1,0 +1,11 @@
+// Cloudflare Workers static assets: `wrangler deploy` (GitHub Actions, .github/workflows/update.yml)
+// uploads out/ as a Worker with no code. Default html_handling (auto-trailing-slash) matches
+// next.config.ts `trailingSlash: true`.
+{
+  "name": "trligelo",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

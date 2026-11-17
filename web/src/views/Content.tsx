@@ -16,7 +16,7 @@ export function contentMetadata(lang: Lang, page: ContentPage): Metadata {
   return { title: t.title, description: t.description(SITE) };
 }
 
-// shortcut: the privacy page describes the launch setup (Cloudflare Pages + Cloudflare Web
+// shortcut: the privacy page describes the launch setup (Cloudflare Workers + Cloudflare Web
 // Analytics, decided for Faz 4); update content/*/privacy.md if hosting or statistics change.
 export function ContentView({ lang, page }: { lang: Lang; page: ContentPage }) {
   const t = msg(lang).pages[page];

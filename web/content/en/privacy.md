@@ -8,7 +8,7 @@ To see how much the site is used, it runs Cloudflare Web Analytics. It uses no c
 
 ## Hosting
 
-The site is served by Cloudflare Pages. Like any web server, Cloudflare may keep technical logs of the requests it serves.
+The site is served by Cloudflare Workers. Like any web server, Cloudflare may keep technical logs of the requests it serves.
 
 ## Theme choice
 
