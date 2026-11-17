@@ -30,12 +30,22 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      # Raw pages of the running season and the club logos (~10 MB). Past seasons come from the
-      # committed CSVs, so a lost cache costs one ~20 min refetch, not the full ~3 h backfill.
-      # Saved in the last step even when the run fails, so TFF is not asked twice.
+      # Club logos: fys.tff.org does not answer GitHub's servers, so `tlelo logos` runs locally
+      # and its cache folder is pushed to a private repo (the logos stay out of this public one).
+      - uses: actions/checkout@v7
+        with:
+          repository: mregodd/trligelo-logos
+          token: ${{ secrets.LOGOS_TOKEN }}
+          path: data/raw/tff/logos
+
+      # Raw pages of the running season (~10 MB). Past seasons come from the committed CSVs, so
+      # a lost cache costs one ~6 min refetch, not the full ~3 h backfill. Saved in the last
+      # step even when the run fails, so TFF is not asked twice.
       - uses: actions/cache/restore@v6
         with:
-          path: data/raw
+          path: |
+            data/raw
+            !data/raw/tff/logos
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
@@ -59,7 +69,6 @@ jobs:
         working-directory: pipeline
         run: |
           uv run tlelo elo
-          uv run tlelo logos
           uv run tlelo site
           uv run pytest -q
 
@@ -91,5 +100,7 @@ jobs:
       - uses: actions/cache/save@v6
         if: always()
         with:
-          path: data/raw
+          path: |
+            data/raw
+            !data/raw/tff/logos
           key: raw-${{ github.run_id }}

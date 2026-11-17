@@ -3,6 +3,9 @@
 Each club page (``pageId=28&kulupId=<id>``) shows the logo TFF holds for the club. Pages
 and images are cached under ``data/raw/tff/`` (git-ignored); ``tlelo site`` copies the
 images into the website. Clubs marked ``mask`` in ``team_display_names.csv`` are skipped.
+
+The images come from fys.tff.org, which does not answer GitHub's servers: run this locally
+and push ``data/raw/tff/logos`` (its own git repo) to the private logo repo the CI reads.
 """
 
 from __future__ import annotations
