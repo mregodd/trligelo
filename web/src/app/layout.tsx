@@ -22,6 +22,7 @@ const display = Barlow_Semi_Condensed({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  twitter: { card: "summary_large_image" },
   title: { default: SITE, template: `%s | ${SITE}` },
   description: msg("tr").home.description,
 };
