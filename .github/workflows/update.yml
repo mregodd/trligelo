@@ -93,7 +93,7 @@ jobs:
           git add data
           if ! git diff --cached --quiet; then
             git commit -m "update-data"
-            git pull --rebase
+            git pull --rebase --autostash # wrangler-action leaves web/package*.json changed
             git push
           fi
 
