@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ClubLogo } from "@/components/ClubLogo";
 import { Form } from "@/components/Form";
+import { RankMove } from "@/components/RankMove";
 import { Ruler } from "@/components/Ruler";
 import table from "@/components/Standings.module.css";
 import { getLeagues, getMeta, getTeamMap, getTeams } from "@/lib/data";
@@ -68,7 +69,7 @@ export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {
               </caption>
               <thead>
                 <tr>
-                  <th scope="col" className="num">
+                  <th scope="col" className="num" title={msg(lang).standings.moveTitle}>
                     {t.head[0]}
                   </th>
                   <th scope="col">{t.head[1]}</th>
@@ -91,7 +92,10 @@ export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {
                   const c = teams.get(s)!;
                   return (
                     <tr key={s}>
-                      <td className="num">{i + 1}</td>
+                      <td className={`num ${table.rankCell}`}>
+                        {i + 1}
+                        <RankMove n={c.groupMove} lang={lang} />
+                      </td>
                       <th scope="row" className={table.club}>
                         <ClubLogo src={c.logo} keepSpace />
                         <a href={href(lang, `/club/${s}/`)}>{c.name}</a>

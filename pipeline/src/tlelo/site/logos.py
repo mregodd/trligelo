@@ -34,7 +34,8 @@ def logo_url(html: str) -> str | None:
 
 
 def logo_path(cache_dir: Path, team: int) -> Path | None:
-    found = sorted((cache_dir / "logos").glob(f"{team}.*"))
+    # A hand-made cut-out (<team>.png) wins over TFF's own .jpg, even if that is fetched again.
+    found = sorted((cache_dir / "logos").glob(f"{team}.*"), key=lambda f: f.suffix != ".png")
     return found[0] if found else None
 
 

@@ -7,7 +7,7 @@ from tlelo.elo.engine import Engine, EuropeModel
 from tlelo.elo.params import V1
 from tlelo.site.export import build, load_withdrawals
 from tlelo.site.fixtures import stakes, upcoming
-from tlelo.site.logos import cut_out, fill_square, logo_url
+from tlelo.site.logos import cut_out, fill_square, logo_path, logo_url
 from tlelo.site.names import clean_name, slugify, tr_title, unique_slugs
 
 
@@ -231,3 +231,20 @@ def test_a_crest_fills_its_square_whatever_margin_it_came_with():
     assert out.shape == (20, 20, 4)
     assert out[10, 10, 3] == 255  # centred
     assert out[10, 0, 3] == 0 and out[10, 19, 3] == 0  # the sides of a tall crest stay clear
+
+
+def test_a_hand_made_png_wins_over_the_logo_from_tff(tmp_path):
+    (tmp_path / "logos").mkdir()
+    for name in ("44.jpg", "44.png", "45.jpg"):
+        (tmp_path / "logos" / name).write_bytes(b"")
+    assert logo_path(tmp_path, 44).name == "44.png"
+    assert logo_path(tmp_path, 45).name == "45.jpg"
+    assert logo_path(tmp_path, 46) is None
+
+
+def test_places_moved_over_the_week():
+    from tlelo.site.export import _moves
+
+    # Best first now: A, B, C. A week ago B led, then C, then A.
+    assert _moves([1, 2, 3], {1: 10.0, 2: 30.0, 3: 20.0}) == {1: 2, 2: -1, 3: -1}
+    assert _moves([1, 2], {1: 5.0, 2: 1.0}) == {1: 0, 2: 0}

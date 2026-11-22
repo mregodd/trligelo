@@ -153,6 +153,16 @@
   font-weight: 600;
 }
 
+/* Places moved over the week, after the rank (gain and loss colours from the week column). */
+.rankCell {
+  white-space: nowrap;
+}
+.move {
+  margin-left: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .wideOnly,
 .formCol {
   display: none;

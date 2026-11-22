@@ -186,6 +186,17 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         for i, t in enumerate(teams_in, start=1):
             league_rank[t] = i
 
+    # Places gained over the same week: in the ranking, and in each group as league pages show it.
+    start = {t: _week_start(teams[t].events, res.ratings[t], cutoff) for t in active}
+    move = _moves(active, start)
+    group_move: dict[int, int] = {}
+    for members in by_league.values():
+        in_group: dict[str, list[int]] = defaultdict(list)
+        for t in members:
+            in_group[groups.get((t, current), "")].append(t)
+        for ts in in_group.values():
+            group_move |= _moves(ts, start)
+
     summaries = []
     for t in visible:
         tm = teams[t]
@@ -196,6 +207,7 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
         summary = _summary(tm, r, last_season, tier, groups, rank, league_rank, cutoff,
                            withdrawn.get(t))  # fmt: skip
         summary["logo"] = logo_urls.get(tm.slug)
+        summary["move"], summary["groupMove"] = move.get(t), group_move.get(t)
         summaries.append(summary)
 
     leagues = []
@@ -293,13 +305,22 @@ def _fixture(row: dict, side_of: dict, ol: OrderedLogit, res: RunResult) -> dict
     }  # fmt: skip
 
 
+def _week_start(events: list[dict], rating: float, cutoff: date) -> float:
+    """A club's rating at the start of the week the site shows changes for."""
+    before = [e for e in events if e["date"] and date.fromisoformat(e["date"]) <= cutoff]
+    return before[-1]["ra"] if before else (events[0]["ra"] - events[0]["d"] if events else rating)
+
+
+def _moves(now: list[int], start: dict[int, float]) -> dict[int, int]:
+    """Places each club gained (+) or lost (-) since the week started; `now` is best first."""
+    before = {t: i for i, t in enumerate(sorted(now, key=lambda t: -start[t]))}
+    return {t: before[t] - i for i, t in enumerate(now)}
+
+
 def _summary(tm, rating, last_season, tier, groups, rank, league_rank, cutoff, withdrawn):
     events = tm.events
     matches = [e for e in events if e["t"] == "match"]
-    before = [e for e in events if e["date"] and date.fromisoformat(e["date"]) <= cutoff]
-    week_start = (
-        before[-1]["ra"] if before else (events[0]["ra"] - events[0]["d"] if events else rating)
-    )
+    week_start = _week_start(events, rating, cutoff)
     peak = max(events, key=lambda e: e["ra"]) if events else None
     low = min(events, key=lambda e: e["ra"]) if events else None
     form = [{"s": e["s"], "d": e["d"]} for e in matches[-5:]]

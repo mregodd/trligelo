@@ -11,6 +11,7 @@ import { msg } from "@/messages";
 import { ClubLogo } from "./ClubLogo";
 import { Form } from "./Form";
 import { LeagueKey } from "./LeagueKey";
+import { RankMove } from "./RankMove";
 import { Ruler } from "./Ruler";
 import styles from "./Standings.module.css";
 
@@ -94,7 +95,7 @@ export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
             </caption>
             <thead>
               <tr>
-                <th scope="col" className="num">
+                <th scope="col" className="num" title={t.moveTitle}>
                   {t.rank}
                 </th>
                 <th scope="col">{t.club}</th>
@@ -124,7 +125,10 @@ export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
                   onFocus={() => setLit(c.slug)}
                   onBlur={() => setLit(null)}
                 >
-                  <td className="num">{c.rank ?? "–"}</td>
+                  <td className={`num ${styles.rankCell}`}>
+                    {c.rank ?? "–"}
+                    <RankMove n={c.move} lang={lang} />
+                  </td>
                   <th scope="row" className={styles.club}>
                     <ClubLogo src={c.logo} keepSpace />
                     <a href={href(lang, `/club/${c.slug}/`)}>{c.name}</a>

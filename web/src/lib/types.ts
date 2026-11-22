@@ -33,6 +33,8 @@ export interface TeamSummary {
   rating: number;
   rank: number | null;
   leagueRank: number | null;
+  move: number | null; // places gained (+) or lost (-) in the ranking over the 7 days of `week`
+  groupMove: number | null; // the same in its group's table on the league page
   week: number;
   games: number;
   peak: { r: number; date: string } | null;
