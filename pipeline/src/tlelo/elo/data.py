@@ -53,6 +53,7 @@ class Game:
     home_is_tr_venue: bool  # Europe: the match was played in Turkey (de facto home)
     closed: bool  # behind closed doors
     goals90: tuple[int, int] | None = None  # after 90 minutes, when extra time was played
+    week: int | None = None  # league matchweek (league stage only)
 
     @property
     def score(self) -> float:
@@ -129,6 +130,7 @@ def _domestic(row: dict, tiers: dict[int, int]) -> Game | None:
         home_is_tr_venue=False,
         closed=_closed(d),
         goals90=(hg, ag) if row["et_home"] else None,
+        week=int(row["week"]) if row["stage"] == "league" and row["week"] else None,
     )
 
 

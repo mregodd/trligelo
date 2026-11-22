@@ -12,6 +12,7 @@ import {
   competitionShort,
   groupName,
   leagueName,
+  stageName,
 } from "@/lib/labels";
 import { type Streak, streaks } from "@/lib/streaks";
 import type { AdjustmentEvent, MatchEvent, TeamEvent, TeamSeason } from "@/lib/types";
@@ -176,6 +177,7 @@ function MatchRow({ lang, team, m, streak }: RowProps) {
           <span className={styles.date}>
             <time dateTime={m.date}>{f.dateShort(m.date)}</time>
             <span className={styles.comp}>{competitionShort(m.comp, lang)}</span>
+            <span className={styles.stage}>{stageName(m.comp, m.round, m.week, lang)}</span>
           </span>
           <span className={styles.opp}>
             <Venue lang={lang} venue={m.venue} />
@@ -249,6 +251,7 @@ function MatchCalc({ lang, team, m, streak }: RowProps) {
     <div className={styles.calc}>
       <p className={styles.calcTitle}>
         {f.dateLong(m.date)}, {competitionLabel(m.comp, m.round, lang)}
+        {m.week && !m.round ? `, ${msg(lang).fixture.week(m.week)}` : ""}
       </p>
       <p>
         {fill(t.before, {

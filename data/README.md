@@ -107,4 +107,4 @@ Bu klasördeki veriler kodun MIT lisansına girmez; her biri kaynağının koşu
 | `ratings/` | Yukarıdaki iki kaynaktan hesaplanır | İkisinin koşulları birlikte: ticari olmayan amaçla, kaynak gösterilerek, aynı lisansla |
 | `sources/` | Projenin elle tuttuğu eşleştirme ve düzeltmeler | Kodla aynı, MIT |
 
-Kulüp logoları repoda yer almaz; kulüplerin markasıdır. Otomatik arka plan temizliği bir logoyu bozarsa, elle hazırlanmış saydam bir `<kulüpID>.png` aynı önbellek klasörüne konur ve TFF'nin dosyasının önüne geçer (örnek: Silivrispor, 44). Bu bir hukuk görüşü değildir; koşulların kesin metni kaynaklardadır.
+Kulüp logoları repoda yer almaz; kulüplerin markasıdır. Otomatik arka plan temizliği bir logoyu bozarsa, elle hazırlanmış saydam bir `<kulüpID>.png` aynı önbellek klasörüne konur ve TFF'nin dosyasının önüne geçer (örnekler: Silivrispor 44, Malatya Yeşilyurt Spor 4844). Bu bir hukuk görüşü değildir; koşulların kesin metni kaynaklardadır.

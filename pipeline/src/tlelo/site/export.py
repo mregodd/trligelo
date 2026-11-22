@@ -115,6 +115,7 @@ def _match_event(
         "season": g.season,
         "comp": g.competition,
         "round": g.round,
+        "week": g.week,
         "venue": "n" if h == 0 else ("h" if h > 0 else "a"),
         "opp": opp,
         "gf": gf,
@@ -248,14 +249,14 @@ def build(res: RunResult, data: Dataset, data_dir: Path) -> dict:
                            set(withdrawn))  # fmt: skip
     side_of = {t: {"slug": slugs[t], "name": names[t], "logo": logo_urls.get(slugs[t])}
                for t in visible}  # fmt: skip
-    order = sorted(rounds, key=lambda k: (LEAGUES.index(k[0]), k[1]))
+    order = sorted(rounds, key=lambda k: (LEAGUES.index(k[0]), k[1], k[2]))
 
     def matches(rows: list[dict]) -> list[dict]:
         return [m for r in rows if (m := _fixture(r, side_of, ol, res))]
 
     fixtures = {
-        "rounds": [{"league": comp, "group": g or None, "week": rounds[(comp, g)][0],
-                    "matches": matches(rounds[(comp, g)][1])} for comp, g in order],
+        "rounds": [{"league": comp, "group": g or None, "week": w,
+                    "matches": matches(rounds[(comp, g, w)])} for comp, g, w in order],
         "cup": matches(cup),
     }  # fmt: skip
     next_of: dict[str, list[dict]] = defaultdict(list)

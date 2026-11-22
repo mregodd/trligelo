@@ -58,6 +58,7 @@ export interface MatchEvent {
   season: string;
   comp: string;
   round: string | null;
+  week: number | null; // league matchweek (null in cups, Europe and play-offs)
   venue: "h" | "a" | "n";
   opp: Opponent;
   gf: number;

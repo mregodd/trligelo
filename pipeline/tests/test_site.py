@@ -182,7 +182,7 @@ def test_a_logo_that_comes_cut_out_is_kept_as_it_is(tmp_path):
     assert out.getpixel((15, 15))[3] == 255
 
 
-def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
+def test_upcoming_is_the_next_round_and_whatever_of_this_one_is_still_to_come():
     def row(comp, week, d, home, away, status, rnd=""):
         return {"competition": comp, "stage": "league" if comp == "SL" else "cup", "group": "",
                 "week": week, "date": d, "time": "", "round": rnd, "home_id": str(home),
@@ -192,6 +192,8 @@ def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
         row("SL", "1", "2026-08-10", 1, 2, "played"),
         row("SL", "2", "", 3, 4, "not_played"),  # postponed: before the last week with a result
         row("SL", "3", "2026-08-24", 2, 3, "played"),
+        row("SL", "3", "2026-08-23", 5, 6, "not_played"),  # dated before the last match: left over
+        row("SL", "3", "2026-08-31", 7, 8, "not_played"),  # the round's Monday match: still to come
         row("SL", "4", "", 1, 3, "not_played"),  # the next round
         row("SL", "4", "", 9, 2, "not_played"),  # 9 has withdrawn
         row("SL", "5", "", 1, 2, "not_played"),
@@ -199,8 +201,8 @@ def test_next_round_skips_leftovers_withdrawn_clubs_and_past_cup_ties():
         row("TK", "", "2026-09-02", 2, 4, "not_played", "2.Tur"),
     ]
     rounds, cup = upcoming(rows, date(2026, 8, 30), skip={9})
-    week, matches = rounds[("SL", "")]
-    assert week == 4 and [(m["home_id"], m["away_id"]) for m in matches] == [("1", "3")]
+    pairs = {k: [(m["home_id"], m["away_id"]) for m in ms] for k, ms in rounds.items()}
+    assert pairs == {("SL", "", 3): [("7", "8")], ("SL", "", 4): [("1", "3")]}
     assert [m["round"] for m in cup] == ["2.Tur"]
 
 

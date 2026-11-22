@@ -21,11 +21,13 @@ export function MatchesView({ lang }: { lang: Lang }) {
   const t = msg(lang).matches;
   const { rounds, cup } = getFixtures();
   const meta = getMeta();
-  const sections = rounds.map((r) => ({
-    id: `${leagueSlug(r.league)}${r.group ? `-${r.group.toLocaleLowerCase("tr-TR")}` : ""}`,
-    title: `${leagueName(r.league)}${r.group ? `, ${groupName(r.group, lang)}` : ""}`,
-    ...r,
-  }));
+  const sections = rounds.map((r) => {
+    const anchor = `${leagueSlug(r.league)}${r.group ? `-${r.group.toLocaleLowerCase("tr-TR")}` : ""}`;
+    const title = `${leagueName(r.league)}${r.group ? `, ${groupName(r.group, lang)}` : ""}`;
+    return { ...r, anchor, id: `${anchor}-${r.week}`, title };
+  });
+  // A group can show two rounds (the end of the current one and the next): one link per group.
+  const jumps = sections.filter((s, i) => sections.findIndex((x) => x.anchor === s.anchor) === i);
   return (
     <>
       <section className={styles.band}>
@@ -33,7 +35,7 @@ export function MatchesView({ lang }: { lang: Lang }) {
           <h1>{t.title}</h1>
           <p className={styles.lead}>{t.lead(fmt(lang).dateLong(meta.lastMatch))}</p>
           <ul className={styles.jump} aria-label={t.sections}>
-            {sections.map((s) => (
+            {jumps.map((s) => (
               <li key={s.id}>
                 <a href={`#${s.id}`}>{s.title}</a>
               </li>

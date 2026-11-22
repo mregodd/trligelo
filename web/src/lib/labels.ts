@@ -45,6 +45,12 @@ export function competitionLabel(comp: string, round: string | null, lang: Lang)
 
 export const isEurope = (comp: string) => IS_EUROPE.has(comp);
 
+/** Where in its competition a match was: "12. hafta" in a league, the round in a cup or Europe. */
+export function stageName(comp: string, round: string | null, week: number | null, lang: Lang): string | null {
+  if (round) return IS_EUROPE.has(comp) ? (msg(lang).europeRounds[round] ?? round) : roundName(round, lang);
+  return week ? msg(lang).fixture.week(week) : null;
+}
+
 /** Names and reasons of the rating adjustments, with the model's numbers filled in. */
 export function adjustments(lang: Lang): Record<AdjustmentKind, { name: string; why: string }> {
   const { num } = fmt(lang);

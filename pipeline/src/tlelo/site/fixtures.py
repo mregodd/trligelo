@@ -25,21 +25,28 @@ def load_rows(path: Path) -> list[dict]:
 
 
 def upcoming(rows: list[dict], last_match: date, skip: set[int]):
-    """(next round per league group, dated cup ties after ``last_match``), without clubs in
-    ``skip`` (withdrawn: their matches will be forfeits)."""
+    """(league matches still to come by (competition, group, week), dated cup ties after
+    ``last_match``), without clubs in ``skip`` (withdrawn: their matches will be forfeits).
+
+    Per league group: the next round after the last week with a result, and any match of
+    that week or an earlier one dated from ``last_match`` on (a round's Monday match, a
+    postponed match with its new date). Older unplayed matches are left over."""
     league: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for r in rows:
         if r["competition"] in LEAGUES and r["stage"] == "league" and r["week"]:
             league[(r["competition"], r["group"])].append(r)
-    rounds: dict[tuple[str, str], tuple[int, list[dict]]] = {}
-    for key, rs in league.items():
+    rounds: dict[tuple[str, str, int], list[dict]] = defaultdict(list)
+    for (comp, group), rs in league.items():
         last = max((int(r["week"]) for r in rs if r["status"] in DONE), default=0)
-        ahead = [r for r in rs if r["status"] == "not_played" and int(r["week"]) > last]
-        if not ahead:
-            continue
-        week = min(int(r["week"]) for r in ahead)
-        matches = [r for r in ahead if int(r["week"]) == week and not _involves(r, skip)]
-        rounds[key] = (week, sorted(matches, key=lambda r: (r["date"] or "9", r["time"])))
+        todo = [r for r in rs if r["status"] == "not_played"]
+        nxt = min((int(r["week"]) for r in todo if int(r["week"]) > last), default=None)
+        for r in todo:
+            week = int(r["week"])
+            due = r["date"] and date.fromisoformat(r["date"]) >= last_match
+            if (week == nxt or (week <= last and due)) and not _involves(r, skip):
+                rounds[(comp, group, week)].append(r)
+    for matches in rounds.values():
+        matches.sort(key=lambda r: (r["date"] or "9", r["time"]))
     cup = sorted(
         (r for r in rows if r["competition"] in CUPS and r["status"] == "not_played"
          and r["date"] and date.fromisoformat(r["date"]) > last_match and not _involves(r, skip)),
