@@ -157,6 +157,9 @@
 .rankCell {
   white-space: nowrap;
 }
+.table thead th.rankCell {
+  text-align: left; /* like its cells: the rank, then the week's arrow */
+}
 .move {
   margin-left: 5px;
   font-size: 0.75rem;

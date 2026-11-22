@@ -69,7 +69,7 @@ export function LeagueView({ lang, slug }: { lang: Lang; slug: string }) {
               </caption>
               <thead>
                 <tr>
-                  <th scope="col" className="num" title={msg(lang).standings.moveTitle}>
+                  <th scope="col" className={`num ${table.rankCell}`} title={msg(lang).standings.moveTitle}>
                     {t.head[0]}
                   </th>
                   <th scope="col">{t.head[1]}</th>

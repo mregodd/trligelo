@@ -44,7 +44,8 @@ export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
       .filter((t) => showInactive || t.active)
       .filter((t) => filter === "all" || t.league === filter)
       .filter((t) => !q || trLower(t.name).includes(q) || trLower(t.official).includes(q))
-      .sort((a, b) => b.rating - a.rating);
+      // Ratings are rounded to 0.1, ranks are not: equal ratings keep the rank order.
+      .sort((a, b) => b.rating - a.rating || (a.rank ?? Infinity) - (b.rank ?? Infinity));
   }, [teams, filter, query, showInactive]);
 
   return (
@@ -95,7 +96,7 @@ export function Standings({ lang, teams, rulerLabel, aside, heading }: Props) {
             </caption>
             <thead>
               <tr>
-                <th scope="col" className="num" title={t.moveTitle}>
+                <th scope="col" className={`num ${styles.rankCell}`} title={t.moveTitle}>
                   {t.rank}
                 </th>
                 <th scope="col">{t.club}</th>
