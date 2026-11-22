@@ -16,7 +16,7 @@ Bu klasördeki CSV dosyaları `pipeline/` içindeki kodla üretilir. Elle düzen
 | `team_seasons.csv` | Kulübün her sezon hangi ligde ve grupta oynadığı. Bu dosyada olmayan kulüpler o sezon amatördü (PGL/BAL) |
 | `sources/tff_pages.csv` | Hangi sezonun hangi TFF sayfasında olduğu (elle tutulur) |
 | `sources/supercup_extra.csv` | TFF'de maç kimliği bulunamayan Süper Kupa maçları. Elle, kaynağıyla birlikte girilir |
-| `sources/match_overrides.csv` | Fikstürde skoru olmayan ama TFF puan cetvelinin saydığı maçlar (disiplin kararıyla hükmen sayılanlar). Elle, açıklamasıyla girilir |
+| `sources/match_overrides.csv` | Fikstürde skoru olmayan ama TFF puan cetvelinin saydığı maçlar: disiplin kararıyla hükmen sayılanlar ya da oynandığı hâlde TFF'nin skorunu maç sayfalarına girmediği maçlar. Elle, açıklamasıyla girilir |
 | `europe/matches.csv` | Türk takımlarının UEFA turnuvalarındaki bütün maçları (Şampiyonlar Ligi, Avrupa Ligi, Konferans Ligi, ön elemeler dahil) |
 | `europe/coefficients.csv` | Her sezonun çekiliş tablolarındaki UEFA kulüp katsayıları. Türk takımlarının rakiplerinden çok daha fazla kulüp içerir |
 | `europe/association_coefficients.csv` | Her sezonun ülke (federasyon) katsayı sıralaması. Kulüp katsayısı bulunamayan rakipler için yedek |
